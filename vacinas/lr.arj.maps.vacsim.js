@@ -1,3 +1,6 @@
+// Variável para checar o CDN
+var _QD_cdn_check_vacsim = true;
+
 $(document).ready(function() {
 	var map,
 		locations = [
