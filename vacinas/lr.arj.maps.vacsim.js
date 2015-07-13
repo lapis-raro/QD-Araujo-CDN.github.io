@@ -4,7 +4,7 @@ var _QD_cdn_check_vacsim = true;
 $(document).ready(function(){
 	var map,
 	locations = [                  
-	
+
 	[-19.915654, -43.940423,'Araujo Matriz - Centro - Rua Curitiba, 327<hr>Todos os dias, das 8h às 20h, inclusive feriados.'],
 	[-19.932537, -43.956683,'Araujo Gutierrez – Gutierrez – Rua André Cavalcanti, 222<hr>Todos os dias, das 8h às 20h, inclusive feriados.'],
 	[-19.935383, -43.931226,'Araujo Centenário – Funcionários – Av. Getúlio Vargas, 840<hr>Todos os dias, das 8h às 20h, inclusive feriados.'],
@@ -24,7 +24,7 @@ $(document).ready(function(){
                   mapTypeId: google.maps.MapTypeId.ROADMAP,
                   scrollwheel:false
               };
-              var image = 'images/marker.png';
+              var image = '/arquivos/marker.png';
               map = new google.maps.Map($('#map')[0], myOptions);
               var infowindow = new google.maps.InfoWindow({maxWidth:250}), marker, i;
               for (i = 0; i < locations.length; i++) {  
@@ -45,7 +45,7 @@ $(document).ready(function(){
 
 
               	google.maps.event.addListener(infowindow, 'domready', function() {
-              		
+
                         // ReferÃªncia ao DIV que agrupa o fundo da infowindow
                         var iwOuter = $('.gm-style-iw');
 
