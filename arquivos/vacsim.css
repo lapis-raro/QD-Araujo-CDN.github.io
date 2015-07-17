@@ -221,7 +221,7 @@ body {
   font-family: 'FrutigerLTStdRoman';
   font-weight: normal;
   text-indent: 20px;
-  background: url("/arquivos/linha-branca.jpg") no-repeat right center;
+  background: url("//www.araujo.com.br/arquivos/linha-branca.jpg") no-repeat right center;
   max-width: 420px;
 }
 /* line 232, ../sass/vacsim.scss */
@@ -292,7 +292,7 @@ body {
 }
 /* line 304, ../sass/vacsim.scss */
 #vacsim-wrapper .cinza-bottom .container #voltar-topo {
-  background: url(/arquivos/btn-voltar-topo.png);
+  background: url("//www.araujo.com.br/arquivos/btn-voltar-topo.png");
   width: 80px;
   height: 88px;
   cursor: pointer;
