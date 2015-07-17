@@ -6,26 +6,26 @@ body {
 
 @font-face {
   font-family: 'FrutigerLTStdCn';
-  src: url("../vacinas/FrutigerLTStdCn.eot");
-  src: url("../vacinas/FrutigerLTStdCn.eot") format("embedded-opentype"), url("../vacinas/FrutigerLTStdCn.woff2") format("woff2"), url("../vacinas/FrutigerLTStdCn.woff") format("woff"), url("../vacinas/FrutigerLTStdCn.ttf") format("truetype"), url("../vacinas/FrutigerLTStdCn.svg#FrutigerLTStdCn") format("svg");
+  src: url("fonts/FrutigerLTStdCn.eot");
+  src: url("fonts/FrutigerLTStdCn.eot") format("embedded-opentype"), url("fonts/FrutigerLTStdCn.woff2") format("woff2"), url("fonts/FrutigerLTStdCn.woff") format("woff"), url("fonts/FrutigerLTStdCn.ttf") format("truetype"), url("fonts/FrutigerLTStdCn.svg#FrutigerLTStdCn") format("svg");
 }
 
 @font-face {
   font-family: 'FrutigerLTStdBold';
-  src: url("../vacinas/FrutigerLTStdBold.eot");
-  src: url("../vacinas/FrutigerLTStdBold.eot") format("embedded-opentype"), url("../vacinas/FrutigerLTStdBold.woff2") format("woff2"), url("../vacinas/FrutigerLTStdBold.woff") format("woff"), url("../vacinas/FrutigerLTStdBold.ttf") format("truetype"), url("../vacinas/FrutigerLTStdBold.svg#FrutigerLTStdBold") format("svg");
+  src: url("fonts/FrutigerLTStdBold.eot");
+  src: url("fonts/FrutigerLTStdBold.eot") format("embedded-opentype"), url("fonts/FrutigerLTStdBold.woff2") format("woff2"), url("fonts/FrutigerLTStdBold.woff") format("woff"), url("fonts/FrutigerLTStdBold.ttf") format("truetype"), url("fonts/FrutigerLTStdBold.svg#FrutigerLTStdBold") format("svg");
 }
 
 @font-face {
   font-family: 'FrutigerLTStdRoman';
-  src: url("../vacinas/FrutigerLTStdRoman.eot");
-  src: url("../vacinas/FrutigerLTStdRoman.eot") format("embedded-opentype"), url("../vacinas/FrutigerLTStdRoman.woff2") format("woff2"), url("../vacinas/FrutigerLTStdRoman.woff") format("woff"), url("../vacinas/FrutigerLTStdRoman.ttf") format("truetype"), url("../vacinas/FrutigerLTStdRoman.svg#FrutigerLTStdRoman") format("svg");
+  src: url("fonts/FrutigerLTStdRoman.eot");
+  src: url("fonts/FrutigerLTStdRoman.eot") format("embedded-opentype"), url("fonts/FrutigerLTStdRoman.woff2") format("woff2"), url("fonts/FrutigerLTStdRoman.woff") format("woff"), url("fonts/FrutigerLTStdRoman.ttf") format("truetype"), url("fonts/FrutigerLTStdRoman.svg#FrutigerLTStdRoman") format("svg");
 }
 
 @font-face {
   font-family: 'FrutigerLTStdLight';
-  src: url("../vacinas/FrutigerLTStdLight.eot");
-  src: url("../vacinas/FrutigerLTStdLight.eot") format("embedded-opentype"), url("../vacinas/FrutigerLTStdLight.woff2") format("woff2"), url("../vacinas/FrutigerLTStdLight.woff") format("woff"), url("../vacinas/FrutigerLTStdLight.ttf") format("truetype"), url("../vacinas/FrutigerLTStdLight.svg#FrutigerLTStdLight") format("svg");
+  src: url("fonts/FrutigerLTStdLight.eot");
+  src: url("fonts/FrutigerLTStdLight.eot") format("embedded-opentype"), url("fonts/FrutigerLTStdLight.woff2") format("woff2"), url("fonts/FrutigerLTStdLight.woff") format("woff"), url("fonts/FrutigerLTStdLight.ttf") format("truetype"), url("fonts/FrutigerLTStdLight.svg#FrutigerLTStdLight") format("svg");
 }
 
 /* line 43, ../sass/vacsim.scss */
