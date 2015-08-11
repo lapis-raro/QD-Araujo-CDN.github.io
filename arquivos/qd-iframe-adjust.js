@@ -1,9 +1,16 @@
 (function(){
-	// setIframeSize($("body").outerHeight(true) + 5);
-	
-	console.log(window);
+	// window.parent.postMessage("qd-iframe-cdn|" + ($(window).height() + 5), "*");
+	$(setIframeSize);
 
-	jQuery(window).scroll(function(){
-		// setIframeSize($("body").outerHeight(true) + 5);
-	});
+	function setIframeSize() {
+		var max = $(document).height();
+		var temp = $(window).height();
+		if(temp > max)
+			max = temp;
+		temp = $(document.body).height();
+		if(temp > max)
+			max = temp;
+
+		window.parent.postMessage("qd-iframe-cdn|" + (max + 5), "*");
+	};
 })();
