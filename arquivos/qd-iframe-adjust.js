@@ -1,16 +1,31 @@
 (function(){
-	// window.parent.postMessage("qd-iframe-cdn|" + ($(window).height() + 5), "*");
-	$(setIframeSize);
-
-	function setIframeSize() {
-		var max = $(document).height();
-		var temp = $(window).height();
-		if(temp > max)
-			max = temp;
-		temp = $(document.body).height();
-		if(temp > max)
-			max = temp;
-
-		window.parent.postMessage("qd-iframe-cdn|" + (max + 5), "*");
+	$(function() {
+		resetIframeSize();
+		window.parent.postMessage("qd-iframe-cdn|" + ($(document).height() + 5), "*");
+	});
+	$(window).load(resetIframeSize);
+	$(document).ajaxComplete(resetIframeSize);
+	$(document).ajaxStart(resetIframeSize);
+	
+	var lastWindowSize = $(window).width();
+	var timeout = 0;
+	$(window).resize(function() {
+		clearTimeout(timeout);
+		timeout = setTimeout(function() {
+			if(lastWindowSize != $(window).width()){
+				resetIframeSize();
+				lastWindowSize = $(window).width();
+			}
+		}, 20);
+	});
+	
+	function resetIframeSize() {
+		window.parent.postMessage("qd-iframe-cdn|" + ($(document.body).height() + 5), "*");
 	};
 })();
+
+$(function() {
+	$("a[href^=#]").click(function() {
+		window.parent.postMessage("qd-iframe-scroll|" + ($($(this).attr("href")).first().offset() || {top: 0}).top, "*");
+	});
+});
