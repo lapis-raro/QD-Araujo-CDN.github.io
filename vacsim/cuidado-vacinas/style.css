@@ -32,7 +32,7 @@ html {
   outline: 0;
   padding: 0;
   vertical-align: baseline;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 body {
