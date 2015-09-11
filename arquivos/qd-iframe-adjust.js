@@ -4,29 +4,29 @@
 })();
 
 (function(){
-	$(function() {
-		resetIframeSize();
-		window.parent.postMessage("qd-iframe-cdn|" + ($(document).height() + 5), "*");
-	});
-	$(window).load(resetIframeSize);
-	$(document).ajaxComplete(resetIframeSize);
-	$(document).ajaxStart(resetIframeSize);
-	
+	"use strict";
+
+	function resetIframeSize(useBody) {
+		window.parent.postMessage("qd-iframe-cdn|" + ($(useBody? document.body: document).height() + 5), "*");
+	};
+
+	$(function() {resetIframeSize(false); });
+	$(window).load(function() {resetIframeSize(false); });
+	$(window).scroll(function() {resetIframeSize(false); });
+	$(document).ajaxComplete(function() {resetIframeSize(false); });
+	$(document).ajaxStart(function() {resetIframeSize(false); });
+
 	var lastWindowSize = $(window).width();
 	var timeout = 0;
 	$(window).resize(function() {
 		clearTimeout(timeout);
 		timeout = setTimeout(function() {
 			if(lastWindowSize != $(window).width()){
-				resetIframeSize();
+				resetIframeSize(true);
 				lastWindowSize = $(window).width();
 			}
 		}, 20);
 	});
-	
-	function resetIframeSize() {
-		window.parent.postMessage("qd-iframe-cdn|" + ($(document.body).height() + 5), "*");
-	};
 })();
 
 $(function() {
