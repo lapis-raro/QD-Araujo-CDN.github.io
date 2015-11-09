@@ -1,0 +1,284 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+<head>
+	<title>Black Friday Drogaria Araujo. As Melhores Ofertas estão Aqui</title>
+	<meta content="Só na Drogaria Araujo você encontra os melhores preços em Medicamentos, Dermocosméticos, Beleza, Infantil em mais de 20 mil itens. Entrega garantida em todo Brasil. 3x sem juros." name="description">
+	<meta charset="UTF-8" />
+	<link rel="icon" href="//www.araujo.com.br/arquivos/favicon.ico" type="image/x-icon" />
+	<!-- Bootstrap + Common -->
+	<link rel="stylesheet" href="//www.araujo.com.br/arquivos/arj.dalt.qd-bootstrap-common.css" type="text/css" />
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+	<script src="//io.vtex.com.br/front-libs/jquery/1.8.3/jquery-1.8.3.min.js"></script>
+	<!-- VTEX checkout SDK -->
+	<!-- ATENÇÃO: Chamar sempre após o BOOTSTRAP.JS -->
+	<!-- <script src="//araujo.vtexcommercestable.com.br/files/js.arj.dalt.functions.base.min.js" type="text/javascript"></script> -->
+	<!-- <script src="//qdcdn.araujo.com.br/arquivos/js.arj.dalt.functions.base.min.js" type="text/javascript"></script> -->
+	<!--<script src="//qd-araujo-cdn.github.io/arquivos/js.arj.dalt.functions.base.min.js" type="text/javascript"></script> -->
+	<script type="text/javascript">
+		/*!
+		 * The Final Countdown for jQuery v2.0.4 (http://hilios.github.io/jQuery.countdown/)
+		 * Copyright (c) 2014 Edson Hilios
+		 *
+		 * Permission is hereby granted, free of charge, to any person obtaining a copy of
+		 * this software and associated documentation files (the "Software"), to deal in
+		 * the Software without restriction, including without limitation the rights to
+		 * use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+		 * the Software, and to permit persons to whom the Software is furnished to do so,
+		 * subject to the following conditions:
+		 *
+		 * The above copyright notice and this permission notice shall be included in all
+		 * copies or substantial portions of the Software.
+		 *
+		 * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+		 * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+		 * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+		 * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+		 * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+		 * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+		 */
+		!function(a){"use strict";"function"==typeof define&&define.amd?define(["jquery"],a):a(jQuery)}(function(a){"use strict";function b(a){if(a instanceof Date)return a;if(String(a).match(g))return String(a).match(/^[0-9]*$/)&&(a=Number(a)),String(a).match(/\-/)&&(a=String(a).replace(/\-/g,"/")),new Date(a);throw new Error("Couldn't cast `"+a+"` to a date object.")}function c(a){return function(b){var c=b.match(/%(-|!)?[A-Z]{1}(:[^;]+;)?/gi);if(c)for(var e=0,f=c.length;f>e;++e){var g=c[e].match(/%(-|!)?([a-zA-Z]{1})(:[^;]+;)?/),i=new RegExp(g[0]),j=g[1]||"",k=g[3]||"",l=null;g=g[2],h.hasOwnProperty(g)&&(l=h[g],l=Number(a[l])),null!==l&&("!"===j&&(l=d(k,l)),""===j&&10>l&&(l="0"+l.toString()),b=b.replace(i,l.toString()))}return b=b.replace(/%%/,"%")}}function d(a,b){var c="s",d="";return a&&(a=a.replace(/(:|;|\s)/gi,"").split(/\,/),1===a.length?c=a[0]:(d=a[0],c=a[1])),1===Math.abs(b)?d:c}var e=100,f=[],g=[];g.push(/^[0-9]*$/.source),g.push(/([0-9]{1,2}\/){2}[0-9]{4}( [0-9]{1,2}(:[0-9]{2}){2})?/.source),g.push(/[0-9]{4}([\/\-][0-9]{1,2}){2}( [0-9]{1,2}(:[0-9]{2}){2})?/.source),g=new RegExp(g.join("|"));var h={Y:"years",m:"months",w:"weeks",d:"days",D:"totalDays",H:"hours",M:"minutes",S:"seconds"},i=function(b,c,d){this.el=b,this.$el=a(b),this.interval=null,this.offset={},this.instanceNumber=f.length,f.push(this),this.$el.data("countdown-instance",this.instanceNumber),d&&(this.$el.on("update.countdown",d),this.$el.on("stoped.countdown",d),this.$el.on("finish.countdown",d)),this.setFinalDate(c),this.start()};a.extend(i.prototype,{start:function(){null!==this.interval&&clearInterval(this.interval);var a=this;this.update(),this.interval=setInterval(function(){a.update.call(a)},e)},stop:function(){clearInterval(this.interval),this.interval=null,this.dispatchEvent("stoped")},pause:function(){this.stop.call(this)},resume:function(){this.start.call(this)},remove:function(){this.stop(),f[this.instanceNumber]=null,delete this.$el.data().countdownInstance},setFinalDate:function(a){this.finalDate=b(a)},update:function(){return 0===this.$el.closest("html").length?void this.remove():(this.totalSecsLeft=this.finalDate.getTime()-(new Date).getTime(),this.totalSecsLeft=Math.ceil(this.totalSecsLeft/1e3),this.totalSecsLeft=this.totalSecsLeft<0?0:this.totalSecsLeft,this.offset={seconds:this.totalSecsLeft%60,minutes:Math.floor(this.totalSecsLeft/60)%60,hours:Math.floor(this.totalSecsLeft/60/60)%24,days:Math.floor(this.totalSecsLeft/60/60/24)%7,totalDays:Math.floor(this.totalSecsLeft/60/60/24),weeks:Math.floor(this.totalSecsLeft/60/60/24/7),months:Math.floor(this.totalSecsLeft/60/60/24/30),years:Math.floor(this.totalSecsLeft/60/60/24/365)},void(0===this.totalSecsLeft?(this.stop(),this.dispatchEvent("finish")):this.dispatchEvent("update")))},dispatchEvent:function(b){var d=a.Event(b+".countdown");d.finalDate=this.finalDate,d.offset=a.extend({},this.offset),d.strftime=c(this.offset),this.$el.trigger(d)}}),a.fn.countdown=function(){var b=Array.prototype.slice.call(arguments,0);return this.each(function(){var c=a(this).data("countdown-instance");if(void 0!==c){var d=f[c],e=b[0];i.prototype.hasOwnProperty(e)?d[e].apply(d,b.slice(1)):null===String(e).match(/^[$A-Z_][0-9A-Z_$]*$/i)?(d.setFinalDate.call(d,e),d.start()):a.error("Method %s does not exist on jQuery.countdown".replace(/\%s/gi,e))}else new i(this,b[0],b[1])})}});
+
+		$(function(){
+			$(".qd-black-friday-form-countdown").countdown('2015/11/27', function(event) {
+				var totalHours = event.offset.totalDays * 24 + event.offset.hours;
+				$(this).html(event.strftime('<div class="row"> <div class="col-xs-10"> <div class="hours"> <span>' + totalHours + '</span> <span>Horas</span> </div> </div> <div class="col-xs-10"> <div class="minutes"> <span>%M</span> <span>Minutos</span> </div> </div> <div class="col-xs-10"> <div class="second"> <span>%S</span> <span>Segundos</span> </div> </div> </div>'));
+			});
+		})
+	</script>
+	<!-- Bootstrap - respond -->
+	<script type="text/javascript">
+		//<![CDATA[
+		(function() {
+			var myNav = navigator.userAgent.toLowerCase();
+			var version = (navigator.userAgent.toLowerCase().indexOf("msie") != -1) ? parseInt(myNav.split("msie")[1]) : 9999;
+			if (version < 9) {
+				document.write('<scr' + 'ipt src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></scr' + 'ipt>');
+				document.write('<scr' + 'ipt src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></scr' + 'ipt>');
+			}
+		})();
+		//]]>
+	</script>
+	<link rel="stylesheet" href="//araujo.vteximg.com.br/arquivos/arj.dalt.institutional.css" type="text/css" />
+</head>
+<body class="intitucional black-friday qd-dalt">
+	<div class="content-structure">
+		<div class="full-content-placeholder">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-xs-30">
+						<vtex:contentPlaceHolder id="Conteudo Largura Total" />
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-30">
+					<div class="mainTpl h1 h2 h3 h4 h5 h5 p table ul dl">
+						<div class="tpl-content-wrapper">
+							<div class="tpl-content">
+								<div class="qd-black-friday">
+									<div class="row">
+										<div class="col-xs-28 col-xs-offset-1">
+											<div class="row">
+												<div class="col-xs-30">
+													<div class="qd-black-friday-text-info" style="padding-bottom:20px;">
+														<div class="row">
+															<div class="col-xs-30">
+																<img src="//www.araujo.com.br/arquivos/araujo.intitucional.blackfriday.banner-1.png" alt="" class="img-responsive" style="margin: 0 auto 30px;" />
+															</div>
+														</div>
+
+														<div class="row">
+															<div class="col-xs-30">
+																<p>A <strong>Drogaria Araujo</strong> tamb&eacute;m participar&aacute; da <strong>Black Friday 2015. </strong>As se&ccedil;&otilde;es<strong> <a href="/dermocosmeticos">Dermocosm&eacute;ticos</a>, <a href="/higiene-pessoal">Higiene Pessoal</a></strong>, artigos de <a href="/beleza"><strong>Beleza</strong></a>, <strong><a href="/fitness">Fitness</a>,</strong> <strong><a href="/saude">Sa&uacute;de</a>, </strong>produtos para a <a href="/infantil/"><strong>Mam&atilde;e e o Beb&ecirc;</strong></a>, e muito mais com descontos imperd&iacute;veis na maior farm&aacute;cia de Minas Gerais.</p>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-xs-12 col-xs-offset-9">
+													<div class="qd-black-friday-form-content" style="padding-top:0;">
+														<p>Faltam:</p>
+														<div class="qd-black-friday-form-countdown"></div>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-xs-30">
+													<div class="qd_news_black_friday">
+														<p>Seja o primeiro a saber quando nossas ofertas forem liberadas.</p>
+
+														<div class="row">
+															<div class="form-group">
+																<label class="col-xs-3 control-label">
+																	<span style="padding-right:10px">Nome</span>
+																</label>
+
+																<div class="col-xs-27">
+																	<input type="text" name="nome" class="qd_news_name input-type-text-ghost form-control" />
+																</div>
+															</div>
+
+															<div class="form-group">
+																<label class="col-xs-3 control-label">E
+																	<span style="padding-right:10px">mail</span>
+																</label>
+
+																<div class="col-xs-27">
+																	<input type="email" name="email" class="qd_news_email input-type-text-ghost form-control" style="width:88%" />
+																	<button class="qd_news_button" style="width:10%">OK</button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="qd-black-friday-know-more">
+										<div class="row">
+											<div class="col-xs-28 col-xs-offset-1">
+												<div class="row">
+													<div class="col-xs-30">
+														<p class="qd-black-friday-title">Saiba mais sobre as principais categorias da <strong>Drogaria Araujo</strong>.</p>
+
+														<div class="row">
+															<div class="col-xs-30">
+																<div class="qd-black-friday-know-more-ico-text">
+																	<a href="/dermocosmeticos">
+																		<span class="qd-icon qd-dermocosmeticos"></span>
+																		<span>Dermocosm&eacute;ticos</span>
+																	</a>
+																</div>
+
+																<p>Dermocosm&eacute;ticos s&atilde;o produtos que est&atilde;o entre os cosm&eacute;ticos e medicamentos. Na <strong>Araujo</strong>, voc&ecirc; encontra um mix completo com marcas mundialmente conhecidas e de acordo com a sua necessidade. Uma variedade de produtos para corpo, rosto e cabelos. Do tratamento ao uso di&aacute;rio. De protetor solar a creme anti-idade. Al&eacute;m de &aacute;gua termal, bronzeadores, cicatrizantes, cremes hidrantes, nutricosm&eacute;ticos e muito mais. Conhe&ccedil;a as principais marcas que voc&ecirc; encontra na <strong>Araujo</strong>: <a href="/anthelios">Anthelios</a>, <a href="/bepantol derma">Bepantol Derma</a>, <a href="/effaclar">Effaclar</a>, <a href="/imecap">Imecap</a>, <a href="/inneov">Inn&eacute;ov</a>, <a href="/minesol">Minesol</a>, <a href="/skinceuticals">SkinCeuticals</a>, <a href="/redermic">Redermic</a> e muito mais.</p>
+															</div>
+														</div>
+														<div class="row">
+															<div class="col-xs-30">
+																<div class="qd-black-friday-know-more-ico-text">
+																	<a href="/infantil/">
+																		<span class="qd-icon qd-mamae-e-bebe"></span>
+																		<span>Mam&atilde;e e Beb&ecirc;</span>
+																	</a>
+																</div>
+
+																<p>Carinho &eacute; a palavra que define essa categoria, e as mam&atilde;es n&atilde;o medem cuidados quando o assunto &eacute; filhos. Por isso, n&oacute;s temos uma variedade de produtos para o cuidado dos pequenos e da mam&atilde;e tamb&eacute;m. Voc&ecirc; encontra fraldas para escolher a que mais se adapta &agrave; pele do seu beb&ecirc; e n&atilde;o deix&aacute;-la irritada. Al&eacute;m disso, as melhores pomadas contra assadura para cuidar e tratar o seu pequeno. Umidificadores para os dias mais secos, len&ccedil;os umedecidos para melhor limpeza e carinho, leites infantis para cada momento dos beb&ecirc;s. Precisou? <strong>Araujo tem</strong>. <a href="/busca/?fq=B:8907">Huggies Turma da M&ocirc;nica</a>, <a href="/ninho">Ninho</a>, <a href="/pampers">Pampers</a>, <a href="/bepantol">Bepantol</a>, <a href="/milnutri">Milnutri</a>, <a href="/neslac">Neslac</a> e <a href="/Johnson s baby">Johnson&rsquo;s Baby</a> e muito mais.</p>
+															</div>
+														</div>
+
+														<div class="row">
+															<div class="col-xs-30">
+																<div class="qd-black-friday-know-more-ico-text">
+																	<a href="/beleza">
+																		<span class="qd-icon qd-beleza"></span>
+																		<span>Beleza</span>
+																	</a>
+																</div>
+
+																<p>As especialistas em beleza j&aacute; sabem que podem se esbaldar nos produtos da <strong>Araujo</strong>. As melhores ofertas em acess&oacute;rios, produtos para cuidar do rosto, repelentes, protetor solar, colora&ccedil;&otilde;es e maquiagens est&atilde;o aqui. Marcas mundialmente reconhecidas, como <a href="/amope">Amop&eacute;</a>, <a href="/exposis">Exposis</a>, <a href="/cicatricure">Cicatricure</a>, <a href="/nivea">Nivea</a>, <a href="/sundown">Sundown</a>, <a href="/loreal">Loreal</a>, <a href="/Maybelline">Maybelline</a> e muito mais com &oacute;timos pre&ccedil;os!</p>
+															</div>
+														</div>
+
+														<div class="row">
+															<div class="col-xs-30">
+																<div class="qd-black-friday-know-more-ico-text">
+																	<a href="/higiene-pessoal">
+																		<span class="qd-icon qd-higiene-pessoal"></span>
+																		<span>Higiene Pessoal</span>
+																	</a>
+																</div>
+
+																<p>Higiene tamb&eacute;m &eacute; sa&uacute;de. Que tal cuidar das duas aproveitando grandes ofertas? Produtos para a higiene bucal, desodorantes, shampoos, produtos para a barba e prote&ccedil;&atilde;o solar.&nbsp; Voc&ecirc; ainda conta com promo&ccedil;&otilde;es especiais das principais marcas: <a href="/oral b">Oral B</a>, <a href="/rexona">Rexona</a>, <a href="/dove">Dove</a>, <a href="/mach 3">Mach 3</a>, <a href="/pantene">Pantene</a>, <a href="/colgate">Colgate</a> e <a href="/Tresemmé">Tresemm&eacute;</a>. &nbsp;Aproveite!</p>
+															</div>
+														</div>
+
+														<div class="row">
+															<div class="col-xs-30">
+																<div class="qd-black-friday-know-more-ico-text">
+																	<a href="/saude">
+																		<span class="qd-icon qd-saude"></span>
+																		<span>Sa&uacute;de</span>
+																	</a>
+																</div>
+
+																<p>Com sa&uacute;de n&atilde;o podemos brincar. S&oacute; a Drogaria Araujo tem o <strong>Padr&atilde;o</strong> <strong>Araujo</strong> de Medicamentos, que te oferece as melhores ofertas sem deixar de lado a qualidade. Aqui voc&ecirc; encontra os melhores medidores de press&atilde;o arterial como <a href="/incoterm">Incoterm</a>,&nbsp;para o bra&ccedil;o ou para o pulso. Tamb&eacute;m para medir a glicose, como <a href="/one touch">One Touch</a>, <a href="/accu chek">Accu-Chek</a>. Vitaminas como <a href="/centrum">Centrum</a>, <a href="/depura">Depura</a>, <a href="/gerovital">Gerovital</a> e at&eacute; produtos para parar de fumar. Se precisar reabastecer a <a href="/saude/primeiros-socorros">caixinha de primeiros socorros</a> tamb&eacute;m temos tudo o que voc&ecirc; precisar.</p>
+															</div>
+														</div>
+
+														<div class="row">
+															<div class="col-xs-30">
+																<div class="qd-black-friday-know-more-ico-text">
+																	<a href="/pet-shop">
+																		<span class="qd-icon qd-pet-shop"></span>
+																		<span>Pet Shop</span>
+																	</a>
+																</div>
+
+																<p>A sa&uacute;de e bem-estar do seu pet &eacute; sempre importante e na <strong>Drogaria</strong>&nbsp;<strong>Araujo </strong>voc&ecirc; encontra tudo em um s&oacute; lugar. Ra&ccedil;&otilde;es para animais de portes e ra&ccedil;as diferentes, antipulgas para uma melhor pelagem e higiene, medicamentos, suplementos para a sa&uacute;de e shampoos para voc&ecirc; abra&ccedil;ar ainda mais o seu pet. <a href="/pedigree">Pedigree</a>, <a href="/frontline">Frontline</a>, <a href="/Whiskas">Whiskas</a>, <a href="/coleira-scalibor-antiparasitaria-para-caes/p">Scalibor</a>, <a href="/royal canin">Royal Canin</a>, <a href="/monovin">Monovin</a> e muitas outras marcas renomadas voc&ecirc; encontra na Araujo</p>
+															</div>
+														</div>
+
+														<div class="row">
+															<div class="col-xs-30">
+																<div class="qd-black-friday-know-more-ico-text">
+																	<a href="/fitness">
+																		<span class="qd-icon qd-fitness"></span>
+																		<span>Fitness</span>
+																	</a>
+																</div>
+
+																<p>Aumente sua endorfina! Fa&ccedil;a exerc&iacute;cios regularmente e conte com a Araujo para te manter em forma. Se sua praia for muscula&ccedil;&atilde;o, temos whey protein, albumina, barrinhas de prote&iacute;na. Para a sua rotina temos emagrecedores, shakes e energ&eacute;ticos. Confira as principais marcas que voc&ecirc; encontra na Araujo: <a href="/midway">Midway</a>, <a href="/Optimum nutrition">Optimum</a>, <a href="/sanavita">Sanavita</a>, <a href="/Health Labs">Health Labs</a>, <a href="/albumina-100--pura-naturovos-po/p">Naturovos </a>entre outras.</p>
+															</div>
+														</div>
+														<div class="row">
+															<div class="col-xs-30">
+																<div class="qd_news_black_friday">
+																	<p>Lembre-se de cadastrar seu e-mail para receber as ofertas da Black Friday Araujo em primeira m&atilde;o. Aproveite nossas ofertas e boas compras!</p>
+
+																	<div class="row">
+																		<div class="form-group">
+																			<label class="col-xs-3 control-label">Nome</label>
+
+																			<div class="col-xs-27">
+																				<input type="text" name="nome" class="qd_news_name input-type-text-ghost form-control" />
+																			</div>
+																		</div>
+
+																		<div class="form-group">
+																			<label class="col-xs-3 control-label">Email</label>
+
+																			<div class="col-xs-27">
+																				<input type="email" name="email" class="qd_news_email input-type-text-ghost form-control" style="width:88%" />
+																				<button class="qd_news_button" style="width:10%">OK</button>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-xs-30">
+											<p class="qd-black-friday-text-footer"> A Black Friday &eacute; um dia especial para o varejo, quando o com&eacute;rcio coloca produtos &agrave; venda com descontos que podem chegar at&eacute; 90% do seu valor original. Esta data acontece todos os anos, sempre na &uacute;ltima sexta-feira do m&ecirc;s de novembro. Em 2015, a Black Friday acontecer&aacute; no dia 27/11. </p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
