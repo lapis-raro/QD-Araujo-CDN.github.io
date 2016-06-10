@@ -1,19 +1,3 @@
-$(document).ready(function(){
-	$("input[placeholder], textarea[placeholder]").each(function(i, e){
-		if($(e).val() == "")
-		{
-			$(e).val($(e).attr("placeholder"));
-		}
-		$(e).blur(function(){
-	    if($(this).val()=="")
-	      $(this).val($(e).attr("placeholder"));
-		}).focus(function(){
-	    if($(this).val() == $(e).attr("placeholder"))
-        $(this).val("");
-		});
-	});
-});
-
 $(function() {
 	var form = $(".formulario");
 	form.find("#form_telefone").mask("(00) 0000-00009");
@@ -37,11 +21,10 @@ $(function() {
 
 			var submitWrapper = $form.find("[type=submit]").parent();
 			submitWrapper.addClass("qd-loading");
-			$.jsonp({
+			$.ajax({
 				url: "http://chadebebe.araujo.com.br/email-site/general_email.php?callback=?",
 				data: $form.serialize(),
-				dataType: "jsonp",
-				callback: "convenio_contact_callback",
+				dataType: "json",
 				success: function(){
 					submitWrapper.removeClass("qd-loading");
 					$form.find(".form-succes").removeClass("hide");

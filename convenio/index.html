@@ -1,10 +1,5 @@
 <!DOCTYPE html>
-<!--[if lt IE 8]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9 ie8"> <![endif]-->
-<!--[if IE 9]>         <html class="no-js lt-ie9 ie9"> <![endif]-->
-<!--[if gt IE 9]><!-->
 <html class="no-js" lang="pt-br">
-<!--<![endif]-->
 <head>
 	<title>Araujo</title>
 	<meta charset="UTF-8">
@@ -14,15 +9,8 @@
 	<link href="css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
 	<link href="css/main.css" rel="stylesheet">
 
-	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-		<script src="http://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-		<script src="http://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	<![endif]-->
-
 	<script src="http://code.jquery.com/jquery.js"></script>
-	<script type="text/javascript" src="//qd-araujo-cdn.github.io/arquivos/qd-iframe-adjust.js"></script>
+	<!-- <script type="text/javascript" src="//qd-araujo-cdn.github.io/arquivos/qd-iframe-adjust.js"></script> -->
 </head>
 <body>
 	<header>
@@ -92,11 +80,11 @@
 					<h4> Sua empresa ainda não é conveniada? </h4>
 					<h5> Solicite o contato de um consultor aqui. </h5>
 					<form class="formulario">
-						<input type="text" placeholder="Nome completo (Solicitante)">
-						<input type="text" placeholder="E-mail">
-						<input type="text" placeholder="Telefone" id="form_telefone">
-						<input type="text" placeholder="Empresa">
-						<input type="text" placeholder="CNPJ" id="form_cnpj">
+						<input type="text" class="required" name="Nome" placeholder="Nome completo (Solicitante)">
+						<input type="text" class="required" name="E-mail" placeholder="E-mail">
+						<input type="text" class="required" name="Telefone" placeholder="Telefone" id="form_telefone">
+						<input type="text" class="required" name="Empresa" placeholder="Empresa">
+						<input type="text" class="required" name="CNPJ" placeholder="CNPJ" id="form_cnpj">
 						<span> Todos os campos são obrigatórios. </span>
 						<button type="submit">Solicitar</button>
 						<div class="form-succes green-alert"><i class="fa fa-check-circle-o padding-r-sm font-size-sm"></i>Email enviado com sucesso </div>
