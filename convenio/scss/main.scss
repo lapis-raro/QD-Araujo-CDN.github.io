@@ -178,4 +178,8 @@ form{
 	bottom: -63px;
 	padding: 24px 0;
 	font-weight: bold;
+
+	&.hide {
+		display: none !important;
+	}
 }
