@@ -133,17 +133,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/convenio\/img\/cartao.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 189740,
-		"inputAbbreviatedPath": "\/convenio\/img\/cartao.png",
-		"outputAbbreviatedPath": "\/convenio\/img\/cartao.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/convenio\/img\/glyphicons-halflings-white.png": {
 		"fileType": 32768,
 		"ignore": 0,
