@@ -22,28 +22,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/arquivos\/js.arj.dalt.functions.base.min.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/arquivos\/js.arj.dalt.functions.base.min.js",
-		"outputAbbreviatedPath": "\/arquivos\/min\/js.arj.dalt.functions.base.min-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/arquivos\/js.arj.dalt.functions.giftlist.min.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/arquivos\/js.arj.dalt.functions.giftlist.min.js",
-		"outputAbbreviatedPath": "\/arquivos\/min\/js.arj.dalt.functions.giftlist.min-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
 	"\/arquivos\/js.arj.dalt.performance.test-2.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -129,6 +107,17 @@
 		"initialSize": 77912,
 		"inputAbbreviatedPath": "\/convenio\/img\/bg.png",
 		"outputAbbreviatedPath": "\/convenio\/img\/bg.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/convenio\/img\/cartao.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 189364,
+		"inputAbbreviatedPath": "\/convenio\/img\/cartao.png",
+		"outputAbbreviatedPath": "\/convenio\/img\/cartao.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
