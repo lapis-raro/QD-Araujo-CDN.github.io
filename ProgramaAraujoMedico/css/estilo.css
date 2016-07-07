@@ -1,0 +1,54 @@
+@font-face {
+	font-family: 'GothamBlack';
+	src: url('GothamBlack.eot');
+	src: url('GothamBlack.eot?#iefix') format('embedded-opentype'),
+		url('GothamBlack.woff') format('woff'),
+		url('GothamBlack.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
+}
+
+html, body{ margin:0px;}
+
+.titulo{
+	font-family: 'GothamBlack';
+	color:#FFF;
+	font-size:40px;
+	
+	}
+.titulo2{	font-family: 'GothamBlack';
+	 color:#89cce1;
+font-size:40px;}
+	
+	p{ width:500px;
+	 font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	 font-size:15px;
+	 color:#354f57;
+		}
+	
+.azul{
+	width:100%;
+	background-color:#8acee4;
+
+}
+	
+.programa
+{
+padding-top: 50px; 
+
+
+	}
+	
+.Benefícios{
+	background-image:url(../img/landing-araujo-medico_06.png);
+	background-repeat:no-repeat;
+	height:558px;
+	
+	
+	
+	}
+.max{max-width: 1800px;}
+
+li{
+	color:#89cce1;
+}
