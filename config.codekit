@@ -22,6 +22,28 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/arquivos\/js.arj.dalt.functions.base.min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/arquivos\/js.arj.dalt.functions.base.min.js",
+		"outputAbbreviatedPath": "\/arquivos\/min\/js.arj.dalt.functions.base.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/arquivos\/js.arj.dalt.functions.giftlist.min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/arquivos\/js.arj.dalt.functions.giftlist.min.js",
+		"outputAbbreviatedPath": "\/arquivos\/min\/js.arj.dalt.functions.giftlist.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/arquivos\/js.arj.dalt.performance.test-2.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -232,6 +254,159 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
+		},
+	"\/ProgramaAraujoMedico\/css\/bootstrap-theme.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/ProgramaAraujoMedico\/css\/bootstrap-theme.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/ProgramaAraujoMedico\/css\/bootstrap-theme.min.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/ProgramaAraujoMedico\/css\/bootstrap-theme.min.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/ProgramaAraujoMedico\/css\/bootstrap.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/ProgramaAraujoMedico\/css\/bootstrap.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/ProgramaAraujoMedico\/css\/bootstrap.min.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/ProgramaAraujoMedico\/css\/bootstrap.min.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/ProgramaAraujoMedico\/css\/estilo.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/ProgramaAraujoMedico\/css\/estilo.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/ProgramaAraujoMedico\/img\/landing-araujo-medico_03.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 114736,
+		"inputAbbreviatedPath": "\/ProgramaAraujoMedico\/img\/landing-araujo-medico_03.png",
+		"outputAbbreviatedPath": "\/ProgramaAraujoMedico\/img\/landing-araujo-medico_03.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/ProgramaAraujoMedico\/img\/landing-araujo-medico_06.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 625676,
+		"inputAbbreviatedPath": "\/ProgramaAraujoMedico\/img\/landing-araujo-medico_06.png",
+		"outputAbbreviatedPath": "\/ProgramaAraujoMedico\/img\/landing-araujo-medico_06.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/ProgramaAraujoMedico\/img\/landing-araujo-medico_08.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3343,
+		"inputAbbreviatedPath": "\/ProgramaAraujoMedico\/img\/landing-araujo-medico_08.png",
+		"outputAbbreviatedPath": "\/ProgramaAraujoMedico\/img\/landing-araujo-medico_08.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/ProgramaAraujoMedico\/img\/landing-araujo-medico_11.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4024,
+		"inputAbbreviatedPath": "\/ProgramaAraujoMedico\/img\/landing-araujo-medico_11.png",
+		"outputAbbreviatedPath": "\/ProgramaAraujoMedico\/img\/landing-araujo-medico_11.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/ProgramaAraujoMedico\/img\/landing-araujo-medico_16.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 80111,
+		"inputAbbreviatedPath": "\/ProgramaAraujoMedico\/img\/landing-araujo-medico_16.png",
+		"outputAbbreviatedPath": "\/ProgramaAraujoMedico\/img\/landing-araujo-medico_16.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/ProgramaAraujoMedico\/img\/landing-araujo-medico_20.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2935,
+		"inputAbbreviatedPath": "\/ProgramaAraujoMedico\/img\/landing-araujo-medico_20.png",
+		"outputAbbreviatedPath": "\/ProgramaAraujoMedico\/img\/landing-araujo-medico_20.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/ProgramaAraujoMedico\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/ProgramaAraujoMedico\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/ProgramaAraujoMedico\/js\/bootstrap.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/ProgramaAraujoMedico\/js\/bootstrap.js",
+		"outputAbbreviatedPath": "\/ProgramaAraujoMedico\/js\/min\/bootstrap-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/ProgramaAraujoMedico\/js\/bootstrap.min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/ProgramaAraujoMedico\/js\/bootstrap.min.js",
+		"outputAbbreviatedPath": "\/ProgramaAraujoMedico\/js\/min\/bootstrap.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/ProgramaAraujoMedico\/js\/npm.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/ProgramaAraujoMedico\/js\/npm.js",
+		"outputAbbreviatedPath": "\/ProgramaAraujoMedico\/js\/min\/npm-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
 		},
 	"\/README.md": {
 		"criticStyle": 0,
