@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap-filestyle.min.js"> </script>
+</head>
+<body>
+	<section class="publicidade">
+		<div class="box">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2">
+						<h1>Ofereça seu imóvel para a Araujo </h1>
+						<p>Você possui um imóvel bem localizado e gostaria de uma empresa consolidada para montar uma parceria de sucesso? Então, ofereça seu imóvel para a Araujo! </p>
+						<p>Estamos sempre buscando parceiros estratégicos, em toda Minas Gerais, para expandirmos ainda mais nossa área de atuação.</p>
+						<p>Preencha o formulário abaixo para que possamos avaliar e em caso de interesse entraremos em contato.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="dadosProposta">
+		<form action="http://chadebebe.araujo.com.br/email-site/general_email.php" method="get" class="container" target="qd_handling_form">  
+			<input type="hidden" value="cl@g" name="to[]">
+			<input type="hidden" value="pd@t" name="to[]">
+			<div class="row localImovel">
+				<div class="col-md-12">
+					<h2>Local do imóvel</h2>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="cep">CEP*:</label>
+						<input type="text" name="" id="cep" class="form-control" required>
+					</div>
+					<div class="form-group">
+						<label for="logradouro">Rua/Av.*:</label>
+						<input type="text" name="" id="logradouro" class="form-control" required>
+					</div>
+					<div class="form-group">
+						<label for="complemento">Complemento:</label>
+						<input type="text" name="" id="complemento" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="numeroCasa">Número*:</label>
+						<input type="text" name="" id="numeroCasa" class="form-control" required>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="bairro">Bairro*:</label>
+						<input type="text" name="" id="bairro" class="form-control" required>
+					</div>
+					<div class="form-group">
+						<label for="cidade">Cidade*:</label>
+						<input type="text" name="" id="cidade" class="form-control" required>
+					</div>
+					<div class="form-group">
+						<label for="estado">Estado*:</label>
+						<input type="text" name="" id="estado" class="form-control" required>
+					</div>
+					<div class="form-group">
+						<label for="referencia">Ponto de referência*:</label>
+						<input type="text" name="" id="referencia" class="form-control">
+					</div>
+				</div>
+			</div>
+			<div class="row detalheImovel">
+				<div class="col-md-12">
+					<h2>Detalhes do imóvel</h2>
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+						<label for="segmento">Áreas de vendas:</label>
+						<input type="text" name="" id="segmento" class="form-control">
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+						<label for="areaTotal">Área total*:</label>
+						<input type="text" name="" id="areaTotal" class="form-control" required>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+						<label>Possui estacionamento*:</label>
+						<select name="" class="form-control">
+							<option value="">Sim</option>
+							<option value="">Não</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="row responsavelOferta">
+				<div class="col-md-12">
+					<h2>Responsável pela oferta</h2>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="nomeCompleto">Nome completo*:</label>
+						<input type="text" name="" id="nomeCompleto" class="form-control" required>
+					</div>
+					<div class="form-group">
+						<label for="emailPessoa">E-mail*:</label>
+						<input type="email" name="" id="emailPessoa" class="form-control" required>
+					</div>
+					<div class="form-group">
+						<label>Você é*:</label>
+						<select name="" class="form-control">
+							<option value="">Corretor</option>
+							<option value="">Proprietário</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="telCelular">Telefone celular*:</label>
+						<input type="tel" name="" id="telCelular" placeholder="(DDD) XXXXX-XXXX" class="form-control" required>
+					</div>
+					<div class="form-group">
+						<label for="telAlternativo">Telefone alternativo:</label>
+						<input type="tel" name="" id="telAlternativo" placeholder="(DDD) XXXXX-XXXX" class="form-control">
+					</div>
+				</div>
+			</div>
+			<div class="row tipoOferta">
+				<div class="col-md-12">
+					<h2>Tipo de oferta</h2>
+				</div>
+				<div class="col-md-12">
+					<div class="form-group">
+						<span>Qual o tipo de sua oferta?*:</span>
+						<input type="checkbox" name=""><label for="">Aluguel</label>
+						<input type="checkbox" name=""><label for="">Venda</label>
+						<input type="checkbox" name=""><label for="">Aluguel ou venda</label>
+					</div>
+				</div>
+			</div>
+			<div class="row fotoOferta">
+				<div class="col-md-8">
+					<div class="form-group">
+						<p>Anexar fotos do imóvel:</p>
+						<input type="file" name="" id="inputFotos">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-8">
+					<input type="submit" value="Enviar Proposta" name="" class="btn btn-danger btn-lg bth-enviar">
+					<p class="observacao">*Campos obrigatórios</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-8">
+					<iframe name="qd_handling_form" src="" style="width: 100%; height: 50px; display: inline-block; overflow: hidden;" frameborder="0"></iframe>
+				</div>
+			</div>
+		</form>
+	</section>
+	<script>
+		$('#inputFotos').filestyle({
+			icon : false,
+			buttonText : 'Procurar',
+			buttonName : 'btn-danger'
+		});
+		jQuery(document).ready(function(){
+			var labelID;
+			$('label').click(function() {
+				labelID = $(this).attr('for');
+				$('#'+labelID).trigger('click');
+			});
+		});
+	</script>
+</body>
+</html>
