@@ -2,7 +2,7 @@ $(function() {
 	if(!$(document.body).is('.ofereca-imovel'))
 		return;
 
-	var form = $(".dadosProposta form");
+	var form = $('.dadosProposta form');
 		form.find('.qd_form_cep').mask('00000-000');
 		form.find('.qd_form_phone').mask('(00) 0000-00009');
 
