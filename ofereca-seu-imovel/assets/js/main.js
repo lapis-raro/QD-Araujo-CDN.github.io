@@ -6,9 +6,6 @@ $(function() {
 		form.find('.qd_form_cep').mask('00000-000');
 		form.find('.qd_form_phone').mask('(00) 0000-00009');
 
-	$.ajax({url: "//api.ipify.org?format=jsonp", dataType: "jsonp", success: function(data) { sendData(data.ip); }, error: function() {$.ajax({url: "//www.telize.com/jsonip", dataType: "jsonp", success: function(data) { sendData(data.ip); }, error: function(data) { sendData(null); } }); } });
-
-	form.append('<input class="hidden" type="text" name="subject" value="Ofereça seu imovel - ' + email +' ">');
 
 	form.validate({
 		rules: {email: {email: true } },
@@ -21,20 +18,11 @@ $(function() {
 			// Enviando os dados para o CRM
 			(function() {
 				// Adicionando classe de carregando
-				var submitWrapper = $form.find("[type=submit]").parent().addClass("qd-loading");
+				var submitWrapper = $form.find('[type=submit]').parent().addClass('qd-loading');
 
 				// Obtendo o e-mail
-				var email = $form.find("#qd_form_email").val() || "";
-				if(!email.length)
-					return alert("Preencha seu e-mail");
-
-				// var saveContact = function(userId) {
-					var phone = ($form.find("#telCelular").val() || "").replace(/[^0-9]+/ig, "");
-					phone = phone.length? "+55" + phone: null;
-
-					$.ajax({url: "//api.ipify.org?format=jsonp", dataType: "jsonp", success: function(data) { sendData(data.ip); }, error: function() {$.ajax({url: "//www.telize.com/jsonip", dataType: "jsonp", success: function(data) { sendData(data.ip); }, error: function(data) { sendData(null); } }); } });
-
-					$form.append('<input type="hidden" name="IP"  value="'+ip+'" />');
+				var email = $form.find('#emailPessoa').val() || "";
+				form.append('<input class="hidden" type="text" name="subject" value="Ofereça seu imovel - ' + email +' ">');
 			})();
 
 			return true;
