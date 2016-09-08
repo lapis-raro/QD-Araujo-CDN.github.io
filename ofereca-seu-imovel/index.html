@@ -9,7 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-	<!-- <script type="text/javascript" src="assets/js/bootstrap-filestyle.min.js"></script> -->
+	<script type="text/javascript" src="assets/js/bootstrap-filestyle.min.js"></script>
 	<script src="assets/js/main.js"></script>
 	<script type="text/javascript" src="//qd-araujo-cdn.github.io/arquivos/qd-iframe-adjust.js"></script>
 </head>
@@ -29,7 +29,7 @@
 		</div>
 	</section>
 	<section class="dadosProposta">
-		<form action="http://chadebebe.araujo.com.br/email-site/general_email.php" method="get" class="container" target="qd_handling_form" enctype="multipart/form-data">  
+		<form action="http://chadebebe.araujo.com.br/email-site/general_email.php" method="POST" class="container" target="qd_handling_form" enctype="multipart/form-data">  
 			<input type="hidden" value="cl@g" name="to[]">
 			<input type="hidden" value="pd@t" name="to[]">
 			<div class="row localImovel">
@@ -166,11 +166,11 @@
 		</form>
 	</section>
 	<script>
-		// $('#inputFotos').filestyle({
-		// 	icon : false,
-		// 	buttonText : 'Procurar',
-		// 	buttonName : 'btn-danger'
-		// });
+		$('#inputFotos').filestyle({
+			icon : false,
+			buttonText : 'Procurar',
+			buttonName : 'btn-danger'
+		});
 		jQuery(document).ready(function(){
 			var labelID;
 			$('label').click(function() {
