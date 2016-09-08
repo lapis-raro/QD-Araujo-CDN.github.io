@@ -11,15 +11,13 @@ $(function() {
 			if(!$form.valid())
 				return;
 
-			// Enviando os dados para o CRM
-			(function() {
-				// Adicionando classe de carregando
-				var submitWrapper = $form.find('[type=submit]').parent().addClass('qd-loading');
+			// Adicionando classe de carregando
+			var submitWrapper = $form.find('[type=submit]').parent().addClass('qd-loading');
 
-				// Obtendo o e-mail
-				var email = $form.find('#emailPessoa').val() || "";
-				form.append('<input class="hidden" type="text" name="subject" value="Ofereça seu imovel - ' + email +' ">');
-			})();
+			// Obtendo o e-mail
+			var email = $form.find('#emailPessoa').val() || "";
+			$form.append('<input class="hidden" type="text" name="subject" value="Ofereça seu imovel - ' + email +' ">');
+			console.log('Funciona!');
 
 			return true;
 		},
