@@ -3,7 +3,6 @@ $(function() {
 		form.find('.qd_form_cep').mask('00000-000');
 		form.find('.qd_form_phone').mask('(00) 0000-00009');
 
-
 	form.validate({
 		rules: {email: {email: true } },
 		submitHandler: function(form){
@@ -20,6 +19,7 @@ $(function() {
 				// Obtendo o e-mail
 				var email = $form.find('#emailPessoa').val() || "";
 				form.append('<input class="hidden" type="text" name="subject" value="Ofereça seu imovel - ' + email +' ">');
+				form[0].reset();
 			})();
 
 			return true;
