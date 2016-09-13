@@ -113,3 +113,6 @@ h2{
 	font-size: .85em;
 	font-weight: bold;
 }
+.form-control.error {
+	border-color: #ff0000 !important;
+}

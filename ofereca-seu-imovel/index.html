@@ -2,13 +2,16 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+	<title>Ofereça seu imóvel para a Araújo</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="assets/js/bootstrap-filestyle.min.js"> </script>
+	<script type="text/javascript" src="assets/js/bootstrap-filestyle.min.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script type="text/javascript" src="//qd-araujo-cdn.github.io/arquivos/qd-iframe-adjust.js"></script>
 </head>
 <body>
 	<section class="publicidade">
@@ -26,9 +29,11 @@
 		</div>
 	</section>
 	<section class="dadosProposta">
-		<form action="http://chadebebe.araujo.com.br/email-site/general_email.php" method="get" class="container" target="qd_handling_form">  
-			<input type="hidden" value="cl@g" name="to[]">
-			<input type="hidden" value="pd@t" name="to[]">
+		<form action="http://chadebebe.araujo.com.br/email-site/general_email.php" method="POST" class="container" target="qd_handling_form" enctype="multipart/form-data">  
+			<input type="hidden" value="iv@a" name="to[]">
+			<input type="hidden" value="im@a" name="to[]">
+			<input type="hidden" value="ds@a" name="to[]">
+
 			<div class="row localImovel">
 				<div class="col-md-12">
 					<h2>Local do imóvel</h2>
@@ -36,37 +41,37 @@
 				<div class="col-md-6">
 					<div class="form-group">
 						<label for="cep">CEP*:</label>
-						<input type="text" name="" id="cep" class="form-control" required>
+						<input type="text" name="CEP" id="cep" class="form-control qd_form_cep" required>
 					</div>
 					<div class="form-group">
 						<label for="logradouro">Rua/Av.*:</label>
-						<input type="text" name="" id="logradouro" class="form-control" required>
+						<input type="text" name="Logradouro" id="logradouro" class="form-control" required>
 					</div>
 					<div class="form-group">
 						<label for="complemento">Complemento:</label>
-						<input type="text" name="" id="complemento" class="form-control">
+						<input type="text" name="Complemento" id="complemento" class="form-control">
 					</div>
 					<div class="form-group">
 						<label for="numeroCasa">Número*:</label>
-						<input type="text" name="" id="numeroCasa" class="form-control" required>
+						<input type="text" name="Número" id="numeroCasa" class="form-control" required>
 					</div>
 				</div>
 				<div class="col-md-6">
 					<div class="form-group">
 						<label for="bairro">Bairro*:</label>
-						<input type="text" name="" id="bairro" class="form-control" required>
+						<input type="text" name="Bairro" id="bairro" class="form-control" required>
 					</div>
 					<div class="form-group">
 						<label for="cidade">Cidade*:</label>
-						<input type="text" name="" id="cidade" class="form-control" required>
+						<input type="text" name="Cidade" id="cidade" class="form-control" required>
 					</div>
 					<div class="form-group">
 						<label for="estado">Estado*:</label>
-						<input type="text" name="" id="estado" class="form-control" required>
+						<input type="text" name="Estado" id="estado" class="form-control" required>
 					</div>
 					<div class="form-group">
 						<label for="referencia">Ponto de referência*:</label>
-						<input type="text" name="" id="referencia" class="form-control">
+						<input type="text" name="Ponto de referência" id="referencia" class="form-control">
 					</div>
 				</div>
 			</div>
@@ -77,21 +82,21 @@
 				<div class="col-md-4">
 					<div class="form-group">
 						<label for="segmento">Áreas de vendas:</label>
-						<input type="text" name="" id="segmento" class="form-control">
+						<input type="text" name="Áreas de vendas" id="segmento" class="form-control">
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="form-group">
 						<label for="areaTotal">Área total*:</label>
-						<input type="text" name="" id="areaTotal" class="form-control" required>
+						<input type="text" name="Área total" id="areaTotal" class="form-control" required>
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="form-group">
 						<label>Possui estacionamento*:</label>
-						<select name="" class="form-control">
-							<option value="">Sim</option>
-							<option value="">Não</option>
+						<select name="Possui estacionamento" class="form-control">
+							<option value="Sim">Sim</option>
+							<option value="Não">Não</option>
 						</select>
 					</div>
 				</div>
@@ -103,28 +108,28 @@
 				<div class="col-md-6">
 					<div class="form-group">
 						<label for="nomeCompleto">Nome completo*:</label>
-						<input type="text" name="" id="nomeCompleto" class="form-control" required>
+						<input type="text" name="Nome completo" id="nomeCompleto" class="form-control" required>
 					</div>
 					<div class="form-group">
 						<label for="emailPessoa">E-mail*:</label>
-						<input type="email" name="" id="emailPessoa" class="form-control" required>
+						<input type="email" name="E-mail" id="emailPessoa" class="form-control" required>
 					</div>
 					<div class="form-group">
 						<label>Você é*:</label>
-						<select name="" class="form-control">
-							<option value="">Corretor</option>
-							<option value="">Proprietário</option>
+						<select name="Você é" class="form-control">
+							<option value="Corretor">Corretor</option>
+							<option value="Proprietário">Proprietário</option>
 						</select>
 					</div>
 				</div>
 				<div class="col-md-6">
 					<div class="form-group">
 						<label for="telCelular">Telefone celular*:</label>
-						<input type="tel" name="" id="telCelular" placeholder="(DDD) XXXXX-XXXX" class="form-control" required>
+						<input type="tel" name="Telefone celular" id="telCelular" placeholder="(DDD) XXXXX-XXXX" class="form-control qd_form_phone" required>
 					</div>
 					<div class="form-group">
 						<label for="telAlternativo">Telefone alternativo:</label>
-						<input type="tel" name="" id="telAlternativo" placeholder="(DDD) XXXXX-XXXX" class="form-control">
+						<input type="tel" name="Telefone alternativo" id="telAlternativo" placeholder="(DDD) XXXXX-XXXX" class="form-control qd_form_phone">
 					</div>
 				</div>
 			</div>
@@ -135,9 +140,9 @@
 				<div class="col-md-12">
 					<div class="form-group">
 						<span>Qual o tipo de sua oferta?*:</span>
-						<input type="checkbox" name=""><label for="">Aluguel</label>
-						<input type="checkbox" name=""><label for="">Venda</label>
-						<input type="checkbox" name=""><label for="">Aluguel ou venda</label>
+						<input type="checkbox" name="Aluguel" value="Aluguel"><label for="">Aluguel</label>
+						<input type="checkbox" name="Venda" value="Venda"><label for="">Venda</label>
+						<input type="checkbox" name="Aluguel ou venda" value="Aluguel ou venda"><label for="">Aluguel ou venda</label>
 					</div>
 				</div>
 			</div>
@@ -145,13 +150,13 @@
 				<div class="col-md-8">
 					<div class="form-group">
 						<p>Anexar fotos do imóvel:</p>
-						<input type="file" name="" id="inputFotos">
+						<input type="file" name="qdfile" id="inputFotos">
 					</div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-8">
-					<input type="submit" value="Enviar Proposta" name="" class="btn btn-danger btn-lg bth-enviar">
+					<input type="submit" value="Enviar Proposta" name="Enviar Proposta" class="btn btn-danger btn-lg bth-enviar">
 					<p class="observacao">*Campos obrigatórios</p>
 				</div>
 			</div>
