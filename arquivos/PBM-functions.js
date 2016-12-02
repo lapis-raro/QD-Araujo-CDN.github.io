@@ -1,12 +1,219 @@
-var QdPbm={init:function(){QdPbm.cookieRenew();QdPbm.pbmHtmlLayout();QdPbm.pbmConsult()},sever:"http://chadebebe.araujo.com.br/araujo-pbm",cookieRenew:function(){$.cookie("qdPbm",$.cookie("qdPbm")||"",{path:"/",expires:1})},pbmHtmlLayout:function(){$(".product-other-payment-method-wrap").before('<div class="row"> <div class="col-xs-30"> <div class="product-qd-v1-pbm p"><div class="qd-loading" style="display: none;"><img src="/arquivos/ajax-loader.gif" /></div><label for="">CPF: <input type="tel" /></label><button>Enviar</button></div> </div> </div>');
-QdPbm.pbmLoading=$(".product-qd-v1-pbm .qd-loading")},pbmConsult:function(){var c=$(".product-qd-v1-pbm"),f=$(".product-sku-rich-selection-wrap .buy-button"),g=$(".product-sku-rich-selection-wrap .skuList");c.find("button").click(function(){var b=(c.find("input").val()||"").trim();if(!b.length)return alert("Informe um CPF");QdPbm.pbmProcessItem(0,skuJson.skus[0],b,f,g)})},pbmProcessItem:function(c,f,g,b,h){function e(){QdPbm.pbmProcessItem(c+1,skuJson.skus,g,b,h)}if("undefined"!=typeof skuJson.skus[c]){var a=
-$(".product-qd-v1-pbm");if(!skuJson.skus[c].available)return e();QdPbm.reqData={cpf:g,qtt:b.filter('[href*="sku='+skuJson.skus[c].sku+'&"]').closest(h).find(".qd-sq-quantity").val()||1,bDate:"",sku:skuJson.skus[c].sku,productId:skuJson.productId};(f=$.cookie("qdPbm"))&&f.length&&(QdPbm.reqData.orderId=f);QdPbm.pbmLoading.show();$.ajax({url:QdPbm.sever+"/pre-auth",dataType:"json",type:"POST",data:QdPbm.reqData,complete:function(){QdPbm.pbmLoading.hide()}}).fail(function(){alert("Desculpe, n\u00e3o foi poss\u00edvel consultar o sistema.")}).done(function(d){if(d.redirect&&
-0==d.redirect.indexOf("ATIVA")){if(!$(".qd-pbm-modal-sign-up").length){var b=$(".qd-common-modal").clone().removeClass("qd-common-modal").addClass("qd-pbm-modal-sign-up");b.modal();b.on("hidden.bs.modal",function(){b.remove()});QdPbm.pbmInsertSignUpForm(b,d,g)}}else{if(d.item){d.item.QtdeAuth!=QdPbm.reqData.qtt&&a.append("<p>Quantidade solicitada \u00e9 diferente da quantidade na qual foi concedido o desconto</p>");var c=Math.ceil((100-d.item.DescPerc/100)/100*d.item.price);d.item.sellingPrice<=c?
-a.append("<p>O desconto oferecido para o item \u201c"+d.item.nameComplete+"\u201d \u00e9 menor do que o pre\u00e7o oferecido pela Araujo. Fique tranquilo, voc\u00ea j\u00e1 esta pagando o menor pre\u00e7o para este item.</p>"):a.append("<p>O item \u201c"+d.item.nameComplete+"\u201d teve o desconto concedido. Voc\u00ea pagar\u00e1 R$ "+qd_number_format(c/100,2,",",".")+"</p>")}a.append("<p>Informa\u00e7\u00e3o do sistema de PBM: \u201c"+d.info+"\u201d </p>")}}).done(function(a){"string"==typeof a.id&&
-a.id.length&&$.cookie("qdPbm",a.orderId,{path:"/",expires:1})}).done(function(){e()}).done(function(a){30!=a.statusServico&&31!=a.statusServico||$.ajax(QdPbm.sever+"/").always(function(){location.reload()})})}},pbmRegexCache:{onlyNumber:/[^0-9]+/g,date:/([0-9]+)\/([0-9]+)\/([0-9]+)/},pbmInsertSignUpForm:function(c,f,g){var b=$('<form><span class="qd-pbm-ATIVA qd-pbm-ATIVA2 qd-pbm-ATIVA3 qd-pbm-ATIVA4"><div class="form-group"><label>Nome Completo <input class="form-control" type="text" name="name"></label></div></span><span class="qd-pbm-ATIVA qd-pbm-ATIVA4 qd-pbm-ATIVA5 qd-pbm-ATIVA-QD"><div class="form-group"><label>E-mail <input class="form-control" type="email" name="email"></label></div><div class="form-group"><label>CPF <input class="form-control" type="text" name="cpf"></label></div></span><span class="qd-pbm-ATIVA qd-pbm-ATIVA4"><div class="form-group"><div class="radio"><label>Masculino <input type="radio" value="77" title="Masculino" name="gender"></label><label>Feminino <input type="radio" value="70" title="Feminino" name="gender"></label></div></div><div class="form-group"><label>Data de anivers\u00e1rio <input class="form-control" type="text" name="bDate"></label></div><div class="form-group"><label>Telefone <input class="form-control" type="text" name="phone"></label></div></span><span class="qd-pbm-ATIVA qd-pbm-ATIVA2 qd-pbm-ATIVA3 qd-pbm-ATIVA4"><div class="form-group"><label>Celular <input class="form-control" type="text" name="mPhone"></label></div></span><span class="qd-pbm-ATIVA qd-pbm-ATIVA4"><div class="form-group"><label>CEP <input class="form-control" type="text" name="zip"></label></div><div class="form-group"><label>Tipo <select class="form-control" name="aType"><option value=""></option><option value="AV">Avenida</option><option value="AL">Alameda</option><option value="EST">Estrada</option><option value="PC">Pra\u00e7a</option><option value="R">Rua</option><option value="ROD">Rodovia</option><option value="TRV">Travessa</option><option value="LG">Largo</option><option value="Outr">Demais</option></select></label></div><div class="form-group"><label>Endere\u00e7o <input class="form-control" type="text" name="address"></label></div><div class="form-group"><label>N\u00famero <input class="form-control" type="text" name="n"></label></div><div class="form-group"><label>Complemento do endere\u00e7o <input class="form-control" type="text" name="complement"></label></div><div class="form-group"><label>Bairro <input class="form-control" type="text" name="neighborhood"></label></div><div class="form-group"><label>Cidade <input class="form-control" type="text" name="city"></label></div><div class="form-group"><label>Estado <select class="form-control" name="state"><option value=""></option><option value="AC">Acre</option><option value="AL">Alagoas</option><option value="AP">Amap\u00e1</option><option value="AM">Amazonas</option><option value="BA">Bahia</option><option value="CE">Cear\u00e1</option><option value="DF">Distrito Federal</option><option value="ES">Esp\u00edrito Santo</option><option value="GO">Goi\u00e1s</option><option value="MA">Maranh\u00e3o</option><option value="MT">Mato Grosso</option><option value="MS">Mato Grosso do Sul</option><option value="MG">Minas Gerais</option><option value="PA">Par\u00e1</option><option value="PB">Para\u00edba</option><option value="PR">Paran\u00e1</option><option value="PE">Pernambuco</option><option value="PI">Piau\u00ed</option><option value="RJ">Rio de Janeiro</option><option value="RN">Rio Grande do Norte</option><option value="RS">Rio Grande do Sul</option><option value="RO">Rond\u00f4nia</option><option value="RR">Roraima</option><option value="SC">Santa Catarina</option><option value="SP">S\u00e3o Paulo</option><option value="SE">Sergipe</option><option value="TO">Tocantins</option></select></label></div></span><span class="qd-pbm-ATIVA qd-pbm-ATIVA1 qd-pbm-ATIVA3"><div class="form-group"><label>Nome do m\u00e9dico <input class="form-control" type="text" name="profName"></label></div><div class="form-group"><label>CRM do m\u00e9dico <input class="form-control" type="text" name="profCod"></label></div><div class="form-group"><label>Estado do m\u00e9dico <select class="form-control" name="profState"><option value="">Selecione</option><option value="AC">Acre</option><option value="AL">Alagoas</option><option value="AP">Amap\u00e1</option><option value="AM">Amazonas</option><option value="BA">Bahia</option><option value="CE">Cear\u00e1</option><option value="DF">Distrito Federal</option><option value="ES">Esp\u00edrito Santo</option><option value="GO">Goi\u00e1s</option><option value="MA">Maranh\u00e3o</option><option value="MT">Mato Grosso</option><option value="MS">Mato Grosso do Sul</option><option value="MG">Minas Gerais</option><option value="PA">Par\u00e1</option><option value="PB">Para\u00edba</option><option value="PR">Paran\u00e1</option><option value="PE">Pernambuco</option><option value="PI">Piau\u00ed</option><option value="RJ">Rio de Janeiro</option><option value="RN">Rio Grande do Norte</option><option value="RS">Rio Grande do Sul</option><option value="RO">Rond\u00f4nia</option><option value="RR">Roraima</option><option value="SC">Santa Catarina</option><option value="SP">S\u00e3o Paulo</option><option value="SE">Sergipe</option><option value="TO">Tocantins</option></select></label></div></span><span class="qd-pbm-ATIVA qd-pbm-ATIVA2 qd-pbm-ATIVA3 qd-pbm-ATIVA4"><div class="form-group"><div class="checkbox"><label>Aceito os termos do programa <input type="checkbox" value="83" name="accept"></label></div></div></span><span class="qd-pbm-ATIVA qd-pbm-ATIVA4"><div class="form-group"><div class="checkbox"><label>Aceito contato por telefone <input type="checkbox" value="83" name="acceptPhone"></label></div></div><div class="form-group"><div class="checkbox"><label>Aceito contato por correspond\u00eancia <input type="checkbox" value="83" name="acceptMail"></label></div></div><div class="form-group"><div class="checkbox"><label>Aceito contato por SMS <input type="checkbox" value="83" name="acceptSMS"></label></div></div><div class="form-group"><div class="checkbox"><label>Aceito contato por e-mail <input type="checkbox" value="83" name="acceptEmail"></label></div></div></span><button type="submit">Enviar</button></form>');
-c.find(".modal-body").html(b);b.find(".qd-pbm-ATIVA").hide().filter(".qd-pbm-"+f.redirect).show().find("input:not([type=checkbox]), input[name=accept], select").addClass("required");b.find('.qd-pbm-ATIVA:not(".qd-pbm-'+f.redirect+'")').remove();b.find("input[name=zip]").mask("00000-000");b.find("input[name=phone]").mask("(00) 0000-0000");b.find("input[name=mPhone]").mask("(00) 0000-00009");b.find("input[name=cpf]").val(g).mask("000.000.000-00");b.find("input[name=bDate]").mask("D0/M0/0000",{translation:{D:{pattern:/[0123]/},
-M:{pattern:/[01]/}}});var h=b.find("select, input").filter("[name=aType], [name=address], [name=n], [name=complement], [name=neighborhood], [name=city], [name=state]").attr("disabled","disabled"),e=b.find("input[name=zip]");e.keyup(function(a){9>(e.val()||"").length||(e.attr("disabled","disabled"),$.ajax({url:"/api/checkout/pub/postal-code/BRA/"+e.val(),dataType:"json",complete:function(){h.add(e).removeAttr("disabled")}}).done(function(a){var d=(a.street||"").trim().split(" "),c=null;b.find("select[name=aType] option").each(function(){var a=
-$(this);if(d[0].toUpperCase().replaceSpecialChars()==a.text().toUpperCase().replaceSpecialChars())return c=a.text(),a.parent().val(a.attr("value")).change(),!1});c?d[0]="":b.find("select[name=aType]").val("Outr").change();b.find("input[name=address]").val(d.join(" "));b.find("input[name=neighborhood]").val(a.neighborhood||"");b.find("input[name=city]").val(a.city||"");b.find("select[name=state]").val(a.state||"").change()}))});b.validate({rules:{email:{email:!0}},submitHandler:function(a){a=$(a);
-if(a.valid()){var b=a.serializeArray();a={};for(var e=0;e<b.length;e++)b[e].value&&(a[b[e].name||"---"]=b[e].value);a.acceptPhone=a.acceptPhone||"78";a.acceptMail=a.acceptMail||"78";a.acceptSMS=a.acceptSMS||"78";a.acceptEmail=a.acceptEmail||"78";a.zip&&(a.zip=a.zip.replace(QdPbm.pbmRegexCache.onlyNumber,""));a.cpf&&(a.cpf=a.cpf.replace(QdPbm.pbmRegexCache.onlyNumber,""));a.bDate&&(a.bDate=a.bDate.replace(QdPbm.pbmRegexCache.date,"$3-$2-$1"));a.mPhone&&(a.mPhone=a.mPhone.replace(QdPbm.pbmRegexCache.onlyNumber,
-"").split(""),a.mPhoneCode=a.mPhone.shift()+a.mPhone.shift(),a.mPhone=a.mPhone.join(""));a.phone&&(a.phone=a.phone.replace(QdPbm.pbmRegexCache.onlyNumber,"").split(""),a.phoneCode=a.phone.shift()+a.phone.shift(),a.phone=a.phone.join(""));a.preAuthId=f.id;b=f.redirect&&"ATIVA-QD"==f.redirect;$.ajax({url:QdPbm.sever+(b?"/pre-auth":"/sign-up"),type:"POST",dataType:"json",data:b?$.extend({},QdPbm.reqData,a):a}).fail(function(){alert("Desculpe, n\u00e3o foi poss\u00edvel consultar o sistema.")}).done(function(a){alert(a.info);
-c.on("hidden.bs.modal",function(){$(".product-qd-v1-pbm button").click()});c.modal("hide")});return!1}},errorPlacement:function(a,b){}})}};$(QdPbm.init);
+var QdPbm = {
+	init: function() {
+		QdPbm.cookieRenew(); // chamar antes de todos
+		QdPbm.pbmHtmlLayout();
+		QdPbm.pbmConsult();
+	},
+	// sever: '//localhost:8080/araujo-pbm',
+	sever: '//web.araujo.com.br/araujo-pbm/',
+	cookieRenew: function() {
+		$.cookie('qdPbm', $.cookie('qdPbm') || '', {path: '/', expires: 1});
+	},
+	pbmHtmlLayout: function() {
+		$('.product-other-payment-method-wrap').before('<div class="row"> <div class="col-xs-30"> <div class="product-qd-v1-pbm p"><div class="qd-loading" style="display: none;"><img src="/arquivos/ajax-loader.gif" /></div><label for="">CPF: <input type="tel" /></label><button>Enviar</button></div> </div> </div>');
+
+		QdPbm.pbmLoading = $('.product-qd-v1-pbm .qd-loading');
+	},
+	pbmConsult: function() {
+		var wrapper = $('.product-qd-v1-pbm');
+		var buyBtns = $('.product-sku-rich-selection-wrap .buy-button');
+		var skuLists = $('.product-sku-rich-selection-wrap .skuList');
+
+		wrapper.find('button').click(function() {
+			var cpf = (wrapper.find('input').val() || '').trim();
+			if(!cpf.length)
+				return alert('Informe um CPF');
+
+			QdPbm.pbmProcessItem(0, skuJson.skus[0], cpf, buyBtns, skuLists);
+		});
+	},
+	pbmProcessItem: function(ndx, items, cpf, buyBtns, skuLists) {
+		if(typeof skuJson.skus[ndx] == 'undefined')
+			return;
+
+		function callNext() {
+			QdPbm.pbmProcessItem(ndx + 1, skuJson.skus, cpf, buyBtns, skuLists);
+		};
+
+		var wrapper = $('.product-qd-v1-pbm');
+
+		// Verifico se este item esta disponível em estoque
+		if(!skuJson.skus[ndx].available)
+			return callNext();
+
+		QdPbm.reqData = {
+			cpf: cpf,
+			qtt: buyBtns.filter('[href*="sku=' + skuJson.skus[ndx].sku + '&"]').closest(skuLists).find('.qd-sq-quantity').val() || 1,
+			bDate: '',
+			sku: skuJson.skus[ndx].sku,
+			productId: skuJson.productId
+		};
+
+		// Caso eu tenha o ID da transação anterior
+		var cookie = $.cookie('qdPbm');
+		if(cookie && cookie.length)
+			QdPbm.reqData.orderId = cookie;
+
+		QdPbm.pbmLoading.show();
+		$.ajax({
+			url: QdPbm.sever + '/pre-auth',
+			dataType: 'json',
+			type: 'POST',
+			data: QdPbm.reqData,
+			complete: function() { QdPbm.pbmLoading.hide() }
+		})
+		.fail(function() {alert('Desculpe, não foi possível consultar o sistema.');})
+		.done(function(data) {
+			// Exibindo o modal de cadastro
+			if(data.redirect && data.redirect.indexOf('ATIVA') == 0){
+				if($('.qd-pbm-modal-sign-up').length)
+					return;
+
+				var modal = $('.qd-common-modal').clone().removeClass('qd-common-modal').addClass('qd-pbm-modal-sign-up');
+				modal.modal();
+				modal.on('hidden.bs.modal', function() {modal.remove()});
+				QdPbm.pbmInsertSignUpForm(modal, data, cpf);
+				return;
+			}
+
+			// Exibindo as informações sobre o desconto do item
+			if(data.item){
+				if(data.item.QtdeAuth != QdPbm.reqData.qtt)	
+					wrapper.append('<p>Quantidade solicitada é diferente da quantidade na qual foi concedido o desconto</p>');
+
+				var priceDiscount = Math.ceil(data.item.price * ((100- data.item.DescPerc /100)/100));
+				if(data.item.sellingPrice <= priceDiscount)
+					wrapper.append('<p>O desconto oferecido para o item “' + data.item.nameComplete + '” é menor do que o preço oferecido pela Araujo. Fique tranquilo, você já esta pagando o menor preço para este item.</p>');
+				else
+					wrapper.append('<p>O item “' + data.item.nameComplete + '” teve o desconto concedido. Você pagará R$ ' + qd_number_format(priceDiscount / 100, 2, ",", ".") + '</p>');
+				
+				wrapper.append('<p>Informação do sistema de PBM: “' + data.info + '” </p>');
+			}
+			else
+				wrapper.append('<p>Informação do sistema de PBM: “' + data.info + '” </p>');
+		}).done(function(data) {
+			if(typeof data.id == 'string' && data.id.length)
+				$.cookie('qdPbm', data.orderId, {path: '/', expires: 1});
+		}).done(function() {
+			callNext();
+		}).done(function(data) {
+			// Caso a requisição exija o login na Seven
+			if(data.statusServico == 30 || data.statusServico == 31)
+				$.ajax(QdPbm.sever + '/').always(function() { location.reload() });
+		});
+	},
+	pbmRegexCache: {
+		onlyNumber: /[^0-9]+/g,
+		date: /([0-9]+)\/([0-9]+)\/([0-9]+)/
+	},
+	pbmInsertSignUpForm: function(modal, data, cpf) {
+		var form = $('<form><span class="qd-pbm-ATIVA qd-pbm-ATIVA2 qd-pbm-ATIVA3 qd-pbm-ATIVA4"><div class="form-group"><label>Nome Completo <input class="form-control" type="text" name="name"></label></div></span><span class="qd-pbm-ATIVA qd-pbm-ATIVA4 qd-pbm-ATIVA5 qd-pbm-ATIVA-QD"><div class="form-group"><label>E-mail <input class="form-control" type="email" name="email"></label></div><div class="form-group"><label>CPF <input class="form-control" type="text" name="cpf"></label></div></span><span class="qd-pbm-ATIVA qd-pbm-ATIVA4"><div class="form-group"><div class="radio"><label>Masculino <input type="radio" value="77" title="Masculino" name="gender"></label><label>Feminino <input type="radio" value="70" title="Feminino" name="gender"></label></div></div><div class="form-group"><label>Data de aniversário <input class="form-control" type="text" name="bDate"></label></div><div class="form-group"><label>Telefone <input class="form-control" type="text" name="phone"></label></div></span><span class="qd-pbm-ATIVA qd-pbm-ATIVA2 qd-pbm-ATIVA3 qd-pbm-ATIVA4"><div class="form-group"><label>Celular <input class="form-control" type="text" name="mPhone"></label></div></span><span class="qd-pbm-ATIVA qd-pbm-ATIVA4"><div class="form-group"><label>CEP <input class="form-control" type="text" name="zip"></label></div><div class="form-group"><label>Tipo <select class="form-control" name="aType"><option value=""></option><option value="AV">Avenida</option><option value="AL">Alameda</option><option value="EST">Estrada</option><option value="PC">Praça</option><option value="R">Rua</option><option value="ROD">Rodovia</option><option value="TRV">Travessa</option><option value="LG">Largo</option><option value="Outr">Demais</option></select></label></div><div class="form-group"><label>Endereço <input class="form-control" type="text" name="address"></label></div><div class="form-group"><label>Número <input class="form-control" type="text" name="n"></label></div><div class="form-group"><label>Complemento do endereço <input class="form-control" type="text" name="complement"></label></div><div class="form-group"><label>Bairro <input class="form-control" type="text" name="neighborhood"></label></div><div class="form-group"><label>Cidade <input class="form-control" type="text" name="city"></label></div><div class="form-group"><label>Estado <select class="form-control" name="state"><option value=""></option><option value="AC">Acre</option><option value="AL">Alagoas</option><option value="AP">Amapá</option><option value="AM">Amazonas</option><option value="BA">Bahia</option><option value="CE">Ceará</option><option value="DF">Distrito Federal</option><option value="ES">Espírito Santo</option><option value="GO">Goiás</option><option value="MA">Maranhão</option><option value="MT">Mato Grosso</option><option value="MS">Mato Grosso do Sul</option><option value="MG">Minas Gerais</option><option value="PA">Pará</option><option value="PB">Paraíba</option><option value="PR">Paraná</option><option value="PE">Pernambuco</option><option value="PI">Piauí</option><option value="RJ">Rio de Janeiro</option><option value="RN">Rio Grande do Norte</option><option value="RS">Rio Grande do Sul</option><option value="RO">Rondônia</option><option value="RR">Roraima</option><option value="SC">Santa Catarina</option><option value="SP">São Paulo</option><option value="SE">Sergipe</option><option value="TO">Tocantins</option></select></label></div></span><span class="qd-pbm-ATIVA qd-pbm-ATIVA1 qd-pbm-ATIVA3"><div class="form-group"><label>Nome do médico <input class="form-control" type="text" name="profName"></label></div><div class="form-group"><label>CRM do médico <input class="form-control" type="text" name="profCod"></label></div><div class="form-group"><label>Estado do médico <select class="form-control" name="profState"><option value="">Selecione</option><option value="AC">Acre</option><option value="AL">Alagoas</option><option value="AP">Amapá</option><option value="AM">Amazonas</option><option value="BA">Bahia</option><option value="CE">Ceará</option><option value="DF">Distrito Federal</option><option value="ES">Espírito Santo</option><option value="GO">Goiás</option><option value="MA">Maranhão</option><option value="MT">Mato Grosso</option><option value="MS">Mato Grosso do Sul</option><option value="MG">Minas Gerais</option><option value="PA">Pará</option><option value="PB">Paraíba</option><option value="PR">Paraná</option><option value="PE">Pernambuco</option><option value="PI">Piauí</option><option value="RJ">Rio de Janeiro</option><option value="RN">Rio Grande do Norte</option><option value="RS">Rio Grande do Sul</option><option value="RO">Rondônia</option><option value="RR">Roraima</option><option value="SC">Santa Catarina</option><option value="SP">São Paulo</option><option value="SE">Sergipe</option><option value="TO">Tocantins</option></select></label></div></span><span class="qd-pbm-ATIVA qd-pbm-ATIVA2 qd-pbm-ATIVA3 qd-pbm-ATIVA4"><div class="form-group"><div class="checkbox"><label>Aceito os termos do programa <input type="checkbox" value="83" name="accept"></label></div></div></span><span class="qd-pbm-ATIVA qd-pbm-ATIVA4"><div class="form-group"><div class="checkbox"><label>Aceito contato por telefone <input type="checkbox" value="83" name="acceptPhone"></label></div></div><div class="form-group"><div class="checkbox"><label>Aceito contato por correspondência <input type="checkbox" value="83" name="acceptMail"></label></div></div><div class="form-group"><div class="checkbox"><label>Aceito contato por SMS <input type="checkbox" value="83" name="acceptSMS"></label></div></div><div class="form-group"><div class="checkbox"><label>Aceito contato por e-mail <input type="checkbox" value="83" name="acceptEmail"></label></div></div></span><button type="submit">Enviar</button></form>');
+		modal.find('.modal-body').html(form);
+		form.find('.qd-pbm-ATIVA').hide().filter('.qd-pbm-' + data.redirect).show().find('input:not([type=checkbox]), input[name=accept], select').addClass('required');
+		form.find('.qd-pbm-ATIVA:not(".qd-pbm-' + data.redirect + '")').remove();
+
+		form.find("input[name=zip]").mask('00000-000');
+		form.find("input[name=phone]").mask('(00) 0000-0000');
+		form.find("input[name=mPhone]").mask('(00) 0000-00009');
+		form.find("input[name=cpf]").val(cpf).mask('000.000.000-00');
+		form.find("input[name=bDate]").mask('D0/M0/0000',  {'translation': { D: {pattern: /[0123]/}, M: {pattern: /[01]/} }});
+
+		// Preenchendo o endereço a partir do CEP
+		var cepInputs = form.find("select, input").filter('[name=aType], [name=address], [name=n], [name=complement], [name=neighborhood], [name=city], [name=state]').attr("disabled", "disabled");
+		var cep = form.find("input[name=zip]");
+		cep.keyup(function(e) {
+			if((cep.val() || "").length < 9)
+				return;
+
+			cep.attr("disabled", "disabled");
+			$.ajax({
+				url: "/api/checkout/pub/postal-code/BRA/" + cep.val(),
+				dataType: "json",
+				complete: function() {
+					cepInputs.add(cep).removeAttr('disabled');
+				}
+			}).done(function(data) {
+				var street = (data.street || "").trim().split(' ');
+				var adType = null;
+				form.find("select[name=aType] option").each(function() {
+					var $t = $(this);
+					if(street[0].toUpperCase().replaceSpecialChars() == $t.text().toUpperCase().replaceSpecialChars()){
+						adType = $t.text();
+						$t.parent().val($t.attr('value')).change();
+						return false;
+					}
+				});
+				if(adType)
+					street[0] = '';
+				else
+					form.find('select[name=aType]').val('Outr').change();
+				form.find("input[name=address]").val(street.join(' '));
+
+				form.find("input[name=neighborhood]").val(data.neighborhood || "");
+				form.find("input[name=city]").val(data.city || "");
+				form.find("select[name=state]").val(data.state || "").change();
+			});
+		});
+
+		form.validate({
+			rules: {email: {email: true } },
+			submitHandler: function(form){
+				var $form = $(form);
+
+				if(!$form.valid())
+					return;
+
+				var formDataArray = $form.serializeArray();
+				var formData = {};
+				for(var i = 0; i < formDataArray.length; i++){
+					if(formDataArray[i].value)
+						formData[formDataArray[i].name || '---'] = formDataArray[i].value;
+				}
+
+				formData.acceptPhone = formData.acceptPhone || '78';
+				formData.acceptMail = formData.acceptMail || '78';
+				formData.acceptSMS = formData.acceptSMS || '78';
+				formData.acceptEmail = formData.acceptEmail || '78';
+	
+				if(formData.zip)
+					formData.zip = formData.zip.replace(QdPbm.pbmRegexCache.onlyNumber, '');
+				if(formData.cpf)
+					formData.cpf = formData.cpf.replace(QdPbm.pbmRegexCache.onlyNumber, '');
+				if(formData.bDate)
+					formData.bDate = formData.bDate.replace(QdPbm.pbmRegexCache.date, '$3-$2-$1');
+				if(formData.mPhone){
+					formData.mPhone = formData.mPhone.replace(QdPbm.pbmRegexCache.onlyNumber, '').split('');
+					formData.mPhoneCode = formData.mPhone.shift() + formData.mPhone.shift();
+					formData.mPhone = formData.mPhone.join('');
+				}
+				if(formData.phone){
+					formData.phone = formData.phone.replace(QdPbm.pbmRegexCache.onlyNumber, '').split('');
+					formData.phoneCode = formData.phone.shift() + formData.phone.shift();
+					formData.phone = formData.phone.join('');
+				}
+
+				formData["preAuthId"] = data.id;
+
+				var isAtivaQd = data.redirect && data.redirect == 'ATIVA-QD';
+				$.ajax({
+					url: QdPbm.sever + (isAtivaQd? '/pre-auth': '/sign-up'),
+					type: 'POST',
+					dataType: 'json',
+					data: isAtivaQd? $.extend({}, QdPbm.reqData, formData): formData
+				})
+				.fail(function() {alert('Desculpe, não foi possível consultar o sistema.');})
+				.done(function(data) {
+					alert(data.info);
+
+					modal.on('hidden.bs.modal', function() {$('.product-qd-v1-pbm button').click(); });
+					modal.modal('hide');
+				});
+
+				return false;
+			},
+			errorPlacement: function(error, element) {}
+		});
+	}
+};
+
+$(QdPbm.init);
