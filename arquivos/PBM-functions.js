@@ -5,7 +5,7 @@ var QdPbm = {
 		QdPbm.pbmConsult();
 	},
 	// sever: '//localhost:8080/araujo-pbm',
-	sever: '//web.araujo.com.br/araujo-pbm/',
+	sever: '//web.araujo.com.br/araujo-pbm',
 	cookieRenew: function() {
 		$.cookie('qdPbm', $.cookie('qdPbm') || '', {path: '/', expires: 1});
 	},

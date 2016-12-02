@@ -1,6 +1,6 @@
 var QdPbmCheckout = {
 	// sever: '//localhost:8080/araujo-pbm',
-	sever: '//web.araujo.com.br/araujo-pbm/',
+	sever: '//web.araujo.com.br/araujo-pbm',
 	init: function() {
 		QdPbmCheckout.cookieRenew(); // chamar antes de todos
 	},
