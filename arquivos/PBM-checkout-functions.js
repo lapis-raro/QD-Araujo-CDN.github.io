@@ -13,24 +13,33 @@ var QdPbmCheckout = {
 	attachmentOrder: function(data) {
 		$(document.body).addClass('qd-loading');
 
-		for (var i = 0; i < data.items.length; i++) {
-			if(!data.items[i].Pbm)
-				continue;
+		try {
+			var infoPbm = {};
 
-			var infoSeven = [{
-				"effectuationCode": data.nr_central,
-				"priceFrom": data.items[i].listPrice,
-				"priceFor": data.items[i].price - (data.giftcardValue * 100),
-				"discountPercentage": (1 - (data.discountPercentage / 100 / 100)),
-				"document": data.cpf
-			}];
+			if (vtexjs.checkout.orderForm.openTextField && vtexjs.checkout.orderForm.openTextField.value && vtexjs.checkout.orderForm.openTextField.value.length){
+				try { infoPbm = JSON.parse(vtexjs.checkout.orderForm.openTextField.value) }
+				catch (e) { infoPbm = {oldMessage: vtexjs.checkout.orderForm.openTextField.value} }
+			}
 
-			try {
-				vtexjs.checkout.addItemAttachment(i, 'Integracao_Seven', infoSeven[i]).always(function() {
-					$(document.body).removeClass('qd-loading');
+			infoPbm["PBM"] = [];
+			for (var i = 0; i < data.items.length; i++) {
+				if(!data.items[i].Pbm)
+					continue;
+
+				infoPbm.PBM.push({
+					"id": data.items[i].id,
+					"code": data.nr_central,
+					"pFrom": data.items[i].listPrice,
+					"pFor": data.items[i].price - (data.giftcardValue * 100),
+					"discPerc": (1 - (data.discountPercentage / 100 / 100)),
+					"doc": data.cpf
 				});
-			} catch (e) {(typeof console !== "undefined" && typeof console.error === "function" && console.error("Problemas :( . Detalhes: ", e)); }
-		}
+			}
+
+			vtexjs.checkout.sendAttachment('openTextField', {value: JSON.stringify(infoPbm)}).always(function() {
+				$(document.body).removeClass('qd-loading');
+			});
+		} catch (e) {(typeof console !== "undefined" && typeof console.error === "function" && console.error("Problemas :( . Detalhes: ", e)); }
 	},
 	cookieRenew: function() {
 		$.cookie('qdPbm', $.cookie('qdPbm') || '', {path: '/', expires: 1});
