@@ -51,26 +51,42 @@ var QdPbmCheckout = {
 			callback();
 	},
 	itemsValidated: function() {
-		$(document.body).addClass('qd-loading');
+		var fullpage = $('<div class="qd-fullpage-loading"><p><img src="/arquivos/ajax-loader.gif"/>Estamos aplicando seu desconto de PBM.</p></div>').appendTo(document.body);
+		fullpage.show();
 
-		$.ajax({
-			url: '/api/checkout/pub/gift-cards/providers',
-			type: "GET",
-			contentType: "application/json; charset=utf-8",
-			dataType: "json"
-		}).done(function(data) {
-			vtexjs.checkout.sendAttachment('paymentData', {
-				giftCards: [{
-					inUse : true,
-					isSpecialCard : false,
-					provider : data[0].id,
-					redemptionCode : $.cookie('qdPbm')
-				}],
-				payments: vtexjs.checkout.orderForm.paymentData.payments
-			}).always(function() {
-				$(document.body).removeClass('qd-loading');
+		try {
+			$.ajax({
+				url: '/api/checkout/pub/gift-cards/providers',
+				type: "GET",
+				contentType: "application/json; charset=utf-8",
+				dataType: "json"
+			}).done(function(data) {
+				vtexjs.checkout.sendAttachment('paymentData', {
+					giftCards: [{
+						inUse : true,
+						isSpecialCard : false,
+						provider : data[0].id,
+						redemptionCode : $.cookie('qdPbm')
+					}],
+					payments: vtexjs.checkout.orderForm.paymentData.payments
+				}).always(function() {
+					fullpage.hide();
+				}).fail(function() {
+					fullpage.html('<p>Ocorreu um erro ao aplicar o desconto, por favor recarregue a pagina <a href="/checkout/#/profile">Recarregar página</a></p>');
+
+					fullpage.find('a').click(function(evt) {
+						evt.preventDefault();
+						location.reload();
+					});
+
+					fullpage.show();
+				});
 			});
-		});
+		}
+		catch (e) {
+			console.log(e);
+			$('.vtex-front-messages-modal-template').modal('hide');
+		}
 	},
 	validateItems: function() {
 		$(document.body).addClass('qd-loading');
@@ -94,8 +110,8 @@ var QdPbmCheckout = {
 				if(req != 0)
 					QdPbmCheckout.validateItems();
 				if(req == cReq) {
-					QdPbmCheckout.itemsValidated();
 					QdPbmCheckout.attachmentOrder(data);
+					QdPbmCheckout.itemsValidated();
 				}
 			};
 
