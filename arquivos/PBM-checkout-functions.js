@@ -1,16 +1,79 @@
 var QdPbmCheckout = {
 	// sever: '//localhost:8080/araujo-pbm',
 	sever: '//web.araujo.com.br/araujo-pbm',
+	run: function() {
+		QdPbmCheckout.checkRequestIsRunning();
+	},
 	init: function() {
 		QdPbmCheckout.cookieRenew(); // chamar antes de todos
+		QdPbmCheckout.fullpageLoading(); // chamar antes de todos
+	},
+	fullpageLoading: function() {
+		$('.container-main').append('<div class="qd-fullpage-loading"></div>');
+	},
+	orderUpdated: function(orderForm){
+		if (typeof orderForm.messages == "object") {
+			for (i in orderForm.messages) {
+				if (orderForm.messages[i].text.indexOf($.cookie('qdPbm')) >= 0) {
+					var fullPage = $('.qd-fullpage-loading').html('<p>Ocorreu um erro ao aplicar o desconto do PBM <br /> Solicitamos que volte ao(s) produto(s) que possui PBM e refaça o processo.</p> <a href="/checkout/#/cart" class="qd-fullpage-loading-close">Fechar</a>');
+
+					$('.vtex-front-messages-template').hide();
+
+					fullPage.find('.qd-fullpage-loading-close').click(function(evt) {
+						evt.preventDefault();
+						fullPage.toggle();
+					});
+
+					fullPage.toggle();
+
+					$.removeCookie('qdPbm', { path: '/' });
+
+					return;
+				} else if (orderForm.messages[i].text.indexOf('Vale Compra' >= 0)) {
+					var fullPage = $('.qd-fullpage-loading').html('<p>Ocorreu um erro ao aplicar o desconto, por favor recarregue a pagina </p><a class="qd-fullpage-loading-reload" href="/checkout/#/profile">Recarregar página</a>');
+
+					$('.vtex-front-messages-template').hide();
+
+					fullPage.find('.qd-fullpage-loading-reload').click(function(evt) {
+						evt.preventDefault();
+						location.reload();
+					});
+
+					fullPage.toggle();
+					return;
+				}
+			}
+		}
 	},
 	payment: function() {
+		if(!QdPbmCheckout.requestRunning)
+			QdPbmCheckout.execPayment();
+		else
+			$(window).one("checkoutRequestEnd.vtex", function() {
+				QdPbmCheckout.execPayment();
+			});
+	},
+	execPayment: function() {
 		// Verificando se o usuário esta logado
 		QdPbmCheckout.userIsAuthenticated(function() {
 			QdPbmCheckout.validateItems();
 		});
 	},
+	checkRequestIsRunning: function() {
+		QdPbmCheckout.requestRunning = false;
+
+		$(window).on("checkoutRequestStart.vtex", function() {
+			QdPbmCheckout.requestRunning = true;
+		});
+
+		$(window).on("checkoutRequestEnd.vtex", function() {
+			QdPbmCheckout.requestRunning = false;
+		});
+	},
 	attachmentOrder: function(data) {
+		if ($.cookie('qdPbm').length <= 0)
+			return;
+
 		$(document.body).addClass('qd-loading');
 
 		try {
@@ -21,20 +84,24 @@ var QdPbmCheckout = {
 				catch (e) { infoPbm = {oldMessage: vtexjs.checkout.orderForm.openTextField.value} }
 			}
 
-			infoPbm["PBM"] = [];
+			var pbmItems = [];
 			for (var i = 0; i < data.items.length; i++) {
 				if(!data.items[i].Pbm)
 					continue;
 
-				infoPbm.PBM.push({
-					"id": data.items[i].id,
-					"code": data.nr_central,
-					"pFrom": data.items[i].listPrice,
-					"pFor": data.items[i].price - (data.giftcardValue * 100),
-					"discPerc": (1 - (data.discountPercentage / 100 / 100)),
-					"doc": data.cpf
+				pbmItems.push({
+					"sku": data.items[i].id,
+					"nrCentral": data.items[i].PbmNrCentral,
+					"horaCentral": data.items[i].PbmHoraCentral,
+					"ctlAP": data.items[i].PbmCtlAP,
+					"nrLocal": data.items[i].PbmNrLocal,
+					"discPerc": (data.items[i].PbmDiscount / 100 / 100).toFixed(4)
 				});
 			}
+			infoPbm["PBM"] = {
+				"cpf": data.cpf,
+				'items': pbmItems
+			};
 
 			vtexjs.checkout.sendAttachment('openTextField', {value: JSON.stringify(infoPbm)}).always(function() {
 				$(document.body).removeClass('qd-loading');
@@ -51,10 +118,10 @@ var QdPbmCheckout = {
 			callback();
 	},
 	itemsValidated: function() {
-		var fullpage = $('<div class="qd-fullpage-loading"><p><img src="/arquivos/ajax-loader.gif"/>Estamos aplicando seu desconto de PBM.</p></div>').appendTo(document.body);
-		fullpage.show();
-
 		try {
+			var fullPage = $('.qd-fullpage-loading').html('<p><img src="/arquivos/ajax-loader.gif"/>Estamos aplicando seu desconto de PBM.</p>');
+			fullPage.show();
+
 			$.ajax({
 				url: '/api/checkout/pub/gift-cards/providers',
 				type: "GET",
@@ -70,21 +137,20 @@ var QdPbmCheckout = {
 					}],
 					payments: vtexjs.checkout.orderForm.paymentData.payments
 				}).always(function() {
-					fullpage.hide();
+					fullPage.toggle();
 				}).fail(function() {
-					fullpage.html('<p>Ocorreu um erro ao aplicar o desconto, por favor recarregue a pagina <a href="/checkout/#/profile">Recarregar página</a></p>');
+					fullPage.html('<p>Ocorreu um erro ao aplicar o desconto, por favor recarregue a pagina </p><a class="qd-fullpage-loading-reload" href="/checkout/#/profile">Recarregar página</a>');
 
-					fullpage.find('a').click(function(evt) {
+					fullPage.find('.qd-fullpage-loading-reload').click(function(evt) {
 						evt.preventDefault();
 						location.reload();
 					});
 
-					fullpage.show();
+					fullPage.toggle();
 				});
 			});
 		}
 		catch (e) {
-			console.log(e);
 			$('.vtex-front-messages-modal-template').modal('hide');
 		}
 	},
@@ -110,8 +176,8 @@ var QdPbmCheckout = {
 				if(req != 0)
 					QdPbmCheckout.validateItems();
 				if(req == cReq) {
-					QdPbmCheckout.attachmentOrder(data);
 					QdPbmCheckout.itemsValidated();
+					QdPbmCheckout.attachmentOrder(data);
 				}
 			};
 
@@ -151,5 +217,10 @@ var QdPbmCheckout = {
 		});
 	}
 };
+(QdPbmCheckout.run)();
 
 $(QdPbmCheckout.init);
+
+$(window).on("orderFormUpdated.vtex", function(e, data){
+	QdPbmCheckout.orderUpdated(data)
+});
