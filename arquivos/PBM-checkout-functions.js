@@ -167,7 +167,19 @@ var QdPbmCheckout = {
 			},
 			complete: function() { $(document.body).removeClass('qd-loading') }
 		}).done(function (data) {
-			if(!data.pbmAvailable)
+			if (data.giftcardValue <= 0) {
+				var fullPage = $('.qd-fullpage-loading').html('<p>O desconto da loja é maior que o oferecido pelo PBM</p> <a href="/checkout/#/cart" class="qd-fullpage-loading-close">Fechar</a>');
+
+				fullPage.find('.qd-fullpage-loading-close').click(function(evt) {
+					evt.preventDefault();
+					fullPage.toggle();
+				});
+
+				fullPage.toggle();
+				return;
+			}
+
+			if(!data.pbmAvailable || !data.discountAvailable)
 				return;
 
 			var checkReq = function() {
