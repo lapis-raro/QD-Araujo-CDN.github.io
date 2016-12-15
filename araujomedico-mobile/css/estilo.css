@@ -1,0 +1,112 @@
+@font-face {
+	font-family: 'GothamBlack';
+	src: url('GothamBlack.eot');
+	src: url('GothamBlack.eot?#iefix') format('embedded-opentype'),
+	url('GothamBlack.woff') format('woff'),
+	url('GothamBlack.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
+}
+
+html, body {
+	margin:0px;
+}
+
+.titulo {
+	font-family: 'GothamBlack';
+	color:#FFF;
+	font-size:40px;
+}
+
+.titulo2 {
+	font-family: 'GothamBlack';
+	color:#89cce1;
+	font-size:40px;
+}
+
+p {
+	width:500px;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:15px;
+	color:#354f57;
+}
+
+.azul {
+	width:100%;
+	background-color:#8acee4;
+
+}
+
+.beneficios-row > div:last-child p{
+	display: inline;
+	margin-left: -15px !important;
+}
+
+.programa {
+	padding-top: 50px; 
+}
+
+.max {
+	max-width: 1800px;
+}
+
+li {
+	color:#89cce1;
+}
+
+@media (max-width: 992px) {
+	[class*=col-xs] {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.row {
+		min-height: 100vh;
+		text-align: center;
+	}
+
+	p {
+		width: auto;
+	}
+
+	.beneficios-row {
+		position: relative;
+	}
+
+	.Benefícios {
+		padding-left: 0;
+		padding-right: 0;
+		position: absolute !important;
+		top: 0;
+		bottom: 0;
+	}
+
+	.Benefícios img {
+		position: relative;
+		height: 100%;
+		left: -65%;
+		max-width: none;
+	}
+
+	.beneficios-row > div:last-child {
+		color: #ecf0f1;
+		background-color: rgba(0,0,0,0.2);
+		min-height: 100vh;
+	}
+
+	.beneficios-row > div:last-child p{
+		color: #ecf0f1;
+	}
+
+	.beneficios-row > div:last-child li {
+		text-align: left;
+	}
+
+	.programa:last-child {
+		padding-top: 20px;
+	}
+
+	.programa:last-child img {
+		display: inline-block;
+	}
+}
