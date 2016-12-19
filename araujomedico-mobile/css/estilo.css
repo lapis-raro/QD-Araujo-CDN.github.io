@@ -30,7 +30,7 @@ p {
 	width:100%;
 	background-color:#8acee4;
 }
-.beneficios-row > div:last-child p{
+.beneficios-row > div:last-child li p{
 	display: inline;
 	margin-left: -15px !important;
 }
