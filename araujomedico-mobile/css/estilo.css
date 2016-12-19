@@ -53,6 +53,7 @@ li {
 }
 .beneficios-row {
 	position: relative;
+	overflow: hidden;
 }
 .Benefícios {
 	padding-left: 0;
