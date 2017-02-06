@@ -7,6 +7,7 @@ var QdPbmCheckout = {
 	init: function() {
 		QdPbmCheckout.cookieRenew(); // chamar antes de todos
 		QdPbmCheckout.fullpageLoading(); // chamar antes de todos
+		QdPbmCheckout.validateItems();
 	},
 	fullpageLoading: function() {
 		$('.container-main').append('<div class="qd-fullpage-loading"></div>');
@@ -15,7 +16,7 @@ var QdPbmCheckout = {
 		if (typeof orderForm.messages == "object") {
 			for (i in orderForm.messages) {
 				if (orderForm.messages[i].text.indexOf($.cookie('qdPbm')) >= 0) {
-					var fullPage = $('.qd-fullpage-loading').html('<p>Ocorreu um erro ao aplicar o desconto do PBM <br /> Solicitamos que volte ao(s) produto(s) que possui PBM e refaça o processo.</p> <a href="/checkout/#/cart" class="qd-fullpage-loading-close">Fechar</a>');
+					var fullPage = $('.qd-fullpage-loading').html('<div class="qd-fullpage-loading-error"> <div class="qd-fullpage-loading-error-header"> <span>Ocorreu um erro ao aplicar o desconto PBM</span> </div> <p>Solicitamos que volte ao(s) produto(s) selecionados e refaça o processo.</p> <a href="/checkout/#/cart" class="qd-fullpage-loading-close">Fechar</a> </div>');
 
 					$('.vtex-front-messages-template').hide();
 
@@ -30,11 +31,11 @@ var QdPbmCheckout = {
 
 					return;
 				} else if (orderForm.messages[i].text.indexOf('Vale Compra' >= 0)) {
-					var fullPage = $('.qd-fullpage-loading').html('<p>Ocorreu um erro ao aplicar o desconto, por favor recarregue a pagina </p><a class="qd-fullpage-loading-reload" href="/checkout/#/profile">Recarregar página</a>');
+					var fullPage = $('.qd-fullpage-loading').html('<div class="qd-fullpage-loading-reload"> <div class="qd-fullpage-loading-reload-header"> <span>Ocorreu um erro ao aplicar o desconto PBM</span> </div> <p>Solicitamos que recarregue a pagina para tentar novamente.</p> <a href="/checkout/#/cart" class="qd-fullpage-loading-reload-link">Recarregar página</a> </div>');
 
 					$('.vtex-front-messages-template').hide();
 
-					fullPage.find('.qd-fullpage-loading-reload').click(function(evt) {
+					fullPage.find('.qd-fullpage-loading-reload-link').click(function(evt) {
 						evt.preventDefault();
 						location.reload();
 					});
@@ -119,7 +120,7 @@ var QdPbmCheckout = {
 	},
 	itemsValidated: function() {
 		try {
-			var fullPage = $('.qd-fullpage-loading').html('<p><img src="/arquivos/ajax-loader.gif"/>Estamos aplicando seu desconto de PBM.</p>');
+			var fullPage = $('.qd-fullpage-loading').html('<div class="qd-fullpage-loading-applying"> <div class="qd-fullpage-loading-applying-header"> <img src="/arquivos/stamp-pbm-2.jpg" alt="PBM" /> </div> <p>Aguarde. Estamos aplicando o seu desconto.</p> <i class="icon-spinner icon-spin"></i> </div>');
 			fullPage.show();
 
 			$.ajax({
@@ -139,9 +140,9 @@ var QdPbmCheckout = {
 				}).always(function() {
 					fullPage.toggle();
 				}).fail(function() {
-					fullPage.html('<p>Ocorreu um erro ao aplicar o desconto, por favor recarregue a pagina </p><a class="qd-fullpage-loading-reload" href="/checkout/#/profile">Recarregar página</a>');
+					fullPage.html('<div class="qd-fullpage-loading-reload"> <div class="qd-fullpage-loading-reload-header"> <span>Ocorreu um erro ao aplicar o desconto PBM</span> </div> <p>Solicitamos que recarregue a pagina para tentar novamente.</p> <a href="/checkout/#/cart" class="qd-fullpage-loading-reload-link">Recarregar página</a> </div>');
 
-					fullPage.find('.qd-fullpage-loading-reload').click(function(evt) {
+					fullPage.find('.qd-fullpage-loading-reload-link').click(function(evt) {
 						evt.preventDefault();
 						location.reload();
 					});
@@ -167,8 +168,14 @@ var QdPbmCheckout = {
 			},
 			complete: function() { $(document.body).removeClass('qd-loading') }
 		}).done(function (data) {
+			// Estrutura para o informativo do pbm no item do checkout
+			$('.cart-items td.product-price').each(function() {
+				var $t = $(this);
+				$t.setTimeout('<div class="qd-pbm-item"> <img src="/arquivos/stamp-pbm-2.jpg" alt="" /> <span>Valor com desc.: <span class="qd-pbm-item-value">R$ 6,60</span></span> </div>');
+			});
+
 			if (data.giftcardValue <= 0) {
-				var fullPage = $('.qd-fullpage-loading').html('<p>O desconto da loja é maior que o oferecido pelo PBM</p> <a href="/checkout/#/cart" class="qd-fullpage-loading-close">Fechar</a>');
+				var fullPage = $('.qd-fullpage-loading').html('<div class="qd-fullpage-loading-not-applied"> <div class="qd-fullpage-loading-not-applied-header"> <span>Atenção!</span> </div> <p>O desconto da Drogaria Araujo é maior do que o oferecido pelo PBM.</p> <a href="/checkout/#/cart" class="qd-fullpage-loading-close">Fechar</a> </div>');
 
 				fullPage.find('.qd-fullpage-loading-close').click(function(evt) {
 					evt.preventDefault();
