@@ -93,10 +93,11 @@ var QdPbmCheckout = {
 				pbmItems.push({
 					"sku": data.items[i].id,
 					"nrCentral": data.items[i].PbmNrCentral,
-					"horaCentral": data.items[i].PbmHoraCentral,
+					"hCentral": data.items[i].PbmHoraCentral,
 					"ctlAP": data.items[i].PbmCtlAP,
 					"nrLocal": data.items[i].PbmNrLocal,
-					"discPerc": (data.items[i].PbmDiscount / 100 / 100).toFixed(4)
+					"discPerc": (data.items[i].PbmDiscount / 100 / 100).toFixed(4),
+					"qtyValid": data.items[i].checkoutValid
 				});
 			}
 			infoPbm["PBM"] = {
@@ -156,8 +157,12 @@ var QdPbmCheckout = {
 		}
 	},
 	validateItems: function() {
-		$(document.body).addClass('qd-loading');
+		if (!vtexjs.checkout.orderForm || vtexjs.checkout.orderForm.items.length <= 0)
+			return;
 
+		var productItem = $('.cart-items');
+
+		$(document.body).addClass('qd-loading');
 		$.ajax({
 			url: QdPbmCheckout.sever + '/checkout-check',
 			dataType: 'json',
@@ -168,12 +173,6 @@ var QdPbmCheckout = {
 			},
 			complete: function() { $(document.body).removeClass('qd-loading') }
 		}).done(function (data) {
-			// Estrutura para o informativo do pbm no item do checkout
-			$('.cart-items td.product-price').each(function() {
-				var $t = $(this);
-				$t.setTimeout('<div class="qd-pbm-item"> <img src="/arquivos/stamp-pbm-2.jpg" alt="" /> <span>Valor com desc.: <span class="qd-pbm-item-value">R$ 6,60</span></span> </div>');
-			});
-
 			if (data.giftcardValue <= 0) {
 				var fullPage = $('.qd-fullpage-loading').html('<div class="qd-fullpage-loading-not-applied"> <div class="qd-fullpage-loading-not-applied-header"> <span>Atenção!</span> </div> <p>O desconto da Drogaria Araujo é maior do que o oferecido pelo PBM.</p> <a href="/checkout/#/cart" class="qd-fullpage-loading-close">Fechar</a> </div>');
 
@@ -185,6 +184,7 @@ var QdPbmCheckout = {
 				fullPage.toggle();
 				return;
 			}
+
 
 			if(!data.pbmAvailable || !data.discountAvailable)
 				return;
@@ -218,6 +218,16 @@ var QdPbmCheckout = {
 					});
 				}
 			}
+
+			window.dataJson = data;
+			setTimeout(function(){
+				for (item in data.items) {
+					if (data.items[item].Pbm) {
+						var priceDiscount = Math.ceil(data.items[item].listPrice * ((100- data.items[item].PbmDiscount /100)/100));
+						productItem.find('.product-item[data-sku="' + data.items[item].id + '"] td.product-price').append('<div class="qd-pbm-item">  <span>Valor com o desconto do PBM: <span class="qd-pbm-item-value">R$ ' + qd_number_format(priceDiscount / 100, 2, ",", ".") + '</span></span> </div>');
+					}
+				}
+			}, 4000);
 		});
 	},
 	preAuth: function(data, item) {
