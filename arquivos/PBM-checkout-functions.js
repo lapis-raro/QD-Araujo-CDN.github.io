@@ -245,6 +245,7 @@ var QdPbmCheckout = {
 
 				var req = 0;
 				var cReq = 0;
+				QdPbmCheckout.cartElement.find('.qd-pbm-item').remove();
 				for(var i = 0; i < data.items.length; i++){
 					if(!data.items[i].Pbm)
 						continue;
@@ -268,7 +269,6 @@ var QdPbmCheckout = {
 	},
 	showCartDiscountInformation: function(item, index) {
 		var priceDiscount = Math.ceil(item.listPrice * ((100 - item.PbmDiscount /100)/100));
-		QdPbmCheckout.cartElement.find('.qd-pbm-item').remove();
 		QdPbmCheckout.cartElement.find('.product-item[data-sku="' + item.id + '"] td.product-price').append('<div class="qd-pbm-item">  <span>Valor com o desconto do PBM: <span class="qd-pbm-item-value">R$ ' + qd_number_format(priceDiscount / 100, 2, ",", ".") + '</span></span> </div>');
 	},
 	preAuth: function(data, item) {
