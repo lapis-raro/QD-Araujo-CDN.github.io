@@ -93,7 +93,7 @@ var QdPbm = {
 			// Exibindo as informações sobre o desconto do item
 			wrapperResult.empty();
 			if(data.item){
-				var priceDiscount = Math.ceil(data.item.price * ((100- data.item.DescPerc /100)/100));
+				var priceDiscount = data.item.newPrice;
 				if(data.item.sellingPrice <= priceDiscount){
 					wrapper.hide();
 					wrapperResult.append('<div class="product-qd-v1-pbm-result-info"> <span class="product-qd-v1-pbm-result-info-title">NÃO FOI POSSÍVEL APLICAR O DESCONTO DO PBM</span> <p> O desconto oferecido para o item “' + data.item.nameComplete + '” é menor do que o preço oferecido pela Araujo. Fique tranquilo, você já esta pagando o menor preço para este item. </p> </div>');

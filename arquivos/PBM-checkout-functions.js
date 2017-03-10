@@ -103,15 +103,32 @@ var QdPbmCheckout = {
 		});
 	},
 	checkRequestIsRunning: function() {
-		QdPbmCheckout.requestRunning = false;
-
+		var vtexIsRunning = false;
 		$(window).on("checkoutRequestStart.vtex", function() {
-			QdPbmCheckout.requestRunning = true;
+			vtexIsRunning = true;
+			updateStatus();
+		});
+		$(window).on("checkoutRequestEnd.vtex", function() {
+			vtexIsRunning = false;
+			updateStatus();
 		});
 
-		$(window).on("checkoutRequestEnd.vtex", function() {
-			QdPbmCheckout.requestRunning = false;
+		var ajaxRunning = false;
+		$(document).ajaxStart(function() {
+			ajaxRunning = true;
+			updateStatus();
+		}).ajaxStop(function() {
+			ajaxRunning = false;
+			updateStatus();
 		});
+
+		
+		(function updateStatus() {
+			if(ajaxRunning == false && vtexIsRunning == false)
+				QdPbmCheckout.requestRunning = false;
+			else
+				QdPbmCheckout.requestRunning = true;
+		})();
 	},
 	attachmentOrder: function(data) {
 		$(document.body).addClass('qd-loading');
@@ -136,7 +153,8 @@ var QdPbmCheckout = {
 					"ctlAP": data.items[i].PbmCtlAP,
 					"nrLocal": data.items[i].PbmNrLocal,
 					"discPerc": (data.items[i].PbmDiscount / 100 / 100).toFixed(4),
-					"qtyValid": data.items[i].checkoutValid
+					"qtyValid": data.items[i].checkoutValid,
+					"newPrice": data.items[i].PbmNewPrice
 				});
 			};
 			var newPbmData = {
@@ -268,7 +286,7 @@ var QdPbmCheckout = {
 		});
 	},
 	showCartDiscountInformation: function(item, index) {
-		var priceDiscount = Math.ceil(item.listPrice * ((100 - item.PbmDiscount /100)/100));
+		var priceDiscount = item.PbmNewPrice;
 		QdPbmCheckout.cartElement.find('.product-item[data-sku="' + item.id + '"] td.product-price').append('<div class="qd-pbm-item">  <span>Valor com o desconto do PBM: <span class="qd-pbm-item-value">R$ ' + qd_number_format(priceDiscount / 100, 2, ",", ".") + '</span></span> </div>');
 	},
 	preAuth: function(data, item) {
