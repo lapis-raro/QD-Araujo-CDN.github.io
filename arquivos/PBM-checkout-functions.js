@@ -123,7 +123,7 @@ var QdPbmCheckout = {
 		});
 
 		
-		(function updateStatus() {
+		(updateStatus = function() {
 			if(ajaxRunning == false && vtexIsRunning == false)
 				QdPbmCheckout.requestRunning = false;
 			else
