@@ -17,6 +17,40 @@ var QdPbmCheckout = {
 
 		QdPbmCheckout.validateItems();
 	},
+	requestStop: function() {
+
+	},
+	checkRequestIsRunning: function() {
+		var vtexIsRunning = false;
+		$(window).on("checkoutRequestStart.vtex", function() {
+			vtexIsRunning = true;
+			updateStatus();
+		});
+		$(window).on("checkoutRequestEnd.vtex", function() {
+			vtexIsRunning = false;
+			updateStatus();
+		});
+
+		var ajaxRunning = false;
+		$(document).ajaxStart(function() {
+			ajaxRunning = true;
+			updateStatus();
+		}).ajaxStop(function() {
+			ajaxRunning = false;
+			updateStatus();
+		});
+
+		
+		(updateStatus = function($firstRun) {
+			if(ajaxRunning == false && vtexIsRunning == false){
+				QdPbmCheckout.requestRunning = false;
+				if(!$firstRun)
+					QdPbmCheckout.requestStop();
+			}
+			else
+				QdPbmCheckout.requestRunning = true;
+		})(true);
+	},
 	cart: function() {
 		QdPbmCheckout.removeGiftcard();
 	},
@@ -102,34 +136,6 @@ var QdPbmCheckout = {
 			QdPbmCheckout.validateItems();
 		});
 	},
-	checkRequestIsRunning: function() {
-		var vtexIsRunning = false;
-		$(window).on("checkoutRequestStart.vtex", function() {
-			vtexIsRunning = true;
-			updateStatus();
-		});
-		$(window).on("checkoutRequestEnd.vtex", function() {
-			vtexIsRunning = false;
-			updateStatus();
-		});
-
-		var ajaxRunning = false;
-		$(document).ajaxStart(function() {
-			ajaxRunning = true;
-			updateStatus();
-		}).ajaxStop(function() {
-			ajaxRunning = false;
-			updateStatus();
-		});
-
-		
-		(updateStatus = function() {
-			if(ajaxRunning == false && vtexIsRunning == false)
-				QdPbmCheckout.requestRunning = false;
-			else
-				QdPbmCheckout.requestRunning = true;
-		})();
-	},
 	attachmentOrder: function(data) {
 		$(document.body).addClass('qd-loading');
 
@@ -153,7 +159,7 @@ var QdPbmCheckout = {
 					"ctlAP": data.items[i].PbmCtlAP,
 					"nrLocal": data.items[i].PbmNrLocal,
 					"discPerc": (data.items[i].PbmDiscount / 100 / 100).toFixed(4),
-					"qtyValid": data.items[i].checkoutValid,
+					"qtyValid": data.items[i].PbmCheckoutValid,
 					"newPrice": data.items[i].PbmNewPrice
 				});
 			};
@@ -184,6 +190,9 @@ var QdPbmCheckout = {
 		try {
 			if (location.hash.toLowerCase().indexOf('/payment') < 0 || !(data.giftcardValue > 0 && !data.checkItemsAgain))
 				return;
+
+			// Adiciono a informação ao campo de Texto Livre
+			QdPbmCheckout.attachmentOrder(data);
 
 			// Verifico se já não tenho esse gift aplicado
 			var redemptionCode = $.cookie('qdPbm');
@@ -216,8 +225,8 @@ var QdPbmCheckout = {
 					$('.gift-card-section').addClass('qd-pbm-applied-discount');
 				}).fail(QdPbmCheckout.notificationError);
 			}).fail(QdPbmCheckout.notificationError);
-		} catch (e) {(typeof console !== "undefined" && typeof console.error === "function" && console.error("Problemas :( . Detalhes: ", e)); }
-
+		}
+		catch (e) {(typeof console !== "undefined" && typeof console.error === "function" && console.error("Problemas :( . Detalhes: ", e)); }
 	},
 	validateItems: function() {
 		if (!vtexjs.checkout.orderForm || vtexjs.checkout.orderForm.items.length <= 0)
@@ -255,10 +264,8 @@ var QdPbmCheckout = {
 						return;
 					if(req != 0)
 						QdPbmCheckout.validateItems();
-					if(req == cReq) {
+					if(req == cReq)
 						QdPbmCheckout.itemsValidated(data);
-						QdPbmCheckout.attachmentOrder(data);
-					}
 				};
 
 				var req = 0;
@@ -286,8 +293,12 @@ var QdPbmCheckout = {
 		});
 	},
 	showCartDiscountInformation: function(item, index) {
-		var priceDiscount = item.PbmNewPrice;
-		QdPbmCheckout.cartElement.find('.product-item[data-sku="' + item.id + '"] td.product-price').append('<div class="qd-pbm-item">  <span>Valor com o desconto do PBM: <span class="qd-pbm-item-value">R$ ' + qd_number_format(priceDiscount / 100, 2, ",", ".") + '</span></span> </div>');
+		if(item.PbmHasDiscount)
+			var htmlMsg = '<span>Valor com o desconto do PBM: <span class="qd-pbm-item-value">R$ ' + qd_number_format(item.PbmNewPrice / 100, 2, ",", ".") + '</span></span>';
+		else
+			var htmlMsg = '<span>Preço Araujo menor que o PBM!</span>';
+
+		QdPbmCheckout.cartElement.find('.product-item[data-sku="' + item.id + '"] td.product-price').append('<div class="qd-pbm-item">' + htmlMsg + '</div>');
 	},
 	preAuth: function(data, item) {
 		return $.ajax({
