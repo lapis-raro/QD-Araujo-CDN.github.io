@@ -113,6 +113,7 @@ var QdPbmCheckout = {
 					return;
 				}
 				else if (orderForm.messages[i].text.indexOf('Vale Compra' >= 0)) {
+					console.debug('vou Recarregar por causa do orderForm.messages[i].text ', orderForm.messages[i].text);
 					QdPbmCheckout.notificationError();
 					$('.vtex-front-messages-template').hide();
 					return;
@@ -149,7 +150,7 @@ var QdPbmCheckout = {
 
 			var pbmItems = [];
 			for (var i = 0; i < data.items.length; i++) {
-				if(!data.items[i].Pbm)
+				if(!(data.items[i].Pbm && data.items[i].PbmHasDiscount))
 					continue;
 
 				pbmItems.push({
@@ -160,13 +161,12 @@ var QdPbmCheckout = {
 					"nrLocal": data.items[i].PbmNrLocal,
 					"discPerc": (data.items[i].PbmDiscount / 100 / 100).toFixed(4),
 					"qtyValid": data.items[i].PbmCheckoutValid,
-					"newPrice": data.items[i].PbmNewPrice
+					"newPrice": data.items[i].PbmNewPrice,
+					"listPrice": data.items[i].PbmListPrice,
+					"cpf": data.items[i].PbmCpf
 				});
 			};
-			var newPbmData = {
-				"cpf": data.cpf,
-				'items': pbmItems
-			};
+			var newPbmData = {'items': pbmItems};
 
 			if(!(infoPbm.PBM && JSON.stringify(infoPbm.PBM) == JSON.stringify(newPbmData))){
 				infoPbm['PBM'] = newPbmData;
@@ -256,7 +256,7 @@ var QdPbmCheckout = {
 						QdPbmCheckout.fullPageElement.hide();
 					});
 
-					return;
+					// return;
 				}
 
 				var checkReq = function() {
