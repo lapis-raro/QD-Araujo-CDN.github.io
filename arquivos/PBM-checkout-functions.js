@@ -17,9 +17,7 @@ var QdPbmCheckout = {
 
 		QdPbmCheckout.validateItems();
 	},
-	requestStop: function() {
-
-	},
+	requestStop: function() {},
 	checkRequestIsRunning: function() {
 		var vtexIsRunning = false;
 		$(window).on("checkoutRequestStart.vtex", function() {
@@ -40,7 +38,6 @@ var QdPbmCheckout = {
 			updateStatus();
 		});
 
-		
 		(updateStatus = function($firstRun) {
 			if(ajaxRunning == false && vtexIsRunning == false){
 				QdPbmCheckout.requestRunning = false;
@@ -55,12 +52,13 @@ var QdPbmCheckout = {
 		QdPbmCheckout.removeGiftcard();
 	},
 	payment: function() {
-		if(!QdPbmCheckout.requestRunning)
+		if(!QdPbmCheckout.requestRunning) {
 			QdPbmCheckout.execPayment();
-		else
+		} else {
 			$(window).one("checkoutRequestEnd.vtex", function() {
 				QdPbmCheckout.execPayment();
 			});
+		}
 	},
 	loadElements: function () {
 		QdPbmCheckout.cartElement = $('#cartLoadedDiv');
@@ -136,6 +134,24 @@ var QdPbmCheckout = {
 		QdPbmCheckout.userIsAuthenticated(function() {
 			QdPbmCheckout.validateItems();
 		});
+
+		var htmlPbmDiscountInfo = $('<tr class="qd-pbm-discount"> <td class="info">Desconto do PBM</td> <td class="space"></td> <td class="qd-pbm-discount-monetary"></td> <td class="empty"></td> </tr> <tr class="qd-pbm-total"> <td class="info">Total com PBM</td> <td class="space"></td> <td class="qd-pbm-total-monetary monetary"></td> <td class="empty"></td> </tr>');
+		var cartTotalizers = $('.mini-cart .cart-totalizers');
+
+		if (!vtexjs.checkout.orderForm.paymentData.giftCards.length) {
+			cartTotalizers.find('.qd-pbm-discount').remove();
+			cartTotalizers.find('.qd-pbm-total').remove();
+			return;
+		}
+
+		if ($('.mini-cart .cart-totalizers .qd-pbm-discount-monetary').length) {
+			cartTotalizers.find('.qd-pbm-discount-monetary').html('- R$ ' + qd_number_format(vtexjs.checkout.orderForm.paymentData.giftCards[0].value/100, 2, ',', '.'));
+			cartTotalizers.find('.qd-pbm-total-monetary').html(window.paymentData.totalToPayIncludingGiftsLabel());
+		} else {
+			cartTotalizers.find('tfoot').append(htmlPbmDiscountInfo);
+			htmlPbmDiscountInfo.find('.qd-pbm-total-monetary').html(window.paymentData.totalToPayIncludingGiftsLabel());
+			htmlPbmDiscountInfo.find('.qd-pbm-discount-monetary').html('- R$ ' + qd_number_format(vtexjs.checkout.orderForm.paymentData.giftCards[0].value/100, 2, ',', '.'));
+		}
 	},
 	attachmentOrder: function(data) {
 		$(document.body).addClass('qd-loading');
