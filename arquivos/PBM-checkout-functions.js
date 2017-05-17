@@ -271,8 +271,6 @@ var QdPbmCheckout = {
 						evt.preventDefault();
 						QdPbmCheckout.fullPageElement.hide();
 					});
-
-					// return;
 				}
 
 				var checkReq = function() {
@@ -292,13 +290,12 @@ var QdPbmCheckout = {
 						continue;
 
 					if(data.items[i].PbmValid){
-						QdPbmCheckout.showCartDiscountInformation(data.items[i], i);
+						QdPbmCheckout.showCartDiscountInformation(data.items[i]);
 						checkReq();
 						continue;
-					}
-					else{
+					} else {
 						req++;
-						QdPbmCheckout.preAuth(data, data.items[i]).always(function() {
+						QdPbmCheckout.preAuth(data.items[i]).always(function() {
 							cReq++;
 							checkReq();
 						});
@@ -308,7 +305,7 @@ var QdPbmCheckout = {
 			catch (e) {(typeof console !== "undefined" && typeof console.error === "function" && console.error("Problemas :( . Detalhes: ", e)); }
 		});
 	},
-	showCartDiscountInformation: function(item, index) {
+	showCartDiscountInformation: function(item) {
 		if(item.PbmHasDiscount)
 			var htmlMsg = '<span>Valor com o desconto do PBM: <span class="qd-pbm-item-value">R$ ' + qd_number_format(item.PbmNewPrice / 100, 2, ",", ".") + '</span></span>';
 		else
@@ -316,13 +313,23 @@ var QdPbmCheckout = {
 
 		QdPbmCheckout.cartElement.find('.product-item[data-sku="' + item.id + '"] td.product-price').append('<div class="qd-pbm-item">' + htmlMsg + '</div>');
 	},
-	preAuth: function(data, item) {
+	modalConfirmDiscount: function(item) {
+		var modal = $('<div class="modal fade modal-qd-pbm-confirm-discount hide"> <div class="modal-dialog"> <div class="modal-content"> <div class="modal-body"> </div> </div> </div> </div>');
+
+		if ($('.modal-qd-pbm-confirm-discount').length)
+			return modal = $('.modal-qd-pbm-confirm-discount');
+		else
+			$(document.body).append(modal);
+
+		modal.modal();
+	},
+	preAuth: function(item) {
 		return $.ajax({
 			url: QdPbmCheckout.sever + '/pre-auth',
 			dataType: 'json',
 			type: 'POST',
 			data: {
-				cpf: data.cpf,
+				cpf: item.PbmCpf,
 				qtt: item.quantity,
 				bDate: '',
 				productId: item.productId,
