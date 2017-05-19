@@ -17,9 +17,7 @@ var QdPbmCheckout = {
 
 		QdPbmCheckout.validateItems();
 	},
-	requestStop: function() {
-
-	},
+	requestStop: function() {},
 	checkRequestIsRunning: function() {
 		var vtexIsRunning = false;
 		$(window).on("checkoutRequestStart.vtex", function() {
@@ -40,7 +38,6 @@ var QdPbmCheckout = {
 			updateStatus();
 		});
 
-		
 		(updateStatus = function($firstRun) {
 			if(ajaxRunning == false && vtexIsRunning == false){
 				QdPbmCheckout.requestRunning = false;
@@ -55,12 +52,13 @@ var QdPbmCheckout = {
 		QdPbmCheckout.removeGiftcard();
 	},
 	payment: function() {
-		if(!QdPbmCheckout.requestRunning)
+		if(!QdPbmCheckout.requestRunning) {
 			QdPbmCheckout.execPayment();
-		else
+		} else {
 			$(window).one("checkoutRequestEnd.vtex", function() {
 				QdPbmCheckout.execPayment();
 			});
+		}
 	},
 	loadElements: function () {
 		QdPbmCheckout.cartElement = $('#cartLoadedDiv');
@@ -136,6 +134,24 @@ var QdPbmCheckout = {
 		QdPbmCheckout.userIsAuthenticated(function() {
 			QdPbmCheckout.validateItems();
 		});
+
+		var htmlPbmDiscountInfo = $('<tr class="qd-pbm-discount"> <td class="info">Desconto do PBM</td> <td class="space"></td> <td class="qd-pbm-discount-monetary"></td> <td class="empty"></td> </tr> <tr class="qd-pbm-total"> <td class="info">Total com PBM</td> <td class="space"></td> <td class="qd-pbm-total-monetary monetary"></td> <td class="empty"></td> </tr>');
+		var cartTotalizers = $('.mini-cart .cart-totalizers');
+
+		if (!vtexjs.checkout.orderForm.paymentData.giftCards.length) {
+			cartTotalizers.find('.qd-pbm-discount').remove();
+			cartTotalizers.find('.qd-pbm-total').remove();
+			return;
+		}
+
+		if ($('.mini-cart .cart-totalizers .qd-pbm-discount-monetary').length) {
+			cartTotalizers.find('.qd-pbm-discount-monetary').html('- R$ ' + qd_number_format(vtexjs.checkout.orderForm.paymentData.giftCards[0].value/100, 2, ',', '.'));
+			cartTotalizers.find('.qd-pbm-total-monetary').html(window.paymentData.totalToPayIncludingGiftsLabel());
+		} else {
+			cartTotalizers.find('tfoot').append(htmlPbmDiscountInfo);
+			htmlPbmDiscountInfo.find('.qd-pbm-total-monetary').html(window.paymentData.totalToPayIncludingGiftsLabel());
+			htmlPbmDiscountInfo.find('.qd-pbm-discount-monetary').html('- R$ ' + qd_number_format(vtexjs.checkout.orderForm.paymentData.giftCards[0].value/100, 2, ',', '.'));
+		}
 	},
 	attachmentOrder: function(data) {
 		$(document.body).addClass('qd-loading');
@@ -255,8 +271,6 @@ var QdPbmCheckout = {
 						evt.preventDefault();
 						QdPbmCheckout.fullPageElement.hide();
 					});
-
-					// return;
 				}
 
 				var checkReq = function() {
@@ -276,13 +290,12 @@ var QdPbmCheckout = {
 						continue;
 
 					if(data.items[i].PbmValid){
-						QdPbmCheckout.showCartDiscountInformation(data.items[i], i);
+						QdPbmCheckout.showCartDiscountInformation(data.items[i]);
 						checkReq();
 						continue;
-					}
-					else{
+					} else {
 						req++;
-						QdPbmCheckout.preAuth(data, data.items[i]).always(function() {
+						QdPbmCheckout.preAuth(data.items[i]).always(function() {
 							cReq++;
 							checkReq();
 						});
@@ -292,7 +305,7 @@ var QdPbmCheckout = {
 			catch (e) {(typeof console !== "undefined" && typeof console.error === "function" && console.error("Problemas :( . Detalhes: ", e)); }
 		});
 	},
-	showCartDiscountInformation: function(item, index) {
+	showCartDiscountInformation: function(item) {
 		if(item.PbmHasDiscount)
 			var htmlMsg = '<span>Valor com o desconto do PBM: <span class="qd-pbm-item-value">R$ ' + qd_number_format(item.PbmNewPrice / 100, 2, ",", ".") + '</span></span>';
 		else
@@ -300,13 +313,23 @@ var QdPbmCheckout = {
 
 		QdPbmCheckout.cartElement.find('.product-item[data-sku="' + item.id + '"] td.product-price').append('<div class="qd-pbm-item">' + htmlMsg + '</div>');
 	},
-	preAuth: function(data, item) {
+	modalConfirmDiscount: function(item) {
+		var modal = $('<div class="modal fade modal-qd-pbm-confirm-discount hide"> <div class="modal-dialog"> <div class="modal-content"> <div class="modal-body"> </div> </div> </div> </div>');
+
+		if ($('.modal-qd-pbm-confirm-discount').length)
+			return modal = $('.modal-qd-pbm-confirm-discount');
+		else
+			$(document.body).append(modal);
+
+		modal.modal();
+	},
+	preAuth: function(item) {
 		return $.ajax({
 			url: QdPbmCheckout.sever + '/pre-auth',
 			dataType: 'json',
 			type: 'POST',
 			data: {
-				cpf: data.cpf,
+				cpf: item.PbmCpf,
 				qtt: item.quantity,
 				bDate: '',
 				productId: item.productId,
