@@ -303,12 +303,10 @@ var QdPbmCheckout = {
 						QdPbmCheckout.showCartDiscountInformation(data.items[i]);
 						checkReq();
 						continue;
-					} else {
+					}
+					else {
 						req++;
-
-						QdPbmCheckout.preAuth(data.items[i]).done(function(dataPreAuth){
-							console.log(dataPreAuth);
-						}).always(function() {
+						QdPbmCheckout.preAuth(data.items[i]).always(function() {
 							cReq++;
 							checkReq();
 						});
