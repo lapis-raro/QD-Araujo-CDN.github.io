@@ -70,7 +70,8 @@ var QdPbm = {
 
 		QdPbm.pbmLoading.show();
 		$.ajax({
-			url: QdPbm.sever + '/pre-auth',
+			url: QdPbm.sever + '/check-best-discount',
+			// url: QdPbm.sever + '/pre-auth',
 			dataType: 'json',
 			type: 'POST',
 			data: QdPbm.reqData,
@@ -103,8 +104,9 @@ var QdPbm = {
 					wrapperResult.append('<div class="product-qd-v1-pbm-result-success"> <span class="product-qd-v1-pbm-result-success-title">Desconto Gerado com sucesso!</span> <p><strong><img src="/arquivos/stamp-pbm-2.jpg" /> Valor do produto com desconto: <span> R$ ' +  qd_number_format(priceDiscount / 100, 2, ",", ".") + '</span></strong></p> <p>Clique no botão <strong>“Comprar”</strong> para adicionar o produto com desconto no seu carrinho. Obs: O desconto só será aplicado na tela de pagamento.</p> <p class="product-qd-v1-pbm-result-success-text-info">Informação da Araujo: "Se o desconto da Araujo for maior do que o do PBM, será aplicado o maior desconto deste medicamento".  </p> <p class="product-qd-v1-pbm-result-success-text-info">Informação do sistema do PBM: “' + data.info + '” </p> </div>');
 				}
 				
-				if(data.item.QtdeAuth != QdPbm.reqData.qtt)
-					wrapperResult.append('<p>Quantidade solicitada é diferente da quantidade na qual foi concedido o desconto</p>');
+				// Depois que foi desenvolvida a funcionalidade de Check Best Discount isso me pareceu inútil
+				// if(data.item.QtdeAuth != QdPbm.reqData.qtt)
+					// wrapperResult.append('<p>Quantidade solicitada é diferente da quantidade na qual foi concedido o desconto</p>');
 			}
 			else if(data.statusServico >= 32) {
 				wrapperResult.html('<div class="product-qd-v1-pbm-result-alert"> <span class="product-qd-v1-pbm-result-alert-title">PROBLEMAS AO ENVIAR SUA SOLICITAÇÃO</span> <p>Informação do sistema do PBM: </p> <p>“' + data.info + '”</p> <button class="qd-alert-close">Tentar novamente</button> </div>');
@@ -225,7 +227,8 @@ var QdPbm = {
 
 				var isAtivaQd = data.redirect && data.redirect == 'ATIVA-QD';
 				$.ajax({
-					url: QdPbm.sever + (isAtivaQd? '/pre-auth': '/sign-up'),
+					// url: QdPbm.sever + (isAtivaQd? '/pre-auth': '/sign-up'),
+					url: QdPbm.sever + (isAtivaQd? '/check-best-discount': '/sign-up'),
 					type: 'POST',
 					dataType: 'json',
 					data: isAtivaQd? $.extend({}, QdPbm.reqData, formData): formData

@@ -1,14 +1,15 @@
 var QdPbmCheckout = {
 	// sever: '//localhost:8080/araujo-pbm',
 	sever: '//web.araujo.com.br/araujo-pbm',
+	providerId: 'araujo',
 	run: function() {
 		QdPbmCheckout.checkRequestIsRunning();
+		QdPbmCheckout.loadingFix();
 	},
 	init: function() {
 		QdPbmCheckout.loadElements(); // chamar antes de todos
 		QdPbmCheckout.fullPageNotification(); // chamar antes de todos
 		QdPbmCheckout.cookieRenew(); // chamar antes de todos
-
 		QdPbmCheckout.validateItems();
 	},
 	orderUpdated: function(orderForm){
@@ -17,7 +18,9 @@ var QdPbmCheckout = {
 
 		QdPbmCheckout.validateItems();
 	},
-	requestStop: function() {},
+	requestStop: function() {
+		$(window).trigger("QD.PBM_requestStop");
+	},
 	checkRequestIsRunning: function() {
 		var vtexIsRunning = false;
 		$(window).on("checkoutRequestStart.vtex", function() {
@@ -38,7 +41,7 @@ var QdPbmCheckout = {
 			updateStatus();
 		});
 
-		(updateStatus = function($firstRun) {
+		function updateStatus($firstRun) {
 			if(ajaxRunning == false && vtexIsRunning == false){
 				QdPbmCheckout.requestRunning = false;
 				if(!$firstRun)
@@ -46,7 +49,21 @@ var QdPbmCheckout = {
 			}
 			else
 				QdPbmCheckout.requestRunning = true;
-		})(true);
+		};
+		updateStatus(true);
+	},
+	loadingFix: function() {
+		$(window).on("QD.PBM_requestStop", function() {
+			setTimeout(function() {
+				try {
+					if(!checkout.loading() && $('.container-order-form .loading-img:visible').length) {
+						checkout.loading(true);
+						checkout.loading(false);
+					}
+				}
+				catch (e) {(typeof console !== "undefined" && typeof console.error === "function" && console.error("Problemas :( . Detalhes: ", e)); }
+			}, 300);
+		});
 	},
 	cart: function() {
 		QdPbmCheckout.removeGiftcard();
@@ -95,7 +112,7 @@ var QdPbmCheckout = {
 	},
 	checkRequestDetails: function(orderForm) {
 		if (typeof orderForm.messages == "object") {
-			for (i in orderForm.messages) {
+			for (var i = 0; i < orderForm.messages.length; i++) {
 				if (orderForm.messages[i].text.indexOf($.cookie('qdPbm')) >= 0) {
 					QdPbmCheckout.fullPageElement.html('<div class="qd-fullpage-notification-error"> <div class="qd-fullpage-notification-error-header"> <span>Não foi possível aplicar seu desconto do PBM</span> </div> <p><strong>Infelizmente ocorreu um erro ao tentar aplicar o seu desconto do PBM.</strong></p> <p>para tentar resolver esse erro, por favor verifique se os itens abaixo estão corretos: </p> <ul><li>A quantidade dos itens no carrinho é a mesma que foi utilziada para consultar o benefício na tela de produto.</li> </ul> <p>Caso esse error persista, por favor entre em contato com o Atendimento ao Cliente.</p> <p><strong>Atente-se que devido a este erro, para que o desconto do PBM lhe seja concedido novamente, será necessário que você volte a tela de produto e insira novamente o seu CPF.</strong></p> <a href="/checkout/#/cart" class="qd-fullpage-notification-close">Fechar</a> </div>');
 					QdPbmCheckout.fullPageElement.show();
@@ -118,7 +135,6 @@ var QdPbmCheckout = {
 				}
 			}
 		}
-
 	},
 	notificationError: function() {
 		var fullPage = QdPbmCheckout.fullPageElement.html('<div class="qd-fullpage-notification-error"> <div class="qd-fullpage-notification-error-header"> <span>Ocorreu um erro ao aplicar o desconto PBM</span> </div> <p><center><strong>Solicitamos que recarregue a pagina para tentar novamente.</strong></center></p> <a href="/checkout/#/cart" class="qd-fullpage-notification-reload-link">Recarregar página</a> </div>');
@@ -221,25 +237,18 @@ var QdPbmCheckout = {
 			QdPbmCheckout.fullPageElement.html('<div class="qd-fullpage-notification-applying"> <div class="qd-fullpage-notification-applying-header"> <img src="/arquivos/stamp-pbm-2.jpg" alt="PBM" /> </div> <p>Aguarde. Estamos aplicando o seu desconto.</p> <i class="icon-spinner icon-spin"></i> </div>');
 			QdPbmCheckout.fullPageElement.show();
 
-			$.ajax({
-				url: '/api/checkout/pub/gift-cards/providers',
-				type: "GET",
-				contentType: "application/json; charset=utf-8",
-				dataType: "json"
-			}).done(function(data) {
-				vtexjs.checkout.sendAttachment('paymentData', {
-					giftCards: [{
-						inUse: true,
-						isSpecialCard: false,
-						provider: data[0].id,
-						redemptionCode: redemptionCode
-					}],
-					payments: vtexjs.checkout.orderForm.paymentData.payments
-				}).done(function() {
-					QdPbmCheckout.fullPageElement.hide();
-				}).always(function() {
-					$('.gift-card-section').addClass('qd-pbm-applied-discount');
-				}).fail(QdPbmCheckout.notificationError);
+			vtexjs.checkout.sendAttachment('paymentData', {
+				giftCards: [{
+					inUse: true,
+					isSpecialCard: false,
+					provider: QdPbmCheckout.providerId,
+					redemptionCode: redemptionCode
+				}],
+				payments: vtexjs.checkout.orderForm.paymentData.payments
+			}).done(function() {
+				QdPbmCheckout.fullPageElement.hide();
+			}).always(function() {
+				$('.gift-card-section').addClass('qd-pbm-applied-discount');
 			}).fail(QdPbmCheckout.notificationError);
 		}
 		catch (e) {(typeof console !== "undefined" && typeof console.error === "function" && console.error("Problemas :( . Detalhes: ", e)); }
@@ -249,6 +258,7 @@ var QdPbmCheckout = {
 			return;
 
 		$(document.body).addClass('qd-loading');
+
 		$.ajax({
 			url: QdPbmCheckout.sever + '/checkout-check',
 			dataType: 'json',
@@ -295,7 +305,10 @@ var QdPbmCheckout = {
 						continue;
 					} else {
 						req++;
-						QdPbmCheckout.preAuth(data.items[i]).always(function() {
+
+						QdPbmCheckout.preAuth(data.items[i]).done(function(dataPreAuth){
+							console.log(dataPreAuth);
+						}).always(function() {
 							cReq++;
 							checkReq();
 						});
@@ -313,19 +326,25 @@ var QdPbmCheckout = {
 
 		QdPbmCheckout.cartElement.find('.product-item[data-sku="' + item.id + '"] td.product-price').append('<div class="qd-pbm-item">' + htmlMsg + '</div>');
 	},
-	modalConfirmDiscount: function(item) {
-		var modal = $('<div class="modal fade modal-qd-pbm-confirm-discount hide"> <div class="modal-dialog"> <div class="modal-content"> <div class="modal-body"> </div> </div> </div> </div>');
+	validateBestDiscount: function() {
+		// var modal = $('<div class="modal fade modal-qd-pbm-confirm-discount hide"> <div class="modal-dialog"> <div class="modal-content"> <div class="modal-body"> <div class="row-fluid"> <div class="span12"> <p> Notamos que o desconto do PBM para <span class="qd-last-quantity"></span> itens, é melhor do que para <span class="qd-current-quantity"></span> itens </p> <p> Preço para <span class="qd-last-quantity"></span> itens: <span class="qd-last-price"></span> </p> <p> Preço para <span class="qd-current-quantity"></span> itens: <span class="qd-current-price"></span> </p> </div> </div> <div class="row-fluid"> <div class="span12"> <button class="modal-qd-pbm-confirm-discount-last" type="button">Manter PBM para <span class="qd-last-quantity"></span> itens</button> <button class="modal-qd-pbm-confirm-discount-current" type="button" data-dismiss="modal">Manter PBM para <span class="qd-current-quantity"></span> itens</button> </div> </div> </div> </div> </div> </div>');
 
-		if ($('.modal-qd-pbm-confirm-discount').length)
-			return modal = $('.modal-qd-pbm-confirm-discount');
-		else
-			$(document.body).append(modal);
+		// if ($('.modal-qd-pbm-confirm-discount').length)
+		// 	modal = $('.modal-qd-pbm-confirm-discount');
+		// else
+		// 	$(document.body).append(modal);
 
-		modal.modal();
+		// modal.find('.qd-last-quantity').text(previousItem.quantity);
+		// modal.find('.qd-last-price').text(qd_number_format(previousItem.PbmNewPrice / 100, 2, ",", "."));
+		// modal.find('.qd-current-quantity').text(currentItem.QtdeAuth);
+		// modal.find('.qd-current-price').text(qd_number_format(currentItem.newPrice / 100, 2, ",", "."));
+
+		// modal.modal();
 	},
 	preAuth: function(item) {
 		return $.ajax({
-			url: QdPbmCheckout.sever + '/pre-auth',
+			// url: QdPbmCheckout.sever + '/pre-auth',
+			url: QdPbmCheckout.sever + '/check-best-discount',
 			dataType: 'json',
 			type: 'POST',
 			data: {
