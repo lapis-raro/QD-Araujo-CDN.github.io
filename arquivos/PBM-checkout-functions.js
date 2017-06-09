@@ -125,6 +125,8 @@ var QdPbmCheckout = {
 					});
 
 					$.removeCookie('qdPbm', { path: '/' });
+					QdPbmCheckout.allowValidateItems = false;
+
 					return;
 				}
 				else if (orderForm.messages[i].text.indexOf('Vale Compra' >= 0)) {
@@ -253,7 +255,11 @@ var QdPbmCheckout = {
 		}
 		catch (e) {(typeof console !== "undefined" && typeof console.error === "function" && console.error("Problemas :( . Detalhes: ", e)); }
 	},
+	allowValidateItems: true,
 	validateItems: function() {
+		if(!QdPbmCheckout.allowValidateItems)
+			return;
+
 		if (!vtexjs.checkout.orderForm || vtexjs.checkout.orderForm.items.length <= 0)
 			return;
 
@@ -264,7 +270,8 @@ var QdPbmCheckout = {
 			dataType: 'json',
 			type: 'POST',
 			data: {
-				items: JSON.stringify(vtexjs.checkout.orderForm.items),
+				// items: JSON.stringify(vtexjs.checkout.orderForm.items),
+				vtexOrderFormId: vtexjs.checkout.orderForm.orderFormId,
 				orderId: $.cookie('qdPbm')
 			},
 			complete: function() { $(document.body).removeClass('qd-loading') }
