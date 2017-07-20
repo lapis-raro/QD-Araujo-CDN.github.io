@@ -1,0 +1,256 @@
+@font-face {
+	font-family: 'GothamBook';
+	src: url('../fonts/GothamNarrow-Book.eot');
+	src: url('../fonts/GothamNarrow-Book.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/GothamNarrow-Book.woff2') format('woff2'),
+		url('../fonts/GothamNarrow-Book.woff') format('woff'),
+		url('../fonts/GothamNarrow-Book.ttf') format('truetype'),
+		url('../fonts/GothamNarrow-Book.svg#GothamBook') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'FrutigerExtraBlack';
+	src: url('../fonts/FrutigerLTStd-ExtraBlackCn.eot');
+	src: url('../fonts/FrutigerLTStd-ExtraBlackCn.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/FrutigerLTStd-ExtraBlackCn.woff2') format('woff2'),
+		url('../fonts/FrutigerLTStd-ExtraBlackCn.woff') format('woff'),
+		url('../fonts/FrutigerLTStd-ExtraBlackCn.ttf') format('truetype'),
+		url('../fonts/FrutigerLTStd-ExtraBlackCn.svg#FrutigerLTStd-ExtraBlackCn') format('svg');
+	font-weight: 900;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'FrutigerLight';
+	src: url('../fonts/FrutigerLTStd-Light.eot');
+	src: url('../fonts/FrutigerLTStd-Light.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/FrutigerLTStd-Light.woff2') format('woff2'),
+		url('../fonts/FrutigerLTStd-Light.woff') format('woff'),
+		url('../fonts/FrutigerLTStd-Light.ttf') format('truetype'),
+		url('../fonts/FrutigerLTStd-Light.svg#FrutigerLTStd-Light') format('svg');
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'FrutigerCn';
+	src: url('../fonts/FrutigerLTStd-Cn.eot');
+	src: url('../fonts/FrutigerLTStd-Cn.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/FrutigerLTStd-Cn.woff2') format('woff2'),
+		url('../fonts/FrutigerLTStd-Cn.woff') format('woff'),
+		url('../fonts/FrutigerLTStd-Cn.ttf') format('truetype'),
+		url('../fonts/FrutigerLTStd-Cn.svg#FrutigerLTStd-Cn') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'FrutigerBoldCn';
+	src: url('../fonts/FrutigerLTStd-BoldCn.eot');
+	src: url('../fonts/FrutigerLTStd-BoldCn.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/FrutigerLTStd-BoldCn.woff2') format('woff2'),
+		url('../fonts/FrutigerLTStd-BoldCn.woff') format('woff'),
+		url('../fonts/FrutigerLTStd-BoldCn.ttf') format('truetype'),
+		url('../fonts/FrutigerLTStd-BoldCn.svg#FrutigerLTStd-BoldCn') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+/*variáveis*/
+$azul-claro: #76ced9;
+$marron-caramelo: #f7ebe4;
+$azul-escuro: #00346a;
+$azul-bebe: #d7eff2;
+
+body{
+    background:#f7ebe4;
+    font:16px 'GothamBook';
+    color:#1d3767;
+}
+h1{
+    font:40px 'FrutigerExtraBlack';
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color:#004684;
+    span{
+        font:40px 'FrutigerLight';
+        color:#004684;
+    }
+}
+.container{
+	max-width: 970px;
+}
+header{
+	position: relative;
+	.container{
+		position: relative;
+		z-index: 1;
+	}
+	.abs-left-color{
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 50%;
+		background-color: $marron-caramelo;
+		z-index: 0;
+	}
+	.abs-right-color{
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: 100%;
+		width: 50%;
+		background-color: $azul-bebe;
+		z-index: 0;
+	}
+}
+
+.box{
+    p{
+        color:#fff;
+        text-transform: uppercase;
+        font:12px 'FrutigerLight';
+        text-align: center;
+        background-color: #003469;
+        padding:10px 20px;
+        margin-top: 50px;
+    }
+}
+
+
+.blue-banner{
+	padding: 35px 0px; 
+	background-color: $azul-claro;
+	h2{
+		margin: 0;
+		font-family: 'FrutigerExtraBlack';
+		color: $azul-escuro;
+		font-size: 30px;
+		text-align: center;
+	}
+}
+.topics{
+	padding: 50px 0px;
+	.line-topics{
+		margin-bottom: 35px;
+		&:last-child{
+			margin-bottom: 0;
+		}
+		h3{
+			margin-top: 15px;
+			font-family: 'FrutigerBoldCn';
+			font-size: 24px;
+			span{
+				font-size: 18px;
+			}
+		}
+		p{
+			font-family: 'FrutigerLight';
+			font-size: 16px;
+		}
+	}
+	.icon{
+		width: 50px;
+		height: 45px;
+		background: url('../img/icones.png') no-repeat;
+		&.estetoscopio{
+			background-position: 0 0;
+		}
+		&.cigarro{
+			background-position: -50px 0;
+		}
+		&.coracao{
+			background-position: -100px 0;
+		}
+		&.homem{
+			background-position: -150px 0;
+		}
+		&.vacina{
+			background-position: -200px 0;
+		}
+		&.fruta{
+			background-position: -250px 0;
+		}
+		&.dedo{
+			background-position: -300px 0;
+		}
+		&.pilula{
+			background-position: -350px 0;
+		}
+	}
+}
+
+.markers-breakpoint{
+	position: relative;
+	background-color: $azul-claro;
+	padding: 90px 0px 75px 0px;
+	margin-top: 100px;
+	.line-title{
+		margin: 70px 0px 35px 0px;
+	}
+	.title{
+		font-family: 'FrutigerExtraBlack';
+		font-size: 28px;
+		margin: 0;
+	}
+	.subtitle{
+		font-family: 'FrutigerCn';
+		font-size: 26px;
+		margin: 0;
+	}
+	.line-image-mosaic{
+		margin-top: -190px;
+	}
+	.list-map-marker{
+		padding-left: 0px;
+		li{
+			font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+			list-style-type: none;
+			list-style-position: outside;
+			padding-left: 30px;
+			line-height: 40px;
+			font-size: 17px;
+			background: url('../img/pin.png') no-repeat left center;
+			strong{
+				//font-family: 'FrutigerBoldCn';
+			}
+		}
+	}
+	.detalhe-map{
+		width: 88px;
+		height: 38px;
+		position: absolute;
+		left: 50%;
+		margin-left: -44px;
+		bottom: -35px;
+		background: url('../img/abinha.png') no-repeat;
+		z-index: 10;
+	}
+}
+
+#map{
+	height: 400px;
+	margin-bottom: 50px;
+}
+
+
+
+
+
+.gm-style-iw {
+	/* width: 350px !important; */
+	top: 15px !important;
+	left: 0px !important;
+	color: #FFF !important;
+	background-color: #ed2b33;
+	box-shadow: 0 1px 6px rgba(178, 178, 178, 0.6);
+	border: 0;
+	border-radius: 15px;
+	padding: 15px;
+	text-align: center;
+	//font-family: 'FrutigerLTStdLight';
+		hr{
+			margin:8px 0;
+			border:0;
+			color: #FFF;
+			border-top:1px solid #FFFFFF;
+		}
+}
