@@ -1,266 +1,279 @@
-@font-face {
-  font-family: 'GothamBook';
-  src: url("../fonts/GothamNarrow-Book.eot");
-  src: url("../fonts/GothamNarrow-Book.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamNarrow-Book.woff2") format("woff2"), url("../fonts/GothamNarrow-Book.woff") format("woff"), url("../fonts/GothamNarrow-Book.ttf") format("truetype"), url("../fonts/GothamNarrow-Book.svg#GothamBook") format("svg");
-  font-weight: normal;
-  font-style: normal;
+/*! HTML5 Boilerplate v5.1.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
 }
 
-@font-face {
-  font-family: 'FrutigerExtraBlack';
-  src: url("../fonts/FrutigerLTStd-ExtraBlackCn.eot");
-  src: url("../fonts/FrutigerLTStd-ExtraBlackCn.eot?#iefix") format("embedded-opentype"), url("../fonts/FrutigerLTStd-ExtraBlackCn.woff2") format("woff2"), url("../fonts/FrutigerLTStd-ExtraBlackCn.woff") format("woff"), url("../fonts/FrutigerLTStd-ExtraBlackCn.ttf") format("truetype"), url("../fonts/FrutigerLTStd-ExtraBlackCn.svg#FrutigerLTStd-ExtraBlackCn") format("svg");
-  font-weight: 900;
-  font-style: normal;
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
 }
 
-@font-face {
-  font-family: 'FrutigerLight';
-  src: url("../fonts/FrutigerLTStd-Light.eot");
-  src: url("../fonts/FrutigerLTStd-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/FrutigerLTStd-Light.woff2") format("woff2"), url("../fonts/FrutigerLTStd-Light.woff") format("woff"), url("../fonts/FrutigerLTStd-Light.ttf") format("truetype"), url("../fonts/FrutigerLTStd-Light.svg#FrutigerLTStd-Light") format("svg");
-  font-weight: 300;
-  font-style: normal;
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
 }
 
-@font-face {
-  font-family: 'FrutigerCn';
-  src: url("../fonts/FrutigerLTStd-Cn.eot");
-  src: url("../fonts/FrutigerLTStd-Cn.eot?#iefix") format("embedded-opentype"), url("../fonts/FrutigerLTStd-Cn.woff2") format("woff2"), url("../fonts/FrutigerLTStd-Cn.woff") format("woff"), url("../fonts/FrutigerLTStd-Cn.ttf") format("truetype"), url("../fonts/FrutigerLTStd-Cn.svg#FrutigerLTStd-Cn") format("svg");
-  font-weight: normal;
-  font-style: normal;
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
 }
 
-@font-face {
-  font-family: 'FrutigerBoldCn';
-  src: url("../fonts/FrutigerLTStd-BoldCn.eot");
-  src: url("../fonts/FrutigerLTStd-BoldCn.eot?#iefix") format("embedded-opentype"), url("../fonts/FrutigerLTStd-BoldCn.woff2") format("woff2"), url("../fonts/FrutigerLTStd-BoldCn.woff") format("woff"), url("../fonts/FrutigerLTStd-BoldCn.ttf") format("truetype"), url("../fonts/FrutigerLTStd-BoldCn.svg#FrutigerLTStd-BoldCn") format("svg");
-  font-weight: bold;
-  font-style: normal;
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
 }
 
-/*variáveis*/
-/* line 62, ../scss/main.scss */
-body {
-  background: #f7ebe4;
-  font: 16px 'GothamBook';
-  color: #1d3767;
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
 }
 
-/* line 67, ../scss/main.scss */
-h1 {
-  font: 40px 'FrutigerExtraBlack';
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  color: #004684;
-}
-/* line 72, ../scss/main.scss */
-h1 span {
-  font: 40px 'FrutigerLight';
-  color: #004684;
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
 }
 
-/* line 77, ../scss/main.scss */
-.container {
-  max-width: 970px;
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
 }
 
-/* line 80, ../scss/main.scss */
-header {
-  position: relative;
-}
-/* line 82, ../scss/main.scss */
-header .container {
-  position: relative;
-  z-index: 1;
-}
-/* line 86, ../scss/main.scss */
-header .abs-left-color {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 50%;
-  background-color: #f7ebe4;
-  z-index: 0;
-}
-/* line 95, ../scss/main.scss */
-header .abs-right-color {
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 100%;
-  width: 50%;
-  background-color: #d7eff2;
-  z-index: 0;
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers:
+ */
+
+.hidden {
+    display: none !important;
 }
 
-/* line 107, ../scss/main.scss */
-.box p {
-  color: #fff;
-  text-transform: uppercase;
-  font: 12px 'FrutigerLight';
-  text-align: center;
-  background-color: #003469;
-  padding: 10px 20px;
-  margin-top: 50px;
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
 }
 
-/* line 119, ../scss/main.scss */
-.blue-banner {
-  padding: 35px 0px;
-  background-color: #76ced9;
-}
-/* line 122, ../scss/main.scss */
-.blue-banner h2 {
-  margin: 0;
-  font-family: 'FrutigerExtraBlack';
-  color: #00346a;
-  font-size: 30px;
-  text-align: center;
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
 }
 
-/* line 130, ../scss/main.scss */
-.topics {
-  padding: 50px 0px;
-}
-/* line 132, ../scss/main.scss */
-.topics .line-topics {
-  margin-bottom: 35px;
-}
-/* line 134, ../scss/main.scss */
-.topics .line-topics:last-child {
-  margin-bottom: 0;
-}
-/* line 137, ../scss/main.scss */
-.topics .line-topics h3 {
-  margin-top: 15px;
-  font-family: 'FrutigerBoldCn';
-  font-size: 24px;
-}
-/* line 141, ../scss/main.scss */
-.topics .line-topics h3 span {
-  font-size: 18px;
-}
-/* line 145, ../scss/main.scss */
-.topics .line-topics p {
-  font-family: 'FrutigerLight';
-  font-size: 16px;
-}
-/* line 150, ../scss/main.scss */
-.topics .icon {
-  width: 50px;
-  height: 45px;
-  background: url("../img/icones.png") no-repeat;
-}
-/* line 154, ../scss/main.scss */
-.topics .icon.estetoscopio {
-  background-position: 0 0;
-}
-/* line 157, ../scss/main.scss */
-.topics .icon.cigarro {
-  background-position: -50px 0;
-}
-/* line 160, ../scss/main.scss */
-.topics .icon.coracao {
-  background-position: -100px 0;
-}
-/* line 163, ../scss/main.scss */
-.topics .icon.homem {
-  background-position: -150px 0;
-}
-/* line 166, ../scss/main.scss */
-.topics .icon.vacina {
-  background-position: -200px 0;
-}
-/* line 169, ../scss/main.scss */
-.topics .icon.fruta {
-  background-position: -250px 0;
-}
-/* line 172, ../scss/main.scss */
-.topics .icon.dedo {
-  background-position: -300px 0;
-}
-/* line 175, ../scss/main.scss */
-.topics .icon.pilula {
-  background-position: -350px 0;
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
 }
 
-/* line 181, ../scss/main.scss */
-.markers-breakpoint {
-  position: relative;
-  background-color: #76ced9;
-  padding: 90px 0px 75px 0px;
-  margin-top: 100px;
-}
-/* line 186, ../scss/main.scss */
-.markers-breakpoint .line-title {
-  margin: 70px 0px 35px 0px;
-}
-/* line 189, ../scss/main.scss */
-.markers-breakpoint .title {
-  font-family: 'FrutigerExtraBlack';
-  font-size: 28px;
-  margin: 0;
-}
-/* line 194, ../scss/main.scss */
-.markers-breakpoint .subtitle {
-  font-family: 'FrutigerCn';
-  font-size: 26px;
-  margin: 0;
-}
-/* line 199, ../scss/main.scss */
-.markers-breakpoint .line-image-mosaic {
-  margin-top: -190px;
-}
-/* line 202, ../scss/main.scss */
-.markers-breakpoint .list-map-marker {
-  padding-left: 0px;
-}
-/* line 204, ../scss/main.scss */
-.markers-breakpoint .list-map-marker li {
-  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
-  list-style-type: none;
-  list-style-position: outside;
-  padding-left: 30px;
-  line-height: 40px;
-  font-size: 17px;
-  background: url("../img/pin.png") no-repeat left center;
-}
-/* line 217, ../scss/main.scss */
-.markers-breakpoint .detalhe-map {
-  width: 88px;
-  height: 38px;
-  position: absolute;
-  left: 50%;
-  margin-left: -44px;
-  bottom: -35px;
-  background: url("../img/abinha.png") no-repeat;
-  z-index: 10;
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
 }
 
-/* line 229, ../scss/main.scss */
-#map {
-  height: 400px;
-  margin-bottom: 50px;
+.clearfix:after {
+    clear: both;
 }
 
-/* line 238, ../scss/main.scss */
-.gm-style-iw {
-  /* width: 350px !important; */
-  top: 15px !important;
-  left: 0px !important;
-  color: #FFF !important;
-  background-color: #ed2b33;
-  box-shadow: 0 1px 6px rgba(178, 178, 178, 0.6);
-  border: 0;
-  border-radius: 15px;
-  padding: 15px;
-  text-align: center;
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
 }
-/* line 250, ../scss/main.scss */
-.gm-style-iw hr {
-  margin: 8px 0;
-  border: 0;
-  color: #FFF;
-  border-top: 1px solid #FFFFFF;
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
 }
