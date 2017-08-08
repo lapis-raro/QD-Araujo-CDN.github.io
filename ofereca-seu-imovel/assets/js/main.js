@@ -25,7 +25,7 @@ $(function() {
 	});
 
 	$('iframe[name=qd_handling_form]').load(function() {
-		form.children().not('mensagem').slideUp();
+		form.children().not('.mensagem').slideUp();
 		form[0].reset();
 	});
 });
