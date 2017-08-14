@@ -1,4 +1,5 @@
 $(function() {
+	var submitWrapper = new $;
 	var form = $('.dadosProposta form');
 	form.find('.qd_form_cep').mask('00000-000');
 	form.find('.qd_form_phone').mask('(00) 0000-00009');
@@ -12,12 +13,11 @@ $(function() {
 				return;
 
 			// Adicionando classe de carregando
-			var submitWrapper = $form.find('[type=submit]').parent().addClass('qd-loading');
+			submitWrapper = $form.find('[type=submit]').parent().addClass('qd-loading');
 
 			// Obtendo o e-mail
 			var email = $form.find('#emailPessoa').val() || "";
 			$form.append('<input class="hidden" type="text" name="subject" value="Ofereça seu imovel - ' + email +' ">');
-			console.log('Funciona!');
 
 			return true;
 		},
@@ -25,6 +25,7 @@ $(function() {
 	});
 
 	$('iframe[name=qd_handling_form]').load(function() {
+		submitWrapper.slideUp();
 		form[0].reset();
 	});
 });
