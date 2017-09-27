@@ -83,7 +83,7 @@ $(function(){
 
 	form.attr({
 		// action: "http://chadebebe.araujo.com.br/email-site/general_email.php?to[]=mp@a&to[]=cl@g",
-		action: "http://chadebebe.araujo.com.br/email-site/general_email.php?to[]=mp@a&to[]=m@a&to[]=ms@a",
+		action: "http://chadebebe.araujo.com.br/email-site/general_email.php?to[]=m@a&to[]=ms@a",
 		// action: "http://chadebebe.araujo.com.br/email-site/general_email.php?to[]=mp@a",
 		// action: "http://chadebebe.araujo.com.br/email-site/general_email.php?to[]=mp@a&bcc[]=cl@g&bcc[]=mm@g&to[]=mt@mt",
 		// action: "http://chadebebe.araujo.com.br/email-site/general_email.php?to[]=mp@a&bcc[]=mm@g",
