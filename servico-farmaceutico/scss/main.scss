@@ -206,11 +206,16 @@ header{
 			list-style-type: none;
 			list-style-position: outside;
 			padding-left: 30px;
-			line-height: 40px;
+			line-height: 16px;
 			font-size: 17px;
-			background: url('../img/pin.png') no-repeat left center;
+			background: url('../img/pin.png') no-repeat left top;
+			margin-bottom: 25px;
+			cursor: pointer;
 			strong{
 				//font-family: 'FrutigerBoldCn';
+			}
+			small{
+				font-size: 12px;
 			}
 		}
 	}
