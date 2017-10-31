@@ -1,0 +1,32 @@
+.paddingFix.tpl-content {padding: 20px 30px;}
+.tpl-content ol, .tpl-content ul, .tpl-content dd, .tpl-content dt, .tpl-content li, .tpl-content p {margin: 10px 0; padding: 0 10px; line-height: 20px;}
+.tpl-content strong {font-weight: bold;}
+.tpl-content h1 {margin: 5px 0px;font-size: 22px; padding:0 10px;color: #014783;}
+.tpl-content h2 {margin: 5px 0;font-size: 20px;padding: 0 10px;color: #014783;}
+.tpl-content h3 {margin: 5px 0;font-size: 18px;padding: 0 10px;color: #014783;}
+.tpl-content h3 {margin: 5px 0;font-size: 16px;padding: 0 10px;color: #014783;}
+.tpl-content h3 {margin: 5px 0;font-size: 16px;padding: 0 10px;color: #014783;}
+.tpl-content img {margin:0 10px!important;}
+
+.desconto table thead th,
+.desconto table thead td{padding: 7px 15px;text-align: center;white-space: nowrap;}
+.desconto table tbody tr:first-child td {background-color: #014783; color: #FFF; font-weight: bold;} 
+.desconto .blueBox {margin-top: 20px;}
+.desconto .blueBox p {background:#ccc;color:#666666; border-radius: 3px; padding: 5px;}
+
+/*Institucional novo checkout*/
+body.novoCheckout .paddingFix.tpl-content{padding-left:29px;}
+body.novoCheckout .tpl-content h2{display:none;}
+body.novoCheckout .tpl-content img{margin: 0 !important;display:block;}
+body.novoCheckout .qdContainer{padding:23px;background: url("/arquivos/novo-checkout-01-915x915.png") no-repeat center center #10568b;}
+body.novoCheckout .qdContainer p *,
+body.novoCheckout .qdContainer p{font-size: 14px;line-height: 18px;color:#FFF;margin:0;padding:0;}
+body.novoCheckout .qdContainer p.footerInfo{font-size: 12px;line-height: 16px;padding: 20px 20px 0;text-align: center;}
+body.novoCheckout .qdContainer ul{margin:0;padding: 0;}
+body.novoCheckout .qdContainer li{font-size: 20px;line-height: 24px;color:#ffff00;font-weight: bold;margin:0 0 20px 0;padding:0;}
+body.novoCheckout .qdRow{padding-right: 475px;margin-top:55px;min-height:226px;background:no-repeat 0 bottom transparent;}
+body.novoCheckout .qdRow.right{padding-right:0;padding-left: 465px;}
+body.novoCheckout .qdRow:first-child{margin-top:0px;background-image:url("/arquivos/novo-checkout-01-873x226.png"); }
+body.novoCheckout .qdRow:first-child +.qdRow{background-image:url("/arquivos/novo-checkout-01-873x225.png"); }
+body.novoCheckout .qdRow:first-child +.qdRow +.qdRow{background-image:url("/arquivos/novo-checkout-01-873x225-12.png"); }
+body.novoCheckout .qdRow:first-child +.qdRow +.qdRow +.qdRow{background-image:url("/arquivos/novo-checkout-01-873x225-14.png"); }

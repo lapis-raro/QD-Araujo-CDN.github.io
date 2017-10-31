@@ -1,0 +1,125 @@
+.mainColumn,
+.mainColumn >div,
+.disclaimer >div {padding:5px;background:#ffffff;border:solid 1px #e8e8e8;border-radius:4px;margin-bottom:5px}
+.disclaimer >div {margin-bottom:2px;}
+.mainTpl >div{margin-bottom:5px;} 
+/* Disclaimers (usando jCycle)*/
+.disclaimer .mainBannerWrapper {position:relative;}
+.disclaimer .mainBannerWrapper .cyclePager {position:absolute;z-index:50;bottom:15px;left:15px; width:32px; height:106px;  padding-top:56px; background:url(back_nav.png) 0 0 no-repeat;}
+.disclaimer .mainBannerWrapper .cyclePager a {text-indent:-999em;width:12px;height:12px; background-image:url(/arquivos/icon-nav.png); background-repeat:no-repeat; display:block;  margin:4px auto;}
+.disclaimer .mainBannerWrapper .cyclePager a:hover {background-position:left bottom;}
+.disclaimer .mainBannerWrapper .cyclePager a.activeSlide {background-position:left bottom;}
+/*.disclaimer .mainBannerWrapper .cyclePager a.activeSlide:hover {background-position:0 -28px;}*/
+.disclaimer .mainBannerContent {width:962px;height:222px;margin:0 auto;overflow:hidden;background:#ffffff;}
+.disclaimer .mainBannerContent .box-banner{margin-bottom:4px;}
+/*jCarousel Bot?es*/ 
+div.brandsWrapper	{position:relative;padding:5px 0;}
+div.brandsWrapper ul li {float:left;width:120px;height:50px;}
+div.brandsWrapper	.jcarousel-container {padding:0 60px;}
+div.brandsWrapper .jcarousel-clip {overflow:hidden;}
+/* Tabs */
+div.collectionsWrapper {padding:0px;}
+div.tabsWrap {position:relative;overflow:hidden;padding:0px;}
+.tabsWrap .tabsNav {background:#BAD1E5;}
+.tabsWrap .ajaxloader {margin-top:40px;}
+.tabsWrap .tabsNav li {float:left;background:#bad1e5;padding:13px 21px;font-size:14px;font-weight:bold;color:#ffffff;cursor:pointer;border-right:solid 1px #FFFFFF;}
+.tabsWrap .tabsNav li:hover {background:#7fafd9;}
+.tabsWrap .tabsNav li:first-child {background:#014783;}
+.tabsWrap .tabsNav li:first-child+li {background:#014783;}
+.tabsWrap .tabsNav li:first-child+li:hover {background:#0e5fa4;}
+.tabsWrap .tabsNav li:last-child {border-right:none;}
+.tabsWrap .tabsNav li.activeTab {background:#e06628!important;cursor:default;}
+.vitrine h2{display:none;}
+
+.mainColumn .linksWrapper {border:none;padding:0px;}
+.linksWrapper .column {float:left;width:230px;margin:10px 11px 10px 0;}
+.linksWrapper .column.last {margin:10px 0 10px 0}
+.linksWrapper .column ul {border:solid 1px #d2d2d2;border-top:solid 3px #014783;padding:10px;}
+.linksWrapper .column li {padding:5px 0;}
+.linksWrapper .column h4 {padding:5px 10px 10px 35px; font-family:"Lato"; color:#004e8e; font-size:19px; font-weight:lighter; } 
+.linksWrapper .Medicamentos h4 {background:url(/arquivos/ico-medicamentos.jpg) 0 0 no-repeat;} 
+.linksWrapper .Higiene h4 {background:url(/arquivos/ico-higiene.jpg) 0 0 no-repeat;} 
+.linksWrapper .Infantil h4 {background:url(/arquivos/ico-infantil.jpg) 0 0 no-repeat;} 
+.linksWrapper .Beleza h4 {background:url(/arquivos/ico-beleza.jpg) 0 0 no-repeat;}
+.linksWrapper .Alimentos h4 {background:url(/arquivos/ico-alimentos.jpg) 0 0 no-repeat;}
+.linksWrapper .Pet h4 {background:url(/arquivos/ico-petshop.jpg) 0 0 no-repeat;}
+.linksWrapper .Fitness h4 {background:url(/arquivos/ico-fitness.jpg) 0 0 no-repeat;}
+.linksWrapper .Geriatrico h4 {background:url(/arquivos/ico-geriatrico.jpg) 0 0 no-repeat;}
+.linksWrapper .ortopedica h4 {}
+.linksWrapper .casa h4 {}
+
+div.vtexNewsWrap .vtexNewsName,
+div.vtexNewsWrap .nv2_messageSuccess,
+div.vtexNewsWrap .nv2_messageError {display:none}
+div.vtexNewsWrap {background:#014783;height: 29px;padding: 12px 10px;}
+div.vtexNewsWrap .formWrapper {float:left;position:relative;width:220px;}
+div.vtexNewsWrap .btn_encontre_araujo{position: relative;float: left;background: url("/arquivos/botao_home_03.jpg")no-repeat 8px 3px;width: 330px;display: block;height: 46px;top: -8px;left: 19px;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;background-color: #e87000;}
+div.vtexNewsWrap .btn_encontre_araujo p{margin: -33px 0px 0px 55px;position: relative;width: 275px;}
+div.vtexNewsWrap .btn_encontre_araujo img{width: 40px;position: relative;float: left;top: 4px;left: 9px;}
+div.vtexNewsWrap p{color: #FFFFFF; float: left; font-size: 14px; margin-right: 8px; padding-top: 8px; text-align: left; width: 370px;}
+div.vtexNewsWrap .newsletter-client-email {background:#ffffff;height:21px;border:solid 1px #9fb2e6;width:165px;}
+div.vtexNewsWrap .newsletter-client-email:focus {border:solid 1px #00c5c2;}
+div.vtexNewsWrap .newsletter-button-ok {cursor:pointer;float:right;background:url(/arquivos/gradientGrey-1x58.png) 0 0 repeat-x;width:39px;height:29px;border:none;overflow:hidden;border-radius:2px;font-size:15px;font-weight:bold;color:#494d51;text-shadow:1px 1px 0px #F3F3F3;margin-left:5px;position: absolute;right: 0;top: 0;}
+div.vtexNewsWrap .newsletter-button-ok:hover {background-position:0 -29px;}
+
+div.halfBanner {width:325px;height:52px;float:right;overflow:hidden;padding:0px;display: none;}
+
+.popUpNewsletter{display:block;}
+.popUpNewsletter-box{position:fixed;top:50px;}
+.newsletterPopup h5 {color: #014783;font-size: 16px;padding: 0;text-align: left;text-transform: uppercase;}
+.newsletterPopup p {float: left;line-height: 21px;padding: 22px 0 0;width: 280px;}
+.newsletterPopup .image {background:url(/arquivos/icoNewsletter.png) repeat-x  0 -70px;margin:10px;width:83px;height:71px;float:left;}
+.newsletterPopup .nv2_messageSuccess .image{background-position:0 0!important;}
+div.jcarousel-skin-brands ul li {
+background:url(filete.jpg) right center no-repeat;
+padding-right: 1px;
+}
+div.jcarousel-skin-brands ul li a{
+	display:block;
+	width:120px;
+	height:50px;
+}
+
+div.jcarousel-skin-brands ul li a.rexona{
+	background:url(/arquivos/brands_rexona.png) left bottom no-repeat;
+}
+div.jcarousel-skin-brands ul li a.rexona:hover{
+	background:url(/arquivos/brands_rexona.png) left top no-repeat;
+	}
+div.jcarousel-skin-brands ul li a.gillete{
+	background:url(/arquivos/brands_gillete.png) left bottom no-repeat;
+}
+div.jcarousel-skin-brands ul li a.gillete:hover{
+	background:url(/arquivos/brands_gillete.png) left top no-repeat;
+}
+div.jcarousel-skin-brands ul li a.dove{
+	background:url(/arquivos/brands_dove.png) left bottom no-repeat;
+}
+div.jcarousel-skin-brands ul li a.dove:hover{
+	background:url(/arquivos/brands_dove.png) left top no-repeat;
+}
+div.jcarousel-skin-brands ul li a.colgate{
+	background:url(/arquivos/brandis_colgate.png) left bottom no-repeat;
+}
+div.jcarousel-skin-brands ul li a.colgate:hover{
+	background:url(/arquivos/brandis_colgate.png) left top no-repeat;
+}
+div.jcarousel-skin-brands ul li a.nivea{
+	background:url(/arquivos/brands_nivea.png) left bottom no-repeat;
+}
+div.jcarousel-skin-brands ul li a.nivea:hover{
+	background:url(/arquivos/brands_nivea.png) left top no-repeat;
+}
+div.jcarousel-skin-brands ul li a.listerine{
+	background:url(/arquivos/brands_listerine.png) left bottom no-repeat;
+}
+div.jcarousel-skin-brands ul li a.listerine:hover{
+	background:url(/arquivos/brands_listerine.png) left top no-repeat;
+}
+div.jcarousel-skin-brands ul li a.oralb{
+	background:url(/arquivos/brandis_oral.png) left bottom no-repeat;
+}
+div.jcarousel-skin-brands ul li a.oralb:hover{
+	background:url(/arquivos/brandis_oral.png) left top no-repeat;
+}
+

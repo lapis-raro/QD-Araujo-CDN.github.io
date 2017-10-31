@@ -1,0 +1,44 @@
+body.fale-conosco{background: transparent;min-width:1px;}
+body.fale-conosco .columnMain{margin-top:0}
+body.fale-conosco{margin-top:0}
+body.fale-conosco fieldset{float:left;margin-top:8px;width:100%}
+body.fale-conosco label{color:#333;display:inline-block!important;margin-right:2px;text-align:right;width:120px}
+body.fale-conosco input[type=password],
+body.fale-conosco input[type=text],
+body.fale-conosco textarea{border-radius:3px 3px 3px 3px;width:262px;padding:5px!important}
+body.fale-conosco input.ddd{width:40px}
+body.fale-conosco input.telefone{width:150px}
+body.fale-conosco .fComentario label{position:relative;top:6px;vertical-align:top}
+body.fale-conosco .fComentario textarea{height:90px;padding:5px}
+body.fale-conosco .wrapper .bts li a{background:url(/arquivos/btn_enviarLaranja.jpg) no-repeat scroll left bottom transparent;float:left;height:32px;overflow:hidden;text-indent:-1000px;width:82px;margin:5px 0 0 335px}
+body.fale-conosco .wrapper .bts li a:hover{background-position:left top}
+body.fale-com-o-presidente .email-sucesso,
+body.fale-conosco .email-sucesso{font-size: 22px; margin-top: 50px; text-align: center;}
+body.fale-com-o-presidente fieldset.voltar,
+body.fale-conosco fieldset.voltar{display: none;}
+body.fale-conosco .columnMain .fCelular .telefone,body.fale-conosco .columnMain .fTelefone .telefone{margin-left:4px}
+
+body.fale-conosco .aviso-erro div{display:none;}
+body.fale-conosco .mainContentWrapper{padding:0;}
+body.fale-conosco h2,
+body.fale-conosco legend,
+body.fale-conosco .mainContentWrapper >*{display:none;}
+body.fale-conosco .mainContentWrapper >.content{display:block;padding:0;margin: 0;border:none;width:auto;}
+body.fale-conosco .mainContentWrapper .wrapper{padding:0;}
+
+body.fale-com-o-presidente div.faleconosco{display:none;margin-top:0}
+body.fale-com-o-presidente div.faleconosco fieldset{float:left;margin-top:8px;width:100%}
+body.fale-com-o-presidente div.faleconosco label{color:#333;display:inline-block!important;margin-right:2px;text-align:right;width:120px}
+body.fale-com-o-presidente div.faleconosco input[type=password],
+body.fale-com-o-presidente div.faleconosco input[type=text],
+body.fale-com-o-presidente div.faleconosco textarea{border-radius:3px 3px 3px 3px;width:262px;padding:5px!important}
+body.fale-com-o-presidente div.faleconosco input.ddd{width:40px}
+body.fale-com-o-presidente div.faleconosco input.telefone{width:150px}
+body.fale-com-o-presidente div.faleconosco .fComentario label{position:relative;top:6px;vertical-align:top}
+body.fale-com-o-presidente div.faleconosco .fComentario textarea{height:90px;padding:5px}
+body.fale-com-o-presidente div.faleconosco li.enviar a{background:url(/arquivos/btn_enviarLaranja.jpg) no-repeat scroll left bottom transparent;float:left;height:32px;overflow:hidden;text-indent:-1000px;width:82px;margin:5px 0 60px 335px}
+body.fale-com-o-presidente div.faleconosco li.enviar a:hover{background-position:left top}
+body.fale-com-o-presidente div.faleconosco fieldset.voltar{text-align:center}
+body.fale-com-o-presidente div.faleconosco .columnMain .fCelular .telefone,
+body.fale-com-o-presidente div.faleconosco .columnMain .fTelefone .telefone{margin-left:4px}
+body.fale-com-o-presidente div.faleconosco input.DDD {width: 30px;}

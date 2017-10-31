@@ -1,0 +1,357 @@
+.container {background: none repeat scroll 0 0 #FFFFFF;border: 1px solid #E8E8E8;border-radius: 4px 4px 4px 4px;padding: 20px 15px;}
+body.body-order-placed .container {-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+.dualColumn{float: left;width: 50%;}
+.mainTpl * {color: inherit;}
+
+.link {color: #85a53a; }
+.link:hover {color: #85a53a; }
+.border-default {border: 1px solid #dbdbdb; }
+.border-none {border: 0 !important; }
+.no-border-radius {border-radius: 0; }
+.hiden {display: none; }
+.toltips {border-color: #f1f1ee; color: #000000; }
+/*-----------------------------*/
+/*     Elementos Gerais        */
+/*-----------------------------*/
+body {background: url("/arquivos/bgBody.gif") repeat-x scroll left top #F2F2F2;color: #000000;font-family: Arial,Helvetica,Garuda,sans-serif;font-size: 12px;text-align: left;}
+body .container {min-height: 400px; }
+#locale-selector-template-holder {display: none; }
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input,
+.address-item {border-radius: 0; }
+a {color: #010101; }
+a:hover {color: #7E7E7E; text-decoration: underline; }
+h1.hide {color: #333333; font-size: 18px; font-family: Arial; margin: -10px 0 0 0; }
+.vtexIdUI-main-content *{color: inherit;}
+
+/*Botoes Call to Action*/
+.bank-invoice-print-link,
+.bank-invoice-print-url,
+#payment-data-submit,
+/*.vtexId-modal-app .vtexIdUI .btn-success,*/
+.accordion-group .btn-success,
+.identified-user-button,
+.modal .btn,
+#btn-client-pre-email,
+.btn-place-order,
+.empty-cart-links .link-choose-products {background: #d68e00; background: linear-gradient(to bottom, #ba8800 0%,#fe9300 10%,#fe9300 50%,#fa8500 51%,#e86d00 100%); font-family:Arial,helvetica,sans-serif; color:#FFF; text-shadow:1px 1px 0 #925300; padding:6px 20px 5px; text-decoration:none; border-radius:5px; outline: none; border:none; display: inline-block; font-weight: bold; font-size: 16px; text-transform:uppercase;box-shadow: none;}
+.bank-invoice-print-url,
+#payment-data-submit,
+.btn-place-order {padding: 9px 20px 8px;font-size: 18px;}
+.bank-invoice-print-url {font-size: 14px;}
+/*#btn-client-pre-email {height: auto;}*/
+/*.vtexId-modal-app .vtexIdUI .btn-success {float: left;}*/
+
+.bank-invoice-print-link:hover,
+.bank-invoice-print-link:focus,
+.bank-invoice-print-url:hover,
+.bank-invoice-print-url:focus,
+#payment-data-submit:focus,
+.vtexId-modal-app .vtexIdUI .btn-success:focus,
+#payment-data-submit:hover,
+.vtexId-modal-app .vtexIdUI .btn-success:hover,
+.accordion-group .btn-success:hover,
+.accordion-group .btn-success:focus,
+.identified-user-button:hover,
+.modal .btn:hover,
+.identified-user-button:focus,
+.modal .btn:focus,
+#btn-client-pre-email:hover,
+#btn-client-pre-email:focus,
+.btn-place-order:focus,
+.btn-place-order:hover,
+.empty-cart-links .link-choose-products:focus,
+.empty-cart-links .link-choose-products:hover {background: #FF9300; background: linear-gradient(to bottom, #d28700 0%,#ff9f00 10%,#ff9f00 49%,#ff9300 51%,#ff9300 100%); outline: none;color: #FFF;}
+.bank-invoice-print-url:active,
+#payment-data-submit:active,
+.vtexId-modal-app .vtexIdUI .btn-success:active,
+.accordion-group .btn-success:active,
+.identified-user-button:active,
+.modal .btn:active,
+#btn-client-pre-email:active,
+.btn-place-order:active,
+.empty-cart-links .link-choose-products:active {background:#D58900; background: linear-gradient(to bottom, #d28700 7%,#ff9f00 20%,#ff9f00 49%,#ff9300 51%,#ff9300 100%); text-shadow:0 1px 0 #925300; outline: none;color: #FFF;}
+
+.bank-invoice-print-link:before,
+.bank-invoice-print-url:before {content: "";-moz-box-sizing: border-box; -moz-osx-font-smoothing: grayscale; display: inline-block; font-family: FontAwesome; font-style: normal; font-weight: normal; line-height: 1; margin-right: 0.2914286em;}
+
+/*Botoes secundarios*/
+.btn-continue-shop,
+.link-two-cards a,
+#cart-shipping-calculate,
+#cart-coupon-add,
+.link-choose-more-products {background: #003060; background: linear-gradient(to bottom,  #003060 0%,#005697 10%,#005697 50%,#004d8b 51%,#004586 100%); font-family:Arial,helvetica,sans-serif; color:#FFF; text-shadow:1px 1px 0 #003060; padding:3px 15px 2px; text-decoration:none; border-radius:5px; outline: none; border:none; display: inline-block; font-size: 14px;}
+.btn-continue-shop:hover,
+.btn-continue-shop:focus,
+.link-two-cards a:hover,
+#cart-shipping-calculate:hover,
+.link-two-cards a:focus,
+#cart-shipping-calculate:focus,
+#cart-coupon-add:hover,
+#cart-coupon-add:focus,
+.link-choose-more-products:hover,
+.link-choose-more-products:focus {background: #003060; background: linear-gradient(to bottom, #003060 0%,#0f5482 10%,#00629f 49%,#004988 52%,#004176 100%); color: #FFF;text-decoration: none;}
+
+.btn-continue-shop:active,
+.link-two-cards a:active,
+#cart-shipping-calculate:active,
+#cart-coupon-add:active,
+.link-choose-more-products:active {background:#00629f; background: linear-gradient(to bottom, #003060 7%,#004e83 15%,#00629f 49%,#004b85 51%,#004176 100%); color: #FFF;}
+
+/*Botoes terciarios*/
+#orderform-minicart-to-cart,
+.link-coupon-add,
+.shipping-calculate-link {background: #E5E5E5; font-family:Arial,helvetica,sans-serif; color:#004290; text-shadow:none; padding:5px 10px; text-decoration:none; border-radius:0; outline: none; border:none; display: inline-block; font-size: 13px; text-decoration:underline;}
+#orderform-minicart-to-cart {font-size: 11px;padding: 3px 7px;}
+
+#orderform-minicart-to-cart:before,
+.link-coupon-add:before,
+.shipping-calculate-link:before {-moz-box-sizing: border-box; -moz-osx-font-smoothing: grayscale; display: inline-block; font-family: FontAwesome; font-style: normal; font-weight: normal; line-height: 1; margin-right: 0.2914286em;}
+
+#orderform-minicart-to-cart:before {content: "";font-size: 14px;}
+.link-coupon-add:before {content: "";}
+.shipping-calculate-link:before {content: "";}
+
+#orderform-minicart-to-cart:hover,
+#orderform-minicart-to-cart:focus,
+.link-coupon-add:hover,
+.link-coupon-add:focus,
+.shipping-calculate-link:focus,
+.shipping-calculate-link:hover {text-decoration:none;color: #004290;}
+
+#orderform-minicart-to-cart:active,
+.link-coupon-add:active,
+.shipping-calculate-link:active {background:#D5D5D5;}
+
+/* ---- Toltips e Modais ---- */
+.cvv-help {border-color: #f1f1ee; color: #000000; }
+.field-help {border-color: #f1f1ee; color: #000000; background-color: #f1f1ee; }
+.field-help .help-arrow.top-arrow {border-bottom-color: #f1f1ee; }
+.field-help .help-arrow.right-arrow {border-left-color: #f1f1ee; }
+.field-help .help-arrow.bottom-arrow {border-top-color: #f1f1ee; }
+.field-help .help-arrow.left-arrow {border-right-color: #f1f1ee; }
+.modal {background: #a8c8ff; color: #000000; padding-bottom: 10px; border-radius: 0;}
+.modal-footer {border: 0 !important; background: #f1f1ee; box-shadow: none; }
+
+
+
+/*
+* SECAO: HEADER
+* paginas: account, account order, login
+*/
+.client-pre-email input {border-radius: 5px;/*height: 35px;*/padding-right:144px;}
+
+/*remover*/ 
+.siteBlindadoWrapper {width: 112px;height: 31px;}
+.checkout-default-header {width: 100%;height: 95px;}
+.checkout-default-container {margin:0 auto; width: 975px;}
+.headerColumn {float: left;}
+/*topbar*/
+.topbar {height: 26px;}
+.topbar a {line-height: 26px;float: right;}
+/*logo*/
+.checkout-default-header h1{position: relative;top:-10px;margin:0; }
+.rightColumn {float: right;}
+.checkout-default-security >div {float: left;}
+.checkout-default-security .icoSecurity {background: url("/arquivos/ico_security-125x21.png") no-repeat 0 0;width: 125px;height: 21px;margin: 15px 10px 0;}
+.checkout-default-security .siteBlindadoWrapper {margin: 15px 0 0;}
+/*Responsive Header*/
+@media (max-width:350px){
+	.headerContent .rightColumn {display: none;}
+}
+@media (max-width:470px){
+	.topbar a {display: none;}
+	.checkout-default-container {width: 975px;}
+	.checkout-default-container .icoSecurity {display: none;}
+}
+@media (min-width:768px) and (max-width:979px){
+	.checkout-default-container {width: 760px;}
+}
+
+
+/*
+* SECAO: FOOTER
+* paginas: account, account order, login
+*/
+.checkoutFooter {background:#2d4f8b;padding:10px 0;border-radius: 4px;margin-top: 40px;}
+.checkoutFooter h3 {color: #FFF;font-size: 12px;margin-top:0; font-weight: normal;margin: 0 0 5px;}
+.checkoutFooter .payment {border-right:solid 1px #254274;margin-left: -2px;min-height: 100px;}
+.checkoutFooter .payment ul {padding:0;margin: 0;}
+.checkoutFooter .payment ul li {background: url("/arquivos/paymentStamps.png") no-repeat 0 0; height: 31px; width: 50px; float: left; margin: 1px;list-style: none;}
+.checkoutFooter .payment .visa {background-position: 0 -172px;}
+.checkoutFooter .payment .dinners {background-position: 0 -138px;}
+.checkoutFooter .payment .master {background-position: 0 -35px;}
+.checkoutFooter .payment .amex {background-position: 0 -70px;}
+.checkoutFooter .payment .boleto {background-position: 0 -103px;}
+.checkoutFooter .payment .itau {background-position: 0 0;}
+.checkoutFooter .stamps {padding: 0 30px;float: left;}
+.checkoutFooter .stamps {list-style: none;}
+
+.checkoutFooter .dualColumn .paddingFix {padding:0 20px;}
+
+.eBitWrapper {float: left;width: 86px;height: 92px;}
+.ebitBannerWrapper +.ebitImg{height: 1px; width: 1px; opacity: 0; filter: alpha(opacity=0);}
+/*Banner ebit fluido*/
+.ebitBannerWrapper {display:block !important;background-color:#eaedf3;border:1px solid #cdd5e7;border-radius:5px;font-size:16px;}
+.qdEbitLogo{text-align:right;}
+.ebitBannerWrapper p{margin-top: 15px;}
+.ebitBannerWrapper p.qdEbitLogo{margin-top: 9px;margin-bottom: 9px;}
+.qdEbitImg{text-align: center;}
+.qdQuestionWrapper{padding:6px;}
+.qdResponseWrapper{background: url("/arquivos/banner_ebit_fluido_bg.gif") #FF7803;border-radius: 5px;padding:6px;}
+.qdResponseWrapper *{color:#FFF;text-shadow:0 -1px 0 rgba(0,0,0,0.3);}
+div.ebitBannerWrapper [class*="span"] {min-height: 1px;}
+.ebitBannerWrapper .qdPrizeWrapper{margin-top: 9px; margin-bottom: 0;}
+@media (max-width: 767px){
+	.qdEbitLogo{text-align:center;}
+}
+@media (min-width: 768px) and (max-width: 979px){
+	.ebitBannerWrapper .qdPrizeWrapper{margin-top: 28px;}
+}
+
+.digicertWrapper {float: left;width: 98px;height: 72px;margin-left: 20px;}
+
+.copyrightWrapper {position: relative;margin: 10px 0 0;}
+.copyrightWrapper p {text-align: center;color: #616161;margin:5px 0 0;}
+.copyrightWrapper .poweredByVtex {position: absolute;top: 0;right: 5px;}
+
+/*
+* SECAO: LOGIN
+* paginas: account, account order, login
+*/
+.link-cart {display: block;margin: 5px 0 0;}
+.client-pre-email {border: none;}
+/*.client-pre-email input {border-radius: 8px;}*/
+.ie8 .client-pre-email input { line-height: 43px; }
+.client-pre-email .emailInfo {padding: 0;background: #f2f2f2;border: solid 1px #b6b6b6;width: 50%;position: relative;overflow: visible;}
+.client-pre-email .emailInfo h3 {padding:10px 0 10px 40px;margin:0;color: #333333;font-size: 18px;background:url("/arquivos/ico_sc_lock.png") no-repeat scroll 15px 7px #C0C0C0;}
+.client-pre-email .emailInfo .unstyled {margin: 10px 0 20px 8%;}
+.client-pre-email .emailInfo .unstyled li i{display: none;}
+.client-pre-email .emailInfo .unstyled li {background: url("/arquivos/ico_sc_checked.png") no-repeat 0px 3px; padding: 0 0 0 20px;}
+.client-pre-email .emailInfo .icon-lock {background: url("/arquivos/ico_sc_topArrow.png") no-repeat scroll 0 0 transparent;bottom: auto;height: 15px;left: 40px;right: auto;top: -14px;width: 30px;}
+.client-pre-email .emailInfo .icon-lock:before {content: "";}
+
+.payment-confirmation-wrap {background-color: #E5E5E5;}
+
+/*-----------------------------*/
+/*        Checkout             */
+/*-----------------------------*/
+/* ---- Total ---- */
+.step .accordion-heading span,
+.totalizers .accordion-heading span {color: #5b5a5a; }
+.step .accordion-heading .accordion-toggle .link-box-edit,
+.totalizers .accordion-heading .accordion-toggle .link-box-edit {border-radius: 0 0 0 6px; top: -5px; right: -5px; }
+.step.active .accordion-heading,
+.totalizers.active .accordion-heading {background: none; }
+.unavailable-modal .unavailable-items{background: #FFF;}
+/*-----------------------------*/
+/*        Cart               */
+/*-----------------------------*/
+.cart {border: 0 !important;}
+.cart-items thead th{background: #EAEDF3; color: #2D4F8B; border-bottom: solid 1px #dbdbdb; }
+.full-cart .item-quantity-change {position: static; }
+.cart-items .product-item {border-bottom: solid 1px #dbdbdb;}
+.cart-items .product-name a {color: #2D4F8B;text-transform: uppercase;}
+.cart-items .seller {display: none;}
+.cart-items .brand-name {color: #999999;}
+.cart-items .item-quantity-change {color: #2D4F8B;}
+.cart-items .item-quantity-change:hover {color: #999999;}
+.cart-items .item-link-remove {color: #ff0000;}
+.cart-items .item-link-remove:hover {color: #999999;}
+input.postal-code {border-radius: 8px;}
+.container-cart .totalizers {background: #eaedf3;border: 0;}
+.step tfoot .info,
+.totalizers tfoot .info, .step tfoot .monetary,
+.totalizers tfoot .monetary {color:#2D4F8B;}
+
+.empty-cart-content {background: url("/arquivos/ico_cart-72x73.png") no-repeat scroll 20px 32px transparent;margin: 0 auto;padding: 0 0 0 130px;width: 440px;}
+.empty-cart-title {color: #2D4F8B;font-weight: normal;font-size: 30px;padding: 0 0 20px 0;}
+.empty-cart-message {color: #616161;font-size: 12px;}
+/*-----------------------------*/
+/*        Order form           */
+/*-----------------------------*/
+
+.box-step-content .payment-group-list-btn a,
+.box-step-content .gift-card-section,
+.box-step-content .steps-view {border: 1px solid #dbdbdb; border-radius: 0; }
+
+.steps-view .sight > span {color: #000000; font-size: 15px; }
+.steps-view .bankInvoicePaymentGroup .sight:after{background: url("araujo.boleto-info-alert.png"); display: block;margin: 16px 0;width: 402px;height:298px;content: "";}
+.qdBoletoAlertPreLoading{position: fixed;bottom: 0;left: -99pc;width: 1px;height: 1px;background: url("araujo.boleto-info-alert.png");}
+body.ie8 .steps-view .bankInvoicePaymentGroup .sight:after{background:url("araujo.boleto-info-alert-mobile2.png"); width:223px;height:362px;}
+body.ie8 .qdBoletoAlertPreLoading{background: url("araujo.boleto-info-alert-mobile2.png");}
+@media screen and (max-width: 510px) {
+	.steps-view .bankInvoicePaymentGroup .sight:after{background: url("araujo.boleto-info-alert-mobile2.png"); width: 223px;height:362px;}
+	.qdBoletoAlertPreLoading{background: url("araujo.boleto-info-alert-mobile2.png");}
+}
+
+.box-step-content .payment-group-list-btn a.active,
+.box-step-content .gift-card-section.active,
+.box-step-content .steps-view.active {margin-left: 2px; border-right: 0px; }
+.box-step-content .gift-card-section {padding: 10px 18px; }
+.shipping-data .create a {border-radius: 0; }
+.mini-cart .table {margin-top: 10px; }
+/*-----------------------------*/
+/*        Order Placed         */
+/*-----------------------------*/
+.page-header {margin: 10px 0; }
+.page-header h1 {color: #333333; font-size: 25px; }
+.ordergroup h2.order-title {color: #2D4F8B; }
+.ordergroup .page-header {border: 0 !important; }
+.ordergroup .order-info .general-info {border: 1px solid #dbdbdb; background: #f3f3f3; color: #232323; min-height: 200px; padding: 0 10px; }
+.containerPage {background: url('/arquivos/checkout-default-cat.png') top right no-repeat; background-position-y: 105px; }
+body.body-order-placed .bannerEbit{display: block; margin: 20px 0 0; text-align: center;}
+
+/*-----------------------------*/
+/*          My Order           */
+/*-----------------------------*/
+.ordergroup,
+.form-search .input-append .search-query {border-radius: 0; }
+/* ---- Mobile Fix ---- */
+@media screen and (max-width: 800px) {
+	body {padding: 0; }
+	body h1.hide {color: #333333; font-size: 20px; margin: 0px; }
+	.checkout-default-container,
+	.checkout-default-header-container {width: auto !important; }
+	.login .checkout-default-footer {display: block; }
+	.login .checkout-default-footer-info {background-position: -570px; }
+	.login .checkout-default-copyright {margin: auto; }
+	.payment-group-list-btn {width: auto; }
+	.box-step-content .payment-group-list-btn a.active {border-right: 1px solid #A5A8AA !important; margin-left: 0 !important; }
+	.mini-cart {margin-bottom: 50px; }
+	.containerPage {background: none !important; }
+	.copyrightWrapper p {padding-left:.5em; text-align: left; }
+}
+
+
+/* Customização da forma como é exibido o frete para motociclista */
+body.allowShippingMotociclista label[for="seller-1-sla-Motociclista"] .shipping-option-item-time.delivery-estimate {display: none; }
+body.allowShippingMotociclista label[for="seller-1-sla-Motociclista"] .shipping-option-item-value +.shipping-option-item-sep:after {content: 'Até 3 horas'; display: inline-block; }
+.orderform-template .cart-items .shipping-date{display:none;}
+.cart-template.mini-cart{position: relative;z-index: 10;}
+.payment-confirmation-wrap[style*='block'] .icon-spinner[style='']{color: #6B6B6B; font-size: 60px; left: 50%; margin: -30px 0 0 -30px; position: fixed; top: 50%; z-index: 99999;}
+.payment-confirmation-wrap[style*='block'] .icon-spinner[style=''] +span{background: #FFF; height: 100%; left: 0; position: fixed; top: 0; width: 100%; z-index: 99998;}
+body.body-order-placed.qd-add-motociclista-info td.shipping-date .shipping-estimate{font-size: 1px;color: #FFF;}
+body.body-order-placed.qd-add-motociclista-info td.shipping-date .shipping-estimate:after{content:"3 horas";font-size: 12px;color: #000;}
+
+
+/*Lightbox de login*/
+.vtexIdUI-providers-list button{text-transform: none;}
+.vtexIdUI-providers-list button.vtexIdUI-others-send-email span{color:#333;}
+.vtexIdUI-providers-list button#vtexIdUI-google-plus{font-weight:normal;color:#DA573B;background:#E94725; background: linear-gradient(to bottom, #e94725 0%,#b8280a 100%);box-shadow: 0 4px 0 #B20000;border-color: #b8280a;color: #FFF;}
+.vtexIdUI-providers-list button#vtexIdUI-google-plus:hover{background: linear-gradient(to bottom, #e94725 0%,#b8280a 80%,#e94725 100%);box-shadow: 0 4px 0 #B20000;border-color: #b8280a;}

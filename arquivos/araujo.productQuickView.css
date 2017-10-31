@@ -1,0 +1,41 @@
+/*
+* @author Pedro Turco Neto
+* @version 1.0
+* @date 2011-12-29
+*/
+body {background: none;min-width: 0px;height: auto;}
+.mainContentWrapper {padding:0px;}
+.mainTpl > .paddingFix {padding:0px; margin:0px;border: none;background:#F9f9f9;}
+.mainTpl .firstLine .columnLeft, .mainTpl .firstLine .columnRight {min-height: 0px;}
+
+.mainTpl {width: 845px;}
+.mainTpl .columnLeft #image {border: 1px solid #E8E8E8; float: left; height: 320px; width: 320px;}
+.mainTpl .columnLeft #image img#image-main {max-height: 320px;max-width:320px;}
+.mainTpl .columnLeft {width: 323px;margin-bottom:0px;}
+
+.mainTpl .columnRight {width: 515px;}
+.informationWrapperTpl h1 *:hover {text-decoration: none;}
+
+
+/* jQuery Zoom */
+.produto .jqZoomPup {background:#fff;border:1px solid #C4C4C4;cursor:crosshair;filter:alpha(opacity=60);opacity:0.6;overflow:hidden;z-index:10;}
+.produto .jqZoomPup img {border:0 none;}
+.produto .preload {-moz-opacity:0.8;opacity:0.8;filter:alpha(opacity = 80);border:1px solid #CCC;background:#FFF url("/arquivos/ajax-loader.gif") center center no-repeat;z-index:110;position:absolute;top:0px;left:0px;width:100%;height:100%;}
+.produto .jqZoomWindow {background:none repeat scroll 0 0 #FFFFFF;    border:1px solid #F2F2F2;    box-shadow:0 1px 2px #191919;    color:#FFFFFF;    display:block !important;    height:373px !important;    margin:0;    top:218px;    width:485px !important;}
+
+.moreInfo {position: absolute; bottom: 10px; right: 10px;}
+.moreInfo a {color: #FFF; font-size: 12px;text-decoration: underline;}
+.moreInfo a:hover {text-decoration: none;}
+
+.skuListWrapper {max-height: 240px; margin-top: 20px; overflow: auto; padding-bottom: 12px;}
+
+/*.produto .buy-button {background: url("/arquivos/gradientOrangeBig-1x64.png") repeat-x scroll 0 0 transparent; border-radius: 4px 4px 4px 4px; color: #FFFFFF; cursor: pointer; display: block; float: left; font-size: 17px; font-weight: bold; letter-spacing: 1px; line-height: 22px; margin-top: -14px; overflow: hidden; padding: 3px 0; position: absolute; right: 5px; text-align: center; text-shadow: 1px 1px 0 #925300; text-transform: uppercase; top: 39%; width: 119px; }*/
+.mainComponents {font-size: 9px; padding-bottom: 5px; }
+
+.quickviewTitle { background: url("/arquivos/gradientBlue-1x55.png") repeat-x scroll 0 0 transparent; border-radius: 4px 4px 4px 4px; display: block; height: 27px; line-height: 25px; margin-bottom: 10px; margin-top: 3px; padding: 0 7px;}
+.quickviewTitle span { color: #FFFFFF;}
+.quickviewTitle .quickviewTitleIco{ background: url("/arquivos/ico_espiar.png") repeat scroll 0 0 transparent; float: left; height: 19px; margin-right: 4px; margin-top: 4px; width: 19px;}
+
+.phoneWrapper,
+.flagsWrapper,
+.saude01 {margin-bottom: 10px;}

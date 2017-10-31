@@ -1,0 +1,50 @@
+.vtex-cpProductField{display:none;}
+.vtex-cpProductTextWrap{position:relative;display:block;}
+.vtex-cpOverlay,.vtex-cpImgOverlay{display:none;position:absolute;top:0;left:0;width:100%;height:100%;border:1px solid #F1F1F1;opacity:0.7;filter:Alpha(opacity=70);background:url("/arquivos/ajax-loader.gif") no-repeat center center #FFF;}
+.vtex-cpImgOverlay{z-index:10;top:0;left:0;width:87%;height:180px;}
+.qd_cpShow{display:inline;}
+.vtex-cpSkuIds.qd_cpHide,
+.qd_cpHide{display:none;}
+/* Sku List */
+.vtex-cpInner{border:1px solid #FFF;display:block;}
+.vtex-cpSkuIds{background:none repeat scroll 0 0 transparent !important;cursor:pointer;display:block;float:left;margin:0 2px 2px 0;}
+.qd_cpSkuList .vtex-cpFirst{margin-left:0;}
+/* Sugestions */
+.vtex-cpProductImage{position:relative;display:block;}
+.vtex-cpOriginalImage,.vtex-cpSkuImage{position:absolute;top:0;left:0;}
+/* Thumbs */
+.qd_cpViewMore{float:left;left:6px;position:relative;background:#f9f9f9;}
+.qd_cpViewMore.qd_cpShow{display:block;}
+.qd_cpViewMore a{display:block;width:100%;height:100%;text-align:center;line-height:36px;font-size:36px;color:#999;}
+.qd_cpViewMore a:hover{text-decoration:none;color:#999;}
+
+/* Border */
+.vtex-cpSkuIds,.qd_cpViewMore{border:1px solid #E0E0E0;}
+.vtex_cpActiveSku{border-color:#003364;}
+/* Sizes */
+.prateleira li .vtex-cpImgsThumb,.prateleira li .vtex-cpInner{width:36px;height:36px;}
+.vtex-cpSkuIds,.qd_cpViewMore{height:38px;width:38px;}
+.vtex-cpProductImage img{width:190px;height:190px;}
+
+.prateleira li{height:auto;}
+.prateleira li .quickViewLink{z-index:1;}
+.prateleira li .productInfoWrapper .price span{display:inline;line-height:16px;}
+.prateleira li .newPrice{font-weight:bold;color:#043F81;}
+.prateleira li .newPrice span{font-weight:bold;color:#043F81;}
+
+.prateleira ul:before,.prateleira ul:after{content:"";display:table;}
+.prateleira ul:after{clear:both;}
+.prateleira ul{zoom:1;}
+
+.qd_cpSkuList{margin-left: -3px;min-width:168px;}
+.qd_cpSkuList.qd_cpShow{display: block;}
+/*.vtex-cpSkuIds:first-child{margin:0 1px 0 0;}*/
+/*.vtex-cpSkuIds:first-child +.vtex-cpSkuIds +.vtex-cpSkuIds +.vtex-cpSkuIds{margin:0 0 2px 0;}*/
+
+.cores.prateleira .medicamentos .qd_cpProductUnavailable,
+.qd_cpHide{display:none!important;}
+.cores.prateleira .medicamentos .qd_cpProductUnavailable.qd_cpShow{display:inline!important;}
+
+/*Flag de promoção*/
+.vtex-cpInner{position: relative;}
+.qd-cores-flag{height: 36px; left: 0; position: absolute; top: 0; width: 36px; z-index: 1;}

@@ -22,7 +22,7 @@ $(function() {
 			var submitWrapper = $form.find("[type=submit]").parent();
 			submitWrapper.addClass("qd-loading");
 			$.ajax({
-				url: "http://chadebebe.araujo.com.br/email-site/general_email.php?callback=?",
+				url: "//web.araujo.com.br/araujo-site/email-site/general_email.php?callback=?",
 				data: $form.serialize(),
 				dataType: "json",
 				success: function(){

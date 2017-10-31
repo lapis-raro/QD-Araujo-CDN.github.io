@@ -4,19 +4,19 @@ var QdPbmCheckout = {
 	providerId: 'araujo',
 	run: function() {
 		QdPbmCheckout.checkRequestIsRunning();
-		QdPbmCheckout.loadingFix();
+		// QdPbmCheckout.loadingFix();
 	},
 	init: function() {
-		QdPbmCheckout.loadElements(); // chamar antes de todos
-		QdPbmCheckout.fullPageNotification(); // chamar antes de todos
-		QdPbmCheckout.cookieRenew(); // chamar antes de todos
-		QdPbmCheckout.validateItems();
+		// QdPbmCheckout.loadElements(); // chamar antes de todos
+		// QdPbmCheckout.fullPageNotification(); // chamar antes de todos
+		// QdPbmCheckout.cookieRenew(); // chamar antes de todos
+		// QdPbmCheckout.validateItems();
 	},
 	orderUpdated: function(orderForm){
-		if (location.hash.toLowerCase().indexOf('/payment') > -1)
-			QdPbmCheckout.checkRequestDetails(orderForm);
+		// if (location.hash.toLowerCase().indexOf('/payment') > -1)
+			// QdPbmCheckout.checkRequestDetails(orderForm);
 
-		QdPbmCheckout.validateItems();
+		// QdPbmCheckout.validateItems();
 	},
 	requestStop: function() {
 		$(window).trigger("QD.PBM_requestStop");

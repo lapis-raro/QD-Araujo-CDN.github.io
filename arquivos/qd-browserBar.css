@@ -1,0 +1,6 @@
+.browserUpdateBar {background: none repeat scroll 0 0 #FFF6BF; border-bottom: 3px solid #FFD324; box-shadow: 0 21px 21px -26px rgba(0, 0, 0, 0.7); display: block !important; left: 0; position: fixed; top: 0; width: 100%; z-index: 10001;}
+.browserUpdateBar .middleContainer {width: 720px; }
+.browserUpdateBar .middleContainer p {color: #000000; float: left; font-size: 14px; font-weight: bold; margin: 20px 0 0; }
+.browserUpdateBar .logosWrapper {float: right; }
+.browserUpdateBar .logosWrapper li {float: left; margin: 5px 10px; width: 60px; }
+.browserUpdateBar .logosWrapper img {border: 2px solid #FFD324; border-radius: 11px; max-width: 100%;}

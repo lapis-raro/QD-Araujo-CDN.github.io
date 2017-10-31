@@ -1,370 +1,272 @@
 @font-face {
-    font-family: 'GothamBook';
-    src: url("../fonts/GothamNarrow-Book.eot");
-    src: url("../fonts/GothamNarrow-Book.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamNarrow-Book.woff2") format("woff2"), url("../fonts/GothamNarrow-Book.woff") format("woff"), url("../fonts/GothamNarrow-Book.ttf") format("truetype"), url("../fonts/GothamNarrow-Book.svg#GothamBook") format("svg");
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'GothamBook';
+  src: url("../fonts/GothamNarrow-Book.eot");
+  src: url("../fonts/GothamNarrow-Book.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamNarrow-Book.woff2") format("woff2"), url("../fonts/GothamNarrow-Book.woff") format("woff"), url("../fonts/GothamNarrow-Book.ttf") format("truetype"), url("../fonts/GothamNarrow-Book.svg#GothamBook") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'FrutigerExtraBlack';
-    src: url("../fonts/FrutigerLTStd-ExtraBlackCn.eot");
-    src: url("../fonts/FrutigerLTStd-ExtraBlackCn.eot?#iefix") format("embedded-opentype"), url("../fonts/FrutigerLTStd-ExtraBlackCn.woff2") format("woff2"), url("../fonts/FrutigerLTStd-ExtraBlackCn.woff") format("woff"), url("../fonts/FrutigerLTStd-ExtraBlackCn.ttf") format("truetype"), url("../fonts/FrutigerLTStd-ExtraBlackCn.svg#FrutigerLTStd-ExtraBlackCn") format("svg");
-    font-weight: 900;
-    font-style: normal;
+  font-family: 'FrutigerExtraBlack';
+  src: url("../fonts/FrutigerLTStd-ExtraBlackCn.eot");
+  src: url("../fonts/FrutigerLTStd-ExtraBlackCn.eot?#iefix") format("embedded-opentype"), url("../fonts/FrutigerLTStd-ExtraBlackCn.woff2") format("woff2"), url("../fonts/FrutigerLTStd-ExtraBlackCn.woff") format("woff"), url("../fonts/FrutigerLTStd-ExtraBlackCn.ttf") format("truetype"), url("../fonts/FrutigerLTStd-ExtraBlackCn.svg#FrutigerLTStd-ExtraBlackCn") format("svg");
+  font-weight: 900;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'FrutigerLight';
-    src: url("../fonts/FrutigerLTStd-Light.eot");
-    src: url("../fonts/FrutigerLTStd-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/FrutigerLTStd-Light.woff2") format("woff2"), url("../fonts/FrutigerLTStd-Light.woff") format("woff"), url("../fonts/FrutigerLTStd-Light.ttf") format("truetype"), url("../fonts/FrutigerLTStd-Light.svg#FrutigerLTStd-Light") format("svg");
-    font-weight: 300;
-    font-style: normal;
+  font-family: 'FrutigerLight';
+  src: url("../fonts/FrutigerLTStd-Light.eot");
+  src: url("../fonts/FrutigerLTStd-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/FrutigerLTStd-Light.woff2") format("woff2"), url("../fonts/FrutigerLTStd-Light.woff") format("woff"), url("../fonts/FrutigerLTStd-Light.ttf") format("truetype"), url("../fonts/FrutigerLTStd-Light.svg#FrutigerLTStd-Light") format("svg");
+  font-weight: 300;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'FrutigerCn';
-    src: url("../fonts/FrutigerLTStd-Cn.eot");
-    src: url("../fonts/FrutigerLTStd-Cn.eot?#iefix") format("embedded-opentype"), url("../fonts/FrutigerLTStd-Cn.woff2") format("woff2"), url("../fonts/FrutigerLTStd-Cn.woff") format("woff"), url("../fonts/FrutigerLTStd-Cn.ttf") format("truetype"), url("../fonts/FrutigerLTStd-Cn.svg#FrutigerLTStd-Cn") format("svg");
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'FrutigerCn';
+  src: url("../fonts/FrutigerLTStd-Cn.eot");
+  src: url("../fonts/FrutigerLTStd-Cn.eot?#iefix") format("embedded-opentype"), url("../fonts/FrutigerLTStd-Cn.woff2") format("woff2"), url("../fonts/FrutigerLTStd-Cn.woff") format("woff"), url("../fonts/FrutigerLTStd-Cn.ttf") format("truetype"), url("../fonts/FrutigerLTStd-Cn.svg#FrutigerLTStd-Cn") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'FrutigerBoldCn';
-    src: url("../fonts/FrutigerLTStd-BoldCn.eot");
-    src: url("../fonts/FrutigerLTStd-BoldCn.eot?#iefix") format("embedded-opentype"), url("../fonts/FrutigerLTStd-BoldCn.woff2") format("woff2"), url("../fonts/FrutigerLTStd-BoldCn.woff") format("woff"), url("../fonts/FrutigerLTStd-BoldCn.ttf") format("truetype"), url("../fonts/FrutigerLTStd-BoldCn.svg#FrutigerLTStd-BoldCn") format("svg");
-    font-weight: bold;
-    font-style: normal;
+  font-family: 'FrutigerBoldCn';
+  src: url("../fonts/FrutigerLTStd-BoldCn.eot");
+  src: url("../fonts/FrutigerLTStd-BoldCn.eot?#iefix") format("embedded-opentype"), url("../fonts/FrutigerLTStd-BoldCn.woff2") format("woff2"), url("../fonts/FrutigerLTStd-BoldCn.woff") format("woff"), url("../fonts/FrutigerLTStd-BoldCn.ttf") format("truetype"), url("../fonts/FrutigerLTStd-BoldCn.svg#FrutigerLTStd-BoldCn") format("svg");
+  font-weight: bold;
+  font-style: normal;
 }
-
 
 /*variáveis*/
-
-
 /* line 62, ../scss/main.scss */
-
 body {
-    background: #f7ebe4;
-    font: 16px 'GothamBook';
-    color: #1d3767;
-    padding-bottom: 5px;
+  background: #f7ebe4;
+  font: 16px 'GothamBook';
+  color: #1d3767;
 }
-
 
 /* line 67, ../scss/main.scss */
-
 h1 {
-    font: 40px 'FrutigerExtraBlack';
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    color: #004684;
+  font: 40px 'FrutigerExtraBlack';
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #004684;
 }
-
-
 /* line 72, ../scss/main.scss */
-
 h1 span {
-    font: 40px 'FrutigerLight';
-    color: #004684;
+  font: 40px 'FrutigerLight';
+  color: #004684;
 }
-
 
 /* line 77, ../scss/main.scss */
-
 .container {
-    max-width: 970px;
+  max-width: 970px;
 }
-
 
 /* line 80, ../scss/main.scss */
-
 header {
-    position: relative;
+  position: relative;
 }
-
-
 /* line 82, ../scss/main.scss */
-
 header .container {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
-
-
 /* line 86, ../scss/main.scss */
-
 header .abs-left-color {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 50%;
-    background-color: #f7ebe4;
-    z-index: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  background-color: #f7ebe4;
+  z-index: 0;
 }
-
-
 /* line 95, ../scss/main.scss */
-
 header .abs-right-color {
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 100%;
-    width: 50%;
-    background-color: #d7eff2;
-    z-index: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  background-color: #d7eff2;
+  z-index: 0;
 }
-
 
 /* line 107, ../scss/main.scss */
-
 .box p {
-    color: #fff;
-    text-transform: uppercase;
-    font: 12px 'FrutigerLight';
-    text-align: center;
-    background-color: #003469;
-    padding: 10px 20px;
-    margin-top: 50px;
+  color: #fff;
+  text-transform: uppercase;
+  font: 12px 'FrutigerLight';
+  text-align: center;
+  background-color: #003469;
+  padding: 10px 20px;
+  margin-top: 50px;
 }
-
 
 /* line 119, ../scss/main.scss */
-
 .blue-banner {
-    padding: 35px 0px;
-    background-color: #76ced9;
+  padding: 35px 0px;
+  background-color: #76ced9;
 }
-
-
 /* line 122, ../scss/main.scss */
-
 .blue-banner h2 {
-    margin: 0;
-    font-family: 'FrutigerExtraBlack';
-    color: #00346a;
-    font-size: 30px;
-    text-align: center;
+  margin: 0;
+  font-family: 'FrutigerExtraBlack';
+  color: #00346a;
+  font-size: 30px;
+  text-align: center;
 }
-
 
 /* line 130, ../scss/main.scss */
-
 .topics {
-    padding: 50px 0px;
+  padding: 50px 0px;
 }
-
-
 /* line 132, ../scss/main.scss */
-
 .topics .line-topics {
-    margin-bottom: 35px;
+  margin-bottom: 35px;
 }
-
-
 /* line 134, ../scss/main.scss */
-
 .topics .line-topics:last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
-
-
 /* line 137, ../scss/main.scss */
-
 .topics .line-topics h3 {
-    margin-top: 15px;
-    font-family: 'FrutigerBoldCn';
-    font-size: 24px;
+  margin-top: 15px;
+  font-family: 'FrutigerBoldCn';
+  font-size: 24px;
 }
-
-
 /* line 141, ../scss/main.scss */
-
 .topics .line-topics h3 span {
-    font-size: 18px;
+  font-size: 18px;
 }
-
-
 /* line 145, ../scss/main.scss */
-
 .topics .line-topics p {
-    font-family: 'FrutigerLight';
-    font-size: 16px;
+  font-family: 'FrutigerLight';
+  font-size: 16px;
 }
-
-
 /* line 150, ../scss/main.scss */
-
 .topics .icon {
-    width: 50px;
-    height: 45px;
-    background: url("../img/icones.png") no-repeat;
+  width: 50px;
+  height: 45px;
+  background: url("../img/icones.png") no-repeat;
 }
-
-
 /* line 154, ../scss/main.scss */
-
 .topics .icon.estetoscopio {
-    background-position: 0 0;
+  background-position: 0 0;
 }
-
-
 /* line 157, ../scss/main.scss */
-
 .topics .icon.cigarro {
-    background-position: -50px 0;
+  background-position: -50px 0;
 }
-
-
 /* line 160, ../scss/main.scss */
-
 .topics .icon.coracao {
-    background-position: -100px 0;
+  background-position: -100px 0;
 }
-
-
 /* line 163, ../scss/main.scss */
-
 .topics .icon.homem {
-    background-position: -150px 0;
+  background-position: -150px 0;
 }
-
-
 /* line 166, ../scss/main.scss */
-
 .topics .icon.vacina {
-    background-position: -200px 0;
+  background-position: -200px 0;
 }
-
-
 /* line 169, ../scss/main.scss */
-
 .topics .icon.fruta {
-    background-position: -250px 0;
+  background-position: -250px 0;
 }
-
-
 /* line 172, ../scss/main.scss */
-
 .topics .icon.dedo {
-    background-position: -300px 0;
+  background-position: -300px 0;
 }
-
-
 /* line 175, ../scss/main.scss */
-
 .topics .icon.pilula {
-    background-position: -350px 0;
+  background-position: -350px 0;
 }
-
 
 /* line 181, ../scss/main.scss */
-
 .markers-breakpoint {
-    position: relative;
-    background-color: #76ced9;
-    padding: 90px 0px 75px 0px;
-    margin-top: 100px;
+  position: relative;
+  background-color: #76ced9;
+  padding: 90px 0px 75px 0px;
+  margin-top: 100px;
 }
-
-
 /* line 186, ../scss/main.scss */
-
 .markers-breakpoint .line-title {
-    margin: 70px 0px 35px 0px;
+  margin: 70px 0px 35px 0px;
 }
-
-
 /* line 189, ../scss/main.scss */
-
 .markers-breakpoint .title {
-    font-family: 'FrutigerExtraBlack';
-    font-size: 28px;
-    margin: 0;
+  font-family: 'FrutigerExtraBlack';
+  font-size: 28px;
+  margin: 0;
 }
-
-
 /* line 194, ../scss/main.scss */
-
 .markers-breakpoint .subtitle {
-    font-family: 'FrutigerCn';
-    font-size: 26px;
-    margin: 0;
+  font-family: 'FrutigerCn';
+  font-size: 26px;
+  margin: 0;
 }
-
-
 /* line 199, ../scss/main.scss */
-
 .markers-breakpoint .line-image-mosaic {
-    margin-top: -190px;
+  margin-top: -190px;
 }
-
-
 /* line 202, ../scss/main.scss */
-
 .markers-breakpoint .list-map-marker {
-    padding-left: 0px;
+  padding-left: 0px;
 }
-
-
 /* line 204, ../scss/main.scss */
-
 .markers-breakpoint .list-map-marker li {
-    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
-    list-style-type: none;
-    list-style-position: outside;
-    padding-left: 30px;
-    line-height: 40px;
-    font-size: 17px;
-    background: url("../img/pin.png") no-repeat left center;
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+  list-style-type: none;
+  list-style-position: outside;
+  padding-left: 30px;
+  line-height: 16px;
+  font-size: 17px;
+  background: url("../img/pin.png") no-repeat left top;
+  margin-bottom: 25px;
+  cursor: pointer;
 }
-
-
 /* line 217, ../scss/main.scss */
-
+.markers-breakpoint .list-map-marker li small {
+  font-size: 12px;
+}
+/* line 222, ../scss/main.scss */
 .markers-breakpoint .detalhe-map {
-    width: 88px;
-    height: 38px;
-    position: absolute;
-    left: 50%;
-    margin-left: -44px;
-    bottom: -35px;
-    background: url("../img/abinha.png") no-repeat;
-    z-index: 10;
+  width: 88px;
+  height: 38px;
+  position: absolute;
+  left: 50%;
+  margin-left: -44px;
+  bottom: -35px;
+  background: url("../img/abinha.png") no-repeat;
+  z-index: 10;
 }
 
-
-/* line 229, ../scss/main.scss */
-
+/* line 234, ../scss/main.scss */
 #map {
-    height: 400px;
-    margin-bottom: 50px;
+  height: 400px;
+  margin-bottom: 50px;
 }
 
-
-/* line 238, ../scss/main.scss */
-
+/* line 243, ../scss/main.scss */
 .gm-style-iw {
-    /* width: 350px !important; */
-    top: 15px !important;
-    left: 0px !important;
-    color: #FFF !important;
-    background-color: #ed2b33;
-    box-shadow: 0 1px 6px rgba(178, 178, 178, 0.6);
-    border: 0;
-    border-radius: 15px;
-    padding: 15px;
-    text-align: center;
+  /* width: 350px !important; */
+  top: 15px !important;
+  left: 0px !important;
+  color: #FFF !important;
+  background-color: #ed2b33;
+  box-shadow: 0 1px 6px rgba(178, 178, 178, 0.6);
+  border: 0;
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
 }
-
-
-/* line 250, ../scss/main.scss */
-
+/* line 255, ../scss/main.scss */
 .gm-style-iw hr {
-    margin: 8px 0;
-    border: 0;
-    color: #FFF;
-    border-top: 1px solid #FFFFFF;
+  margin: 8px 0;
+  border: 0;
+  color: #FFF;
+  border-top: 1px solid #FFFFFF;
 }

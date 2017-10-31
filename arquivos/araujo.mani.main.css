@@ -1,0 +1,424 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+#container{
+    background: #ffffff;
+    border-radius: 3px;
+    margin: 0 auto 30px;
+    width: 974px;
+}
+body h2.titulo-topo{
+    background: url("bg-topo-manipulacao.png") repeat 0 0;
+    color: #004e8e;
+    font-family: Arial;
+    font-size: 17px;
+    line-height: 16px;
+    margin: 0 0 20px 0;
+    padding: 20px;
+    text-align: left;
+    text-transform: uppercase;
+}
+#destaque-manipulacao{
+    background: #5c8727;
+    padding: 10px;
+    display: block;
+    margin: 20px 0;
+}
+.logo-manipulacao{
+    margin: 30px 0 0 40px;
+    display: block;
+}
+#fotos-manipulacao{
+    background: url(contorno-fotos.png) no-repeat;
+    display: block; 
+    margin: 30px 0 0 40px;
+    padding: 24px 30px 90px 30px;
+}
+#fotos-manipulacao img{
+     padding: 10px 5px;
+}
+.box-conteudo{
+    width: 440px;
+    padding: 10px;
+    float: left;
+}
+#container p.titulo-conteudo{
+    color:#5c8727;
+    font-family: 'Arial', Verdana, Tahoma;
+    font-size:30px;
+    line-height: 30px;
+    font-weight: bold;
+    margin:30px 0;
+}
+#form-receita textarea,
+#form-receita input{
+    background: #eef3eb;
+    border: none;
+    padding: 10px;
+    width: 370px;
+}
+#form-receita textarea{
+    min-height: 80px;
+}
+#form-receita label{
+    width: 100%;
+    display: block;
+    color:#5c8727;
+    font-weight: bold;
+    padding-top: 10px;
+    line-height: 22px;
+}
+#form-receita label span{
+    color:#db1818;
+}
+#form-receita .endereco-completo{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    color:#414141;
+    padding-top: 10px;
+    margin-bottom: 0
+}
+#container p.obs{
+    color:#d22929;
+    font-size: 11px;
+    font-style: italic;
+}
+
+.file-wrapper {
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+}
+.file-wrapper input {
+    cursor: pointer;
+    font-size: 100px;
+    height: 100%;
+    filter: alpha(opacity=1);
+    -moz-opacity: 0.01;
+    opacity: 0.01;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.file-wrapper .button {
+    background: #5c8727;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 5px;
+    padding: 4px 18px;
+    text-transform: uppercase;
+}
+.respeito{
+    line-height: 22px;
+    color:#5c8727;
+    font-size: 14px;
+}
+#form-receita input.enviar{
+    background: url(bt-enviar.png) no-repeat;
+    color:#fff;
+    width: 104px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 0 8px 25px;
+    margin: 20px 0;
+}
+#box-economizar{
+    width: 465px;
+    height: 100px;
+    display: block;
+    margin-top: 40px;
+    background: url(box-economia.png) no-repeat;
+}
+#box-economizar .titulo{
+    color:#5c8727;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    padding: 7px 0 0 100px;
+}
+#box-economizar .descricao{
+    font-size: 14px;
+    font-style: italic;
+    color:#333333;
+    margin: 0;
+    padding: 0 0 0 100px;
+    width: 98%;
+}
+.obs-tratamento{
+    color:#333333;
+    font-style: italic;
+    font-size: 11px;
+    margin: 0
+}
+#box-cidade{
+    width: 180px;
+    float: left;
+    display: block;
+}
+#box-cidade input{
+    width: 165px;
+}
+#box-estado{
+    width: 70px;
+    float: left;
+    display: block;
+    margin-left: 12px;
+}
+#box-estado input{
+    width: 50px;
+}
+.ie7 #box-estado{
+    margin-left: 5px;
+}
+#box-cep{
+    width: 123px;
+    float: left;
+    display: block;
+    margin-left: 6px;
+}
+#box-cep input{
+    width: 100px;
+}
+#cupom{
+    width: 100%;
+    display: block;
+    clear: both;
+}
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+#container .invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+#container .clearfix:before,
+#container .clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+#container .clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+#container p {color: #333333;font-family: 'Arial',Verdana,Tahoma;font-size: 13px;line-height: 22px;}
+
+
+#cintainer {font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+#container article,
+#container aside,
+#container details,
+#container figcaption,
+#container figure,
+#container footer,
+#container header,
+#container hgroup,
+#container main,
+#container nav,
+#container section,
+#container summary{display:block;}
+#container audio,
+#container canvas,
+#container progress,
+#container video{display:inline-block;vertical-align:baseline;}
+#container audio:not([controls]){display:none;height:0;}
+#container [hidden],template{display:none;}
+#container a{background:transparent;}
+#container a:active,a:hover{outline:0;}
+#container abbr[title]{border-bottom:1px dotted;}
+#container dfn{font-style:italic;}
+#container h1{font-size:2em;margin:.67em 0;}
+#container mark{background:#ff0;color:#000;}
+#container small{font-size:80%;}
+#container sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}
+#container sup{top:-.5em;}
+#container sub{bottom:-.25em;}
+#container img{border:0;}
+svg:not(:root){overflow:hidden;}
+#container figure{margin:1em 40px;}
+#container hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0;}
+#container code,
+#container kbd,
+#container pre,
+#container samp{font-family:monospace, monospace;font-size:1em;}
+#container button,
+#container input,
+#container optgroup,
+#container select,
+#container textarea{color:inherit;font:inherit;margin:0;}
+#container button{overflow:visible;}
+#container button,
+#container select{text-transform:none;}
+#container button,
+#container input[type=button],/* 1 */
+#container input[type=reset],
+#container input[type=submit]{-webkit-appearance:button;cursor:pointer;}
+#container button[disabled],
+#container input[disabled]{cursor:default;}
+#container input{line-height:normal;}
+#container input[type=checkbox],
+#container input[type=radio]{box-sizing:border-box;padding:0;}
+#container input[type=number]::-webkit-inner-spin-button,
+#container input[type=number]::-webkit-outer-spin-button{height:auto;}
+#container input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}
+#container input[type=search]::-webkit-search-cancel-button,
+#container input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}
+#container fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}
+#container table{border-collapse:collapse;border-spacing:0;}
+#container td,
+#container th{padding:0;}
+#container b,
+#container strong,
+#container optgroup{font-weight:700;}
+#container pre,
+#container textarea{overflow:auto;}
+#container button::-moz-focus-inner,input::-moz-focus-inner,legend{border:0;padding:0;}

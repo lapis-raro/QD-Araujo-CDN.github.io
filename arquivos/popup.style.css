@@ -1,0 +1,26 @@
+body {background:#fff;min-width:inherit;width: 100%;}
+.footer,
+.header h1,
+.header .close{display:none;}
+
+.pop-pagamento .header h2 {display: none;}
+body.pop-pagamento #divCredito legend{padding-bottom: 10px;}
+
+.content h3 {text-align:left;font-size:14px;color: #014783;}
+.cartao {border-bottom:solid 1px #e7e7e7;margin-bottom:10px;}
+.cartao fieldset {position: relative;}
+.cartao fieldset legend {font-size:11px;}
+.cartao fieldset legend span {display: block;margin-top:10px;}
+/*.cartao .card-flag {left: 100px;position: absolute;top: 3px;width: 300px;}*/
+.cartao .card-flag img {float: left;max-width: 100px;}
+.cartao .card-flag select {float: left;margin:16px 0 0 20px;font-size:12px}
+.cartao table {margin:10px 0 20px;width: 85%;text-align:left;}
+.cartao table th {font-size:14px;font-weight:bold;}
+.cartao table td {font-size:11px;color:#585858;}
+
+.boleto .wrapper {background: url("/arquivos/boleto_64x64.png") no-repeat scroll 0 0 transparent; display: block; height: 64px; padding: 15px 0 15px 80px;}
+.boleto .wrapper img{ display: none; float:left;max-width: 100px;}
+.boleto .wrapper p{text-align:left;color:#585858;}
+.boleto .wrapper .valor{padding-top:2px;color:#111;font-style:normal;font-weight:bold;}
+
+.pop-mensagem p {color: #000000; font-size: 12px; line-height: 17px; padding: 10px;}

@@ -1,0 +1,159 @@
+body a {color:#010101;}
+
+/*
+* SECAO:ESTRUTURA
+* paginas:account, account order, login
+*/
+.mainTpl {margin:0 auto 50px;}
+.dualColumn{float:left;width:50%;}
+.mainTpl * {color:inherit;}
+.columnLeft {width:20%;float:left;}
+.columnMain {width:79%;float:right;}
+.mainTpl > .paddingFix {padding:15px;min-height:300px;}
+.mainTpl .titleWrapper {position:relative;height:1px;}
+.mainTpl .titleWrapper h2 {font-size:18px;font-weight:normal;left:200px;position:absolute;top:-44px;}
+/*titulo*/
+.mainTpl h4 {color:#004E8E!important;font-size:24px;border-bottom:solid 1px #bababa;line-height:36px;margin:0 0 10px 0;}
+
+
+/*botões*/
+.onderPage,
+.new-address-link .address-update,
+body.account #profile-submit,
+body.account #form-submit,
+body.account #address-delete,
+.edit-profile-link a {margin:5px 0;line-height:20px; text-shadow:0 -1px 0 rgba(0, 0, 0, 0.25);border:1px solid #024E8E;border-radius:5px 5px 5px 5px;color:#FFFFFF;display:inline-block;font-size:12px;padding:3px 10px;box-shadow:0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05); background:#3f7abb;background:-moz-linear-gradient(top,  #3f7abb 0%, #055090 100%); background:-webkit-linear-gradient(top,  #3f7abb 0%,#055090 100%); background:-ms-linear-gradient(top,  #3f7abb 0%,#055090 100%); background:linear-gradient(to bottom,  #3f7abb 0%,#055090 100%); -webkit-transition:all 200ms ease-in; -moz-transition:all 200ms ease-in; transition:all 200ms ease-in;}
+.onderPage:hover,
+.new-address-link .address-update:hover,
+.edit-profile-link a:hover {color:#FFF;text-decoration:none;background:#216bba;background:-moz-linear-gradient(top,  #216bba 0%, #004e8e 100%);background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#216bba), color-stop(100%,#004e8e));background:-webkit-linear-gradient(top,  #216bba 0%,#004e8e 100%);background:-o-linear-gradient(top,  #216bba 0%,#004e8e 100%);background:-ms-linear-gradient(top,  #216bba 0%,#004e8e 100%);background:linear-gradient(to bottom,  #216bba 0%,#004e8e 100%);filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#216bba', endColorstr='#004e8e',GradientType=0 ); -webkit-transition:none 200ms ease-in;-moz-transition:none 200ms ease-in;-o-transition:none 200ms ease-in;transition:none 200ms ease-in;}
+.onderPage:active,
+.new-address-link .address-update:active,
+.edit-profile-link a:active {box-shadow:0 2px 4px rgba(0, 0, 0, 0.15) inset, 0 1px 2px rgba(0, 0, 0, 0.05);}
+
+
+/*
+* SECAO:HEADER
+* paginas:account, account order, login
+*/
+.checkout-default-header {position:absolute;top:0;left:0;width:100%;height:95px;}
+.checkout-default-container {margin:0 auto;width:976px;}
+.headerColumn {float:left;}
+/*topbar*/
+.topbar {height:26px;}
+.topbar a {line-height:26px;float:right;}
+/*logo*/
+.checkout-default-header h1{position:relative;top:-10px;}
+.rightColumn {float:right;}
+
+.checkout-default-security >div {float:left;}
+.checkout-default-security .icoSecurity {background:url("/arquivos/ico_security-125x21.png") no-repeat 0 0;width:125px;height:21px;margin:15px 10px 0;}
+.checkout-default-security .siteBlindadoWrapper {margin:15px 0 0;}
+
+
+/*
+* SECAO:MINHA CONTA
+* paginas:account, account order, login
+*/
+.columnMain h5 {font-size:16px;color:#024E8E;}
+.profile-detail-display p {line-height:20px;}
+
+
+/*
+* SECAO:ESTRUTURA
+* paginas:account, account order, login
+*/
+.menuSidebarWrapper {border:solid 1px #d2d2d2;padding:1px;}
+.menuSidebarWrapper h5 {background-color:#004e8e;color:#FFF;font-size:15px;font-weight:normal;padding:10px 20px;}
+.menuSidebarWrapper a {font-size:12px;padding:5px 20px;margin:1px 0;display:block;font-size:13px;}
+.menuSidebarWrapper a:hover {background-color:#f7f7f7;text-decoration:none;}
+
+
+/*
+* SECAO:LOGIN
+* paginas:account, account order, login
+*/
+.login .vtexIdUI-coluna {margin-bottom:50px;}
+.login .text-error span{padding:0 5px 0 0 ;}
+
+
+/*
+* SECAO:MEUS PEDIDOS
+* paginas:meus pedidos
+*/
+.account-orders .vtex-bootstrap h1 {color:#004E8E!important;font-size:24px;border-bottom:solid 1px #bababa;line-height:36px;margin:0 0 10px 0;}
+.account-orders .vtex-bootstrap .page-header {border:none;padding:0;margin:0;}
+.account-orders .vtex-bootstrap .form-search .search-query {border:solid 2px #ffa400;border-radius:4px;box-shadow:none;}
+.account-orders .vtex-bootstrap .form-search .search-query:focus {border-color:#004E8E !important;}
+.order-header {background-color:#EAEDF3;border-radius:10px 10px 0 0;}
+.account-orders .vtex-bootstrap .order-info .top-row {border:none;}
+.vtex-bootstrap .ordergroup .order-title {margin:10px 0;}
+.vtex-bootstrap .order-date {color:#004E8E;}
+.account-orders .vtex-bootstrap .ordergroup .order-details {padding: 0;}
+.account-orders .vtex-bootstrap .order-details .items {border: none;}
+.order-details table {border: none;}
+.order-details th {color: #FFF;}
+.order-details table tbody td, 
+.order-details table tbody th, 
+.order-details table tfoot td, 
+.order-details table tfoot th {border-bottom: none;border-top: 1px solid #D2D2D2}
+.order-details .top-row {background-color: #EAEDF3;border-top: 1px solid #D2D2D2}
+.vtex-bootstrap .order-status {margin: 0;}
+.order-details .seller-info,
+.order-details .showTrackingInfo,
+.order-details .trackingInfo,
+.order-details .request-cancel,
+.order-details .order-status-wrapper,
+.order-details .section-info-title {margin:5px 15px;}
+.vtex-bootstrap .order-info .general-info *{border:none;font-weight: normal;}
+body.account-orders .product-item td{text-align: center;}
+body.account-orders .product-item td.product-name{text-align: lefts;}
+body.account-orders .trackingInfo iframe.qd-shipping-tracking{border: 1px solid #d2d2d2; height: 200px; margin-bottom: 8px; width: 98%;}
+
+/*
+* SECAO:CRIAR NOVO ENDERECO
+* paginas:account
+*/
+.account h2 {background:url("araujo_atendimento_03.jpg") repeat-x scroll 0 0 transparent;color:#004E8E;font-size:20px;padding:10px;text-transform:uppercase;}
+.address-display-unit {width:33%;float:left;margin:10px 0 20px;}
+.address-display-unit p {line-height:18px;}
+.address-display .edit-address-link {line-height:24px;}
+.edit-address-link a {color:#000;}
+.edit-address-link a:hover {text-decoration:underline;}
+.edit-address-link .address-update:before {margin:0 2px 0 0;content:"";font-family:"FontAwesome";}
+.edit-address-link .delete:before {margin:0 2px 0 0;content:"";font-family:"FontAwesome";}
+.edit-address-link .delete:hover:before {color:red;}
+.vtexIdUI .vtexIdUI-pre-auth-btn.btn {background:#7eae26; background:-moz-linear-gradient(top, #7eae26 0%, #457f0e 100%); background:-webkit-linear-gradient(top, #7eae26 0%, #457f0e 100%); background:-ms-linear-gradient(top, #7eae26 0%, #457f0e 100%); background:linear-gradient(to bottom, #7eae26 0%, #457f0e 100%); border-radius:2px; border-color:#457f0e; color:#ffffff !important; font-size:15px; text-transform:uppercase; text-shadow:0 -1px 0 rgba(0, 0, 0, 0.25); }
+.vtexIdUI .vtexIdUI-pre-auth-btn.btn:hover,
+.vtexIdUI .vtexIdUI-pre-auth-btn.btn:focus,
+.vtexIdUI .vtexIdUI-pre-auth-btn.btn:active {background:#457f0e;color:#ffffff !important;}
+/*Zerando estilo do bootstrap*/
+body.account .topBar .navTop li{padding-top:0;}
+body.account h5,
+body.account li{line-height: 1;}
+body.account .address-display,
+body.account .address-display-block,
+body.account .profile-detail-display{margin: 0;width: 100%;}
+
+/*
+* SECAO:FOOTER
+* paginas:account, account order, login
+*/
+.checkoutFooter {background:#2d4f8b;padding:10px 0;border-radius:4px;margin-top:40px;}
+.checkoutFooter h3 {color:#FFF;font-size:12px;margin-top:0;font-weight:normal;margin:0 0 5px;}
+.checkoutFooter .payment {border-right:solid 1px #254274;margin-left:-2px;min-height:100px;}
+.checkoutFooter .payment ul {padding:0;margin:0;}
+.checkoutFooter .payment ul li {background:url("/arquivos/paymentStamps.png") no-repeat 0 0;height:31px;width:50px;float:left;margin:1px;list-style:none;}
+.checkoutFooter .payment .visa {background-position:0 -172px;}
+.checkoutFooter .payment .dinners {background-position:0 -138px;}
+.checkoutFooter .payment .master {background-position:0 -35px;}
+.checkoutFooter .payment .amex {background-position:0 -70px;}
+.checkoutFooter .payment .boleto {background-position:0 -103px;}
+.checkoutFooter .payment .itau {background-position:0 0;}
+.checkoutFooter .stamps {padding:0 30px;float:left;}
+.checkoutFooter .stamps {list-style:none;}
+.checkoutFooter .dualColumn .paddingFix {padding:0 20px;}
+.checkoutFooter .eBitWrapper {float:left;width:86px;height:92px;}
+.checkoutFooter .digicertWrapper {float:left;width:98px;height:72px;margin-left:20px;}
+.copyrightWrapper {position:relative;margin:10px 0 0;}
+.copyrightWrapper p {text-align:center;color:#616161;margin:5px 0 0;}
+.copyrightWrapper .poweredByVtex {position:absolute;top:0;right:5px;}
