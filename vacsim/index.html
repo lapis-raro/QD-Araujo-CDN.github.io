@@ -4,114 +4,235 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
         <title>Vacsim</title>
-        <meta name="description" content="">        
+        <meta name="description" content="Araujo Vacsim">        
         <link rel="stylesheet" href="css/vacsim.css">
+
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.8.3.min.js"></script>
+        <script type="text/javascript" src="//qd-araujo-cdn.github.io/arquivos/qd-iframe-adjust.js"></script>
         
     </head>
     <body>
 
         <div id="vacsim-wrapper">
 
-            
-
-            <div class="wrap azul-1">
+            <div class="wrap cinza-1">
                 <div class="container">
-                    <div class="coluna-esquerda">
-                        <img src="images/icon-clock.png" id="icon-clock" style="margin-top: 60px; margin-bottom:10px; width:80px; height:auto;">
-                    </div>
-                    <div class="coluna-direita">
-                        <h3>Vacinas <br>e testes rápidos.<br>
-                            Araujo tem.
-                        </h3>
-                        <span class="divider"></span>
-                        <p>
-                            Agora você pode fazer testes rápidos e comprar vacinas com a garantia do Padrão Araujo de Medicamentos.
-                            <br>A aplicação e os testes são feitos na hora pela VACSIM. É rápido, prático e perto de você. Confira.
-                        </p>
-                        
-                    </div>
-
-                    <div class="clear-wrap"></div>
+                    <a href="#vacinas">
+                        <img style="width: auto; height: 60px;" src="images/btn-vacinas.png">
+                    </a>
+                    <a href="#testes-rapidos" class="mg-left-40">
+                        <img style="width: auto; height: 60px;" src="images/btn-testes-rapidos.png">
+                    </a>
+                    <a href="#servicos" class="mg-left-40">
+                        <img style="width: auto; height: 60px;" src="images/btn-servicos.png">
+                    </a>
+                    <a href="#onde-encontrar" class="mg-left-40">
+                        <img style="width: auto; height: 60px;" src="images/btn-onde-encontrar.png">
+                    </a>
+                    <a target="_top" href="//www.araujo.com.br/vacsim/cuidado-vacinas" target="_blank" class="mg-left-40">
+                        <img style="width: auto; height: 60px;" src="images/btn-cuidado-com-as-vacinas.jpg">
+                    </a>                    
                 </div>
             </div>
+            
+            
+            <!-- APOS TERMINAR A CAMPANHA DAS VACINAS 2016 descomentar a parte azul-2 logo abaixo -->
+            <!--
+            <div class="wrap redzao-2" name="onde-econtrar" id="onde-encontrar">
+                <div class="container">
+                    <div class="coluna-esquerda">
+                        <img src="images/icon-pin-map.png" id="icon-pin-map" style="margin-top: 120px;">
+                    </div>
+                    <div class="coluna-direita">
+                        <h3>Lojas em serviço<br/>
+                            de aplicação</h3>
+                        
+                        <p>
+                            <span class="dest-yellow">Sábado e domingo, das 8h às 20h:</span><br/>
+                            <strong class="upper-18">Gutierrez</strong> – rua André Cavalcanti, 222
+                        </p>
+                        <p>
+                            <span class="dest-yellow">Sábado das 8h às 20h e domingo, das 8h às 14h:</span><br/>
+                            <strong class="upper-18">CENTRO</strong> – rua Curitiba, 327
+                        </p>
+                        <p>
+                            <span class="dest-yellow">Sábado, das 9h às 18h:</span><br/>
+                            <strong class="upper-18">CENTRO</strong> – rua Curitiba, 327<br/>
+                            <strong class="upper-18">Funcionários</strong> – Av. Getúlio Vargas, 840<br/>
+                            <strong class="upper-18">Cidade Nova</strong> – Av. Cristiano Machado, 2.400<br/>
+                            <strong class="upper-18">Savassi</strong> – Av. do Contorno, 6.115 <br/>
+                            <strong class="upper-18">Mangabeiras</strong> – Praça da Bandeira, 180 <br/>
+                            <strong class="upper-18">Betim</strong> – Av. Governador Valadares, 455 <br/>
+                            <strong class="upper-18">Nova Lima</strong> – Rua Alameda da Serra, 1.369
+                        </p>
+                        <p>
+                            <span class="dest-yellow">Sábado, das 9h às 13h:</span><br/>
+                            <strong class="upper-18">Estoril</strong> – Av. Professor Mário Werneck, 1.340<br/>
+                            <strong class="upper-18">Castelo</strong> – Av. Miguel Perrela, 530<br/>
+                        </p>
+                        <p class="obs-farm">
+                            Estoque limitado a 4 mil unidades. Atendimento por ordem de chegada, <br/>enquanto durar o estoque. * O pagamento do serviço de aplicação é feito<br/> 
+                            para a Vacsim, somente em dinheiro ou cartão de débito (exceto bandeira Elo).
+                        </p>
 
+                        <a href="#map" id="btn-google-maps">
+                            <img  src="images/botao-vermelho.jpg">
+                        </a>
+                        
+                    </div>
+                    <div class="clear-wrap"></div>
+                </div>
+            </div>-->
+            <div style="text-align:left;margin:0 auto;background-color:#6ec5d1;">
+                <img src="images/banner-dengue-vacsim.jpg" style="margin:0; display:block; max-width:100%;height:auto;">
+            </div>
             <div class="wrap azul-2" name="onde-econtrar" id="onde-encontrar">
                 <div class="container">
                     <div class="coluna-esquerda">
-                        <img src="images/icon-pin-map.png" id="icon-pin-map" style="margin-top: 120px; width:80px;">
+                        <img src="images/icon-pin-map.png" id="icon-pin-map" style="margin-top: 120px;">
                     </div>
                     <div class="coluna-direita">
                         <h3>Onde encontrar:</h3>
 
-                        <a data-cidade="bh" class="botao-ondeencontrar" href="javascript:;">
-                            Belo Horizonte
-                        </a>
-                        <div class="horarios">
-                            <p>
-                                Horário de atendimento:<br>
-                                todos os dias, das 8h às 20h, inclusive feriados.   
-                            </p>
-                            <ul>                            
-                                <li class="bh">Araujo Centenário – <strong>Funcionários</strong> – Av. Getúlio Vargas, 840</li>
-                                <li class="bh">Araujo Gutierrez – <strong>Gutierrez</strong> – Rua André Cavalcanti, 222</li>
-                                <li class="bh">Araujo Matriz – <strong>Centro</strong> – Rua Curitiba, 327</li>                            
-                            </ul>
-
-                            <p>
-                                Horário de atendimento: <br>
-                                de segunda a sábado, das 8h às 20h, exceto feriados. 
-                            </p>
-
-                            <ul>
-                                
-                                <li class="bh">Araujo Cristiano Machado – <strong>Cidade Nova</strong> – Av. Cristiano Machado, 2.400</li>
-                                <li class="bh">Araujo Estoril – <strong>Estoril</strong> – Av. Professor Mário Werneck, 1.340</li>
-                                
-                                <li class="bh">Araujo Padre Eustáquio – <strong>Padre Eustáquio</strong> – Rua Padre Eustáquio, 2.208</li> 
-                                <li class="bh">Araujo Portugal – <strong>Jardim Atlântico</strong> – Av. Portugal, 2.841</li>
-                                <li class="bh">Araujo Praça da Bandeira – <strong>Mangabeiras</strong> – Praça da Bandeira, 180</li>    
-                                <li class="bh">Araujo Savassi – <strong>Funcionários</strong> – Av. do Contorno, 6.115</li>                          
-                            </ul>
-                        </div>
-
-                        <a  data-cidade="contagem" class="botao-ondeencontrar" href="javascript:;">
-                            Contagem
-                        </a>
-                        <div class="horarios">
-
-                            <p>
-                                Horário de atendimento: <br>
-                                de segunda a sábado, das 8h às 20h, exceto feriados. 
-                            </p>
-                            <ul>
-                                
-                                <li class="setelagoas">Araujo Gil Diniz – <strong>Nossa Senhora do Carmo</strong> – Av. Prefeito Gil Diniz, 777 - <strong><font color="#5DC4E1">Contagem</font></strong></li> 
-                                                   
-                            </ul>
+                        <!--
+                        <p>
+                            Horário de atendimento:<br>
+                            todos os dias, das 8h às 20h.
+                        </p>
+                        <ul>                            
+                                                      
+                            <li><strong>Gutierrez</strong> – Rua André Cavalcanti, 222.</li>
+                                     
+                        </ul>
+                        -->
+                         <p>
+                            Horário de atendimento:<br>
+                            de segunda a sábado, das 8h às 20h, domingo, das 8h às 14h.
+                        </p>
+                        <ul>                            
                             
+                            <li><!--Araujo Matriz – --><strong>Centro</strong> – Rua Curitiba, 327.</li>     
+                            <li><!--Araujo Centenário – --><strong>Funcionários</strong> – Av. Getúlio Vargas, 840.</li>                     
+                        </ul>
 
-                        </div>
+                           
+                        <p>
+                            Horário de atendimento: <br>
+                            de segunda a sexta, das 9h às 18h. E aos sábados, das 9h às 13h, exceto feriados.
+                        </p>
 
-                        <a data-cidade="setelagoas" class="botao-ondeencontrar" href="javascript:;">
-                            Sete Lagoas
-                        </a>
-                        <div class="horarios">
-                            <p>
-                                Horário de atendimento: <br>
-                                de segunda a sábado, das 8h às 20h, exceto feriados. 
-                            </p>
-
-                            <ul>
-                                <li class="contagem">Araujo Sete Lagoas - Centro - Praça Alexandre Lanza, 141 - <strong><font color="#5DC4E1">Sete Lagoas</font></strong></li>
-                            </ul>
-
+                        <ul>  
+                            <li> <!--Araujo Barro Preto – --><strong>Barro Preto</strong> – Av. do Contorno, 9841.</li>
+                            <li><!--Araujo Miguel Perrela – --><strong>Castelo</strong> – Av. Miguel Perrela, 530.</li>
+                            <li><!--Araujo Cristiano Machado – --> <strong>Cidade Nova</strong> – Av. Cristiano Machado, 2.400.</li>
+                            <li><!--Araujo Estoril – --><strong>Estoril</strong> – Av. Professor Mário Werneck, 1.340.</li>
+                            <li><!--Araujo Savassi – --><strong>Funcionários</strong> – Av. do Contorno, 6.115.</li>
                             
-                        </div>
+                             <li><!--Araujo Gutierrez – --><strong>Gutierrez</strong> – Rua André Cavalcanti, 222.</li>
+                            <li><!--Araujo Praça da Bandeira – --><strong>Mangabeiras</strong> – Praça da Bandeira, 180.</li>
+                            <li><!--Araujo Alameda da Serra – --><strong>Nova Lima</strong> – Rua Alameda da Serra, 1.369.</li>
+                            <!--<li>Araujo Nossa Senhora do Carmo – <strong>Centro</strong> – Av. Governador Valadares, 455 - <strong><font color="#5DC4E1">Betim.</font></strong></li>-->
+                        </ul>
+
+
+                        <p>
+                            Horário de atendimento:<br>
+                            de segunda a sexta, das 10h às 13h e das 14h às 19h. E aos sábados, das 8h às 12h.
+                        </p>
+                        <ul>                          
+                            
+                            <li><strong>Padre Eustáquio</strong> – Rua Padre Eustáquio, 2.208.</li>                   
+                        </ul>
+
+                        <!--
+
+                        <p>
+                            Horário de atendimento:<br>
+                            de segunda a sexta, das 8h às 20h. Aos sábados, das 9h às 13h. Domingos e feriados das 8h às 14h. 
+                        </p>
+                        <ul>                          
+                            
+                                
+                        </ul>
+                        -->
+
+
+                        <p>
+                            Horário de atendimento:<br>
+                            de segunda a sexta, das 10h às 19h. E aos sábados, das 8h às 14h.
+                        </p>
+                        <ul>                          
+                            
+                            <li><!--Araujo Centenário – --><strong>São Bento</strong> – Rua Michel Jeha, nº 20 e nº 22.</li>           
+                        </ul>
+
+                        <p>
+                            Horário de atendimento:<br>
+                            de segunda a sexta, das 7h às 21h30. E aos sábados, das 7h às 16h.
+                        </p>
+                        <ul>                          
+                            
+                            <li><!--Araujo Centenário – --><strong>São Lucas</strong> – Praça Hugo Werneck, nº 450. Bairro Santa Efigênia.</li>           
+                        </ul>
+
+                        <p>
+                            Horário de atendimento:<br>
+                            de segunda a sexta, das 10h às 19h.
+                        </p>
+                        <ul>                          
+                            
+                            <li><!--Araujo Centenário – --><strong>Planalto</strong> – Av. Dr. Cristiano Guimarães, nº 1691. Bairro Planalto.</li>           
+                        </ul>
+                        
+
+                        <p>
+                            Horário de atendimento:<br>
+                            de segunda a sexta, das 9h às 18h. E aos sábados, das 10h às 14h.
+                        </p>
+                        <ul>                          
+                            
+                            <li><!--Araujo Lourdes – --><strong>Lourdes </strong> – Diamond Mall – Av. Olegário Maciel, 1.600.</li>           
+                        </ul>
+
+
+                         <!--<p>
+                            Atendimento via agendamento de horários<br>pelos telefones (31) 3213-7005 ou (31) 3270-5623:
+                        </p>-->
+                        <!--<ul>                            
+                            
+                            <li><strong>Minas I</strong> – Rua da Bahia, 2244 (exclusivo para sócios do clube).</li>                   
+                        </ul>-->
+
+                        <!--<p style="font-size: 18px;">Confira a localização das lojas no mapa abaixo</p>-->
 
                         
-                        
+                        <a href="#map" id="btn-google-maps">
+                            <img  src="images/btn-google-maps.jpg">
+                        </a>
                         
                     </div>
+                    <div class="clear-wrap"></div>
+                </div>
+            </div>
+
+
+
+            <div class="wrap azul-1">
+                <div class="container">
+                    <div class="coluna-esquerda">
+                        <img src="images/icon-clock.png" id="icon-clock" style="margin-top: 60px;">
+                    </div>
+                    <div class="coluna-direita">
+                        <h3>Vacinas e testes rápidos.<br>
+                            Araujo tem.
+                        </h3>
+                        <span class="divider"></span>
+                        <p>
+                            Agora você pode fazer testes rápidos e comprar vacinas com a garantia do Padrão Araujo de Medicamentos. A aplicação e os testes são feitos na hora pela Vacsim, uma clínica com 15 anos de experiência em medicina preventiva. É rápido, prático e perto de você. Confira.
+                        </p>
+                        <img src="images/img-araujo-vacsim-parceria.png">
+                    </div>
+
                     <div class="clear-wrap"></div>
                 </div>
             </div>
@@ -119,72 +240,59 @@
             <div class="wrap azul-3" name="vacinas" id="vacinas">
                 <div class="container">
                     <div class="coluna-esquerda">
-                        <img src="images/icon-vacinas.png" id="icon-vacinas" style="width: 190px;  height: auto;">
+                        <img src="images/icon-vacinas.png" id="icon-vacinas" style="margin-top: 110px;">
                         
-                        
+                        <img id="btn-todas-vacinas" src="images/btn-todas-vacinas.jpg">
                         
                     </div>
                     <div class="coluna-direita">
                         <h3>Vacinas</h3>
 
-                        <a href="javascript:;" id="mostra-vacinas">
-                            Veja a lista de 
-                            <br>vacinas disponíveis.
-                        </a>
-
-                        <ul id="lista-vacinas"> 
+                        <ul>
 
 
-                            <li>Recém-nascido<br>
-                                <span>
-                                    <a href="arquivos/calend-sbim-crianca-0-10anos-2014-15-150306.pdf" target="_blank">
-                                        Confira o calendário de vacinação
-                                    </a>                                
-                                </span>
-                            </li>
+                            
                             <li>Crianças de 0 a 10 anos<br>
                                 <span>
-                                    <a href="arquivos/calend-sbim-crianca-0-10anos-2014-15-150306.pdf" target="_blank">
+                                    <a href="arquivos/calend-sbim-crianca-2016-17-160914c-spread.pdf" target="_blank">
                                         Confira o calendário de vacinação
                                     </a>                                
                                 </span>
                             </li>
                             <li>Adolescentes de 11 a 19 anos<br>
                                 <span>
-                                    <a href="arquivos/calend-sbim-adolescente-11-19anos-2014-15-150306.pdf" target="_blank">
+                                    <a href="arquivos/calend-sbim-adolescente-2016-17-160914c-spread.pdf" target="_blank">
                                         Confira o calendário de vacinação
                                     </a>                                
                                 </span>
                             </li>
-                            <li>Mulheres de 20 a 59 anos<br>
+                            
+                            <li>Adultos de 20 a 59 anos<br>
                                 <span>
-                                    <a href="arquivos/calend-sbim-mulher-20-59anos-2014-15-150306.pdf" target="_blank">
-                                        Confira o calendário de vacinação
-                                    </a>                                
-                                </span>
-                            </li>
-                            <li>Homens de 20 a 59 anos<br>
-                                <span>
-                                    <a target="_blank" href="arquivos/calend-sbim-homem-20-59anos-2014-15-150306.pdf">
+                                    <a target="_blank" href="arquivos/calend-sbim-adulto-2016-17-160914c-spread.pdf">
                                         Confira o calendário de vacinação
                                     </a>                                
                                 </span>
                             </li>
                             <li>Idosos com mais de 60 anos<br>
                                 <span>
-                                    <a href="arquivos/calend-sbim-idoso-mais-de-60anos-2014-15-150306.pdf" target="_blank">
+                                    <a href="arquivos/calend-sbim-idoso-2016-17-160914c-spread.pdf" target="_blank">
                                         Confira o calendário de vacinação
                                     </a>                                
                                 </span>
                             </li>
-                            <li>Gestantes</li>
+                            <li>Gestantes<br>
+                                <span>
+                                    <a href="arquivos/calend-sbim-gestante-2016-17-160914c-spread.pdf" target="_blank">
+                                        Confira o calendário de vacinação
+                                    </a>
+                                </span>
+
+                            </li>
                             <li>Viajantes</li>
                             <li>Calendário específico de vacinas</li>
                         
                         </ul>
-                        <br>
-                        <p>Todas as vacinas. Araujo tem.</p>
-
                     </div>
                     <div class="clear-wrap"></div>
                 </div>
@@ -193,30 +301,26 @@
             <div class="wrap azul-4" id='testes-rapidos' name="testes-rapidos">
                 <div class="container">
 
-                    <div class="">
-                        <img src="images/icon-clock-2.png" id="icon-clock-2" style="margin-top: 110px;width: 160px;height:auto;">
+                    <div class="coluna-esquerda">
+                        <img src="images/icon-clock-2.png" id="icon-clock-2" style="margin-top: 110px;">
                     </div>
-                    <div class="">
+                    <div class="coluna-direita">
                        <h3>Testes Rápidos:</h3>
 
-                       <p>
-                        Saiba quais são os testes <br>realizados pela Araujo.
-                       </p>
+                       <h4>Não é necessário jejum ou preparo</h4>
 
-                       <h4 style="text-align:left;">Não é necessário jejum ou preparo</h4>
-
-                       <ul style="text-align:left;">
+                       <ul>
                             <li>Medição de pressão</li>
-                            <li>Glicemia e hemoglobina glicada
-                            <li>Colesterol
-                            <li>Glicemia com colesterol 
-                            <li>Teste da Dengue
-                            <li>Teste do pezinho
-                            <li>Coagulação (RNI/TP)</li>                            
+                            <li>Glicemia e hemoglobina glicada</li>
+                            <li>Colesterol</li>
+                            <li>Glicemia com colesterol </li>
+                            <li>Teste da Dengue</li>
+                            <li>Teste do pezinho</li>
+                            <li>Coagulação (RNI/TP)</li>                           
                        </ul>
                     
-                       <h4 style="text-align:left;">É necessário 12 horas de jejum</h4>
-                        <ul style="text-align:left;">
+                       <h4>É necessário 12 horas de jejum</h4>
+                        <ul>
                             <li>Perfil Lipídico (Col, Hdl e Tri.)</li>
                         </ul>   
 
@@ -252,17 +356,20 @@
                 </div>
             </div>
 
-           
+            
+            
+
+            <div class="wrap mapa">
+                <div id="map" name="map" ></div>
+            </div>
 
             <div class="wrap cinza-1 cinza-bottom">
                 <div class="container">
 
                     <p>
-                        
-                        <br>Drogatel <strong>(31) 3270-5000</strong>  
-                        <br>Vacsim <strong>(31) 3213-7005</strong>
+                        ARAUJO.COM.BR/VACSIM  <strong>|</strong>  Drogatel <strong>(31) 3270-5000</strong>  <strong>|</strong>  Vacsim <strong>(31) 3213-7005</strong>
                     </p>
-                    
+                    <a id="voltar-topo" href="#" ></a>
                  
                 </div>
             </div>
@@ -273,32 +380,112 @@
 
         
 
-        <script type="text/javascript" src="https://code.jquery.com/jquery-1.8.3.min.js"></script>  
+
+        <script src="js/vacsim-scripts.js"></script>
         <script type="text/javascript" src="//qd-araujo-cdn.github.io/arquivos/qd-iframe-adjust.js"></script>
-        
+
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
     <script>
-        
-        $(".botao-ondeencontrar").click(function(){
-            $(this).next().toggle();
-            $(this).toggleClass("active");
-            if($(this).hasClass("active")){
-                $('html, body').animate({
-                    scrollTop: $(this).offset().top
-                }, 500);
-            }
-        });
+   
+          $(document).ready(function(){
+                      var map,
+              locations = [                  
+                                    
+                  [-19.915654, -43.940423,'Araujo Matriz - Centro - Rua Curitiba, 327<hr>De segunda a sábado, das 8h às 20h, e domingo, das 8h às 14h.'],
+                  [-19.932537, -43.956683,'Araujo Gutierrez – Gutierrez – Rua André Cavalcanti, 222<hr>De segunda a sexta, das 9h às 18h e aos sábados das 9h às 13h, exceto feriados.'],
+                  [-19.935383, -43.931226,'Araujo Centenário – Funcionários – Av. Getúlio Vargas, 840<hr>De segunda a sábado, das 8h às 20h, domingo, das 8h às 14h.'],
+                  [-19.886905, -43.929193,'Araujo Cristiano Machado – Cidade Nova – Av. Cristiano Machado, 2.400<hr>Todos os dias, das 8h às 20h, inclusive feriados.'],
+                  [-19.968386, -43.964553,'Araujo Estoril – Estoril – Av. Professor Mário Werneck, 1.340<hr>Todos os dias, das 8h às 20h, inclusive feriados.'],
+                  [-19.939905, -43.934592,'Araujo Savassi – Funcionários – Av. do Contorno, 6.115<hr>De segunda a sábado, das 8h às 20h, exceto feriados.'],
+                  [-19.949079, -43.920340,'Araujo Praça da Bandeira – Mangabeiras – Praça da Bandeira, 180<hr>De segunda a sábado, das 8h às 20h, exceto feriados.'],                  
+                  [-19.922062, -43.957576,'Araujo Barro Preto – Barro Preto – Av. do Contorno, 9841<hr>De segunda a sexta, das 9h às 18h. E aos sábados, das 9h às 13h, exceto feriados.'],            
+                  [-19.877759, -43.996400,'Araujo Miguel Perrela – <strong>Castelo</strong> – Av. Miguel Perrela, 530 - <strong>Belo Horizonte</strong><hr>De segunda a sexta, das 9h às 18h. E aos sábados, das 9h às 13h, exceto feriados.'],
+                  [-19.975071, -43.938314,'Araujo Alameda da Serra – <strong>Nova Lima</strong> – Rua Alameda da Serra, 1.369 - <strong>Nova Lima</strong><hr>De segunda a sexta, das 9h às 18h. E aos sábados, das 9h às 13h, exceto feriados.'],
+                  [-19.914980, -43.973455,'Araujo Padre Eustáquio - <strong>Padre Eustáquio</strong> -  Rua Padre Eustáquio, 2208 - <strong>Belo Horizonte</strong><hr>De segunda a sexta, das 10h às 13h e das 14h às 19h. E aos sábados das 8h às 12h.'],
+                  [-19.953797, -43.949962,'Araujo São Bento - <strong>São Bento</strong> - Rua Michel Jeha, nº 20 e nº 22<hr>De segunda a sexta, das 10h às 19h. E aos sábados, das 8h às 14h.'],
+                  [-19.924633, -43.926568,'Araujo São Lucas - <strong>Bairro Santa Efigênia</strong> - Praça Hugo Werneck, nº 450<hr>De segunda a sexta, das 7h às 21h30. E aos sábados, das 7h às 16h.'],
+                  [-19.834952, -43.955263,'Araujo Planalto - <strong>Bairro Planalto</strong> - Av. Dr. Cristiano Guimarães, nº 1691<hr>De segunda a sexta, das 10h às 19h.']
+                  [-19.928042, -43.9495611,'Araujo Lourdes - <strong>Bairro Lourdes</strong> - Diamond Mall – Av. Olegário Maciel, 1.600.<hr> De segunda a sexta, das 9h às 18h. E aos sábados, das 10h às 14h.']
+                  
+                  //[-19.935287, -43.940608,'<strong>Araujo Minas I</strong> – Rua da Bahia, 2244 (exclusivo para sócios do clube)<hr>Atendimento via agendamento de horários pelos telefones<br>(31) 3213-7005 ou (31) 3270-5623.']                  
+                   ];
+              var myOptions = {
+                  zoom: 11,
+                  center: new google.maps.LatLng(-19.9166813, -43.9344931),//locations[0][0], locations[0][1]
+                  mapTypeId: google.maps.MapTypeId.ROADMAP,
+                  scrollwheel:false
+              };
+              var image = 'images/marker.png';
+              map = new google.maps.Map($('#map')[0], myOptions);
+              var infowindow = new google.maps.InfoWindow({maxWidth:250}), marker, i;
+                for (i = 0; i < locations.length; i++) {  
+                    marker = new google.maps.Marker({
+                        position: new google.maps.LatLng(locations[i][0], locations[i][1]),
+                        map: map,
+                        icon: image
 
-        $("#mostra-vacinas").click(function(){
-            $(this).toggleClass("active");
-            $("#lista-vacinas").toggle();
-            if($(this).hasClass("active")){
-                $('html, body').animate({
-                    scrollTop: $(this).offset().top
-                }, 500);
-            }
-        });
+                    });
 
-          
+                    google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                        return function() {
+                            infowindow.setContent(locations[i][2]);
+                            infowindow.open(map, marker);
+                            map.setCenter(marker.getPosition());
+                        }
+                    })(marker, i));
+
+
+                    google.maps.event.addListener(infowindow, 'domready', function() {
+  
+                        // ReferÃªncia ao DIV que agrupa o fundo da infowindow
+                        var iwOuter = $('.gm-style-iw');
+
+                        /* Uma vez que o div pretendido estÃ¡ numa posiÃ§Ã£o anterior ao div .gm-style-iw.
+                        * Recorremos ao jQuery e criamos uma variÃ¡vel iwBackground,
+                        * e aproveitamos a referÃªncia jÃ¡ existente do .gm-style-iw para obter o div anterior com .prev().
+                        */
+                        var iwBackground = iwOuter.prev();
+
+                        // Remover o div da sombra do fundo
+                        iwBackground.children(':nth-child(2)').css({'display' : 'none'});
+
+                        // Remover o div de fundo branco
+                        iwBackground.children(':nth-child(4)').css({'display' : 'none'});
+
+                        // Desloca a infowindow 115px para a direita
+                        //iwOuter.parent().parent().css({left: '115px'});
+
+                        // Desloca a sombra da seta a 76px da margem esquerda 
+                        //iwBackground.children(':nth-child(1)').attr('style', function(i,s){ return s + 'left: 76px !important;'});
+
+                        // Desloca a seta a 76px da margem esquerda 
+                        iwBackground.children(':nth-child(3)').attr('style', function(i,s){ return s + 'background-color:#ed2b33 !important; color:#ed2b33 !important; border-color:#ed2b33 !important'});
+
+                        // Altera a cor desejada para a sombra da cauda
+                        iwBackground.children(':nth-child(3)').find('div').children().css({'box-shadow': 'rgba(72, 181, 233, 0.6) 0px 1px 6px', 'z-index' : '1', "color" : "#ed2b33", "background-color" : "#ed2b33", "border-color" : "#ed2b33"});
+
+                        // ReferÃªncia ao DIV que agrupa os elementos do botÃ£o fechar
+                        var iwCloseBtn = iwOuter.next();
+
+                        // Aplica o efeito desejado ao botÃ£o fechar
+                        iwCloseBtn.css({opacity: '0', right: '38px', top: '3px', border: '7px solid #ed2b33', 'border-radius': '13px', 'box-shadow': '0 0 5px #3990B9' , "display" : "none"});
+
+                        // Se o conteÃºdo da infowindow nÃ£o ultrapassar a altura mÃ¡xima definida, entÃ£o o gradiente Ã© removido.
+                        if($('.iw-content').height() < 140){
+                          $('.iw-bottom-gradient').css({display: 'none'});
+                        }
+
+                        // A API aplica automaticamente 0.7 de opacidade ao botÃ£o apÃ³s o evento mouseout. Esta funÃ§Ã£o reverte esse evento para o valor desejado.
+                        iwCloseBtn.mouseout(function(){
+                          $(this).css({opacity: '1'});
+                        });
+                    });
+
+
+
+                }
+               
+      });
     </script>
 
         
