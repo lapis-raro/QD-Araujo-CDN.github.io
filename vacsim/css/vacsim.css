@@ -1,4 +1,4 @@
-/* line 1, ../sass/vacsim.scss */
+/* line 1, ../../sass/vacsim.scss */
 body {
   margin: 0;
   padding: 0;
@@ -28,135 +28,208 @@ body {
   src: url("fonts/FrutigerLTStdLight.eot") format("embedded-opentype"), url("fonts/FrutigerLTStdLight.woff2") format("woff2"), url("fonts/FrutigerLTStdLight.woff") format("woff"), url("fonts/FrutigerLTStdLight.ttf") format("truetype"), url("fonts/FrutigerLTStdLight.svg#FrutigerLTStdLight") format("svg");
 }
 
-/* line 43, ../sass/vacsim.scss */
+/* line 43, ../../sass/vacsim.scss */
 #vacsim-wrapper {
   font-family: 'FrutigerLTStdBold';
 }
-/* line 47, ../sass/vacsim.scss */
+/* line 47, ../../sass/vacsim.scss */
 #vacsim-wrapper ul {
   margin: 0;
   padding: 0 0 0 20px;
 }
-/* line 52, ../sass/vacsim.scss */
+/* line 52, ../../sass/vacsim.scss */
 #vacsim-wrapper p {
   font-family: 'FrutigerLTStdRoman';
-  font-size: 1.2em;
 }
-/* line 57, ../sass/vacsim.scss */
-#vacsim-wrapper li {
-  font-size: 1em;
-  text-align: left;
-}
-/* line 62, ../sass/vacsim.scss */
+/* line 56, ../../sass/vacsim.scss */
 #vacsim-wrapper a {
   text-decoration: none;
 }
-/* line 65, ../sass/vacsim.scss */
+/* line 59, ../../sass/vacsim.scss */
 #vacsim-wrapper .wrap {
   width: 100%;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
-/* line 70, ../sass/vacsim.scss */
+/* line 64, ../../sass/vacsim.scss */
 #vacsim-wrapper .container {
   width: 970px;
   margin: 0 auto;
   min-height: 75px;
 }
-/* line 75, ../sass/vacsim.scss */
+/* line 69, ../../sass/vacsim.scss */
 #vacsim-wrapper .container h3 {
   margin: 0 0 34px;
   font-weight: normal;
 }
-/* line 80, ../sass/vacsim.scss */
+/* line 74, ../../sass/vacsim.scss */
 #vacsim-wrapper .container .coluna-esquerda {
   width: 380px;
   float: left;
 }
-/* line 85, ../sass/vacsim.scss */
+/* line 79, ../../sass/vacsim.scss */
 #vacsim-wrapper .container .coluna-direita {
   width: 590px;
   float: right;
 }
-/* line 90, ../sass/vacsim.scss */
+/* line 84, ../../sass/vacsim.scss */
 #vacsim-wrapper .container .clear-wrap {
   clear: both;
 }
-/* line 93, ../sass/vacsim.scss */
+/* line 87, ../../sass/vacsim.scss */
 #vacsim-wrapper .container span.divider {
-  width: 80%;
-  height: 24px;
-  background-color: #ea155b;
+  width: 180px;
+  height: 14px;
+  background-color: #5dc4e1;
   display: block;
-  margin: 0 0 10px;
+  margin: 0 0 34px;
 }
-/* line 102, ../sass/vacsim.scss */
+/* line 96, ../../sass/vacsim.scss */
 #vacsim-wrapper .mg-left-20 {
   margin-left: 20px;
 }
-/* line 105, ../sass/vacsim.scss */
+/* line 99, ../../sass/vacsim.scss */
 #vacsim-wrapper .mg-left-40 {
-  margin-left: 40px;
+  margin-left: 25px;
 }
-/* line 109, ../sass/vacsim.scss */
+/* line 103, ../../sass/vacsim.scss */
 #vacsim-wrapper .cinza-1 {
   background-color: #f3f3f3;
   color: #676767;
 }
-/* line 114, ../sass/vacsim.scss */
+/* line 108, ../../sass/vacsim.scss */
 #vacsim-wrapper .azul-1 {
   background-color: #3d6499;
   color: #FFF;
 }
-/* line 118, ../sass/vacsim.scss */
+/* line 112, ../../sass/vacsim.scss */
 #vacsim-wrapper .azul-1 h3 {
-  font-size: 2em;
-  margin-bottom: 10px;
+  font-size: 48px;
 }
-/* line 122, ../sass/vacsim.scss */
+/* line 115, ../../sass/vacsim.scss */
 #vacsim-wrapper .azul-1 p {
-  font-size: 1em;
-  margin: 0;
+  font-size: 17.5px;
+  margin: 0 0 34px;
   line-height: 160%;
 }
-/* line 128, ../sass/vacsim.scss */
+/* line 121, ../../sass/vacsim.scss */
+#vacsim-wrapper .redzao-1 {
+  background-color: #E01B22;
+  /*Cor quando entrar outro banner*/
+  /*background-color:#F6E6C2;*/
+  color: #FFF;
+  font-family: 'FrutigerLTStdCn';
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+/* line 129, ../../sass/vacsim.scss */
+#vacsim-wrapper .redzao-1 img {
+  width: 100%;
+  height: auto;
+}
+/* line 134, ../../sass/vacsim.scss */
+#vacsim-wrapper .redzao-2 {
+  background-color: #BE1A21;
+  color: #FFF;
+  font-family: 'FrutigerLTStdCn';
+}
+/* line 138, ../../sass/vacsim.scss */
+#vacsim-wrapper .redzao-2 .dest-yellow {
+  color: #f4b11a;
+}
+/* line 141, ../../sass/vacsim.scss */
+#vacsim-wrapper .redzao-2 .upper-18 {
+  text-transform: uppercase;
+  font-size: 18px;
+}
+/* line 145, ../../sass/vacsim.scss */
+#vacsim-wrapper .redzao-2 .obs-farm {
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 16px;
+  margin-bottom: 30px;
+}
+/* line 151, ../../sass/vacsim.scss */
+#vacsim-wrapper .redzao-2 h3 {
+  font-size: 59px;
+  font-family: 'FrutigerLTStdBold';
+}
+/* line 155, ../../sass/vacsim.scss */
+#vacsim-wrapper .redzao-2 p {
+  font-family: 'FrutigerLTStdBold';
+  margin: 0 0 20px 0;
+  line-height: 26px;
+}
+/* line 161, ../../sass/vacsim.scss */
+#vacsim-wrapper .redzao-2 ul {
+  font-family: 'FrutigerLTStdLight';
+  margin: 0 0 34px;
+  padding: 0 0 0 16px;
+}
+/* line 166, ../../sass/vacsim.scss */
+#vacsim-wrapper .redzao-2 ul li {
+  font-family: 'FrutigerLTStdLight';
+}
+/* line 169, ../../sass/vacsim.scss */
+#vacsim-wrapper .redzao-2 ul li strong {
+  font-family: 'FrutigerLTStdBold';
+  font-weight: normal;
+  line-height: 170%;
+}
+/* line 177, ../../sass/vacsim.scss */
+#vacsim-wrapper .redzao-2 .container {
+  position: relative;
+  padding-bottom: 30px;
+}
+/* line 180, ../../sass/vacsim.scss */
+#vacsim-wrapper .redzao-2 .container #btn-google-maps {
+  position: absolute;
+  bottom: -50px;
+  right: 10px;
+  display: block;
+  width: 610px;
+  height: 73px;
+}
+/* line 191, ../../sass/vacsim.scss */
 #vacsim-wrapper .azul-2 {
   background-color: #2f5281;
   color: #FFF;
   font-family: 'FrutigerLTStdCn';
 }
-/* line 133, ../sass/vacsim.scss */
+/* line 196, ../../sass/vacsim.scss */
 #vacsim-wrapper .azul-2 h3 {
-  font-size: 2em;
+  font-size: 59px;
   font-family: 'FrutigerLTStdBold';
 }
-/* line 137, ../sass/vacsim.scss */
+/* line 200, ../../sass/vacsim.scss */
 #vacsim-wrapper .azul-2 p {
   font-family: 'FrutigerLTStdBold';
   margin: 0 0 7px 0;
 }
-/* line 142, ../sass/vacsim.scss */
+/* line 205, ../../sass/vacsim.scss */
 #vacsim-wrapper .azul-2 ul {
   font-family: 'FrutigerLTStdLight';
   margin: 0 0 34px;
   padding: 0 0 0 16px;
 }
-/* line 147, ../sass/vacsim.scss */
+/* line 210, ../../sass/vacsim.scss */
 #vacsim-wrapper .azul-2 ul li {
   font-family: 'FrutigerLTStdLight';
+  list-style-position: inside;
+  text-align: center;
 }
-/* line 150, ../sass/vacsim.scss */
+/* line 213, ../../sass/vacsim.scss */
 #vacsim-wrapper .azul-2 ul li strong {
   font-family: 'FrutigerLTStdBold';
   font-weight: normal;
   line-height: 170%;
 }
-/* line 158, ../sass/vacsim.scss */
+/* line 221, ../../sass/vacsim.scss */
 #vacsim-wrapper .azul-2 .container {
   position: relative;
   padding-bottom: 30px;
 }
-/* line 161, ../sass/vacsim.scss */
+/* line 224, ../../sass/vacsim.scss */
 #vacsim-wrapper .azul-2 .container #btn-google-maps {
   position: absolute;
   bottom: -50px;
@@ -165,64 +238,65 @@ body {
   width: 610px;
   height: 73px;
 }
-/* line 171, ../sass/vacsim.scss */
+/* line 234, ../../sass/vacsim.scss */
 #vacsim-wrapper .azul-3 {
   background-color: #5dc4e1;
   color: #FFF;
 }
-/* line 175, ../sass/vacsim.scss */
+/* line 238, ../../sass/vacsim.scss */
 #vacsim-wrapper .azul-3 h3 {
   color: #3d6499;
-  font-size: 3em;
+  font-size: 59px;
   font-family: 'FrutigerLTStdBold';
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
-/* line 181, ../sass/vacsim.scss */
+/* line 244, ../../sass/vacsim.scss */
 #vacsim-wrapper .azul-3 li {
   color: #3d6499;
   font-family: 'FrutigerLTStdCn';
   font-size: 20px;
   line-height: 19px;
   margin-bottom: 12px;
+  list-style-position: inside;
+  text-align: center;
 }
-/* line 187, ../sass/vacsim.scss */
+/* line 250, ../../sass/vacsim.scss */
 #vacsim-wrapper .azul-3 li a {
   color: #FFF;
   text-decoration: underline;
   font-size: 12px;
   font-family: 'FrutigerLTStdLight';
 }
-/* line 194, ../sass/vacsim.scss */
+/* line 257, ../../sass/vacsim.scss */
 #vacsim-wrapper .azul-3 li:last-child {
   margin-bottom: 0;
 }
-/* line 199, ../sass/vacsim.scss */
+/* line 262, ../../sass/vacsim.scss */
 #vacsim-wrapper .azul-3 a {
   color: #FFF;
 }
-/* line 204, ../sass/vacsim.scss */
+/* line 267, ../../sass/vacsim.scss */
 #vacsim-wrapper .azul-3 .container {
   position: relative;
 }
-/* line 207, ../sass/vacsim.scss */
+/* line 270, ../../sass/vacsim.scss */
 #vacsim-wrapper .azul-3 .container #btn-todas-vacinas {
   position: absolute;
   bottom: -50px;
-  left: -30px;
+  left: 40%;
 }
-/* line 215, ../sass/vacsim.scss */
+/* line 278, ../../sass/vacsim.scss */
 #vacsim-wrapper .azul-4 {
   background-color: #afb6ca;
   color: #FFF;
 }
-/* line 221, ../sass/vacsim.scss */
+/* line 284, ../../sass/vacsim.scss */
 #vacsim-wrapper .azul-4 h3 {
   color: #3d6499;
-  font-size: 2em;
+  font-size: 59px;
   font-family: 'FrutigerLTStdBold';
-  margin-bottom: 0;
 }
-/* line 228, ../sass/vacsim.scss */
+/* line 290, ../../sass/vacsim.scss */
 #vacsim-wrapper .azul-4 h4 {
   font-size: 12px;
   color: #FFF;
@@ -230,77 +304,78 @@ body {
   font-weight: normal;
   text-indent: 20px;
   background: url("../images/linha-branca.jpg") no-repeat right center;
-  max-width: 420px;
+  /*max-width: 420px;*/
+  text-align: center;
 }
-/* line 240, ../sass/vacsim.scss */
+/* line 302, ../../sass/vacsim.scss */
 #vacsim-wrapper .azul-4 ul li {
   color: #3d6499;
   font-size: 20px;
   font-family: 'FrutigerLTStdBold';
   margin-bottom: 10px;
 }
-/* line 250, ../sass/vacsim.scss */
+/* line 312, ../../sass/vacsim.scss */
 #vacsim-wrapper .azul-4 span {
   color: #FFF;
 }
-/* line 255, ../sass/vacsim.scss */
+/* line 317, ../../sass/vacsim.scss */
 #vacsim-wrapper .azul-5 {
   background-color: #ced2de;
   color: #FFF;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 130px;
+  padding-bottom: 130px;
 }
-/* line 263, ../sass/vacsim.scss */
+/* line 325, ../../sass/vacsim.scss */
 #vacsim-wrapper .azul-5 h3 {
   color: #3d6499;
-  font-size: 2em;
+  font-size: 59px;
   font-family: 'FrutigerLTStdBold';
 }
-/* line 271, ../sass/vacsim.scss */
+/* line 333, ../../sass/vacsim.scss */
 #vacsim-wrapper .azul-5 ul li {
   color: #3d6499;
-  font-size: 1.1em !important;
+  font-size: 20px;
   font-family: 'FrutigerLTStdBold';
   margin-bottom: 10px;
-  text-align: left;
+  text-align: center;
+  list-style-position: inside;
 }
-/* line 280, ../sass/vacsim.scss */
+/* line 340, ../../sass/vacsim.scss */
 #vacsim-wrapper .azul-5 span {
   color: #FFF;
 }
-/* line 285, ../sass/vacsim.scss */
+/* line 345, ../../sass/vacsim.scss */
 #vacsim-wrapper .mapa {
   padding: 0;
 }
-/* line 287, ../sass/vacsim.scss */
+/* line 347, ../../sass/vacsim.scss */
 #vacsim-wrapper .mapa #map {
   height: 318px;
 }
-/* line 292, ../sass/vacsim.scss */
+/* line 352, ../../sass/vacsim.scss */
 #vacsim-wrapper .cinza-bottom {
   text-align: center;
-  padding-top: 30px;
-  padding-right: 30px;
 }
-/* line 298, ../sass/vacsim.scss */
+/* line 356, ../../sass/vacsim.scss */
 #vacsim-wrapper .cinza-bottom .container {
   position: relative;
 }
-/* line 301, ../sass/vacsim.scss */
+/* line 359, ../../sass/vacsim.scss */
 #vacsim-wrapper .cinza-bottom .container strong {
   font-family: 'FrutigerLTStdBold';
 }
-/* line 305, ../sass/vacsim.scss */
+/* line 363, ../../sass/vacsim.scss */
 #vacsim-wrapper .cinza-bottom .container p {
   font-family: 'FrutigerLTStdLight';
   font-weight: normal;
   color: #676767;
-  font-size: 1em;
+  font-size: 15px;
   text-align: center;
-  margin: 0;
+  border-right: 1px solid #cfcfcf;
+  padding: 35px 55px  35px 0;
   display: inline-block;
 }
-/* line 316, ../sass/vacsim.scss */
+/* line 374, ../../sass/vacsim.scss */
 #vacsim-wrapper .cinza-bottom .container #voltar-topo {
   background: url(../images/btn-voltar-topo.png);
   width: 80px;
@@ -311,7 +386,7 @@ body {
   right: 82px;
   display: block;
 }
-/* line 332, ../sass/vacsim.scss */
+/* line 390, ../../sass/vacsim.scss */
 #vacsim-wrapper .gm-style-iw {
   /* width: 350px !important; */
   top: 15px !important;
@@ -325,118 +400,98 @@ body {
   text-align: center;
   font-family: 'FrutigerLTStdLight';
 }
-/* line 345, ../sass/vacsim.scss */
+/* line 403, ../../sass/vacsim.scss */
 #vacsim-wrapper .gm-style-iw hr {
   margin: 8px 0;
   border: 0;
   color: #FFF;
   border-top: 1px solid #FFFFFF;
 }
-/* line 353, ../sass/vacsim.scss */
-#vacsim-wrapper .botao-ondeencontrar {
-  background: #5dc4e1;
-  color: #FFF;
-  font-size: 1.2em;
-  font-family: 'FrutigerLTStdBold';
-  padding: 25px 36px;
-  display: block;
-  margin-bottom: 20px;
-  text-align: left;
-  position: relative;
-}
-/* line 364, ../sass/vacsim.scss */
-#vacsim-wrapper .botao-ondeencontrar:after {
-  content: "+";
-  display: block;
-  position: absolute;
-  right: 30px;
-  top: 25px;
-}
-/* line 372, ../sass/vacsim.scss */
-#vacsim-wrapper .botao-ondeencontrar.active:after {
-  content: "-";
-}
-/* line 377, ../sass/vacsim.scss */
-#vacsim-wrapper .horarios {
-  display: none;
-}
-/* line 381, ../sass/vacsim.scss */
-#vacsim-wrapper #mostra-vacinas {
-  background: #3d6499 url("../images/icon-mostra-vacinas.png") no-repeat 90% center;
-  font-size: 1.3em;
-  color: #FFF;
-  position: relative;
-  padding: 50px 10% 50px 30px;
-  display: block;
-  text-align: left;
-  margin-bottom: 0;
-}
-/* line 391, ../sass/vacsim.scss */
-#vacsim-wrapper #mostra-vacinas.active {
-  background-image: url("../images/icon-mostra-vacinas-inverse.png");
-  margin-bottom: 30px;
-}
-/* line 398, ../sass/vacsim.scss */
-#vacsim-wrapper #lista-vacinas {
-  display: none;
-}
-/* line 401, ../sass/vacsim.scss */
-#vacsim-wrapper #lista-vacinas li {
-  font-size: 1.2em;
-}
-/* line 406, ../sass/vacsim.scss */
-#vacsim-wrapper #testes-rapidos {
-  text-align: left !important;
-}
-/* line 409, ../sass/vacsim.scss */
-#vacsim-wrapper #testes-rapidos h4 {
-  font-size: 1em;
-}
-/* line 414, ../sass/vacsim.scss */
-#vacsim-wrapper #testes-rapidos ul li {
-  font-size: 1.1em;
-}
-/* line 422, ../sass/vacsim.scss */
-#vacsim-wrapper #servicos ul li {
-  font-size: 1.3em;
-}
 
-/* Medium devices (desktops, 992px and up) */
-@media (max-width: 2100px) {
-  /* line 436, ../sass/vacsim.scss */
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+  /* line 417, ../../sass/vacsim.scss */
   .container {
-    width: 90% !important;
-    padding-left: 5%;
-    padding-right: 5%;
-    /* max-width: 420px !important; */
-    text-align: center;
+    width: 650px !important;
   }
-  /* line 443, ../sass/vacsim.scss */
+  /* line 420, ../../sass/vacsim.scss */
   .container .coluna-esquerda {
-    text-align: center;
-    width: 100% !important;
+    width: 30% !important;
   }
-  /* line 449, ../sass/vacsim.scss */
+  /* line 426, ../../sass/vacsim.scss */
   .container .coluna-direita {
-    width: 100% !important;
+    width: 65% !important;
   }
-  /* line 454, ../sass/vacsim.scss */
+  /* line 430, ../../sass/vacsim.scss */
   .container img {
     max-width: 100% !important;
   }
 
-  /* line 463, ../sass/vacsim.scss */
-  #vacsim-wrapper .container span.divider {
-    display: block;
-    margin: 0 auto 10px !important;
+  /* line 435, ../../sass/vacsim.scss */
+  #vacsim-wrapper .cinza-bottom .container p {
+    border-right: 0 !important;
+    padding: 35px 0 35px 0;
+    text-align: center;
   }
 
-  /* line 470, ../sass/vacsim.scss */
+  /* line 441, ../../sass/vacsim.scss */
+  #vacsim-wrapper .cinza-bottom .container #voltar-topo {
+    position: static !important;
+    margin: auto !important;
+  }
+
+  /* line 449, ../../sass/vacsim.scss */
+  #vacsim-wrapper .azul-3 .container #btn-todas-vacinas {
+    position: static !important;
+  }
+
+  /* line 453, ../../sass/vacsim.scss */
+  .cinza-1 {
+    text-align: center;
+  }
+
+  /* line 457, ../../sass/vacsim.scss */
+  .cinza-1 .mg-left-40 {
+    margin-left: 0 !important;
+  }
+}
+/* Medium devices (desktops, 992px and up) */
+@media (max-width: 480px) {
+  /* line 466, ../../sass/vacsim.scss */
+  .container {
+    width: 90% !important;
+    padding-left: 5%;
+    padding-right: 5%;
+    max-width: 420px !important;
+    text-align: center;
+  }
+  /* line 473, ../../sass/vacsim.scss */
+  .container .coluna-esquerda {
+    text-align: center;
+    width: 100% !important;
+  }
+  /* line 479, ../../sass/vacsim.scss */
+  .container .coluna-direita {
+    text-align: center;
+    width: 100% !important;
+  }
+  /* line 484, ../../sass/vacsim.scss */
+  .container img {
+    max-width: 100% !important;
+  }
+
+  /* line 493, ../../sass/vacsim.scss */
+  #vacsim-wrapper .container span.divider {
+    display: block;
+    margin: 0 auto 30px !important;
+  }
+
+  /* line 500, ../../sass/vacsim.scss */
   #icon-vacinas, #icon-pin-map, #icon-clock-2, #icon-nurse, #icon-clock {
     margin-top: 0 !important;
   }
 
-  /* line 474, ../sass/vacsim.scss */
+  /* line 504, ../../sass/vacsim.scss */
   #vacsim-wrapper .azul-2 .container #btn-google-maps {
     position: static;
     display: block;
@@ -444,18 +499,13 @@ body {
     height: auto;
   }
 
-  /* line 482, ../sass/vacsim.scss */
+  /* line 512, ../../sass/vacsim.scss */
   #vacsim-wrapper .azul-4 h4 {
     background-image: none;
   }
 
-  /* line 484, ../sass/vacsim.scss */
+  /* line 514, ../../sass/vacsim.scss */
   ul {
-    /* list-style-position: inside; */
-  }
-
-  /* line 488, ../sass/vacsim.scss */
-  .horarios p {
-    text-align: left;
+    list-style-position: inside;
   }
 }
