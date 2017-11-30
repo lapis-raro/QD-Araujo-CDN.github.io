@@ -7,7 +7,8 @@ body {background:#fff;min-width:inherit;width: 100%;}
 body.pop-pagamento #divCredito legend{padding-bottom: 10px;}
 
 .content h3 {text-align:left;font-size:14px;color: #014783;}
-.cartao {border-bottom:solid 1px #e7e7e7;margin-bottom:10px;}
+/* .cartao {border-bottom:solid 1px #e7e7e7;margin-bottom:10px;} */
+.cartao {margin-bottom:10px;}
 .cartao fieldset {position: relative;}
 .cartao fieldset legend {font-size:11px;}
 .cartao fieldset legend span {display: block;margin-top:10px;}
