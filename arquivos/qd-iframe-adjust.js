@@ -11,7 +11,7 @@
 	};
 
 	$(function () { resetIframeSize(false); });
-	$(window).load(function () { resetIframeSize(false); });
+	$(window).on("load", function () { resetIframeSize(false); });
 	$(window).scroll(function () { resetIframeSize(false); });
 	$(window).on('QD_manualIframeAdjust', function (e, useBody) { resetIframeSize(useBody || false); });
 	$(document).ajaxComplete(function () { resetIframeSize(false); });
@@ -32,7 +32,7 @@
 
 (function ($) {
 	$(function () {
-		$("a[href^=#]").click(function () {
+		$("a[href^='#']").click(function () {
 			window.parent.postMessage("qd-iframe-scroll|" + ($($(this).attr("href")).first().offset() || { top: 0 }).top, "*");
 		});
 	});
