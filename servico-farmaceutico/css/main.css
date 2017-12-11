@@ -247,7 +247,7 @@ header .abs-right-color {
 /* line 234, ../scss/main.scss */
 #map {
   height: 400px;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
 }
 
 /* line 243, ../scss/main.scss */
