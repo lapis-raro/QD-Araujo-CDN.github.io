@@ -45,6 +45,10 @@ body {
   font: 16px 'GothamBook';
   color: #1d3767;
 }
+body a {
+  color: #1d3767;
+  text-decoration: none;
+}
 
 /* line 67, ../scss/main.scss */
 h1 {
