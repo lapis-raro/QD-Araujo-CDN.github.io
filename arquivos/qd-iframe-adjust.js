@@ -32,7 +32,7 @@
 
 (function ($) {
 	$(function () {
-		$("a[href^=#]").click(function () {
+		$("a[href^='#']").click(function () {
 			window.parent.postMessage("qd-iframe-scroll|" + ($($(this).attr("href")).first().offset() || { top: 0 }).top, "*");
 		});
 	});
