@@ -11,7 +11,7 @@
 	};
 
 	$(function () { resetIframeSize(false); });
-	$(window).load(function () { resetIframeSize(false); });
+	$(window).on("load", function () { resetIframeSize(false); });
 	$(window).scroll(function () { resetIframeSize(false); });
 	$(window).on('QD_manualIframeAdjust', function (e, useBody) { resetIframeSize(useBody || false); });
 	$(document).ajaxComplete(function () { resetIframeSize(false); });
