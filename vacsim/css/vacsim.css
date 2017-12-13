@@ -45,8 +45,7 @@ body {
 /* line 57, ../sass/vacsim.scss */
 #vacsim-wrapper li {
   font-size: 1em;
-  text-align: center;
-  list-style-position: inside;
+  text-align: left;
 }
 /* line 62, ../sass/vacsim.scss */
 #vacsim-wrapper a {
@@ -209,7 +208,7 @@ body {
 #vacsim-wrapper .azul-3 .container #btn-todas-vacinas {
   position: absolute;
   bottom: -50px;
-  left: 0;
+  left: -30px;
 }
 /* line 215, ../sass/vacsim.scss */
 #vacsim-wrapper .azul-4 {
@@ -231,7 +230,7 @@ body {
   font-weight: normal;
   text-indent: 20px;
   background: url("../images/linha-branca.jpg") no-repeat right center;
-  /*max-width: 420px;*/
+  max-width: 420px;
 }
 /* line 240, ../sass/vacsim.scss */
 #vacsim-wrapper .azul-4 ul li {
@@ -263,7 +262,7 @@ body {
   font-size: 1.1em !important;
   font-family: 'FrutigerLTStdBold';
   margin-bottom: 10px;
-  text-align: center;
+  text-align: left;
 }
 /* line 280, ../sass/vacsim.scss */
 #vacsim-wrapper .azul-5 span {

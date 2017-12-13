@@ -1,0 +1,496 @@
+body{
+	margin:0;
+	padding:0;
+}
+
+@font-face {
+	    font-family: 'FrutigerLTStdCn';
+	    src: url('fonts/FrutigerLTStdCn.eot');
+	    src: url('fonts/FrutigerLTStdCn.eot') format('embedded-opentype'),
+	         url('fonts/FrutigerLTStdCn.woff2') format('woff2'),
+	         url('fonts/FrutigerLTStdCn.woff') format('woff'),
+	         url('fonts/FrutigerLTStdCn.ttf') format('truetype'),
+	         url('fonts/FrutigerLTStdCn.svg#FrutigerLTStdCn') format('svg');
+	}
+@font-face {
+    font-family: 'FrutigerLTStdBold';
+    src: url('fonts/FrutigerLTStdBold.eot');
+    src: url('fonts/FrutigerLTStdBold.eot') format('embedded-opentype'),
+         url('fonts/FrutigerLTStdBold.woff2') format('woff2'),
+         url('fonts/FrutigerLTStdBold.woff') format('woff'),
+         url('fonts/FrutigerLTStdBold.ttf') format('truetype'),
+         url('fonts/FrutigerLTStdBold.svg#FrutigerLTStdBold') format('svg');
+}
+@font-face {
+    font-family: 'FrutigerLTStdRoman';
+    src: url('fonts/FrutigerLTStdRoman.eot');
+    src: url('fonts/FrutigerLTStdRoman.eot') format('embedded-opentype'),
+         url('fonts/FrutigerLTStdRoman.woff2') format('woff2'),
+         url('fonts/FrutigerLTStdRoman.woff') format('woff'),
+         url('fonts/FrutigerLTStdRoman.ttf') format('truetype'),
+         url('fonts/FrutigerLTStdRoman.svg#FrutigerLTStdRoman') format('svg');
+}
+@font-face {
+    font-family: 'FrutigerLTStdLight';
+    src: url('fonts/FrutigerLTStdLight.eot');
+    src: url('fonts/FrutigerLTStdLight.eot') format('embedded-opentype'),
+         url('fonts/FrutigerLTStdLight.woff2') format('woff2'),
+         url('fonts/FrutigerLTStdLight.woff') format('woff'),
+         url('fonts/FrutigerLTStdLight.ttf') format('truetype'),
+         url('fonts/FrutigerLTStdLight.svg#FrutigerLTStdLight') format('svg');
+}
+
+#vacsim-wrapper{
+	
+
+	font-family: 'FrutigerLTStdBold';
+	ul{
+		margin: 0;
+		padding: 0 0 0 20px;
+	}
+
+	p{
+		font-family: 'FrutigerLTStdRoman';
+		font-size: 1.2em;
+	}
+
+	li{
+		font-size: 1em;
+		text-align: left;
+	}
+
+	a{
+		text-decoration: none;
+	}
+	.wrap{
+		width: 100%;
+		padding-top:30px;
+		padding-bottom:30px;
+	}
+	.container{
+		width: 970px;
+		margin:0 auto;
+		min-height: 75px;
+
+		h3{
+			margin: 0 0 34px;
+			font-weight: normal;
+		}
+
+		.coluna-esquerda{
+			width: 380px;
+			float: left;
+		}
+
+		.coluna-direita{
+			width: 590px;
+			float: right;
+		}
+
+		.clear-wrap{
+			clear: both;
+		}
+		span.divider{
+			width: 80%;
+			height: 24px;
+			background-color:#ea155b;
+			display: block;
+			margin:0 0 10px;
+		}
+	}
+
+	.mg-left-20{
+		margin-left: 20px;
+	}
+	.mg-left-40{
+		margin-left: 40px;
+	}
+
+	.cinza-1{
+		background-color: #f3f3f3;
+		color: #676767;
+	}
+
+	.azul-1{
+		background-color:#3d6499;
+		color: #FFF;
+
+		h3{
+			font-size:2em;
+			margin-bottom: 10px;
+		}
+		p{
+			font-size: 1em;
+			margin:0;
+			line-height: 160%;
+		}
+	}
+	.azul-2{
+		background-color:#2f5281;
+		color: #FFF;
+		font-family: 'FrutigerLTStdCn';
+
+		h3{
+			font-size:2em;
+			font-family: 'FrutigerLTStdBold';
+		}
+		p{
+			font-family: 'FrutigerLTStdBold';
+			margin: 0 0 7px 0;
+		}
+
+		ul{
+			font-family: 'FrutigerLTStdLight';
+			margin: 0 0 34px;
+			padding:0 0 0 16px;
+
+			li{
+				font-family: 'FrutigerLTStdLight';
+
+				strong{
+					font-family: 'FrutigerLTStdBold';
+					font-weight: normal;
+					line-height: 170%;
+				}
+			}
+		}
+
+		.container{
+			position: relative;
+			padding-bottom:30px;
+			#btn-google-maps{
+				position:absolute;
+				bottom:-50px;
+				right:10px;
+				display: block;
+				width: 610px;
+				height: 73px;
+			}
+		}
+	}
+	.azul-3{
+		background-color:#5dc4e1;
+		color: #FFF;
+
+		h3 {
+			color: #3d6499;
+			font-size:3em;
+			font-family: 'FrutigerLTStdBold';
+			margin-bottom: 30px;
+		}
+		li{
+			color: #3d6499;
+			font-family: 'FrutigerLTStdCn';
+			font-size: 20px;
+			line-height: 19px;
+			margin-bottom: 12px;
+			a{
+				color: #FFF;
+				text-decoration: underline;
+				font-size: 12px;
+				font-family: 'FrutigerLTStdLight';
+			}
+
+			&:last-child{
+				margin-bottom: 0;
+
+			}
+		}
+		a{
+			color: #FFF;
+
+		}
+
+		.container{
+			position: relative;
+
+			#btn-todas-vacinas{
+				position:absolute;
+				bottom:-50px;
+				left:-30px;
+			}
+		}
+
+	}
+	.azul-4{
+		background-color:#afb6ca;
+		color: #FFF;
+		
+
+		h3 
+			{
+			color: #3d6499;
+			font-size: 2em;
+			font-family: 'FrutigerLTStdBold';
+			margin-bottom: 0;
+		}
+
+		h4{
+			font-size: 12px;
+			color: #FFF;
+			font-family: 'FrutigerLTStdRoman';
+			font-weight: normal;
+			text-indent: 20px;
+			background: url("../images/linha-branca.jpg") no-repeat right center;
+			max-width: 420px;
+		}
+
+		ul{
+			
+			li{
+				color: #3d6499;
+				font-size:20px;
+				font-family: 'FrutigerLTStdBold';
+				margin-bottom: 10px;
+			}
+		}
+		
+		
+
+		span{
+			color:#FFF;
+		}
+	}
+
+	.azul-5{
+		background-color:#ced2de;
+		color: #FFF;
+
+		padding-top: 30px;
+		padding-bottom:30px;
+
+		h3 
+			{
+			color: #3d6499;
+			font-size: 2em;
+			font-family: 'FrutigerLTStdBold';
+		}
+
+		ul{
+			
+			li{
+				color: #3d6499;
+				font-size:1.1em !important;
+				font-family: 'FrutigerLTStdBold';
+				margin-bottom: 10px;
+				text-align: left;
+
+			}
+		}
+		span{
+			color:#FFF;
+		}
+	}
+
+	.mapa{
+		padding:0;
+		#map{
+			height: 318px;
+		}
+	}
+
+	.cinza-bottom{
+		text-align: center;
+		padding-top: 30px;
+		padding-right: 30px;
+
+
+		.container{
+			position: relative;
+
+			strong{
+				font-family: 'FrutigerLTStdBold';
+			}
+		
+			p{
+				font-family: 'FrutigerLTStdLight';
+				font-weight: normal;
+				color: #676767;
+				font-size: 1em;
+				text-align: center;
+				margin:0;
+				
+				display: inline-block;
+			}
+
+			#voltar-topo{
+				background:url(../images/btn-voltar-topo.png);
+				width: 80px;
+				height: 88px;
+				cursor: pointer;
+				position:absolute;
+				top: 18px;
+  				right: 82px;
+  				display:block;
+			}
+
+		}
+		
+		
+	}
+
+	.gm-style-iw {
+		/* width: 350px !important; */
+		top: 15px !important;
+		left: 0px !important;
+		color: #FFF !important;
+		background-color: #ed2b33;
+		box-shadow: 0 1px 6px rgba(178, 178, 178, 0.6);
+		border: 0;
+		border-radius: 15px;
+		padding: 15px;
+  		text-align: center;
+  		font-family: 'FrutigerLTStdLight';
+
+  		hr{
+  			margin:8px 0;
+  			border:0;
+  			color: #FFF;
+  			border-top:1px solid #FFFFFF;
+  		}
+	}
+
+	.botao-ondeencontrar{
+		background: #5dc4e1;
+		color: #FFF;	
+		font-size: 1.2em;
+		font-family: 'FrutigerLTStdBold';
+		padding:25px 36px;
+		display: block;
+		margin-bottom: 20px;
+		text-align: left;
+		position: relative;
+
+		&:after{
+			content:"+";
+			display: block;
+			position: absolute;
+			right: 30px;
+			top: 25px;
+		}
+
+		&.active:after{
+			content: "-";
+		}
+	}
+
+	.horarios{
+		display: none;
+	}
+
+	#mostra-vacinas{
+		background: #3d6499 url("../images/icon-mostra-vacinas.png") no-repeat 90% center;
+		font-size: 1.3em;
+		color: #FFF;
+		position: relative;
+		padding:50px 10% 50px 30px;
+		display: block;
+		text-align: left;
+		margin-bottom:0;
+
+		&.active{
+			background-image: url("../images/icon-mostra-vacinas-inverse.png");
+			margin-bottom: 30px;
+		}
+
+	}
+
+	#lista-vacinas{
+		display: none;
+
+		li{
+			font-size: 1.2em;
+		}
+	}
+
+	#testes-rapidos{
+		text-align: left !important;
+
+		h4{
+			font-size: 1em;
+		}
+
+		ul{
+			li{
+				font-size: 1.1em;
+			}
+		}
+	}
+
+	#servicos{
+		ul{
+			li{
+				font-size: 1.3em;
+			}
+		}
+	}
+
+}
+
+
+
+
+/* Medium devices (desktops, 992px and up) */
+@media (max-width: 2100px) {
+
+	.container{
+		width: 90% !important;
+		padding-left: 5%;
+		padding-right: 5%;
+		/* max-width: 420px !important; */
+		text-align: center;
+
+		.coluna-esquerda{
+			text-align: center;
+			width: 100% !important;
+
+		}
+
+		.coluna-direita{
+			
+			width: 100% !important;
+		}
+
+		img{
+			max-width: 100% !important;
+		}
+
+		
+
+
+	}
+
+	#vacsim-wrapper .container span.divider {
+		  
+		  display: block;
+		  margin: 0 auto 10px !important;
+		}
+
+	
+	#icon-vacinas,#icon-pin-map, #icon-clock-2, #icon-nurse, #icon-clock  {
+		margin-top: 0 !important;
+	}
+
+	#vacsim-wrapper .azul-2 .container #btn-google-maps {
+	  position: static;
+	 
+	  display: block;
+	  width: auto;
+	  height: auto;
+	}
+
+	#vacsim-wrapper .azul-4 h4 {background-image: none;}
+
+	ul {
+	    /* list-style-position: inside; */
+	}
+
+	.horarios p{
+		text-align: left;
+	}
+
+
+}
+
+
+
