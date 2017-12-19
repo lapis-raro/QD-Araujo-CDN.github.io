@@ -45,7 +45,8 @@ body {
 /* line 57, ../sass/vacsim.scss */
 #vacsim-wrapper li {
   font-size: 1em;
-  text-align: left;
+  text-align: center;
+  list-style-position: inside;
 }
 /* line 62, ../sass/vacsim.scss */
 #vacsim-wrapper a {
@@ -53,7 +54,8 @@ body {
 }
 /* line 65, ../sass/vacsim.scss */
 #vacsim-wrapper .wrap {
-  width: 100%;
+  max-width: 100%;
+  width: auto;
   padding-top: 30px;
   padding-bottom: 30px;
 }
@@ -118,6 +120,7 @@ body {
   font-size: 1em;
   margin: 0;
   line-height: 160%;
+  padding: 20px 0 30px;
 }
 /* line 128, ../sass/vacsim.scss */
 #vacsim-wrapper .azul-2 {
@@ -208,7 +211,7 @@ body {
 #vacsim-wrapper .azul-3 .container #btn-todas-vacinas {
   position: absolute;
   bottom: -50px;
-  left: -30px;
+  left: 0;
 }
 /* line 215, ../sass/vacsim.scss */
 #vacsim-wrapper .azul-4 {
@@ -230,7 +233,7 @@ body {
   font-weight: normal;
   text-indent: 20px;
   background: url("../images/linha-branca.jpg") no-repeat right center;
-  max-width: 420px;
+  /*max-width: 420px;*/
 }
 /* line 240, ../sass/vacsim.scss */
 #vacsim-wrapper .azul-4 ul li {
@@ -262,7 +265,7 @@ body {
   font-size: 1.1em !important;
   font-family: 'FrutigerLTStdBold';
   margin-bottom: 10px;
-  text-align: left;
+  text-align: center;
 }
 /* line 280, ../sass/vacsim.scss */
 #vacsim-wrapper .azul-5 span {
@@ -458,4 +461,15 @@ body {
   .horarios p {
     text-align: left;
   }
+}
+.banner{
+	text-align:left;
+	margin:0 auto;
+	background-color:#6ec5d1;
+}
+.banner img{
+	margin:0; 
+	display:block; 
+	max-width:100%;
+	height:auto;
 }

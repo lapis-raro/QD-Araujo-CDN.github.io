@@ -1,0 +1,286 @@
+/*RESET*/
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing:    border-box;
+	box-sizing:         border-box;
+}
+
+[hidden] {
+	display: none;
+}
+
+@media only screen and (min-width: 0)
+html {
+  background-size: none !important;
+  -webkit-background-size: none !important;
+  -moz-background-size: none !important;
+  -ms-background-size: none !important;
+  -o-background-size: none !important;
+  height: 10px;
+  background-color: red;
+}
+
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+  overflow-y: auto; 
+}
+
+body {
+  margin: 0px;
+    padding: 0px;
+    width: 100%;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    height: 100%;
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.content {
+  padding: 0 20px;
+  min-height: 100%;
+position: relative;
+overflow: hidden;
+}
+
+/*===== IMAGENS RESPONSIVAS ======= */
+img{
+	max-width:100%;
+	height:auto
+}
+
+/*===== TAGS CABEÇALHO ======= */
+
+@media only screen  and (min-width : 320px)  and (max-width : 480px) {
+  h1 {
+    font-size: 27px;
+  }
+
+.txt-01_ultimo {
+  margin-top: 20px;
+}
+}
+
+
+@media only screen  and (min-width : 480px)  and (max-width : 800px) {
+  h1 {
+    font-size: 27px;
+  }
+
+.txt-01_ultimo {
+  margin-top: 20px;
+}
+}
+
+@media only screen  and (min-width : 801px)  and (max-width : 1153px) {
+
+.txt-01_ultimo {
+  margin-top: 20px;
+}
+}
+nav {
+  width: 100%;
+  height: 56px;
+  line-height: 56px;
+  background-color: transparent;
+  box-shadow: none;
+  margin-top: 20px;
+}
+
+.container {
+  ;
+}
+
+h1.header.center.orange-text {
+  margin-bottom: -285px;
+}
+
+.brand-logo img {
+  max-width: 30%;
+}
+
+/*==== READEQUAÇÃO NO MENU === */
+
+.side-nav li {
+  float: left;
+  display: inline-block;
+}
+
+.menu-passo-mobile {
+  text-align: left;
+  float: left;
+  position: relative;
+  color: #757575;
+  font-weight: bold;
+  padding-left: 28px;
+  display: inline-block;
+  margin-top: 3px;
+}
+
+@media screen and (max-width: 555px) {
+nav {
+    float: left;
+    margin-top: -20px;
+    text-align: center;
+}
+
+nav .button-collapse i {
+    float: left;
+}
+
+.menu-passo-mobile {
+    text-align: left;
+    float: left;
+    margin-top: -1px !important;
+}
+
+}
+
+
+/* @media mexer aqui
+
+.menu-passo-mobile {
+    text-align: center !important;
+    float: none;
+    /* padding-bottom: 20px; */
+    position: relative;
+    color: #757575;
+    font-weight: bold;
+    /* margin-left: 160px; */
+    padding-left: 0;
+    display: inline-block;
+    /* margin-top: -3px; */
+/*} */
+
+
+@media screen and (max-width: 991px) {
+a.nav-active {
+    color: #ffffff;
+    font-weight: bold;
+    background-color: red;
+}
+}
+
+@media screen and (min-width: 991px) {
+.menu-passo-mobile {
+  display: none;
+
+}
+}
+
+a.nav-active {
+    color: #000000;
+    font-weight: bold;
+}
+
+
+nav ul a {
+}
+
+nav ul li:hover, nav ul li.active {
+  background-color: transparent;
+}
+
+.remover-borda-menu a {
+	border-right: none;
+
+}
+
+nav #nav-mobile ul a {
+  
+  background-color: red;
+}
+
+.side-nav ul a{
+  background-color: red;
+  border-right: none !important;
+}
+
+ul.right.hide-on-med-and-down {
+  margin-right: 20px;
+}
+
+.side-nav a {
+  border: none;
+}
+
+.side-nav a:hover {
+  color: #ffffff;
+}
+
+nav .button-collapse i {
+    color: #757575;
+}
+
+.side-nav li:hover, .side-nav li.active {
+  background-color: #e74c3c;
+}
+div#index-banner {
+  margin-top: -245px;
+}
+
+.input-field {
+  margin-top: 10px;
+}
+
+div#home {
+  margin-top: 245px;
+}
+
+nav .button-collapse {
+  float: none;
+  margin: 0 auto;
+}
+
+ul li p {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.conteudo-SEO {
+  margin: 0 auto;
+  max-width: 645px;
+  height: auto;
+}
+
+ul li p a {
+  color: #e74c3c;
+  text-decoration: underline;
+}
+
+.w-container.cont-horarios {
+    margin-top: -200px;
+}
+
+.side-nav {
+    width: 76px;
+    top: 106px;
+}
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen  and (min-width : 320px)  and (max-width : 555px) {
+.side-nav {
+    width: 76px;
+    top: 131px;
+}
+}
