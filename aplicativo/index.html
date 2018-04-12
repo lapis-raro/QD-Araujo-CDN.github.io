@@ -280,19 +280,19 @@
         //     },
         //         allowPageScroll:"vertical"
         // });
-        function calcularFiltro(){
-            var larguraTela = $(window).width();
-            $("section").each(function(){
-                var filter = $(this).find(".abs-filter");
-                var container = $(this).find(".container").width();
-                var firstCol = $(this).find(".col-sector:first-child").width();
-                $(filter).width((larguraTela - firstCol)- (larguraTela-container)/2 -15);
-            });
-        }
-        calcularFiltro();
-        window.onresize = function(){
-            calcularFiltro();
-        };
+        // function calcularFiltro(){
+        //     var larguraTela = $(window).width();
+        //     $("section").each(function(){
+        //         var filter = $(this).find(".abs-filter");
+        //         var container = $(this).find(".container").width();
+        //         var firstCol = $(this).find(".col-sector:first-child").width();
+        //         $(filter).width((larguraTela - firstCol)- (larguraTela-container)/2 -15);
+        //     });
+        // }
+        // calcularFiltro();
+        // window.onresize = function(){
+        //     calcularFiltro();
+        // };
       </script>
     </body>
 </html>
