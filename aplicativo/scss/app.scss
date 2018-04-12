@@ -264,12 +264,6 @@ section{
 	
 }
 
-
-
-
-
-
-
 /*---------------------------------------------------------------
   ______       _                 _                        _        __        _             
  |  ____|     | |               | |                      | |      /_/       (_)            
@@ -283,6 +277,10 @@ section{
 .features-list{
 	p{
 		color: $azul-fonte;
+		@media screen and (max-width: 576px){
+			font-size: 0.9rem;
+    		padding-left: 0.5rem;
+		}
 	}
 }
 .img-fluid{
@@ -305,6 +303,23 @@ section{
 	}
 	@media screen and(max-width: 992px){
 		justify-content: center;
+	}
+	@media screen and(max-width: 576px){
+		.nav-item{
+			display: block;
+			width: 100%;
+		}
+		.nav-item:first-child{
+			margin-right: 0px;
+			margin-bottom: 15px;
+		}
+	}
+}
+
+@media screen and (max-width: 992px){
+	.container{
+		max-width: inherit;
+		width: 100%;
 	}
 }
 
@@ -449,6 +464,9 @@ header{
 			background-color: $azul-pallet-2;
 		}
 	}
+	.col-carousel{
+		text-align: center;
+	}
 }
 
 .features-app{
@@ -529,6 +547,19 @@ header{
 	.carousel-control-prev, .carousel-control-next{
 		width: auto;
 		margin-top: -50%;
+		@media screen and(max-width: 992px){
+			top: 30%;
+			margin-top: 0;
+    		bottom: inherit;
+		}
+	}
+	@media screen and(max-width: 992px){
+		display: inline-block;
+		width: 80%;
+	}
+	@media screen and(max-width: 576px){
+		display: block;
+		width: 100%;
 	}
 }
 

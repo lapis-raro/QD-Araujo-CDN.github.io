@@ -12,13 +12,14 @@
             <!-- Global site tag (gtag.js) - Google Analytics -->
 
             
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115750859-2"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115750859-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-115750859-2');
+      gtag('config', 'UA-115750859-3');
     </script>
     </head>
     <body>
@@ -43,10 +44,10 @@
             <div class="row justify-content-center line-cta-buttom">
                 <ul class="nav list-lojas-app">
                     <li class="nav-item">
-                        <a href="https://play.google.com/store/apps/details?id=com.araujo.araujoapp" target="_blank" alt="Aplicativo Drogaria Araujo na Google play Store"><img src="img/botao-google-play.png" class="img-fluid" alt="Google Play icon"></a>
+                        <a href="https://play.google.com/store/apps/details?id=com.araujo.araujoapp" target="_blank" alt="Aplicativo Drogaria Araujo na Google play Store" onclick="ga('send', 'event', 'Clique', 'App', 'Android1');"><img src="img/botao-google-play.png" class="img-fluid" alt="Google Play icon"></a>
                     </li>
                     <li class="nav-item">
-                        <a href="https://itunes.apple.com/br/app/drogaria-araujo/id1258317711?mt=8" alt="Aplicativo Drogaria Araujo na Apple Store" target="_blank"><img src="img/botao-app-store.png" class="img-fluid" alt="Apple Store icon"></a>
+                        <a href="https://itunes.apple.com/br/app/drogaria-araujo/id1258317711?mt=8" alt="Aplicativo Drogaria Araujo na Apple Store" target="_blank" onclick="ga('send', 'event', 'Clique', 'App', 'iOS1');"><img src="img/botao-app-store.png" class="img-fluid" alt="Apple Store icon"></a>
                     </li>
                 </ul>
             </div>
@@ -116,7 +117,7 @@
                     </h2>
                     <p>Você envia uma <br/>foto da receita, a Araujo<br/> agiliza a compra.</p>
                 </div>
-                <div class="col-lg-4 offset-lg-2 col-md-12 col-sector text-center filter-mob">
+                <div class="col-lg-4 offset-lg-2 col-md-12 col-sector text-center filter-mob col-carousel">
                 <div id="carousel-passo-a-passo" class="carousel carousel-passo slide" data-ride="carousel">
                     
                     <div class="carousel-inner">
@@ -224,10 +225,10 @@
                     <div class="row no-gutters line-cta-buttom">
                         <ul class="nav list-lojas-app">
                             <li class="nav-item">
-                                <a href="https://play.google.com/store/apps/details?id=com.araujo.araujoapp" target="_blank" alt="Aplicativo Drogaria Araujo na Google play Store"><img src="img/botao-google-play.png" class="img-fluid" alt="Google Play icon"></a>
+                                <a href="https://play.google.com/store/apps/details?id=com.araujo.araujoapp" target="_blank" alt="Aplicativo Drogaria Araujo na Google play Store" onclick="ga('send', 'event', 'Clique', 'App', 'Android2');"><img src="img/botao-google-play.png" class="img-fluid" alt="Google Play icon"></a>
                             </li>
                             <li class="nav-item">
-                                <a href="https://itunes.apple.com/br/app/drogaria-araujo/id1258317711?mt=8" alt="Aplicativo Drogaria Araujo na Apple Store" target="_blank"><img src="img/botao-app-store.png" class="img-fluid" alt="Apple Store icon"></a>
+                                <a href="https://itunes.apple.com/br/app/drogaria-araujo/id1258317711?mt=8" alt="Aplicativo Drogaria Araujo na Apple Store" target="_blank" onclick="ga('send', 'event', 'Clique', 'App', 'iOS2');"><img src="img/botao-app-store.png" class="img-fluid" alt="Apple Store icon"></a>
                             </li>
                         </ul>
                     </div>
@@ -266,10 +267,19 @@
       <!-- Jquery -->
       <script src="js/jquery.min.js"></script>
       <script type="text/javascript" src="//qd-araujo-cdn.github.io/arquivos/qd-iframe-adjust.js"></script>
+      
+      <script src="js/jquery.touchSwipe.min.js"></script>
       <!-- Bootstrap JS -->
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
       <script>
+        $(".carousel-passo").swipe({
+            swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+                if (direction == 'left') $(this).carousel('next');
+                if (direction == 'right') $(this).carousel('prev');
+            },
+                allowPageScroll:"vertical"
+        });
         function calcularFiltro(){
             var larguraTela = $(window).width();
             $("section").each(function(){
@@ -280,12 +290,9 @@
             });
         }
         calcularFiltro();
-
         window.onresize = function(){
-            console.log(window);
             calcularFiltro();
         };
-        
       </script>
     </body>
 </html>
