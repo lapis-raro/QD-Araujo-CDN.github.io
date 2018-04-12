@@ -265,11 +265,53 @@
       </footer>
       <!-- Jquery -->
       <script src="js/jquery.min.js"></script>
-      <script type="text/javascript" src="//qd-araujo-cdn.github.io/arquivos/qd-iframe-adjust.js"></script>
+      <!-- <script type="text/javascript" src="//qd-araujo-cdn.github.io/arquivos/qd-iframe-adjust.js"></script> -->
       <!-- Bootstrap JS -->
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
       <script>
+        (function () {
+            if (window.parent === window)
+                location.href = location.href.replace("qd-araujo-cdn.github.io", "www.araujo.com.br");
+        })();
+
+        (function ($) {
+            "use strict";
+
+            function resetIframeSize(useBody) {
+                if(useBody == false) return false;
+                window.parent.postMessage("qd-iframe-cdn|" + ($(useBody ? document.body : document).height() + 5), "*");
+            };
+
+            $(function () { resetIframeSize(false); });
+            $(window).on("load", function () { resetIframeSize(false); });
+            $(window).scroll(function () { resetIframeSize(false); });
+            $(window).on('QD_manualIframeAdjust', function (e, useBody) { resetIframeSize(useBody || false); });
+            $(document).ajaxComplete(function () { resetIframeSize(false); });
+            $(document).ajaxStart(function () { resetIframeSize(false); });
+
+            var lastWindowSize = $(window).width();
+            var timeout = 0;
+            $(window).resize(function () {
+                clearTimeout(timeout);
+                timeout = setTimeout(function () {
+                    if (lastWindowSize != $(window).width()) {
+                        resetIframeSize(true);
+                        lastWindowSize = $(window).width();
+                    }
+                }, 20);
+            });
+        })(jQuery);
+
+        (function ($) {
+            $(function () {
+                $("a[href^='#']").click(function () {
+                    window.parent.postMessage("qd-iframe-scroll|" + ($($(this).attr("href")).first().offset() || { top: 0 }).top, "*");
+                });
+            });
+        })(jQuery);
+
+
         // function calcularFiltro(){
         //     var larguraTela = $(window).width();
         //     $("section").each(function(){
