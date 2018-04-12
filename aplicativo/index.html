@@ -279,7 +279,7 @@
             "use strict";
 
             function resetIframeSize(useBody) {
-                if(useBody == false) return false;
+                // if(useBody == false) return false;
                 window.parent.postMessage("qd-iframe-cdn|" + ($(useBody ? document.body : document).height() + 5), "*");
             };
 
