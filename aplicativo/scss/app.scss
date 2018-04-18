@@ -65,7 +65,7 @@ Corporação: Lápis Raro agência de Comunicação Digital
 
 //Colors
 $verde-pallet-1: #4ac39a;
-$verde-pallet-2: #51bc96;
+$verde-pallet-2: #3db49a;
 $verde-fonte-1: #2c745c;
 $azul-pallet-1: #4f92de;
 $azul-pallet-2: #568ec9;
@@ -264,12 +264,6 @@ section{
 	
 }
 
-
-
-
-
-
-
 /*---------------------------------------------------------------
   ______       _                 _                        _        __        _             
  |  ____|     | |               | |                      | |      /_/       (_)            
@@ -283,6 +277,10 @@ section{
 .features-list{
 	p{
 		color: $azul-fonte;
+		@media screen and (max-width: 576px){
+			font-size: 0.9rem;
+    		padding-left: 0.5rem;
+		}
 	}
 }
 .img-fluid{
@@ -306,6 +304,31 @@ section{
 	@media screen and(max-width: 992px){
 		justify-content: center;
 	}
+	@media screen and(max-width: 576px){
+		.nav-item{
+			display: block;
+			width: 100%;
+		}
+		.nav-item:first-child{
+			margin-right: 0px;
+			margin-bottom: 15px;
+		}
+	}
+}
+//Row com altura completa
+.full-height{
+	height: 100%;
+}
+@media screen and (max-width: 992px){
+	.container{
+		max-width: inherit;
+		width: 100%;
+	}
+}
+
+//Linha de vídeo
+.video-line{
+	padding: 30px 0;
 }
 
 /*---------------------------------------------------------------
@@ -329,19 +352,26 @@ section{
 	}
 
     @media screen and(max-width: 768px){
-		display: block;
+		//display: block;
+		
 		margin-bottom: 30px;
 	}
 	
 }
 header{
-	padding: 50px 0;
+	padding: 30px 0 50px 0;
 	background: url('../img/bg-topo.png') no-repeat 50% 50%;
 	 background-size: 100% 100%;
-	 min-height: 100vh;
+	 //min-height: 100vh;
+	 //height: 100%;
 	 .destaque{
 		 color: #fff;
 		 font-size: 26px;
+		 margin-bottom: 0;
+	}
+	.abs-logo{
+		margin-bottom: -75px;
+		display: inline-block;
 	}
 	@media screen and(max-width: 768px){
         padding-top: 0;
@@ -417,13 +447,14 @@ header{
 			}
 		}
 	}
+	
 	@media screen and(max-width: 992px){
 		.filter-mob{
 			background-color: $verde-pallet-2;
 		}
 	}
-	
 }
+
 .receita-agil{
 	.abs-filter{
 		background-color: $azul-pallet-2;
@@ -448,6 +479,9 @@ header{
 		.filter-mob{
 			background-color: $azul-pallet-2;
 		}
+	}
+	.col-carousel{
+		text-align: center;
 	}
 }
 
@@ -503,7 +537,8 @@ header{
 		}
 		p{
 			font-size: 18px;
-			color: #fff;
+			color: #fff;			
+			min-height: 70px; 
 			.number{
 				font-size: 26px;
 				font-family: 'gotham-narrow-bold';
@@ -529,6 +564,19 @@ header{
 	.carousel-control-prev, .carousel-control-next{
 		width: auto;
 		margin-top: -50%;
+		@media screen and(max-width: 992px){
+			top: 30%;
+			margin-top: 0;
+    		bottom: inherit;
+		}
+	}
+	@media screen and(max-width: 992px){
+		display: inline-block;
+		width: 80%;
+	}
+	@media screen and(max-width: 576px){
+		display: block;
+		width: 100%;
 	}
 }
 
