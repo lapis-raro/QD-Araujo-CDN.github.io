@@ -2,12 +2,12 @@
 <html class="no-js" lang="en">
     <head>
       <meta charset="UTF-8">
-      <title>Tem + – Chegou seu app Araujo</title>
+      <title>Tem + Chegou seu app Araujo</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
       <meta name="description" content="Aplicativo Araujo">
       <meta name="keywords" content="aplicativo, drogaria, drogaria araujo, araujo, app araujo">
-     
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <!--<link href="//vjs.zencdn.net/6.7/video-js.min.css" rel="stylesheet">-->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
       <link rel="stylesheet" href="css/app.css" type="text/css" media="screen" />
             <!-- Global site tag (gtag.js) - Google Analytics -->
 
@@ -24,100 +24,132 @@
     </head>
     <body>
     <header class="main-banner">
-        <div class="pre-header d-block d-md-none">
+        <!--<div class="pre-header d-block d-md-none">
             <img src="img/logo-araujo.png" alt="">
-        </div>
+        </div>-->
         <div class="container">
-            <div class="row d-none d-md-block justify-content-center">
-                <div class="col-md-12 col-lg-8 offset-lg-3 text-right">
-                    <img class="img-fluid abs-logo" src="img/logo-araujo.png" alt="">
+            <div class="row no-gutters justify-content-center">
+                <div class="col-md-6 col-lg-6 col-6 order-1 order-md-1 text-right d-none d-md-block">
+                    <img class="img-fluid abs-logo" src="img/mao-aplicativo.png" alt="Mãozinha segurando celular com o aplicativo da araujo aberto.">
+                </div>
+                <div class="col-md-6 col-lg-6 col-12 order-2 order-md-2 col-header-text">
+                    <!--<div class="d-block d-md-none mobile-logo">
+                        <img src="img/logo-araujo.png" class="img-fluid" alt="Drogaria Araujo.">
+                    </div>-->
+                    <div class="d-none d-md-block">
+                        <h1>
+                            CHEGOU <br/>
+                            O APP <br/>
+                            ARAUJO :)
+                        </h1>
+                        <p class="destaque">
+                            Ofertas, novidades e praticidade. <br class="d-none d-md-block"/>
+                            Tem mais Araujo no seu celular. 
+                        </p>
+                    </div>
+                    <div class="d-block d-md-none">
+                        <img src="img/banner-app-mobile.jpg" class="img-fluid" alt="Drogaria Araujo.">
+                    </div>
+                    
+                    <div class="row line-cta-buttom d-none d-md-block">
+                        <div class="col text-left">
+                            <img src="img/btn-baixe-agora.png" class="img-fluid inline" alt="Baixe o Aplicativo">
+                        </div>
+                    </div>
+                    
+                    <div class="row justify-content-center line-cta-buttom d-none d-md-block">
+                        <div class="col">
+                            <ul class="nav list-lojas-app">
+                                <li class="nav-item">
+                                    <a  id="Android1" href="https://play.google.com/store/apps/details?id=com.araujo.araujoapp" target="_blank" alt="Aplicativo Drogaria Araujo na Google play Store" onclick="ga('send', 'event', 'Clique', 'App', '');"><img src="img/botao-google-play.png" class="img-fluid" alt="Google Play icon"></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a id="iOS1" href="https://itunes.apple.com/br/app/drogaria-araujo/id1258317711?mt=8" alt="Aplicativo Drogaria Araujo na Apple Store" target="_blank"><img src="img/botao-app-store.png" class="img-fluid" alt="Apple Store icon"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="row justify-content-center">
-                <div class="col text-center">
-                    <img src="img/main-banner.png" class="img-fluid" alt="">
-                    <h1>CHEGOU SEU APP ARAUJO :)</h1>
-                    <p class="destaque">Produtos, ofertas e vantagens: <br class="d-block d-md-none"/>
-                    é a Araujo inteirinha no seu celular.</p>
+            <div class="row line-cta-buttom mobile-header d-block d-md-none">
+                <div class="col text-center text-md-left">
+                    <img src="img/btn-baixe-agora.png" class="img-fluid inline" alt="Baixe o Aplicativo">
                 </div>
             </div>
-            <div class="row justify-content-center line-cta-buttom">
-                <div class="col text-center">
-                    <img src="img/button-cta.png" class="img-fluid" alt="Baixe o Aplicativo">
+            <div class="row justify-content-center line-cta-buttom d-block d-md-none">
+                <div class="col">
+                    <ul class="nav list-lojas-app">
+                        <li class="nav-item">
+                            <a id="Android1-Mobile" href="https://play.google.com/store/apps/details?id=com.araujo.araujoapp" target="_blank" alt="Aplicativo Drogaria Araujo na Google play Store" onclick="ga('send', 'event', 'Clique', 'App', 'Android1');"><img src="img/botao-google-play.png" class="img-fluid" alt="Google Play icon"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="iOS1-Mobile" href="https://itunes.apple.com/br/app/drogaria-araujo/id1258317711?mt=8" alt="Aplicativo Drogaria Araujo na Apple Store" target="_blank"><img src="img/botao-app-store.png" class="img-fluid" alt="Apple Store icon"></a>
+                        </li>
+                    </ul>
                 </div>
-            </div>
-            <div class="row justify-content-center line-cta-buttom">
-                <ul class="nav list-lojas-app">
-                    <li class="nav-item">
-                        <a href="https://play.google.com/store/apps/details?id=com.araujo.araujoapp" target="_blank" alt="Aplicativo Drogaria Araujo na Google play Store" onclick="ga('send', 'event', 'Clique', 'App', 'Android1');"><img src="img/botao-google-play.png" class="img-fluid" alt="Google Play icon"></a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="https://itunes.apple.com/br/app/drogaria-araujo/id1258317711?mt=8" alt="Aplicativo Drogaria Araujo na Apple Store" target="_blank" onclick="ga('send', 'event', 'Clique', 'App', 'iOS1');"><img src="img/botao-app-store.png" class="img-fluid" alt="Apple Store icon"></a>
-                    </li>
-                </ul>
             </div>
         </div>
     </header>
     <section class="clique-retire">
-        <div class="abs-filter"></div>
         <div class="container">
             <div class="row align-items-stretch">
-                <div class="col-lg-4 col-md-12 col-sector horizontal-divider text-center">
+                <div class="col-lg-6 col-md-12 horizontal-divider text-left">
                     <div class="div row full-height align-items-center">
-                        <div class="col">
-                            <img src="img/ilustracao-clique-retire.png" class="img-fluid" alt="">
-                            <h2 class="title-section green-detail">
-                                <span>Clique <br/>Retire</span>
-                            </h2>
-                            <p>O jeito rápido e fácil<br/> de receber suas compras.</p>
+                        <div class="col text-center text-lg-left">
+                            <img src="img/clique-retire-logo.png" class="img-fluid inline" alt="Clique e Retire - Drogaria Araujo">
+                            <h3 class="subtitle-clique-retire">
+                                <span class="gold">Facilite sua vida.</span> Faça suas <br class="d-none d-md-block"/>
+                                compras pelo app e retire <br class="d-none d-md-block"/>
+                                na loja, sem fila e sem frete.
+                            </h3>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-7 col-md-12 offset-lg-1 col-sector filter-mob">
+                <div class="col-lg-5 offset-lg-1 col-md-12">
                     <div class="row list-clique-retire">
-                        <div class="col-md-4 list-item">
-                            <img src="img/icon-drive-thru.png" class="img-fluid" alt="">
-                            <h3>Drive Thru</h3>
-                            <p>
-                                É só passar 
-                                e levar o que você 
-                                já comprou. 
-                                Encontre um 
-                                drive thru 
-                                perto de você.
-                            </p>
-                        </div>
-                        <div class="col-md-4 list-item">
-                            <img src="img/icon-loja.png" class="img-fluid" alt="">
-                            <h3>Loja</h3>
-                            <p>
-                                Retire na loja 
-                                mais próxima! 
-                                Se preferir, você nem 
-                                precisa sair do carro. 
-                                Assim que chegar, 
-                                um funcionário Araujo 
-                                vai até você com 
-                                suas compras.
-                            </p>
-                        </div>
-                        <div class="col-md-4 list-item">
-                            <img src="img/icon-casa.png" class="img-fluid" alt="">
-                            <h3>Casa</h3>
-                            <p>
-                                Receba no seu 
-                                endereço, 
-                                pelo Drogatel.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row video-line">
-                        <div class="col-12">
-                            <div class="embed-responsive embed-responsive-16by9">
-                                <video controls onclick="this.paused ? this.play() : this.pause();">
-                                    <source src="video/araujo-clique-retire-560p.mp4" type="video/mp4">
-                                    Seu Navegador não suporta a tag de vídeo.
-                                </video>
+                        <div class="col-md-12">
+                            <div id="carousel-clique-retire" class="carousel cr-clique-retire carousel-passo carousel-swipe slide" data-ride="carousel" data-interval="false">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img class="d-block img-fluid" src="img/clique-retire-drivethru.png" alt="Clique e Retire no Drive Thru">
+                                        <h3>Drive Thru</h3>
+                                        <p>
+                                            É só passar e levar <br/>
+                                            o que você já comprou. <br/><br/>
+                                        </p>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block img-fluid" src="img/clique-retire-balcao.png" alt="Clique e Retire no Balcão">
+                                        <h3>Loja</h3>
+                                        <p>
+                                            Retire na loja mais próxima <br/>
+                                            sem passar pelo caixa <br/><br/>
+                                        </p>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block img-fluid" src="img/clique-retire-box.png" alt="Clique e Retire no Box">
+                                        <h3>Box</h3>
+                                        <p>
+                                            Quer pegar suas compras sem se preocupar <br/>
+                                            com o horário? Está chegando aí o box <br/>
+                                            Araujo, sua opção de retirada 24h.
+                                        </p>
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#carousel-clique-retire" role="button" data-slide="prev">
+                                <img src="img/angle-left.png" class="img-fluid" alt="Próximo item">
+                                    <span class="sr-only">Anterior</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carousel-clique-retire" role="button" data-slide="next">
+                                    <img src="img/angle-right.png" class="img-fluid" alt="Próximo item">
+                                    <span class="sr-only">Próximo</span>
+                                </a>
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carousel-clique-retire" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carousel-clique-retire" data-slide-to="1"></li>
+                                    <li data-target="#carousel-clique-retire" data-slide-to="2"></li>
+                                    
+                                </ol>
                             </div>
                         </div>
                     </div>
@@ -126,131 +158,151 @@
         </div>
     </section>
     <section class="receita-agil">
-        <div class="abs-filter"></div>
         <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-12 col-sector horizontal-divider text-center">
-                    <img src="img/ilustracao-receita-agil.png" class="img-fluid" alt="">
-                    <h2 class="title-section blue-detail">
-                        <strong>Receita <br/>Ágil</strong>
-                    </h2>
-                    <p>Você envia uma <br/>foto da receita, a Araujo<br/> agiliza a compra.</p>
-                </div>
-                <div class="col-lg-4 offset-lg-2 col-md-12 col-sector text-center filter-mob col-carousel">
-                <div id="carousel-passo-a-passo" class="carousel carousel-passo slide" data-ride="carousel">
-                    
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img class="d-block" src="img/phone-1.png" alt="Passo a Passo 1">
-                            <div class="legenda">
-                                <h5>Passo a Passo</h5>
-                                <p><span class="number">1 - </span>Abra o app e clique em Receita Ágil</p>
+            <div class="row no-gutters align-items-center">
+                <div class="col-lg-5 col-md-12 order-lg-1 order-2 text-center col-carousel">
+                    <div id="carousel-passo-a-passo" data-crossother="#carousel-passo-a-passo-legenda" class="carousel carousel-passo carousel-swipe slide" data-ride="carousel" data-interval="false">
+                        <div class="carousel-inner">
+                            <div class="carousel-item after-legend active">
+                                <img class="d-block" src="img/receita-agil-phone-1.png" alt="Passo a Passo 1">
+                            </div>
+                            <div class="carousel-item after-legend">
+                                <img class="d-block" src="img/receita-agil-phone-2.png" alt="Passo a Passo 2">
+                            </div>
+                            <div class="carousel-item after-legend">
+                                <img class="d-block" src="img/receita-agil-phone-3.png" alt="Passo a Passo 3">
+                            </div>
+                            <div class="carousel-item after-legend">
+                                <img class="d-block" src="img/receita-agil-phone-4.png" alt="Passo a Passo 4">
                             </div>
                         </div>
-                        <div class="carousel-item">
-                            <img class="d-block" src="img/phone-2.png" alt="Passo a Passo 2">
-                            <div class="legenda">
-                                <h5>Passo a Passo</h5>
-                                <p><span class="number">2 - </span>Fotografe sua receita e envie pra gente</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block" src="img/phone-3.png" alt="Passo a Passo 3">
-                            <div class="legenda">
-                                <h5>Passo a Passo</h5>
-                                <p><span class="number">3 - </span>Vamos conferir e encontrar os melhores preços</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block" src="img/phone-4.png" alt="Passo a Passo 4">
-                            <div class="legenda">
-                                <h5>Passo a Passo</h5>
-                                <p><span class="number">4 - </span> Agora é só autorizar a compra e escolher como retirar!</p>
-                            </div>
-                        </div>
+                        <a class="carousel-control-prev" href="#carousel-passo-a-passo" role="button" data-slide="prev">
+                        <img src="img/angle-left.png" class="img-fluid" alt="Próximo item">
+                            <span class="sr-only">Anterior</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carousel-passo-a-passo" role="button" data-slide="next">
+                            <img src="img/angle-right.png" class="img-fluid" alt="Próximo item">
+                            <span class="sr-only">Próximo</span>
+                        </a>
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-passo-a-passo" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-passo-a-passo" data-slide-to="1"></li>
+                            <li data-target="#carousel-passo-a-passo" data-slide-to="2"></li>
+                            <li data-target="#carousel-passo-a-passo" data-slide-to="3"></li>
+                        </ol>
                     </div>
-                    <a class="carousel-control-prev" href="#carousel-passo-a-passo" role="button" data-slide="prev">
-                    <img src="img/arrow-left.png" class="img-fluid" alt="Próximo item">
-                        <span class="sr-only">Anterior</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carousel-passo-a-passo" role="button" data-slide="next">
-                        <img src="img/arrow-right.png" class="img-fluid" alt="Próximo item">
-                        <span class="sr-only">Próximo</span>
-                    </a>
-                    <ol class="carousel-indicators">
-                        <li data-target="#carousel-passo-a-passo" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel-passo-a-passo" data-slide-to="1"></li>
-                        <li data-target="#carousel-passo-a-passo" data-slide-to="2"></li>
-                        <li data-target="#carousel-passo-a-passo" data-slide-to="3"></li>
-                    </ol>
+                </div>
+                <div class="col-lg-7 order-lg-2 order-1 col-md-12 text-center">
+                    <div class="row no-gutters">
+                        <div class="col-12">
+                            <div class="box-receita-agil d-inline-block">
+                                <img src="img/logo-receita-agil.png" class="img-fluid inline" alt="Receita Ágil Araujo">
+                                <h3 class="subtitle-receita-agil">
+                                    Fotografe sua receita médica <br class="d-none d-sm-block"/>
+                                    e envie pelo app, que <span>a gente <br class="d-none d-sm-block"/>
+                                    agiliza o pedido,</span> inclusive dos <br class="d-none d-sm-block"/>
+                                    medicamentos controlados.
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div id="carousel-passo-a-passo-legenda" class="carousel carousel-passo  before-content slide carousel-fade" data-ride="carousel" data-interval="false">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div class="legenda">
+                                            <h5>Passo a Passo</h5>
+                                            <p><span class="number">1 - </span>Abra o app e clique em Receita Ágil.</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="legenda">
+                                            <h5>Passo a Passo</h5>
+                                            <p><span class="number">2 - </span>Fotografe sua receita e envie pra gente.</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="legenda">
+                                            <h5>Passo a Passo</h5>
+                                            <p><span class="number">3 - </span>Vamos conferir e encontrar
+                                            os melhores preços.</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="legenda">
+                                            <h5>Passo a Passo</h5>
+                                            <p><span class="number">4 - </span> Agora é só autorizar a compra
+                                                e escolher como retirar!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <section class="features-app">
-        <div class="abs-filter"></div>
         <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-12 col-sector horizontal-divider text-center">
-                    <img src="img/icone-aplicativo.png" class="logo-app" alt="">
-                    <h3 class="title-app text-center">
-                        Aqui tem+ <br/>
-                        praticidade
-                    </h3>
+            <div class="row align-items-center">
+                <div class="col-lg-5 col-md-12 text-center">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h3 class="title-app text-center">
+                                Aqui tem+ <br/>
+                                praticidade
+                            </h3>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="img/icone-aplicativo.png" alt="" class="img-fluid">
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-5 offset-lg-1 col-md-12 col-sector filter-mob">
+                <div class="col-lg-6 offset-lg-1 col-md-12">
+                    
                     <div class="row no-gutters features-list">
                         <div class="col-md-3 col-3">
-                            <img src="img/round-icon-alert.png" class="img-fluid" alt="">
+                            <img src="img/icon-conversa-farmaceutico.png" class="img-fluid" alt="">
                         </div>
                         <div class="col-md-9 col-9">
                             <p>
-                            <strong>Lembrete de medicamentos</strong><br/>
-                            Receba notificações na hora certa <br class="d-none d-sm-block"/>
-                            de tomar seus medicamentos.
+                                <strong>Converse com o farmacêutico</strong><br/>
+                                Dúvida não tem hora. Converse pelo <br class="d-none d-sm-block"/>
+                                chat com um farmacêutico de confiança. 
                             </p>
                         </div>
                     </div>
                     <div class="row no-gutters features-list">
                         <div class="col-md-3 col-3">
-                            <img src="img/round-icon-marker.png" class="img-fluid" alt="">
+                            <img src="img/icon-lembrete.png" class="img-fluid" alt="">
                         </div>
                         <div class="col-md-9 col-9">
                             <p>
-                                <strong>Encontrar lojas</strong><br/>
-                            Tem sempre uma Araujo perto de você, <br class="d-none d-sm-block"/>
-                            e o app mostra como chegar lá.
+                            <strong>Lembretes</strong><br/>
+                                Tá na hora do seu remédio? Seu app<br class="d-none d-sm-block"/>
+                                também lembra você da hora certa<br class="d-none d-sm-block"/>
+                                de tomar seus medicamentos.
                             </p>
                         </div>
                     </div>
-                    <div class="row no-gutters features-list">
-                        <div class="col-md-3 col-3">
-                            <img src="img/round-icon-conversation.png" class="img-fluid" alt="">
-                        </div>
-                        <div class="col-md-9 col-9">
-                            <p>
-                            <strong>Chat com o farmacêutico</strong><br/>
-                            Tire dúvidas e receba orientações, <br class="d-none d-sm-block"/>
-                            24h por dia.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row no-gutters line-cta-buttom">
-                        <div class="col">
-                            <img src="img/button-cta.png" alt="Baixe o Aplicativo">
-                        </div>
-                    </div>
-                    <div class="row no-gutters line-cta-buttom">
-                        <ul class="nav list-lojas-app">
-                            <li class="nav-item">
-                                <a href="https://play.google.com/store/apps/details?id=com.araujo.araujoapp" target="_blank" alt="Aplicativo Drogaria Araujo na Google play Store" onclick="ga('send', 'event', 'Clique', 'App', 'Android2');"><img src="img/botao-google-play.png" class="img-fluid" alt="Google Play icon"></a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="https://itunes.apple.com/br/app/drogaria-araujo/id1258317711?mt=8" alt="Aplicativo Drogaria Araujo na Apple Store" target="_blank" onclick="ga('send', 'event', 'Clique', 'App', 'iOS2');"><img src="img/botao-app-store.png" class="img-fluid" alt="Apple Store icon"></a>
-                            </li>
-                        </ul>
-                    </div>
+                    
+                </div>
+            </div>
+            <div class="row no-gutters line-cta-buttom">
+                <div class="col-12 text-center">
+                    <img src="img/btn-baixe-agora.png" alt="Baixe o Aplicativo">
+                </div>
+            </div>
+            <div class="row no-gutters line-cta-buttom">
+                <div class="col-12 text-center">
+                    <ul class="nav list-lojas-app">
+                        <li class="nav-item">
+                            <a id="Android2" href="https://play.google.com/store/apps/details?id=com.araujo.araujoapp" target="_blank" alt="Aplicativo Drogaria Araujo na Google play Store"><img src="img/botao-google-play.png" class="img-fluid" alt="Google Play icon"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="iOS2" href="https://itunes.apple.com/br/app/drogaria-araujo/id1258317711?mt=8" alt="Aplicativo Drogaria Araujo na Apple Store" target="_blank"><img src="img/botao-app-store.png" class="img-fluid" alt="Apple Store icon"></a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -285,33 +337,39 @@
       </footer>
       <!-- Jquery -->
       <script src="js/jquery.min.js"></script>
+      <script src="//vjs.zencdn.net/6.7/video.min.js"></script>
       <script type="text/javascript" src="//qd-araujo-cdn.github.io/arquivos/qd-iframe-adjust.js"></script>
       
       <script src="js/jquery.touchSwipe.min.js"></script>
       <!-- Bootstrap JS -->
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
       <script>
-        $(".carousel-passo").swipe({
+          //var player = videojs(".video-item");
+        $('.carousel-passo .carousel-control-prev').click(function(e){
+            $("#carousel-passo-a-passo-legenda").carousel('prev');
+        });
+        $('.carousel-passo .carousel-control-next').click(function(e){
+            $("#carousel-passo-a-passo-legenda").carousel('next');
+        });
+
+
+        $(".carousel-swipe").swipe({
+            
             swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
-                if (direction == 'left') $(this).carousel('next');
-                if (direction == 'right') $(this).carousel('prev');
+                crossother = $(this).data('crossother');
+                if (direction == 'left') {
+                    $(this).carousel('next'); 
+                    $(crossother).carousel('next');
+                }
+                if (direction == 'right'){
+                    $(this).carousel('prev'); 
+                    $(crossother).carousel('prev');
+                }
             },
                 allowPageScroll:"vertical"
         });
-        function calcularFiltro(){
-            var larguraTela = $(window).width();
-            $("section").each(function(){
-                var filter = $(this).find(".abs-filter");
-                var container = $(this).find(".container").width();
-                var firstCol = $(this).find(".col-sector:first-child").width();
-                $(filter).width((larguraTela - firstCol)- (larguraTela-container)/2 -15);
-            });
-        }
-        calcularFiltro();
-            window.onresize = function(){
-            calcularFiltro();
-        };
+        
       </script>
     </body>
 </html>

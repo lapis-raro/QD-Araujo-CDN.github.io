@@ -1,0 +1,674 @@
+/*-----------------------------------------------------------------------------------
+Nome: Landing Page - Aplicativo Drogaria Araujo
+Autor: Gabriel de Oliveira Koelho
+Prazo: 12 horas
+Corporação: Lápis Raro agência de Comunicação Digital
+------------------------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------
+					______             _        
+					|  ___|           | |       
+					| |_  ___   _ __  | |_  ___ 
+					|  _|/ _ \ | '_ \ | __|/ __|
+					| | | (_) || | | || |_ \__ \
+					\_|  \___/ |_| |_| \__||___/
+					                            
+-----------------------------------------------------------------*/
+
+
+@font-face {
+	font-family: 'gotham-narrow-bold';
+	src: url('../fonts/GothamNarrow-Bold.eot?#iefix') format('embedded-opentype'),  
+	url('../fonts/GothamNarrow-Bold.otf')  format('opentype'),
+		   url('../fonts/GothamNarrow-Bold.woff') format('woff'), 
+		   url('../fonts/GothamNarrow-Bold.ttf')  format('truetype'), 
+		   url('../fonts/GothamNarrow-Bold.svg#gotham-narrow-bold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+  }
+
+@font-face {
+	font-family: 'gotham-narrow-black';
+	src: url('../fonts/GothamNarrow-Black.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/GothamNarrow-Black.otf')  format('opentype'),
+	url('../fonts/GothamNarrow-Black.woff') format('woff'),
+	url('../fonts/GothamNarrow-Black.ttf')  format('truetype'),
+	url('../fonts/GothamNarrow-Black.svg#gotham-narrow-black') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'gotham-narrow';
+	src: url('../fonts/GothamNarrow-Book.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/GothamNarrow-Book.otf')  format('opentype'),
+		url('../fonts/GothamNarrow-Book.woff') format('woff'), 
+		url('../fonts/GothamNarrow-Book.ttf')  format('truetype'), 
+		url('../fonts/GothamNarrow-Book.svg#gotham-narrow') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+
+
+/*------------------------------------------------
+ __      __        _   __            _     
+ \ \    / /       (_) /_/           (_)    
+  \ \  / __ _ _ __ _  __ ___   _____ _ ___ 
+   \ \/ / _` | '__| |/ _` \ \ / / _ | / __|
+    \  | (_| | |  | | (_| |\ V |  __| \__ \
+     \/ \__,_|_|  |_|\__,_| \_/ \___|_|___/
+                                                                                 
+--------------------------------------------------*/
+
+
+//Colors
+$verde-pallet-1: #4ac39a;
+$verde-pallet-2: #3db49a;
+$verde-fonte-1: #2c745c;
+$azul-pallet-1: #4f92de;
+$azul-pallet-2: #568ec9;
+$azul-fonte: #2c527c;
+$azul-fonte-2: #014280;
+$azul-araujo: #004476;
+$cinza-pallet-1: #fbfbfb;
+$cinza-pallet-2: #f7f6f5;
+
+
+
+
+
+/*=======================================================
+___  ____      _           
+|  \/  (_)    (_)          
+| .  . |___  ___ _ __  ___ 
+| |\/| | \ \/ / | '_ \/ __|
+| |  | | |>  <| | | | \__ \
+\_|  |_/_/_/\_\_|_| |_|___/
+                           
+=========================================================*/
+/*Mixins*/
+@mixin transition-default($transition) {
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    -webkit-transition: $transition;
+    transition: $transition;
+}
+
+@mixin rotate-2d($rotate) {
+    -moz-transform: rotate($rotate);
+    -webkit-transform: rotate($rotate);
+    -o-transform: rotate($rotate);
+    -ms-transform: rotate($rotate);
+    transform: rotate($rotate);
+}
+
+@mixin translateX-default($translate) {
+    -moz-transform: translateX($translate);
+    -webkit-transform: translateX($translate);
+    -o-transform: translateX($translate);
+    -ms-transform: translateX($translate);
+    transform: translateX($translate);
+}
+
+@mixin translateY-default($translate) {
+    -moz-transform: translateY($translate);
+    -webkit-transform: translateY($translate);
+    -o-transform: translateY($translate);
+    -ms-transform: translateY($translate);
+    transform: translateY($translate);
+}
+
+@mixin shadow-box(){
+    -webkit-box-shadow: 0px 1px 10px 0px rgba(191,191,191,1);
+    -moz-box-shadow: 0px 1px 10px 0px rgba(191,191,191,1);
+    box-shadow: 0px 1px 10px 0px rgba(191,191,191,1);
+}
+/*---------------------------------------------------------------
+					  _______                 
+					 |__   __|                
+					    | |  __ _   __ _  ___ 
+					    | | / _` | / _` |/ __|
+					    | || (_| || (_| |\__ \
+					    |_| \__,_| \__, ||___/
+					                __/ |     
+					               |___/      
+-----------------------------------------------------------------*/
+body{
+	font-family: 'gotham-narrow' !important;
+	font-weight: normal !important;
+}
+h1, h2, h3, h4, h5{
+	font-family: 'gotham-narrow-black';
+	//font-weight: bolder;
+}
+h1{
+	color: #fff;
+	margin-top: 30px;
+	margin-bottom: 15px;
+	@media screen and(max-width: 576px){
+		font-size: 28px;
+	}
+}
+p{
+	font-size: 18px;
+}
+
+strong{
+	font-family: 'gotham-narrow-bold';
+	//font-weight: bold;
+}
+
+section{
+	position: relative;
+	overflow: hidden; 
+
+	//padding: 50px 0;
+	.abs-filter{
+		position: absolute;
+		right: 0;
+		//width: 63.5%;
+		height: 100%;
+		@media screen and (max-width: 992px){
+			display: none;
+		}
+	}
+	.col-sector{
+		position: relative;
+		padding: 50px 15px;
+		&.horizontal-divider{
+			&:before{
+				content: '';
+				position: absolute;
+				width: 1px;
+				height: 100%;
+				right: 0;
+				top: 0;
+			}
+			&:after{
+				content: '';
+				width: 40px;
+				height: 40px;
+				margin-top: -20px;
+				margin-left: -20px;
+				right: -20px;
+				top: 50%;
+				position: absolute;
+				@include rotate-2d(45deg);
+				
+			}
+			p{
+				color: #fff;
+				font-size: 24px;
+			}
+			@media screen and(max-width: 992px){
+				&:before{
+					left: 0;
+					right: inherit;
+					top: inherit;
+					bottom: 0;
+					width: 100%;
+					height: 1px;
+				}
+				&:after{
+					width: 20px;
+					height: 20px;
+					margin-left: -10px;
+					margin-top: -10px;
+					right: inherit;
+					top: inherit;
+					bottom: -10px;
+					left: 50%;
+					z-index: 3;
+				}
+				p{
+					font-size: 18px;
+				}
+			}
+		}
+		@media screen and(max-width: 576px){
+			padding: 25px 15px;
+		}
+	}
+	.title-section{
+		display: block;
+		text-transform: uppercase;
+		text-align: center;
+		margin: 30px 15px 15px 15px;
+		//padding: 0 80px;
+		&.blue-detail{
+			color: $azul-fonte;
+			background: url(../img/blue-detail.png) repeat-x 0% 50%;
+			span, strong{
+				display: inline-block;
+				padding: 0px 25px;
+				background-color: $azul-pallet-1;
+			}
+		}
+		&.green-detail{
+			color: $verde-fonte-1;
+			
+			background: url(../img/green-detail.png) repeat-x 0% 50%;
+			span, strong{
+				display: inline-block;
+				padding: 0px 25px;
+				background-color: $verde-pallet-1;
+			}
+		}
+		@media screen and (max-width: 576px){
+			display: block;
+			padding: 0 0;
+		}
+	}
+	
+}
+
+/*---------------------------------------------------------------
+  ______       _                 _                        _        __        _             
+ |  ____|     | |               | |                      | |      /_/       (_)            
+ | |__    ___ | |_  _ __  _   _ | |_  _   _  _ __  __ _  | |__    __ _  ___  _   ___  __ _ 
+ |  __|  / __|| __|| '__|| | | || __|| | | || '__|/ _` | | '_ \  / _` |/ __|| | / __|/ _` |
+ | |____ \__ \| |_ | |   | |_| || |_ | |_| || |  | (_| | | |_) || (_| |\__ \| || (__| (_| |
+ |______||___/ \__||_|    \__,_| \__| \__,_||_|   \__,_| |_.__/  \__,_||___/|_| \___|\__,_|
+                                                                                                                                                                                
+-----------------------------------------------------------------*/
+//Utilizando os rows do framework
+.features-list{
+	p{
+		color: $azul-fonte;
+		@media screen and (max-width: 576px){
+			font-size: 0.9rem;
+    		padding-left: 0.5rem;
+		}
+	}
+}
+.img-fluid{
+	display: block;
+	margin: 0 auto;
+}
+.line-cta-buttom{
+	margin-bottom: 20px;
+	margin-top: 40px;
+	@media screen and(max-width: 992px){
+		justify-content: center;
+		.col{
+			text-align: center;
+		}
+	}
+}
+.list-lojas-app{
+	.nav-item:first-child{
+		margin-right: 15px;
+	}
+	@media screen and(max-width: 992px){
+		justify-content: center;
+	}
+	@media screen and(max-width: 576px){
+		.nav-item{
+			display: block;
+			width: 100%;
+		}
+		.nav-item:first-child{
+			margin-right: 0px;
+			margin-bottom: 15px;
+		}
+	}
+}
+//Row com altura completa
+.full-height{
+	height: 100%;
+}
+@media screen and (max-width: 992px){
+	.container{
+		max-width: inherit;
+		width: 100%;
+	}
+}
+
+//Linha de vídeo
+.video-line{
+	padding: 30px 0;
+}
+
+/*---------------------------------------------------------------
+				 _                       _             
+				| |                     | |            
+				| |__    ___   __ _   __| |  ___  _ __ 
+				| '_ \  / _ \ / _` | / _` | / _ \| '__|
+				| | | ||  __/| (_| || (_| ||  __/| |   
+				|_| |_| \___| \__,_| \__,_| \___||_|   
+-----------------------------------------------------------------*/
+
+.pre-header{
+    background-color: #fbfbfb;
+	display: none;
+	text-align: left;
+	padding: 10px 30px;
+	img{
+		display: block;
+		margin: 0 auto;
+
+	}
+
+    @media screen and(max-width: 768px){
+		//display: block;
+		
+		margin-bottom: 30px;
+	}
+	
+}
+header{
+	padding: 30px 0 50px 0;
+	background: url('../img/bg-topo.png') no-repeat 50% 50%;
+	 background-size: 100% 100%;
+	 //min-height: 100vh;
+	 //height: 100%;
+	 .destaque{
+		 color: #fff;
+		 font-size: 26px;
+		 margin-bottom: 0;
+	}
+	.abs-logo{
+		margin-bottom: -75px;
+		display: inline-block;
+	}
+	@media screen and(max-width: 768px){
+        padding-top: 0;
+	}
+	
+	@media screen and(max-width: 576px){
+        .destaque{
+			font-size: 18px;
+		}
+    }
+}
+
+
+
+/*---------------------------------------------------------------
+					___  ___                    
+					|  \/  |                    
+					| .  . |  ___  _ __   _   _ 
+					| |\/| | / _ \| '_ \ | | | |
+					| |  | ||  __/| | | || |_| |
+					\_|  |_/ \___||_| |_| \__,_|
+					                            
+-----------------------------------------------------------------*/
+
+
+
+
+/*---------------------------------------------------------------
+			   _____                /\/|           
+			  / ____|              |/\/            
+			 | (___   ___  ___ ___  ___   ___  ___ 
+			  \___ \ / _ \/ __/ __|/ _ \ / _ \/ __|
+			  ____) |  __/\__ \__ \ (_) |  __/\__ \
+			 |_____/ \___||___/___/\___/ \___||___/
+                                                                         
+-----------------------------------------------------------------*/
+.clique-retire{
+	.abs-filter{
+		background-color: $verde-pallet-2;
+	}
+	background-color: $verde-pallet-1;
+	.col-sector.horizontal-divider{
+		&:before{
+			background-color: $verde-fonte-1;
+		}
+		&:after{
+			background-color: $verde-pallet-1;
+			border-top: 1px solid $verde-fonte-1;
+			border-right: 1px solid $verde-fonte-1;
+			@media screen and(max-width: 992px){
+				border-bottom: 1px solid $verde-fonte-1;
+				border-top: none;
+			}
+		}
+		
+	}
+	.list-clique-retire{
+		text-align: center;
+		h3{
+			text-transform: uppercase;
+			margin-top: 15px;
+			color: #fff;
+		}
+		p{
+			color: #fff;
+		}
+		@media screen and(max-width: 576px){
+			.list-item{
+				margin-bottom: 30px;
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+	
+	@media screen and(max-width: 992px){
+		.filter-mob{
+			background-color: $verde-pallet-2;
+		}
+	}
+}
+
+.receita-agil{
+	.abs-filter{
+		background-color: $azul-pallet-2;
+	}
+	background-color: $azul-pallet-1;
+	.col-sector.horizontal-divider{
+		&:before{
+			background-color: $azul-fonte;
+		}
+		&:after{
+			background-color: $azul-pallet-1;
+			border-top: 1px solid $azul-fonte;
+			border-right: 1px solid $azul-fonte;
+			@media screen and(max-width: 992px){
+				border-bottom: 1px solid $azul-fonte;
+				border-top: none;
+			}
+		}
+		
+	}
+	@media screen and(max-width: 992px){
+		.filter-mob{
+			background-color: $azul-pallet-2;
+		}
+	}
+	.col-carousel{
+		text-align: center;
+	}
+}
+
+.features-app{
+	.abs-filter{
+		background-color: $cinza-pallet-2;
+	}
+	background-color: $cinza-pallet-1;
+	.title-app{
+		color: $azul-araujo;
+		text-transform: uppercase;
+		margin-top: 25px;
+		font-size: 40px;
+		@media screen and(max-width: 992px){
+			font-size: 28px;
+		}
+	}
+	.col-sector.horizontal-divider{
+		&:before{
+			background-color: #d2d2d1;
+			@media screen and(max-width: 992px){
+				display: none;
+			}
+		}
+		&:after{
+			background-color: $cinza-pallet-1;
+			border-top: 1px solid #d2d2d1;
+			border-right: 1px solid #d2d2d1;
+			@media screen and(max-width: 992px){
+				display: none;
+			}
+		}
+		
+	}
+	@media screen and(max-width: 992px){
+		.filter-mob{
+			background-color: $cinza-pallet-2;
+		}
+	}
+}
+.carousel-passo{
+	//display: inline-block;
+	img{
+		margin: 0 auto;
+	}
+	.legenda{
+			
+		h5{
+			text-transform: uppercase;
+			color: #fff;
+			font-size: 28px;
+			margin: 20px 0;
+		}
+		p{
+			font-size: 18px;
+			color: #fff;			
+			min-height: 70px; 
+			.number{
+				font-size: 26px;
+				font-family: 'gotham-narrow-bold';
+			}
+		}
+	}
+	.carousel-indicators{
+		position: relative;
+		margin: 30px auto 0 auto;
+		
+		li{
+			width: 15px;
+			height: 15px;
+			border-radius: 50%;
+			@include transition-default(1s ease);
+			&.active{
+				background-color: #22fcff;
+				@include transition-default(1s ease);
+			}
+		}
+		
+	}
+	.carousel-control-prev, .carousel-control-next{
+		width: auto;
+		margin-top: -50%;
+		@media screen and(max-width: 992px){
+			top: 30%;
+			margin-top: 0;
+    		bottom: inherit;
+		}
+	}
+	@media screen and(max-width: 992px){
+		display: inline-block;
+		width: 80%;
+	}
+	@media screen and(max-width: 576px){
+		display: block;
+		width: 100%;
+	}
+}
+
+/*------------------------------------------------------------------
+ _____               _     
+/  __ \             | |    
+| /  \/ __ _ _ __ __| |___ 
+| |    / _` | '__/ _` / __|
+| \__/\ (_| | | | (_| \__ \
+ \____/\__,_|_|  \__,_|___/
+                           
+--------------------------------------------------------------------*/
+
+
+
+
+/*---------------------------------------------------------------
+				______             _              
+				|  ___|           | |             
+				| |_  ___    ___  | |_  ___  _ __ 
+				|  _|/ _ \  / _ \ | __|/ _ \| '__|
+				| | | (_) || (_) || |_|  __/| |   
+				\_|  \___/  \___/  \__|\___||_|   
+-----------------------------------------------------------------*/
+.main-footer{
+    background-color: $azul-araujo;
+	padding: 35px 0;
+	.site-link{
+		font-family: 'gotham-narrow-bold';
+		color: #fff;
+		font-size: 24px;
+		text-decoration: none;
+		&:hover{
+			text-decoration: underline;
+		}
+		
+	}
+	.col-link{
+		@media screen and(max-width: 768px){
+			text-align: center;
+			margin-bottom: 15px;
+		}
+	}
+	.social-links{
+		justify-content: flex-end !important;
+		.nav-item{
+			margin-right: 15px;
+			&:last-child{
+				margin-right: 0;
+			}
+		}
+		@media screen and(max-width: 768px){
+			justify-content: center !important;
+		}
+	}
+	@media screen and(max-width: 768px){
+		padding: 20px 0;
+	}
+}
+
+
+/*---------------------------------------------------------------
+				                       _         _ 
+				                      | |       | |
+				 _ __ ___    ___    __| |  __ _ | |
+				| '_ ` _ \  / _ \  / _` | / _` || |
+				| | | | | || (_) || (_| || (_| || |
+				|_| |_| |_| \___/  \__,_| \__,_||_|
+                                                                      
+----------------------------------------------------------------*/
+
+
+
+/*-----------------------------------------------------------------
+		                            _                  
+		     /\                    | |                 
+		    /  \   ___ ___  _ __ __| | ___  ___  _ __  
+		   / /\ \ / __/ _ \| '__/ _` |/ _ \/ _ \| '_ \ 
+		  / ____ \ (_| (_) | | | (_| |  __/ (_) | | | |
+		 /_/    \_\___\___/|_|  \__,_|\___|\___/|_| |_|
+
+------------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------
+    _____     _         
+    |_   _|   | |        
+      | | __ _| |__  ___ 
+      | |/ _` | '_ \/ __|
+      | | (_| | |_) \__ \
+      \_/\__,_|_.__/|___/
+                     
+-------------------------------------------------------------------*/

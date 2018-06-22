@@ -2,7 +2,7 @@
 Nome: Landing Page - Aplicativo Drogaria Araujo
 Autor: Gabriel de Oliveira Koelho
 Prazo: 12 horas
-Corporação: Lápis Raro agência de Comunicação Digital
+Corporação: Lápis Raro Agência de Comunicação Digital
 ------------------------------------------------------------------------------------*/
 
 /*---------------------------------------------------------------
@@ -147,10 +147,51 @@ h1{
 	color: #fff;
 	margin-top: 30px;
 	margin-bottom: 15px;
+	font-size: 98px;
+	line-height: 91px;
+	@media screen and(max-width: 992px){
+		font-size: 60px;
+		line-height: 60px;
+		text-align: left;
+	}
+	@media screen and(max-width: 768px){
+		font-size: 40px;
+    	line-height: 40px;
+	}
 	@media screen and(max-width: 576px){
-		font-size: 28px;
+		font-size: 30px;
+    	line-height: 30px;
 	}
 }
+
+.subtitle-receita-agil, .subtitle-clique-retire{
+	font-style: italic;
+	text-transform: uppercase;
+	font-size: 25px;
+	line-height: 30px;
+	text-align: left;
+	color: #fff;
+	margin: 40px 0 50px 0;
+	span{
+		color: #00b1eb;
+		&.gold{
+			color: #ffde31;
+		}
+	}
+	@media screen and(max-width: 992px){
+		text-align: center;
+		font-size: 20px;
+		line-height: 24px;
+	}
+}
+.subtitle-clique-retire{
+	text-transform: inherit;
+	font-size: 25px;
+	letter-spacing: 1px;
+	line-height: 25px;
+}
+
+
 p{
 	font-size: 18px;
 }
@@ -274,23 +315,46 @@ section{
                                                                                                                                                                                 
 -----------------------------------------------------------------*/
 //Utilizando os rows do framework
+.container{
+	max-width: 960px;
+}
 .features-list{
+	margin-bottom: 25px;
 	p{
 		color: $azul-fonte;
-		@media screen and (max-width: 576px){
+		@media screen and (max-width: 992px){
 			font-size: 0.9rem;
     		padding-left: 0.5rem;
 		}
+	}
+	@media screen and (max-width: 992px){
+		margin: 15px 0;
 	}
 }
 .img-fluid{
 	display: block;
 	margin: 0 auto;
+	&.inline{
+		display: inline-block;
+	}
 }
 .line-cta-buttom{
 	margin-bottom: 20px;
 	margin-top: 40px;
 	@media screen and(max-width: 992px){
+
+		.col{
+			text-align: left;
+		}
+		img{
+			max-height: 60px;
+		}
+		&.mobile-header{
+			margin-top: 0;
+		}
+	}
+	@media screen and(max-width: 768px){
+		margin: 15px 0;
 		justify-content: center;
 		.col{
 			text-align: center;
@@ -298,6 +362,7 @@ section{
 	}
 }
 .list-lojas-app{
+	display: inline-flex;
 	.nav-item:first-child{
 		margin-right: 15px;
 	}
@@ -360,26 +425,50 @@ section{
 }
 header{
 	padding: 30px 0 50px 0;
-	background: url('../img/bg-topo.png') no-repeat 50% 50%;
+	background: url('../img/fundo-receita-agil.jpg') no-repeat 50% 50%;
 	 background-size: 100% 100%;
 	 //min-height: 100vh;
 	 //height: 100%;
 	 .destaque{
 		 color: #fff;
-		 font-size: 26px;
+		 font-size: 30px;
+		 line-height: 40px;
 		 margin-bottom: 0;
 	}
 	.abs-logo{
-		margin-bottom: -75px;
+		margin-bottom: -50px;
 		display: inline-block;
 	}
+	@media screen and(max-width: 992px){
+		
+		.destaque{
+			font-size: 24px;
+			line-height: 28px;
+			text-align: left;
+		}
+		.container{
+			padding: 0;
+		}
+	}
 	@media screen and(max-width: 768px){
-        padding-top: 0;
+		padding-top: 0;
+		background: url(../img/gradient-red-mob.jpg) repeat-y left top /100%;
+		//background: none;
+		background-color: #bb1125;
+        /*.abs-logo{
+			display: none;
+		}*/
+		.destaque{
+			font-size: 18px;
+			line-height: 20px;
+			text-align: left;
+		}
 	}
 	
 	@media screen and(max-width: 576px){
-        .destaque{
-			font-size: 18px;
+		.destaque{
+			font-size: 14px;
+			line-height: 18px;
 		}
     }
 }
@@ -409,10 +498,11 @@ header{
                                                                          
 -----------------------------------------------------------------*/
 .clique-retire{
+	background: url(../img/fundo-clique-retire.png) repeat-x left center / 100% 100%;
+	padding: 60px 0 50px 0;
 	.abs-filter{
 		background-color: $verde-pallet-2;
 	}
-	background-color: $verde-pallet-1;
 	.col-sector.horizontal-divider{
 		&:before{
 			background-color: $verde-fonte-1;
@@ -434,6 +524,7 @@ header{
 			text-transform: uppercase;
 			margin-top: 15px;
 			color: #fff;
+			
 		}
 		p{
 			color: #fff;
@@ -456,6 +547,8 @@ header{
 }
 
 .receita-agil{
+	background: url(../img/fundo-receita-agil.jpg) no-repeat center center /cover;
+	padding: 60px 0 50px 0;
 	.abs-filter{
 		background-color: $azul-pallet-2;
 	}
@@ -473,8 +566,8 @@ header{
 				border-top: none;
 			}
 		}
-		
 	}
+	
 	@media screen and(max-width: 992px){
 		.filter-mob{
 			background-color: $azul-pallet-2;
@@ -482,14 +575,16 @@ header{
 	}
 	.col-carousel{
 		text-align: center;
+		position: relative;
 	}
 }
 
 .features-app{
-	.abs-filter{
-		background-color: $cinza-pallet-2;
+	padding: 100px 0 50px 0;
+	background-color: #edecec;
+	@media screen and(max-width: 992px){
+		padding: 30px 0;
 	}
-	background-color: $cinza-pallet-1;
 	.title-app{
 		color: $azul-araujo;
 		text-transform: uppercase;
@@ -524,25 +619,64 @@ header{
 }
 .carousel-passo{
 	//display: inline-block;
+	&.cr-clique-retire{
+		.carousel-control-prev, .carousel-control-next{
+			margin-top: 0;
+			@media screen and(max-width: 992px){
+				top: 30%;
+				margin-top: 0;
+				bottom: inherit;
+			}
+		}
+	}
+	&.carousel-swipe{
+		z-index: 1;
+	}
+	&.before-content{
+		position: relative;
+		&:before{
+			content: '';
+			position: absolute;
+			width: 25%;
+			background-color: #fff;
+			height: 100%;
+			left: -25%;
+			bottom: 0;
+			z-index: 0;
+		}
+		@media screen and(max-width: 992px){
+			&:before{
+				display: none;
+			}
+		}
+	}
 	img{
 		margin: 0 auto;
 	}
 	.legenda{
-			
+			background-color: #fff;
+			padding: 30px 15px 15px 15px;
+			text-align: left;
+    		width: 80%;
 		h5{
 			text-transform: uppercase;
-			color: #fff;
+			color: $azul-araujo;
 			font-size: 28px;
-			margin: 20px 0;
+			margin: 0 0 0px 0;
 		}
 		p{
 			font-size: 18px;
-			color: #fff;			
-			min-height: 70px; 
+			color: $azul-araujo;
+			margin: 0;			
 			.number{
 				font-size: 26px;
 				font-family: 'gotham-narrow-bold';
 			}
+		}
+		@media screen and(max-width: 992px){
+			width: 100%;
+			text-align: center;
+			margin-bottom: 30px;
 		}
 	}
 	.carousel-indicators{
@@ -573,6 +707,11 @@ header{
 	@media screen and(max-width: 992px){
 		display: inline-block;
 		width: 80%;
+		.carousel-item{
+			img{
+				max-height: 200px;
+			}
+		}
 	}
 	@media screen and(max-width: 576px){
 		display: block;
@@ -589,7 +728,130 @@ header{
  \____/\__,_|_|  \__,_|___/
                            
 --------------------------------------------------------------------*/
+/*
+  Player Skin Designer for Video.js
+  http://videojs.com
 
+  To customize the player skin edit 
+  the CSS below. Click "details" 
+  below to add comments or questions.
+  This file uses some SCSS. Learn more  
+  at http://sass-lang.com/guide)
+
+  This designer can be linked to at:
+  https://codepen.io/heff/pen/EarCt/left/?editors=010
+*/
+
+// The following are SCSS variables to automate some of the values.
+// But don't feel limited by them. Change/replace whatever you want. 
+
+// The color of icons, text, and the big play button border.
+// Try changing to #0f0
+$primary-foreground-color: #fff; // #fff default
+
+// The default color of control backgrounds is mostly black but with a little
+// bit of blue so it can still be seen on all-black video frames, which are common.
+// Try changing to #900
+$primary-background-color: #2B333F;  // #2B333F default
+
+// Try changing to true
+$center-big-play-button: false; // true default
+
+.video-js {
+  /* The base font size controls the size of everything, not just text.
+     All dimensions use em-based sizes so that the scale along with the font size.
+     Try increasing it to 15px and see what happens. */
+  font-size: 10px;
+
+  /* The main font color changes the ICON COLORS as well as the text */
+  color: $primary-foreground-color;
+}
+
+/* The "Big Play Button" is the play button that shows before the video plays.
+   To center it set the align values to center and middle. The typical location
+   of the button is the center, but there is trend towards moving it to a corner
+   where it gets out of the way of valuable content in the poster image.*/
+.vjs-default-skin .vjs-big-play-button {
+  /* The font size is what makes the big play button...big. 
+     All width/height values use ems, which are a multiple of the font size.
+     If the .video-js font-size is 10px, then 3em equals 30px.*/
+  font-size: 3em;
+
+  /* We're using SCSS vars here because the values are used in multiple places.
+     Now that font size is set, the following em values will be a multiple of the
+     new font size. If the font-size is 3em (30px), then setting any of
+     the following values to 3em would equal 30px. 3 * font-size. */
+  $big-play-width: 3em; 
+  /* 1.5em = 45px default */
+  $big-play-height: 1.5em;
+
+  line-height: $big-play-height;
+  height: $big-play-height;
+  width: $big-play-width;
+
+  /* 0.06666em = 2px default */
+  border: 0.06666em solid $primary-foreground-color;
+  /* 0.3em = 9px default */
+  border-radius: 0.3em;
+
+  @if $center-big-play-button {
+    /* Align center */
+    left: 50%;
+    top: 50%;
+    margin-left: -($big-play-width / 2);
+    margin-top: -($big-play-height / 2);   
+  } @else {
+    /* Align top left. 0.5em = 15px default */
+    left: 0.5em;
+    top: 0.5em;
+  }
+}
+
+/* The default color of control backgrounds is mostly black but with a little
+   bit of blue so it can still be seen on all-black video frames, which are common. */
+.video-js .vjs-control-bar,
+.video-js .vjs-big-play-button,
+.video-js .vjs-menu-button .vjs-menu-content {
+  /* IE8 - has no alpha support */
+  background-color: $primary-background-color;
+  /* Opacity: 1.0 = 100%, 0.0 = 0% */
+  background-color: rgba($primary-background-color, 0.7);
+}
+
+// Make a slightly lighter version of the main background
+// for the slider background.
+$slider-bg-color: lighten($primary-background-color, 33%);
+
+/* Slider - used for Volume bar and Progress bar */
+.video-js .vjs-slider {
+  background-color: $slider-bg-color;
+  background-color: rgba($slider-bg-color, 0.5);
+}
+
+/* The slider bar color is used for the progress bar and the volume bar
+   (the first two can be removed after a fix that's coming) */
+.video-js .vjs-volume-level,
+.video-js .vjs-play-progress,
+.video-js .vjs-slider-bar {
+  background: $primary-foreground-color;
+}
+
+/* The main progress bar also has a bar that shows how much has been loaded. */
+.video-js .vjs-load-progress {
+  /* For IE8 we'll lighten the color */
+  background: lighten($slider-bg-color, 25%);
+  /* Otherwise we'll rely on stacked opacities */
+  background: rgba($slider-bg-color, 0.5);
+}
+
+/* The load progress bar also has internal divs that represent
+   smaller disconnected loaded time ranges */
+.video-js .vjs-load-progress div {
+  /* For IE8 we'll lighten the color */
+  background: lighten($slider-bg-color, 50%);
+  /* Otherwise we'll rely on stacked opacities */
+  background: rgba($slider-bg-color, 0.75);
+}
 
 
 
