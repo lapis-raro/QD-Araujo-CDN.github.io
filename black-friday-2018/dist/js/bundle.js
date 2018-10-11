@@ -7,12 +7,32 @@ $('.carousel-slider-banner').slick({
   autoplaySpeed: 7000,
 });
 
-var nextYear = moment.tz("2018-11-30 00:00", "America/Sao_Paulo");
 
-$('#black-friday-time').countdown(nextYear.toDate(), function(event) {
-  var $this = $(this).html(event.strftime(''
-    + '<span>%d</span> Dias '
-    + '<span>%H</span> Horas '
-    + '<span>%M</span> Minutos '
-    + '<span>%S</span> Segundos'));
-});
+
+// Definir a data em que estamos contando para baixo
+var countDownDate = new Date("Nov 30, 2018 00:00:00").getTime();
+
+// Atualize a contagem a cada 1 segundo
+var x = setInterval(function() {
+
+  // Pega a data e a hora de hoje
+  var now = new Date().getTime();
+
+  // Encontra a distância entre agora e a data da contagem regressiva
+  var distance = countDownDate - now;
+
+  // Cálculos de tempo para dias, horas, minutos e segundos
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Exibe o resultado no elemento com id = "black-friday-time"
+  document.querySelector("#black-friday-time").innerHTML ="<div> <span class='days'>" + days + "</span>" + "<div class='smalltext'> Dia(s) </div> </div> " + "<div> <span class='hours'>" + hours + "</span>" + "<div class='smalltext'> Horas(s) </div> </div>" + "<div> <span class='minutes'>" + minutes + "</span>" + "<div class='smalltext'> Minutos(s) </div> </div>" + "<div> <span class='seconds'>" + seconds + "</span>" + "<div class='smalltext'> Segundos(s) </div> </div>";
+
+  // Se a contagem regressiva terminar, escreva algum texto
+  if (distance < 0) {
+    clearInterval(x);
+    document.querySelector("#black-friday-time").innerHTML = "Expirado";
+  }
+}, 1000);
