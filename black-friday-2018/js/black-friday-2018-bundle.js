@@ -28,7 +28,7 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Exibe o resultado no elemento com id = "black-friday-time"
-  document.querySelector("#black-friday-time").innerHTML ="<div> <span class='days'>" + days + "</span>" + "<div class='smalltext'> Dia(s) </div> </div> " + "<div> <span class='hours'>" + hours + "</span>" + "<div class='smalltext'> Horas(s) </div> </div>" + "<div> <span class='minutes'>" + minutes + "</span>" + "<div class='smalltext'> Minutos(s) </div> </div>" + "<div> <span class='seconds'>" + seconds + "</span>" + "<div class='smalltext'> Segundos(s) </div> </div>";
+  document.querySelector("#black-friday-time").innerHTML ="<div> <span class='days'>" + days + "</span>" + "<div class='smalltext'> Dia(s) </div> </div> " + "<div> <span class='hours'>" + hours + "</span>" + "<div class='smalltext'> Hora(s) </div> </div>" + "<div> <span class='minutes'>" + minutes + "</span>" + "<div class='smalltext'> Minuto(s) </div> </div>" + "<div> <span class='seconds'>" + seconds + "</span>" + "<div class='smalltext'> Segundo(s) </div> </div>";
 
   // Se a contagem regressiva terminar, escreva algum texto
   if (distance < 0) {
