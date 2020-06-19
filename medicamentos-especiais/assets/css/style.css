@@ -12436,6 +12436,12 @@ a img.aligncenter {
     .main-section__content-contato--margin {
       margin-top: 50px; }
 
+.form-paciente {
+  display: none; }
+
+.form-paciente-show {
+  display: block; }
+
 .main-title {
   font-style: normal;
   font-weight: 900;

@@ -5,9 +5,9 @@
         </label>
         <select name="identificacao" id="identificacao" class="form-control">
             <option value=""></option>
-            <option value="">Paciente</option>
-            <option value="">Familiar/Representante</option>
-            <option value="">Advogado</option>
+            <option>Paciente</option>
+            <option>Familiar/Representante</option>
+            <option>Advogado</option>
         </select>
     </div>
     <div class="form-group">

@@ -35,5 +35,7 @@
     </div>
 </section>
 
+<!--<script type="text/javascript" src="//qd-araujo-cdn.github.io/arquivos/qd-iframe-adjust.js"></script>-->
+<script src="assets/js/scripts.min.js"></script>
 </body>
 </html>
