@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -30,7 +30,7 @@
     </div>
 </footer>
 
-<script type="text/javascript" src="//qd-araujo-cdn.github.io/arquivos/qd-iframe-adjust.js"></script>
+<!--<script type="text/javascript" src="//qd-araujo-cdn.github.io/arquivos/qd-iframe-adjust.js"></script>-->
 <script src="assets/js/scripts.min.js"></script>
 </body>
 </html>
