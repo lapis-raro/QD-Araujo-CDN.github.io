@@ -24,14 +24,14 @@ $arquivo            = $_POST['arquivo'];
 $aceite             = $_POST['aceite'];
 
 $html_body  = "<p>Pedido de orçamento</p>";
-$html_body  .= "<p> Identificação: $identificacao </p>";
-$html_body  .= "<p> Nome: $nome </p>";
-$html_body  .= "<p> Telefone: $telefone </p>";
-$html_body  .= "<p> E-mail: $email </p>";
-$html_body  .= "<p> Paciente: $paciente </p>";
-$html_body  .= "<p> Nome/dosagem do medicamento: $nome-medicamento </p>";
-$html_body  .= "<p> Quantidade: $qtd </p>";
-$html_body  .= "<p> Aceite: $aceite </p>";
+$html_body  .= "<p> Identificação: ".$identificacao." </p>";
+$html_body  .= "<p> Nome: ".$nome." </p>";
+$html_body  .= "<p> Telefone: ".$telefone." </p>";
+$html_body  .= "<p> E-mail: ".$email." </p>";
+$html_body  .= "<p> Paciente: ".$paciente." </p>";
+$html_body  .= "<p> Nome/dosagem do medicamento: ".$nomemedicamento." </p>";
+$html_body  .= "<p> Quantidade: ".$qtd." </p>";
+$html_body  .= "<p> Aceite: ".$aceite." </p>";
 
 $email->addContent("text/html", $html_body);
 
