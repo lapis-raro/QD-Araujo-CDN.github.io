@@ -13,27 +13,27 @@ $email->addContent(
     "text/plain", "and easy to do anywhere, even with PHP"
 );
 
-$identificacao      = $_POST['identificacao'];
-$nome               = $_POST['nome'];
-$telefone           = $_POST['telefone'];
-$email              = $_POST['email'];
-$paciente           = $_POST['paciente'];
-$nomemedicamento   = $_POST['nome-medicamento'];
-$qtd                = $_POST['qtd'];
-$arquivo            = $_POST['arquivo'];
-$aceite             = $_POST['aceite'];
+//$identificacao      = $_POST['identificacao'];
+//$nome               = $_POST['nome'];
+//$telefone           = $_POST['telefone'];
+//$email              = $_POST['email'];
+//$paciente           = $_POST['paciente'];
+//$nomemedicamento   = $_POST['nome-medicamento'];
+//$qtd                = $_POST['qtd'];
+//$arquivo            = $_POST['arquivo'];
+//$aceite             = $_POST['aceite'];
 
 $html_body  = "<p>Pedido de orçamento</p>";
-$html_body  .= "<p> Identificação: ".$identificacao." </p>";
-$html_body  .= "<p> Nome: ".$nome." </p>";
-$html_body  .= "<p> Telefone: ".$telefone." </p>";
-$html_body  .= "<p> E-mail: ".$email." </p>";
-$html_body  .= "<p> Paciente: ".$paciente." </p>";
-$html_body  .= "<p> Nome/dosagem do medicamento: ".$nomemedicamento." </p>";
-$html_body  .= "<p> Quantidade: ".$qtd." </p>";
-$html_body  .= "<p> Aceite: ".$aceite." </p>";
+//$html_body  .= "<p> Identificação: ".$identificacao." </p>";
+//$html_body  .= "<p> Nome: ".$nome." </p>";
+//$html_body  .= "<p> Telefone: ".$telefone." </p>";
+//$html_body  .= "<p> E-mail: ".$email." </p>";
+//$html_body  .= "<p> Paciente: ".$paciente." </p>";
+//$html_body  .= "<p> Nome/dosagem do medicamento: ".$nomemedicamento." </p>";
+//$html_body  .= "<p> Quantidade: ".$qtd." </p>";
+//$html_body  .= "<p> Aceite: ".$aceite." </p>";
 
-$email->addContent("text/html", $html_body);
+$email->addContent("text/html", "<p>Pedido de orçamento</p>");
 
 $sendgrid = new \SendGrid('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');
 try {
@@ -47,6 +47,6 @@ try {
 
 ?>
 
-<script>
-    location.href = 'index.php'
-</script>
+<!--<script>-->
+<!--    location.href = 'index.php'-->
+<!--</script>-->
