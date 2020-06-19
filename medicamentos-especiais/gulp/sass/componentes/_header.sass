@@ -1,0 +1,69 @@
+.main-header
+  background-color: $vermelho
+
+  &__container
+    display: flex
+    align-items: center
+    //justify-content: center
+    flex-wrap: wrap
+
+    @media ($break-xs)
+      justify-content: space-between
+
+    &-logo
+      width: 25%
+      //border: white solid 1px
+      margin-right: 10px
+
+      @media ($break-xs)
+        width: 60%
+        margin-right: 0px
+
+        img
+          width: 100%
+
+    &-content
+      width: 74%
+
+      @media ($break-xs)
+        width: auto
+
+    &-search
+      color: white
+      margin-bottom: 10px
+      display: flex
+      justify-content: space-between
+      align-items: center
+      //margin-right: 10px
+
+
+      &-link
+        color: white
+        margin-right: 10px
+
+      &__box
+        width: 80%
+
+        @media ($break-xs)
+          display: none
+
+      &__input
+        border: 0px
+        background-color: $vermelho
+        width: 80%
+        color: white
+        transition: 1s
+
+        &::placeholder
+          font-family: Roboto;
+          color: white
+          font-size: 16px;
+
+        &:focus, &:hover
+          border: $red 0px solid
+          background-color: white
+          color: $vermelho
+
+
+    &-link
+      color: white

@@ -1,0 +1,145 @@
+.main-advertising
+  background-color: $vermelho
+  padding: 10px 15px
+  border-radius: 10px;
+  margin-top: 45px
+  font-family: 'Dosis', sans-serif;
+  color: white
+  font-size: 20px
+  display: flex
+  align-items: center
+  justify-content: space-around
+
+  @media ($break-xs)
+    flex-direction: column
+
+    .main-button
+      width: 100%
+
+  &__white
+    background-color: white
+    margin-top: 0
+
+  &__body
+    padding: 20px
+    width: 100%
+    color: #4B4B4B
+
+    label
+      font-family: 'Roboto', sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 120%;
+
+  &--interno
+    flex-direction: column
+    margin-top: 0
+    padding: 20px
+    margin-bottom: 30px
+    align-items: flex-start
+
+    .main-button
+      width: 100%
+
+    div.col
+      padding-right: 0px
+      padding-left: 0px
+
+      &:first-child
+        align-items: center
+
+    a
+      color: white
+
+  div.col
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
+
+    &:first-child
+      align-items: center
+
+  &__title
+    font-family: 'Dosis', sans-serif;
+
+    &-newsletter
+      font-size: 24px
+
+  &__description
+    color: white
+    margin-bottom: 15px
+
+  &__newsletter
+
+    @media ($break-xs)
+      padding-top: 30px
+      padding-bottom: 30px
+
+    &-col
+      padding-right: 15px
+      padding-left: 15px
+
+      @media ($break-xs)
+        width: 100%
+
+    &-col-1
+      width: 20%
+      align-items: center
+      display: flex
+      justify-content: center
+
+      @media ($break-xs)
+        width: 100%
+        text-align: center
+
+    &-col-2
+      width: 40%
+      font-size: 16px
+
+      @media ($break-xs)
+        width: 100%
+        margin-bottom: 30px
+
+    &-col-3
+      width: 40%
+
+      @media ($break-xs)
+        width: 100%
+
+    &-form
+      width: 100%
+      display: flex
+      background-color: white
+      border-radius: 10px
+      padding: 10px
+
+      @media ($break-xs)
+        border-radius: 5px
+        margin-bottom: 15px
+
+      .form-control
+        border: 0
+        font-size:
+
+      .input-group-prepend
+        display: flex
+        align-items: center
+        margin-right: 0
+
+      .icon
+        font-size: 15px
+        color: $corFonteSite
+        margin-right: 15px
+
+.input-btn-mobile
+
+  @media ($break-xs)
+    display: none
+
+.input-button-mobile
+  display: none
+
+  @media ($break-xs)
+    display: block
