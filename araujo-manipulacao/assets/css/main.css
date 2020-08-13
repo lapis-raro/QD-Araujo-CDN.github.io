@@ -1,0 +1,208 @@
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.banner-topo{
+    padding: 0;
+}
+
+.banner-topo img{
+    width: 100%;
+}
+
+.araujo-voce{
+    background-color: #f7f8fa;
+}
+
+h1, h2{
+    color: #1f336c;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.araujo-voce p{
+    color: #1f336c;
+    font-size: 17px;
+}
+
+.sugestoes{
+    background-color: #ab9e9a;
+}
+
+.sugestoes .titulo{
+    text-align: right;
+}
+
+.sugestoes .titulo img{
+    text-align: right;
+}
+
+.sugestoes .sugestao-item{
+    background-color: #FFF;
+    border: 2px solid #1f336c;
+    color: #1f336c;
+    height: 435px;
+}
+
+.sugestoes .sugestao-item p{
+    margin: 1.5rem 0;
+    font-size: 13px;
+    padding: 10px 5px 5px;
+    height: 140px;
+}
+
+.sugestoes .sugestao-item p strong{
+    font-size: 17px;
+}
+
+.sugestoes .sugestao-item .btn{
+    background-color: #1f336c;
+    color: #FFF;
+    margin-bottom: 1rem;
+    width: 85%;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 13px;
+    border: 1px solid #1f336c;
+    transition: all 0.5s;
+}
+
+.sugestoes .sugestao-item .btn:hover{
+    background-color: #FFF;
+    color: #1f336c;
+}
+
+.subtitulo img:hover{
+    cursor: pointer;
+}
+
+.subtitulo button{
+    color: #1f336c;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 36px;
+    text-align: left;
+}
+
+.subtitulo button:focus{
+    box-shadow: none !important;
+    color: #1f336c;
+}
+
+.subtitulo button:hover{
+    color: #1f336c;
+}
+
+.seta{
+    padding-left: 5px;
+    transition: all 0.5s;
+}
+
+.rotate{
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.card{
+    border: 0 !important;
+    background-color: transparent;
+}
+
+.card-header{
+    padding: 0;
+    margin-bottom: 0;
+    background-color: transparent;
+    border-bottom: 0;
+}
+
+.card-body{
+    font-size: 17px;
+    color: #1f336c;
+    background-color: #cce1e9;
+}
+
+.aba{
+    transition: all 0.5s;
+}
+
+.linhas{
+    background-image: url("../images/fundo.png");
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+.nutricao{
+    margin-top: -50px;
+}
+
+.owl-carousel .owl-item img {
+    display: unset !important;
+    width: unset !important;
+    max-width: 100% !important;
+}
+
+.owl-prev {
+    width: 15px;
+    height: 100px;
+    position: absolute;
+    top: 40%;
+    margin-left: -20px;
+    display: block !important;
+}
+
+.owl-next {
+    width: 15px;
+    height: 100px;
+    position: absolute;
+    top: 40%;
+    right: -25px;
+    display: block !important;
+}
+.owl-prev i, .owl-next i {transform : scale(1,6); color: #ccc;}
+
+button:focus {
+    outline: 0px;
+}
+
+.carousel{
+    margin-top: -45px;
+}
+
+@media (max-width: 768px) {
+    h1{
+        text-align: center;   
+    }
+    .molecula{
+        display: none;
+    }
+    .nutricao{
+        margin-top: 40px;
+    }
+    .carousel{
+        margin-top: 40px;
+        width: 80%;
+    }
+    .sugestoes .sugestao-item{
+        border: 0;
+    }
+    .linhas{
+        text-align: center;
+    }
+}
+
+@media (max-width: 550px) {
+    .carousel{
+        width: 80%;
+    }
+    .sugestoes .sugestao-item{
+        border: 0;
+    }
+    .subtitulo button{
+        font-size: 27px;
+        text-align: center;
+    }
+    .no-br{
+        display: none;
+    }
+}
